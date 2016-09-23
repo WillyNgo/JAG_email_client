@@ -1,2 +1,3 @@
 com\williamngo\test\SendEmail_Equals_test.class
+com\williamngo\test\ReceiveEmail_test.class
 com\williamngo\test\SendEmail_iae_test.class

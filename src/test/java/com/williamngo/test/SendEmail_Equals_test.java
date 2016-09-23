@@ -26,13 +26,16 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- *
+ * This class tests the sending email module. In order to assure that an email has been
+ * sent properly, I used my overridden equals() method coded in the JagEmail class. Thus,
+ * I am testing for both methods here.
+ * 
  * @author William Ngo
  */
 @RunWith(Parameterized.class)
 public class SendEmail_Equals_test {
 
-    //private final Logger log = LoggerFactory.getLogger(getClass().getName());
+    private final Logger log = LoggerFactory.getLogger(getClass().getName());
     ConfigBean cfg;
     Optional<String> emailReceive;
     Optional<String> emailCC;
@@ -219,7 +222,8 @@ public class SendEmail_Equals_test {
     
     /**
      * Creates a JagEmail object that contains the same information as the
-     * JagEmail that is in the Collection<Object> Data. Used to assertTrue on two identical emails
+     * JagEmail that is in the Collection<Object> Data. Used to assertTrue or assertFalse
+     * on two identical email
      *
      * @return expected - The JagEmail that is expected to be equal to
      */

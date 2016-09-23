@@ -39,10 +39,11 @@ public class MailController implements IMailer {
         String smtpServerName = configBean.getSmtpServer();
         String emailSend = configBean.getEmailSend();
         String emailSendPwd = configBean.getEmailSendPwd();
+        int smtpPortNo = configBean.getSmtpPort();
 
         //Creates server
         SmtpServer<SmtpSslServer> mySmtpServer = SmtpSslServer
-                .create(smtpServerName)
+                .create(smtpServerName, smtpPortNo)
                 .authenticateWith(emailSend, emailSendPwd);
         
         //Debug set to true to view conversation
@@ -177,39 +178,38 @@ public class MailController implements IMailer {
      * 
      * @return 
      */
+    @Override
     public JagEmail[] receiveEmail()
     {
         //Receiver information
         String imapServerName = configBean.getImapServer();
         String emailReceive = configBean.getEmailSend();
         String emailReceivePwd = configBean.getEmailSendPwd();
+        int imapPortNo = configBean.getImapPort();
         
         //Instantiate server and session
-        ImapSslServer myImapServer = new ImapSslServer(imapServerName, emailReceive, emailReceivePwd);
+        ImapSslServer myImapServer = new ImapSslServer(imapServerName, imapPortNo,emailReceive, emailReceivePwd);
         ReceiveMailSession session = myImapServer.createSession();
+        session.open();
+        myImapServer.setProperty("mail.debug", "true");
         
-        ReceivedEmail[] emails = session.receiveEmailAndMarkSeen((EmailFilter.filter().flag(Flags.Flag.SEEN, false)));
+        ReceivedEmail[] emails = session.receiveEmailAndMarkSeen(
+                EmailFilter.filter().flag(Flags.Flag.SEEN, false));
+        
+        JagEmail[] jagEmails;
         
         if(emails != null)
+        {            
+            jagEmails = convertBean(emails);
+        }
+        else
         {
-            for (ReceivedEmail email : emails)
-            {
-                List<EmailMessage> allMessages = email.getAllMessages();
-                List<EmailAttachment> attachments = email.getAttachments();
-                
-                //If there are attachments, save them
-                if (attachments != null) 
-                {
-                    for (EmailAttachment attachment : attachments)
-                        attachment.writeToFile(new File("C:\\Temp\\Attach\\", attachment.getName()));
-                    
-                }
-            }
+            jagEmails = null;
         }
         
+        session.close();
         //Convert ReceivedEmail to JagEmail
-        JagEmail[] jagEmail = convertBean(emails);
-        return jagEmail;
+        return jagEmails;
     }
     
     public void setConfigBean (ConfigBean cb)
@@ -233,15 +233,19 @@ public class MailController implements IMailer {
     private JagEmail[] convertBean(ReceivedEmail[] r)
     {
         JagEmail[] myEmailArray = new JagEmail[r.length];
-        
+        int e = myEmailArray.length;
         for(int i = 0; i < r.length; i++)
         {
+            myEmailArray[i] = new JagEmail();
             myEmailArray[i].setBcc(r[i].getBcc());
             myEmailArray[i].setCc(r[i].getCc());
             myEmailArray[i].setAttachedMessages(r[i].getAttachedMessages());
-            myEmailArray[i].setEmailAttachment(new ArrayList<>(r[i].getAttachments()));
+            
+            if(r[i].getAttachments() != null)
+                myEmailArray[i].setEmailAttachment(new ArrayList<>(r[i].getAttachments()));
             myEmailArray[i].setFlags(r[i].getFlags());
-            myEmailArray[i].setMessageNumber(r[i].getMessageNumber());
+            //Message number not used currently
+            //myEmailArray[i].setMessageNumber(r[i].getMessageNumber());
             myEmailArray[i].setReceiveDate(r[i].getReceiveDate());
             myEmailArray[i].setFolder("Inbox");
         }
