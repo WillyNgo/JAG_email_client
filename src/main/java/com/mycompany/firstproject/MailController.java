@@ -71,10 +71,12 @@ public class MailController implements IMailer {
         
         /************ Validate optional information *********/
         
-        if(html == null || html.length() == 0)
+        //Add html
+        if(html == null)
             html = "";
         email.addHtml(html);
         
+        //Checks for attachments
         if(embedded != null)
         {
             String[] embedStrArray = embedded.split(",");

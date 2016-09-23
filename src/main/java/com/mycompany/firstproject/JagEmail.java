@@ -174,21 +174,23 @@ public class JagEmail extends Email{
                 if(!Objects.equals(this.attachments.get(i).getSize(), other.attachments.get(i).getSize()))
                     return false;
             }
-        }
-        
-        
+
         //Checks actual attachment
-        for(int i = 0; i < attachments.size(); i++)
-        {
-            EmailAttachment thisAttachment = this.attachments.get(i);
-            EmailAttachment otherAttachment = other.attachments.get(i);
+            for(int i = 0; i < attachments.size(); i++)
+            {
+                EmailAttachment thisAttachment = this.attachments.get(i);
+                EmailAttachment otherAttachment = other.attachments.get(i);
             
-            if(!Objects.equals(thisAttachment.getName(), otherAttachment.getName()))
-                return false;
+                if(!Objects.equals(thisAttachment.getName(), otherAttachment.getName()))
+                    return false;
             
-            if(!Objects.equals(thisAttachment.getSize(), otherAttachment.getSize()))
-                return false;
+                if(!Objects.equals(thisAttachment.getSize(), otherAttachment.getSize()))
+                    return false;
+            }
         }
+        
+        
+        
         return true;
     }
 }

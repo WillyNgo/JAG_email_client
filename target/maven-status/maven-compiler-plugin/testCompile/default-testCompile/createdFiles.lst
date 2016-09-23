@@ -1,1 +1,2 @@
-com\williamngo\test\MailController_test.class
+com\williamngo\test\SendEmail_Equals_test.class
+com\williamngo\test\SendEmail_iae_test.class
