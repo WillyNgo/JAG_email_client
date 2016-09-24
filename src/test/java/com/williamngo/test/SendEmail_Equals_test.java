@@ -197,10 +197,11 @@ public class SendEmail_Equals_test {
     public void sendEmail_test_assertTrue() {
         MailController m = new MailController(cfg);
 
-        //boolean valid = false;
+        
         JagEmail myEmail = m.sendEmail(emailReceive, emailCC, emailBCC, subject, text, html, embedded, attachment);
+        log.info("Created JagEmail object...");
         JagEmail expectedEmail = createExpectedJagEmail();
-
+        log.info("Created expected JagEmail Object..");
         assertTrue(myEmail.equals(expectedEmail));
     }
     
@@ -212,11 +213,12 @@ public class SendEmail_Equals_test {
         MailController m = new MailController(cfg);
         
         JagEmail myEmail = m.sendEmail(emailReceive, emailCC, emailBCC, subject, text, html, embedded, attachment);
+        log.info("Created JagEmail Object");
         JagEmail differentEmail = createExpectedJagEmail();
-        
+        log.info("Created JagEmail object named differentEmail that contains same info as myEmail");
         //Change a value
         differentEmail.to("ngo.willi@gmail.com");
-        
+        log.info("Changed value TO of differentEmail to ngo.willi@gmail.com");
         assertFalse(myEmail.equals(differentEmail));
     }
     
@@ -228,6 +230,7 @@ public class SendEmail_Equals_test {
      * @return expected - The JagEmail that is expected to be equal to
      */
     public JagEmail createExpectedJagEmail() {
+        log.info("Creating expected Jag Email...");
         //JagEmail object to be compared with
         JagEmail expected = new JagEmail();
         
@@ -260,7 +263,8 @@ public class SendEmail_Equals_test {
                 .subject(expectedSubject)
                 .addText(expectedText)
                 .addHtml(expectedHtml);
-                
+        log.info("Setted values of expected JagEmail");
+        
         //Check for attachments
         if (expectedEmbedded != null) {
             String[] embedStrArray = expectedEmbedded.split(",");
@@ -275,7 +279,8 @@ public class SendEmail_Equals_test {
                 expected.attach(EmailAttachment.attachment().file(a));
             }
         }
-
+        
+        log.info("returning expected JagEmail...");
         return expected;
     }
 }

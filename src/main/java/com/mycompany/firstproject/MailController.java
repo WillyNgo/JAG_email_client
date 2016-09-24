@@ -21,10 +21,8 @@ import jodd.mail.*;
  * @author 1435707
  */
 public class MailController implements IMailer {
-    //private final Logger log = LoggerFactory.getLogger(getClass().getName());
+    private final Logger log = LoggerFactory.getLogger(getClass().getName());
     private ConfigBean configBean;
-    
-    
     
     public MailController(ConfigBean c)
     {
@@ -45,6 +43,7 @@ public class MailController implements IMailer {
         SmtpServer<SmtpSslServer> mySmtpServer = SmtpSslServer
                 .create(smtpServerName, smtpPortNo)
                 .authenticateWith(emailSend, emailSendPwd);
+        log.info("Created SmtpServer");
         
         //Debug set to true to view conversation
         mySmtpServer.debug(true);      
@@ -52,14 +51,16 @@ public class MailController implements IMailer {
         /********** Validate required information ***************/
         
         //Check if there are no subject, defaults to "(no subject)"
-        if(subject == null || subject.length() == 0)
+        if(subject == null || subject.length() == 0){
+            log.info("Subject not found, defaulting to '(no subject)'");
             subject = "(no subject)";
-        
+        }
         
         //If message is null, default to empty string
-        if(message == null)
+        if(message == null){
+            log.info("Message found as null, defaulting to empty string");
             message = "";
-        
+        }
         //If message and html is not null, concatenate both - Not used
         //if(!(html.equals("") && message.equals("")))
         
@@ -68,7 +69,8 @@ public class MailController implements IMailer {
         email.from(emailSend)
                 .subject(subject)
                 .addText(message);
-                
+        
+        log.info("Created JagEmail object");
         
         /************ Validate optional information *********/
         
@@ -80,6 +82,7 @@ public class MailController implements IMailer {
         //Checks for attachments
         if(embedded != null)
         {
+            log.info("embedded found, setting embedded in email");
             String[] embedStrArray = embedded.split(",");
             for(String e : embedStrArray)
                 email.embed(EmailAttachment.attachment().bytes(new File(e)));
@@ -89,6 +92,7 @@ public class MailController implements IMailer {
         
         if(attachment != null)
         {
+            log.info("attachment found, setting attachment in email");
             String[] attachStrArray = attachment.split(",");
             for(String a : attachStrArray)
                 email.attach(EmailAttachment.attachment().file(a));
@@ -101,7 +105,7 @@ public class MailController implements IMailer {
         if(listOfTo.isPresent())
         {
             String emailTostr = listOfTo.get();
-            
+            log.info("Recipient TO found");
             String[] emailTo = emailTostr.split(",");
             email.to(emailTo);
         }
@@ -113,6 +117,7 @@ public class MailController implements IMailer {
         {
             //If there are CCs present, creates a new EmailAddress[] containing those emails
             String emailCCstr = listOfCc.get();
+            log.info("Recipient CC found");
             String[] emailCC = emailCCstr.split(",");
             email.cc(emailCC);
         }
@@ -124,6 +129,7 @@ public class MailController implements IMailer {
         if(listOfBcc.isPresent())
         {
             String emailBCCstr = listOfBcc.get();
+            log.info("Recipient BCC found");
             String[] emailBCC = emailBCCstr.split(",");
             email.bcc(emailBCC);
         }
@@ -141,7 +147,6 @@ public class MailController implements IMailer {
         //Set folder to sent
         email.setFolder("sent");
         
-        
         //Open session and send mail
         SendMailSession session = mySmtpServer.createSession();
         
@@ -152,26 +157,6 @@ public class MailController implements IMailer {
         return email;
     }
     
-    /**
-     * This overloaded method sends an email that is intended to be forwarded
-     * or replied. It keeps a copy of the previous email's message and pastes in
-     * the forwarded/replied message in the bottom.
-     * 
-     * @param e
-     * @return 
-     */
-    /*
-    public JagEmail sendEmail(JagEmail e)
-    {
-        //Get the message of attached Email
-        JagEmail[] listOfEmail = (JagEmail[]) e.getAllMessages().toArray();
-        List<EmailMessage> emsg = listOfEmail[0].getAllMessages();
-        
-        //TODO: finish this
-        return email;
-    }
-    
-    */
     
     /**
      * Creates an imap server in order to receive messages
@@ -199,7 +184,7 @@ public class MailController implements IMailer {
         JagEmail[] jagEmails;
         
         if(emails != null)
-        {            
+        {
             jagEmails = convertBean(emails);
         }
         else
@@ -250,6 +235,7 @@ public class MailController implements IMailer {
             myEmailArray[i].setFolder("Inbox");
         }
         
+        log.info("successfully converted ReceivedEmail to JagEmail");
         return myEmailArray;
     }
 }

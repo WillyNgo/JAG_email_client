@@ -112,7 +112,6 @@ public class ReceiveEmail_test {
              Thread.sleep(5000);
          } catch (InterruptedException e) {
              log.error("Threaded sleep failed", e);
-             System.exit(1);
          }
          
          //sets configBean to pass information of the receiving account

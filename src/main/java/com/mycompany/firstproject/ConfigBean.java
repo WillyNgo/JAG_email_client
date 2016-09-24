@@ -5,6 +5,8 @@
  */
 package com.mycompany.firstproject;
 
+import org.slf4j.*;
+
 /**
  * Contains information of SMPT, IMAP servers and email addresses
  * identification information
@@ -12,6 +14,8 @@ package com.mycompany.firstproject;
  * Version 09/18/2016
  */
 public class ConfigBean {
+    private final Logger log = LoggerFactory.getLogger(getClass().getName());
+
     private String userName;
     private String smtpServerName; //"smtp.gmail.com";
     private String imapServerName; //"imap.gmail.com";
@@ -130,9 +134,10 @@ public class ConfigBean {
      */
     public void setImapServer(String imapServerName)
     {
-        if(imapServerName == null || imapServerName.length() == 0)
+        if(imapServerName == null || imapServerName.length() == 0){
+            log.error("Invalid - imapServerName not there");
             throw new IllegalArgumentException("Invalid - Error in setimapServer");
-        
+        }
         this.imapServerName = imapServerName;
     }
     
@@ -141,9 +146,10 @@ public class ConfigBean {
      * @param emailSend 
      */
     public void setEmailSend(String emailSend) {
-        if(emailSend == null || emailSend.length() == 0)
+        if(emailSend == null || emailSend.length() == 0){
+            log.error("Invalid - emailSend is null or length 0");
             throw new IllegalArgumentException("Invalid - Error in SetEmailSend");
-        
+        }
         this.emailSend = emailSend;
     }
     
@@ -152,9 +158,10 @@ public class ConfigBean {
      * @param emailSendPwd 
      */
     public void setEmailSendPwd(String emailSendPwd) {
-        if(emailSendPwd == null || emailSendPwd.length() == 0)
+        if(emailSendPwd == null || emailSendPwd.length() == 0){
+            log.error("Invalid - Error in SetEmailSendPwd");
             throw new IllegalArgumentException("Invalid - Error in SetEmailSendPwd");
-        
+        }
         this.emailSendPwd = emailSendPwd;
     }
     
@@ -163,9 +170,10 @@ public class ConfigBean {
      * @param smtpPort 
      */
     public void setSmtpPort(int smtpPort) {
-        if(smtpPort == -1)
+        if(smtpPort == -1){
+            log.info("Found smtp port -1, defaulting to 465");
             this.smtpPortNo = 465; //SSL ecrypted SMTP port defaults to 465
-        else
+        }else
             this.smtpPortNo = smtpPort;
     }
     
@@ -175,7 +183,10 @@ public class ConfigBean {
      */
     public void setImapPort(int imapPort) {
         if(imapPort == -1)
+        {
+            log.info("Found imap port -1, defaulting to 465");
             this.imapPortNo = 993;//SSL ecrypted IMAP port defaults to 993
+        }
         else
             this.imapPortNo = imapPort;
     }
