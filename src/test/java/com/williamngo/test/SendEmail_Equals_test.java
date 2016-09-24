@@ -112,7 +112,7 @@ public class SendEmail_Equals_test {
                 msg,
                 "<html><body><h1>" + msg + "</h1></body></html>",
                 null,
-                "C:\\Users\\1435707\\Pictures\\koala.jpg"
+                "pictures\\kimagura.jpg"
             },
             //Testing for null in the to
             {
@@ -124,7 +124,7 @@ public class SendEmail_Equals_test {
                 msg,
                 "<html><body><h1>" + msg + "</h1></body></html>",
                 null,
-                "C:\\Users\\1435707\\Pictures\\koala.jpg"
+                "pictures\\kimagura.jpg"
             },
             //Testing for null in the cc and bcc
             {
@@ -136,7 +136,7 @@ public class SendEmail_Equals_test {
                 "Here is some text",
                 "<html><body><h1>" + msg + "</h1></body></html>",
                 null,
-                "C:\\Users\\1435707\\Pictures\\koala.jpg"
+                "pictures\\kimagura.jpg"
             },
             //No subject
             {
@@ -148,7 +148,7 @@ public class SendEmail_Equals_test {
                 msg + " - No subject",
                 "<html><body><h1>" + msg + "</h1></body></html>",
                 null,
-                "C:\\Users\\1435707\\Pictures\\koala.jpg"
+                "pictures\\kimagura.jpg"
             },
             //No text in body, has html
             {
@@ -160,7 +160,7 @@ public class SendEmail_Equals_test {
                 null,
                 "<html><body><h1>" + msg + "</h1></body></html>",
                 null,
-                "C:\\Users\\1435707\\Pictures\\koala.jpg"
+                "pictures\\kimagura.jpg"
             },
             //No text or html
             {
@@ -172,7 +172,7 @@ public class SendEmail_Equals_test {
                 null,
                 null,
                 null,
-                "C:\\Users\\1435707\\Pictures\\koala.jpg"
+                "pictures\\kimagura.jpg"
             },
             //No attachments
             {

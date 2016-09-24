@@ -111,7 +111,7 @@ public class SendEmail_iae_test {
                 msg,
                 "<html><body><h1>" + msg + "</h1></body></html>",
                 null,
-                "C:\\Users\\1435707\\Pictures\\koala.jpg"
+                "pictures\\kimagura.jpg"
             }
         }
         );

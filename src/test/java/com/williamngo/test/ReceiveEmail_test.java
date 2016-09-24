@@ -18,7 +18,8 @@ import org.junit.runners.Parameterized;
 import org.slf4j.*;
 
 /**
- *
+ * This class tests for a received email. Many validation has been done in the sendEmail_Equals class
+ * So this class only checks if there is an email that has been received through the JagEmail's receiveEmail method
  * @author 1435707
  */
 @RunWith(Parameterized.class)
@@ -71,7 +72,7 @@ public class ReceiveEmail_test {
                         msg,
                         "<html><body><h1>" + msg + "</h1></body></html>",
                         null,
-                        "C:\\Users\\1435707\\Pictures\\koala.jpg"
+                        "pictures\\kimagura.jpg"
                     }
                 }
         );
