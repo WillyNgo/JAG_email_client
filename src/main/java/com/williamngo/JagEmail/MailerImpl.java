@@ -1,10 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package com.mycompany.firstproject;
+package com.williamngo.JagEmail;
 
+import com.williamngo.interfaces.Mailer;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
@@ -17,14 +13,17 @@ import org.slf4j.LoggerFactory;
 
 import jodd.mail.*;
 /**
- *
+ * MailerImpl implements the Mailer interface. Contains methods for sending 
+ * and receiving mails.
+ * 
  * @author 1435707
+ * @version 2016/04/10
  */
-public class MailController implements IMailer {
+public class MailerImpl implements Mailer {
     private final Logger log = LoggerFactory.getLogger(getClass().getName());
     private ConfigBean configBean;
     
-    public MailController(ConfigBean c)
+    public MailerImpl(ConfigBean c)
     {
         this.configBean = c;
     }
@@ -35,20 +34,21 @@ public class MailController implements IMailer {
     {       
         //Assign info of sender
         String smtpServerName = configBean.getSmtpServer();
-        String emailSend = configBean.getEmailSend();
-        String emailSendPwd = configBean.getEmailSendPwd();
+        String emailSend = configBean.getEmailAddress();
+        String emailSendPwd = configBean.getEmailAddressPwd();
         int smtpPortNo = configBean.getSmtpPort();
 
         //Creates server
         SmtpServer<SmtpSslServer> mySmtpServer = SmtpSslServer
                 .create(smtpServerName, smtpPortNo)
                 .authenticateWith(emailSend, emailSendPwd);
-        log.info("Created SmtpServer");
-        
-        //Debug set to true to view conversation
-        mySmtpServer.debug(true);      
+        log.info("Created SmtpServer");     
         
         /********** Validate required information ***************/
+        
+        //If there are no recipients, throw exception
+        if(!listOfTo.isPresent() && !listOfCc.isPresent() && !listOfBcc.isPresent())
+            throw new IllegalArgumentException("Error in sendEmail - Must have at least one recipient");
         
         //Check if there are no subject, defaults to "(no subject)"
         if(subject == null || subject.length() == 0){
@@ -61,8 +61,6 @@ public class MailController implements IMailer {
             log.info("Message found as null, defaulting to empty string");
             message = "";
         }
-        //If message and html is not null, concatenate both - Not used
-        //if(!(html.equals("") && message.equals("")))
         
         //Email object to be sent
         JagEmail email = new JagEmail();
@@ -109,9 +107,7 @@ public class MailController implements IMailer {
             String[] emailTo = emailTostr.split(",");
             email.to(emailTo);
         }
-        else{
-            email.to("");
-        }
+
         //Check to see if there is any CC, add if there is
         if(listOfCc.isPresent())
         {
@@ -121,10 +117,6 @@ public class MailController implements IMailer {
             String[] emailCC = emailCCstr.split(",");
             email.cc(emailCC);
         }
-        else
-        {
-            email.cc("");
-        }
         
         if(listOfBcc.isPresent())
         {
@@ -133,17 +125,7 @@ public class MailController implements IMailer {
             String[] emailBCC = emailBCCstr.split(",");
             email.bcc(emailBCC);
         }
-        else
-        {
-            email.bcc("");
-        }
         
-        
-        //If there are no recipients, throw exception
-        if(!listOfTo.isPresent() && !listOfCc.isPresent() && !listOfBcc.isPresent())
-            throw new IllegalArgumentException("Error in sendEmail - Must have at least one recipient");
-        
-       
         //Set folder to sent
         email.setFolder("sent");
         
@@ -152,6 +134,10 @@ public class MailController implements IMailer {
         
         session.open();
         session.sendMail(email);
+        
+        //Solution for embedded attachment
+        //if there is embedded, set it back
+        
         session.close();
         
         return email;
@@ -161,28 +147,29 @@ public class MailController implements IMailer {
     /**
      * Creates an imap server in order to receive messages
      * 
-     * @return 
+     * @return JagEmails - an array of JagEmail that contains all JagEmails received
      */
     @Override
     public JagEmail[] receiveEmail()
     {
         //Receiver information
         String imapServerName = configBean.getImapServer();
-        String emailReceive = configBean.getEmailSend();
-        String emailReceivePwd = configBean.getEmailSendPwd();
+        String emailReceive = configBean.getEmailAddress(); //Receive the emails sent by the same account
+        String emailReceivePwd = configBean.getEmailAddressPwd();
         int imapPortNo = configBean.getImapPort();
         
         //Instantiate server and session
-        ImapSslServer myImapServer = new ImapSslServer(imapServerName, imapPortNo,emailReceive, emailReceivePwd);
+        ImapSslServer myImapServer = new ImapSslServer(imapServerName, imapPortNo, emailReceive, emailReceivePwd);
         ReceiveMailSession session = myImapServer.createSession();
         session.open();
-        myImapServer.setProperty("mail.debug", "true");
+        //myImapServer.setProperty("mail.debug", "true");
         
         ReceivedEmail[] emails = session.receiveEmailAndMarkSeen(
                 EmailFilter.filter().flag(Flags.Flag.SEEN, false));
         
         JagEmail[] jagEmails;
         
+        //Convert ReceivedEmail to JagEmail
         if(emails != null)
         {
             jagEmails = convertBean(emails);
@@ -193,18 +180,7 @@ public class MailController implements IMailer {
         }
         
         session.close();
-        //Convert ReceivedEmail to JagEmail
         return jagEmails;
-    }
-    
-    public void setConfigBean (ConfigBean cb)
-    {
-        this.configBean = cb;
-    }
-    
-    public ConfigBean getConfigBean()
-    {
-        return this.configBean;
     }
     
     /**

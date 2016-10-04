@@ -1,0 +1,135 @@
+[INFO ] 2016-10-04 10:48:52.907 [main] com.mycompany.firstproject.MailController.convertBean(MailController.java:238) - successfully converted ReceivedEmail to JagEmail
+[INFO ] 2016-10-04 10:48:53.001 [main] com.mycompany.firstproject.MailController.sendEmail(MailController.java:46) - Created SmtpServer
+[INFO ] 2016-10-04 10:48:53.001 [main] com.mycompany.firstproject.MailController.sendEmail(MailController.java:73) - Created JagEmail object
+[INFO ] 2016-10-04 10:48:53.001 [main] com.mycompany.firstproject.MailController.sendEmail(MailController.java:95) - attachment found, setting attachment in email
+[INFO ] 2016-10-04 10:48:53.001 [main] com.mycompany.firstproject.MailController.sendEmail(MailController.java:108) - Recipient TO found
+[INFO ] 2016-10-04 10:49:02.016 [main] com.mycompany.firstproject.MailController.convertBean(MailController.java:238) - successfully converted ReceivedEmail to JagEmail
+[INFO ] 2016-10-04 10:49:02.110 [main] com.mycompany.firstproject.MailController.sendEmail(MailController.java:46) - Created SmtpServer
+[INFO ] 2016-10-04 10:49:02.110 [main] com.mycompany.firstproject.MailController.sendEmail(MailController.java:73) - Created JagEmail object
+[INFO ] 2016-10-04 10:49:02.110 [main] com.mycompany.firstproject.MailController.sendEmail(MailController.java:95) - attachment found, setting attachment in email
+[INFO ] 2016-10-04 10:49:02.110 [main] com.mycompany.firstproject.MailController.sendEmail(MailController.java:108) - Recipient TO found
+[INFO ] 2016-10-04 10:49:02.110 [main] com.mycompany.firstproject.MailController.sendEmail(MailController.java:120) - Recipient CC found
+[INFO ] 2016-10-04 10:49:02.110 [main] com.mycompany.firstproject.MailController.sendEmail(MailController.java:132) - Recipient BCC found
+[INFO ] 2016-10-04 10:49:03.506 [main] com.williamngo.test.TestSendEmail_Equals_test.sendEmail_test_assertTrue(TestSendEmail_Equals_test.java:202) - Created JagEmail object...
+[INFO ] 2016-10-04 10:49:03.506 [main] com.williamngo.test.TestSendEmail_Equals_test.createExpectedJagEmail(TestSendEmail_Equals_test.java:233) - Creating expected Jag Email...
+[INFO ] 2016-10-04 10:49:03.506 [main] com.williamngo.test.TestSendEmail_Equals_test.createExpectedJagEmail(TestSendEmail_Equals_test.java:266) - Setted values of expected JagEmail
+[INFO ] 2016-10-04 10:49:03.506 [main] com.williamngo.test.TestSendEmail_Equals_test.createExpectedJagEmail(TestSendEmail_Equals_test.java:283) - returning expected JagEmail...
+[INFO ] 2016-10-04 10:49:03.506 [main] com.williamngo.test.TestSendEmail_Equals_test.sendEmail_test_assertTrue(TestSendEmail_Equals_test.java:204) - Created expected JagEmail Object..
+[INFO ] 2016-10-04 10:49:03.522 [main] com.mycompany.firstproject.MailController.sendEmail(MailController.java:46) - Created SmtpServer
+[INFO ] 2016-10-04 10:49:03.522 [main] com.mycompany.firstproject.MailController.sendEmail(MailController.java:73) - Created JagEmail object
+[INFO ] 2016-10-04 10:49:03.522 [main] com.mycompany.firstproject.MailController.sendEmail(MailController.java:95) - attachment found, setting attachment in email
+[INFO ] 2016-10-04 10:49:03.522 [main] com.mycompany.firstproject.MailController.sendEmail(MailController.java:120) - Recipient CC found
+[INFO ] 2016-10-04 10:49:03.522 [main] com.mycompany.firstproject.MailController.sendEmail(MailController.java:132) - Recipient BCC found
+[INFO ] 2016-10-04 10:49:04.826 [main] com.williamngo.test.TestSendEmail_Equals_test.sendEmail_test_assertTrue(TestSendEmail_Equals_test.java:202) - Created JagEmail object...
+[INFO ] 2016-10-04 10:49:04.826 [main] com.williamngo.test.TestSendEmail_Equals_test.createExpectedJagEmail(TestSendEmail_Equals_test.java:233) - Creating expected Jag Email...
+[INFO ] 2016-10-04 10:49:04.826 [main] com.williamngo.test.TestSendEmail_Equals_test.createExpectedJagEmail(TestSendEmail_Equals_test.java:266) - Setted values of expected JagEmail
+[INFO ] 2016-10-04 10:49:04.826 [main] com.williamngo.test.TestSendEmail_Equals_test.createExpectedJagEmail(TestSendEmail_Equals_test.java:283) - returning expected JagEmail...
+[INFO ] 2016-10-04 10:49:04.826 [main] com.williamngo.test.TestSendEmail_Equals_test.sendEmail_test_assertTrue(TestSendEmail_Equals_test.java:204) - Created expected JagEmail Object..
+[INFO ] 2016-10-04 10:49:04.826 [main] com.mycompany.firstproject.MailController.sendEmail(MailController.java:46) - Created SmtpServer
+[INFO ] 2016-10-04 10:49:04.826 [main] com.mycompany.firstproject.MailController.sendEmail(MailController.java:73) - Created JagEmail object
+[INFO ] 2016-10-04 10:49:04.826 [main] com.mycompany.firstproject.MailController.sendEmail(MailController.java:95) - attachment found, setting attachment in email
+[INFO ] 2016-10-04 10:49:04.826 [main] com.mycompany.firstproject.MailController.sendEmail(MailController.java:108) - Recipient TO found
+[INFO ] 2016-10-04 10:49:06.091 [main] com.williamngo.test.TestSendEmail_Equals_test.sendEmail_test_assertTrue(TestSendEmail_Equals_test.java:202) - Created JagEmail object...
+[INFO ] 2016-10-04 10:49:06.091 [main] com.williamngo.test.TestSendEmail_Equals_test.createExpectedJagEmail(TestSendEmail_Equals_test.java:233) - Creating expected Jag Email...
+[INFO ] 2016-10-04 10:49:06.107 [main] com.williamngo.test.TestSendEmail_Equals_test.createExpectedJagEmail(TestSendEmail_Equals_test.java:266) - Setted values of expected JagEmail
+[INFO ] 2016-10-04 10:49:06.107 [main] com.williamngo.test.TestSendEmail_Equals_test.createExpectedJagEmail(TestSendEmail_Equals_test.java:283) - returning expected JagEmail...
+[INFO ] 2016-10-04 10:49:06.107 [main] com.williamngo.test.TestSendEmail_Equals_test.sendEmail_test_assertTrue(TestSendEmail_Equals_test.java:204) - Created expected JagEmail Object..
+[INFO ] 2016-10-04 10:49:06.107 [main] com.mycompany.firstproject.MailController.sendEmail(MailController.java:46) - Created SmtpServer
+[INFO ] 2016-10-04 10:49:06.107 [main] com.mycompany.firstproject.MailController.sendEmail(MailController.java:55) - Subject not found, defaulting to '(no subject)'
+[INFO ] 2016-10-04 10:49:06.107 [main] com.mycompany.firstproject.MailController.sendEmail(MailController.java:73) - Created JagEmail object
+[INFO ] 2016-10-04 10:49:06.107 [main] com.mycompany.firstproject.MailController.sendEmail(MailController.java:95) - attachment found, setting attachment in email
+[INFO ] 2016-10-04 10:49:06.107 [main] com.mycompany.firstproject.MailController.sendEmail(MailController.java:108) - Recipient TO found
+[INFO ] 2016-10-04 10:49:06.107 [main] com.mycompany.firstproject.MailController.sendEmail(MailController.java:120) - Recipient CC found
+[INFO ] 2016-10-04 10:49:06.107 [main] com.mycompany.firstproject.MailController.sendEmail(MailController.java:132) - Recipient BCC found
+[INFO ] 2016-10-04 10:49:07.576 [main] com.williamngo.test.TestSendEmail_Equals_test.sendEmail_test_assertTrue(TestSendEmail_Equals_test.java:202) - Created JagEmail object...
+[INFO ] 2016-10-04 10:49:07.576 [main] com.williamngo.test.TestSendEmail_Equals_test.createExpectedJagEmail(TestSendEmail_Equals_test.java:233) - Creating expected Jag Email...
+[INFO ] 2016-10-04 10:49:07.576 [main] com.williamngo.test.TestSendEmail_Equals_test.createExpectedJagEmail(TestSendEmail_Equals_test.java:266) - Setted values of expected JagEmail
+[INFO ] 2016-10-04 10:49:07.576 [main] com.williamngo.test.TestSendEmail_Equals_test.createExpectedJagEmail(TestSendEmail_Equals_test.java:283) - returning expected JagEmail...
+[INFO ] 2016-10-04 10:49:07.576 [main] com.williamngo.test.TestSendEmail_Equals_test.sendEmail_test_assertTrue(TestSendEmail_Equals_test.java:204) - Created expected JagEmail Object..
+[INFO ] 2016-10-04 10:49:07.576 [main] com.mycompany.firstproject.MailController.sendEmail(MailController.java:46) - Created SmtpServer
+[INFO ] 2016-10-04 10:49:07.576 [main] com.mycompany.firstproject.MailController.sendEmail(MailController.java:61) - Message found as null, defaulting to empty string
+[INFO ] 2016-10-04 10:49:07.576 [main] com.mycompany.firstproject.MailController.sendEmail(MailController.java:73) - Created JagEmail object
+[INFO ] 2016-10-04 10:49:07.576 [main] com.mycompany.firstproject.MailController.sendEmail(MailController.java:95) - attachment found, setting attachment in email
+[INFO ] 2016-10-04 10:49:07.576 [main] com.mycompany.firstproject.MailController.sendEmail(MailController.java:108) - Recipient TO found
+[INFO ] 2016-10-04 10:49:07.576 [main] com.mycompany.firstproject.MailController.sendEmail(MailController.java:120) - Recipient CC found
+[INFO ] 2016-10-04 10:49:07.576 [main] com.mycompany.firstproject.MailController.sendEmail(MailController.java:132) - Recipient BCC found
+[INFO ] 2016-10-04 10:49:08.959 [main] com.williamngo.test.TestSendEmail_Equals_test.sendEmail_test_assertTrue(TestSendEmail_Equals_test.java:202) - Created JagEmail object...
+[INFO ] 2016-10-04 10:49:08.959 [main] com.williamngo.test.TestSendEmail_Equals_test.createExpectedJagEmail(TestSendEmail_Equals_test.java:233) - Creating expected Jag Email...
+[INFO ] 2016-10-04 10:49:08.959 [main] com.williamngo.test.TestSendEmail_Equals_test.createExpectedJagEmail(TestSendEmail_Equals_test.java:266) - Setted values of expected JagEmail
+[INFO ] 2016-10-04 10:49:08.959 [main] com.williamngo.test.TestSendEmail_Equals_test.createExpectedJagEmail(TestSendEmail_Equals_test.java:283) - returning expected JagEmail...
+[INFO ] 2016-10-04 10:49:08.959 [main] com.williamngo.test.TestSendEmail_Equals_test.sendEmail_test_assertTrue(TestSendEmail_Equals_test.java:204) - Created expected JagEmail Object..
+[INFO ] 2016-10-04 10:49:08.959 [main] com.mycompany.firstproject.MailController.sendEmail(MailController.java:46) - Created SmtpServer
+[INFO ] 2016-10-04 10:49:08.959 [main] com.mycompany.firstproject.MailController.sendEmail(MailController.java:61) - Message found as null, defaulting to empty string
+[INFO ] 2016-10-04 10:49:08.959 [main] com.mycompany.firstproject.MailController.sendEmail(MailController.java:73) - Created JagEmail object
+[INFO ] 2016-10-04 10:49:08.959 [main] com.mycompany.firstproject.MailController.sendEmail(MailController.java:95) - attachment found, setting attachment in email
+[INFO ] 2016-10-04 10:49:08.959 [main] com.mycompany.firstproject.MailController.sendEmail(MailController.java:108) - Recipient TO found
+[INFO ] 2016-10-04 10:49:08.959 [main] com.mycompany.firstproject.MailController.sendEmail(MailController.java:120) - Recipient CC found
+[INFO ] 2016-10-04 10:49:08.959 [main] com.mycompany.firstproject.MailController.sendEmail(MailController.java:132) - Recipient BCC found
+[INFO ] 2016-10-04 10:49:10.364 [main] com.williamngo.test.TestSendEmail_Equals_test.sendEmail_test_assertTrue(TestSendEmail_Equals_test.java:202) - Created JagEmail object...
+[INFO ] 2016-10-04 10:49:10.364 [main] com.williamngo.test.TestSendEmail_Equals_test.createExpectedJagEmail(TestSendEmail_Equals_test.java:233) - Creating expected Jag Email...
+[INFO ] 2016-10-04 10:49:10.364 [main] com.williamngo.test.TestSendEmail_Equals_test.createExpectedJagEmail(TestSendEmail_Equals_test.java:266) - Setted values of expected JagEmail
+[INFO ] 2016-10-04 10:49:10.364 [main] com.williamngo.test.TestSendEmail_Equals_test.createExpectedJagEmail(TestSendEmail_Equals_test.java:283) - returning expected JagEmail...
+[INFO ] 2016-10-04 10:49:10.364 [main] com.williamngo.test.TestSendEmail_Equals_test.sendEmail_test_assertTrue(TestSendEmail_Equals_test.java:204) - Created expected JagEmail Object..
+[INFO ] 2016-10-04 10:49:10.364 [main] com.mycompany.firstproject.MailController.sendEmail(MailController.java:46) - Created SmtpServer
+[INFO ] 2016-10-04 10:49:10.364 [main] com.mycompany.firstproject.MailController.sendEmail(MailController.java:73) - Created JagEmail object
+[INFO ] 2016-10-04 10:49:10.364 [main] com.mycompany.firstproject.MailController.sendEmail(MailController.java:108) - Recipient TO found
+[INFO ] 2016-10-04 10:49:10.364 [main] com.mycompany.firstproject.MailController.sendEmail(MailController.java:120) - Recipient CC found
+[INFO ] 2016-10-04 10:49:10.364 [main] com.mycompany.firstproject.MailController.sendEmail(MailController.java:132) - Recipient BCC found
+[INFO ] 2016-10-04 10:49:11.301 [main] com.williamngo.test.TestSendEmail_Equals_test.sendEmail_test_assertTrue(TestSendEmail_Equals_test.java:202) - Created JagEmail object...
+[INFO ] 2016-10-04 10:49:11.301 [main] com.williamngo.test.TestSendEmail_Equals_test.createExpectedJagEmail(TestSendEmail_Equals_test.java:233) - Creating expected Jag Email...
+[INFO ] 2016-10-04 10:49:11.301 [main] com.williamngo.test.TestSendEmail_Equals_test.createExpectedJagEmail(TestSendEmail_Equals_test.java:266) - Setted values of expected JagEmail
+[INFO ] 2016-10-04 10:49:11.301 [main] com.williamngo.test.TestSendEmail_Equals_test.createExpectedJagEmail(TestSendEmail_Equals_test.java:283) - returning expected JagEmail...
+[INFO ] 2016-10-04 10:49:11.301 [main] com.williamngo.test.TestSendEmail_Equals_test.sendEmail_test_assertTrue(TestSendEmail_Equals_test.java:204) - Created expected JagEmail Object..
+[INFO ] 2016-10-04 10:49:11.301 [main] com.mycompany.firstproject.MailController.sendEmail(MailController.java:46) - Created SmtpServer
+[INFO ] 2016-10-04 10:49:11.301 [main] com.mycompany.firstproject.MailController.sendEmail(MailController.java:73) - Created JagEmail object
+[INFO ] 2016-10-04 10:49:11.301 [main] com.mycompany.firstproject.MailController.sendEmail(MailController.java:95) - attachment found, setting attachment in email
+[INFO ] 2016-10-04 12:11:56.779 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:45) - Created SmtpServer
+[INFO ] 2016-10-04 12:11:56.794 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:71) - Created JagEmail object
+[INFO ] 2016-10-04 12:11:56.794 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:93) - attachment found, setting attachment in email
+[INFO ] 2016-10-04 12:11:56.810 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:106) - Recipient TO found
+[INFO ] 2016-10-04 12:11:56.810 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:116) - Recipient CC found
+[INFO ] 2016-10-04 12:11:56.810 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:124) - Recipient BCC found
+[INFO ] 2016-10-04 12:12:12.142 [main] com.williamngo.JagEmail.MailerImpl.convertBean(MailerImpl.java:214) - successfully converted ReceivedEmail to JagEmail
+[INFO ] 2016-10-04 12:12:31.671 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:45) - Created SmtpServer
+[INFO ] 2016-10-04 12:12:31.687 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:71) - Created JagEmail object
+[INFO ] 2016-10-04 12:12:31.687 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:93) - attachment found, setting attachment in email
+[INFO ] 2016-10-04 12:12:31.702 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:106) - Recipient TO found
+[INFO ] 2016-10-04 12:12:31.702 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:116) - Recipient CC found
+[INFO ] 2016-10-04 12:12:31.702 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:124) - Recipient BCC found
+[INFO ] 2016-10-04 12:12:52.278 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:45) - Created SmtpServer
+[INFO ] 2016-10-04 12:12:52.294 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:71) - Created JagEmail object
+[INFO ] 2016-10-04 12:12:52.294 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:93) - attachment found, setting attachment in email
+[INFO ] 2016-10-04 12:12:52.294 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:106) - Recipient TO found
+[INFO ] 2016-10-04 12:12:52.294 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:116) - Recipient CC found
+[INFO ] 2016-10-04 12:12:52.294 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:124) - Recipient BCC found
+[INFO ] 2016-10-04 12:12:56.855 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:45) - Created SmtpServer
+[INFO ] 2016-10-04 12:12:56.871 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:71) - Created JagEmail object
+[INFO ] 2016-10-04 12:12:56.871 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:93) - attachment found, setting attachment in email
+[INFO ] 2016-10-04 12:12:56.871 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:106) - Recipient TO found
+[INFO ] 2016-10-04 12:12:56.871 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:116) - Recipient CC found
+[INFO ] 2016-10-04 12:12:56.871 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:124) - Recipient BCC found
+[INFO ] 2016-10-04 12:31:03.193 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:45) - Created SmtpServer
+[INFO ] 2016-10-04 12:31:03.225 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:71) - Created JagEmail object
+[INFO ] 2016-10-04 12:31:03.225 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:93) - attachment found, setting attachment in email
+[INFO ] 2016-10-04 12:31:03.256 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:106) - Recipient TO found
+[INFO ] 2016-10-04 12:31:03.256 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:116) - Recipient CC found
+[INFO ] 2016-10-04 12:31:03.256 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:124) - Recipient BCC found
+[INFO ] 2016-10-04 12:32:09.413 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:45) - Created SmtpServer
+[INFO ] 2016-10-04 12:32:09.460 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:71) - Created JagEmail object
+[INFO ] 2016-10-04 12:32:09.460 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:93) - attachment found, setting attachment in email
+[INFO ] 2016-10-04 12:32:09.491 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:106) - Recipient TO found
+[INFO ] 2016-10-04 12:32:09.491 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:116) - Recipient CC found
+[INFO ] 2016-10-04 12:32:09.491 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:124) - Recipient BCC found
+[INFO ] 2016-10-04 12:33:00.351 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:45) - Created SmtpServer
+[INFO ] 2016-10-04 12:33:00.398 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:71) - Created JagEmail object
+[INFO ] 2016-10-04 12:33:00.398 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:93) - attachment found, setting attachment in email
+[INFO ] 2016-10-04 12:33:00.429 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:106) - Recipient TO found
+[INFO ] 2016-10-04 12:33:00.429 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:116) - Recipient CC found
+[INFO ] 2016-10-04 12:33:00.429 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:124) - Recipient BCC found
+[INFO ] 2016-10-04 12:35:45.976 [main] com.williamngo.JagEmail.MailerImpl.convertBean(MailerImpl.java:214) - successfully converted ReceivedEmail to JagEmail
+[INFO ] 2016-10-04 12:37:31.533 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:45) - Created SmtpServer
+[INFO ] 2016-10-04 12:37:31.580 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:71) - Created JagEmail object
+[INFO ] 2016-10-04 12:37:31.580 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:93) - attachment found, setting attachment in email
+[INFO ] 2016-10-04 12:37:31.611 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:106) - Recipient TO found
+[INFO ] 2016-10-04 12:37:31.611 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:116) - Recipient CC found
+[INFO ] 2016-10-04 12:37:31.611 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:124) - Recipient BCC found

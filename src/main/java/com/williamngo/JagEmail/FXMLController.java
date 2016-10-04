@@ -1,4 +1,4 @@
-package com.mycompany.firstproject;
+package com.williamngo.JagEmail;
 
 import java.net.URL;
 import java.util.ResourceBundle;

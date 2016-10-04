@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: com.williamngo.test.TestJagEmail
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 228.623 sec <<< FAILURE! - in com.williamngo.test.TestJagEmail
+JagEmailTesting[0](com.williamngo.test.TestJagEmail)  Time elapsed: 228.185 sec  <<< ERROR!
+java.lang.NullPointerException
+	at com.williamngo.test.TestJagEmail.JagEmailTesting(TestJagEmail.java:180)
+

@@ -1,17 +1,14 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package com.mycompany.firstproject;
+package com.williamngo.JagEmail;
 
 import java.util.*;
 import jodd.mail.*;
 import javax.mail.*;
 
 /**
- *
+ * JagEmail object
+ * 
  * @author William Ngo
+ * @version 2016/04/10
  */
 public class JagEmail extends Email{
     private String folder;

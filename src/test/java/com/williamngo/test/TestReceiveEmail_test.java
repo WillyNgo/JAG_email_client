@@ -5,9 +5,9 @@
  */
 package com.williamngo.test;
 
-import com.mycompany.firstproject.ConfigBean;
-import com.mycompany.firstproject.JagEmail;
-import com.mycompany.firstproject.MailController;
+import com.williamngo.JagEmail.ConfigBean;
+import com.williamngo.JagEmail.JagEmail;
+import com.williamngo.JagEmail.MailerImpl;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Optional;
@@ -23,7 +23,7 @@ import org.slf4j.*;
  * @author 1435707
  */
 @RunWith(Parameterized.class)
-public class ReceiveEmail_test {
+public class TestReceiveEmail_test {
 
     private final Logger log = LoggerFactory.getLogger(getClass().getName());
     ConfigBean cfg;
@@ -36,7 +36,7 @@ public class ReceiveEmail_test {
     String embedded;
     String attachment;
 
-    public ReceiveEmail_test(
+    public TestReceiveEmail_test(
             ConfigBean cfg,
             Optional<String> emailReceive,
             Optional<String> emailCC,
@@ -81,7 +81,7 @@ public class ReceiveEmail_test {
     @Test
     public void receiveEmail_test_notNull()
     {
-        MailController m = new MailController(cfg);
+        MailerImpl m = new MailerImpl(cfg);
         JagEmail myEmail = m.sendEmail(emailReceive, emailCC, emailBCC, subject, text, html, embedded, attachment);
         
         // Add a five second pause to allow the Gmail server to receive what has
@@ -94,7 +94,7 @@ public class ReceiveEmail_test {
          }
          
          //sets configBean to pass information of the receiving account
-         m = new MailController(new ConfigBean("userName", "smtp.gmail.com", "imap.gmail.com", "williamngoreceive@gmail.com", "receiveanemail", 465, 993));
+         m = new MailerImpl(new ConfigBean("userName", "smtp.gmail.com", "imap.gmail.com", "williamngoreceive@gmail.com", "receiveanemail", 465, 993));
          
         JagEmail[] receivedEmails = m.receiveEmail();
         assertNotNull(receivedEmails);
@@ -103,7 +103,7 @@ public class ReceiveEmail_test {
     @Test
     public void receiveEmail_test_Null()
     {
-        MailController m = new MailController(cfg);
+        MailerImpl m = new MailerImpl(cfg);
         //JagEmail myEmail = m.sendEmail(emailReceive, emailCC, emailBCC, subject, text, html, embedded, attachment);
         
         // Add a five second pause to allow the Gmail server to receive what has
@@ -115,7 +115,7 @@ public class ReceiveEmail_test {
          }
          
          //sets configBean to pass information of the receiving account
-         m = new MailController(new ConfigBean("userName", "smtp.gmail.com", "imap.gmail.com", "williamngoreceive@gmail.com", "receiveanemail", 465, 993));
+         m = new MailerImpl(new ConfigBean("userName", "smtp.gmail.com", "imap.gmail.com", "williamngoreceive@gmail.com", "receiveanemail", 465, 993));
          
          JagEmail[] receivedNullEmails = m.receiveEmail();
          assertNull(receivedNullEmails);

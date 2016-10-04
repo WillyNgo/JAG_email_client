@@ -1,13 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.williamngo.test;
 
-import com.mycompany.firstproject.ConfigBean;
-import com.mycompany.firstproject.JagEmail;
-import com.mycompany.firstproject.MailController;
+import com.williamngo.JagEmail.ConfigBean;
+import com.williamngo.JagEmail.JagEmail;
+import com.williamngo.JagEmail.MailerImpl;
 import java.io.File;
 import java.util.Arrays;
 import java.util.Collection;
@@ -33,7 +28,7 @@ import org.slf4j.LoggerFactory;
  * @author William Ngo
  */
 @RunWith(Parameterized.class)
-public class SendEmail_Equals_test {
+public class TestJagEmail {
 
     private final Logger log = LoggerFactory.getLogger(getClass().getName());
     ConfigBean cfg;
@@ -46,7 +41,7 @@ public class SendEmail_Equals_test {
     String embedded;
     String attachment;
 
-    public SendEmail_Equals_test(
+    public TestJagEmail(
             ConfigBean cfg,
             Optional<String> emailReceive,
             Optional<String> emailCC,
@@ -66,30 +61,6 @@ public class SendEmail_Equals_test {
         this.embedded = embedded;
         this.attachment = attachment;
     }
-
-    /*
-    @BeforeClass
-    public static void setUpClass() 
-    {
-    
-    }
-    
-    @AfterClass
-    public static void tearDownClass() {
-    }
-    
-    @Before
-    public void setUp() 
-    {
-    
-    }
-    
-    @After
-    public void tearDown() 
-    {
-    
-    }
-     */
     
     /**
      * Contains data for testing. Note: all the embed fields are null because it
@@ -102,7 +73,8 @@ public class SendEmail_Equals_test {
     public static Collection<Object[]> data() {
         //Messaged used in the body of the email
         String msg = "Here is some text";
-        return Arrays.asList(new Object[][]{
+        return Arrays.asList(new Object[][]
+        {
             {
                 new ConfigBean("userName", "smtp.gmail.com", "imap.gmail.com", "williamngosend@gmail.com", "sendanemail", 465, 993),
                 Optional.of("williamngoreceive@gmail.com"),
@@ -113,7 +85,8 @@ public class SendEmail_Equals_test {
                 "<html><body><h1>" + msg + "</h1></body></html>",
                 null,
                 "pictures\\kimagura.jpg"
-            },
+            }
+                /*,
             //Testing for null in the to
             {
                 new ConfigBean("userName", "smtp.gmail.com", "imap.gmail.com", "williamngosend@gmail.com", "sendanemail", 465, 993),
@@ -186,16 +159,35 @@ public class SendEmail_Equals_test {
                 null,
                 null
             }
-        }
+                */
+           }
         );
     }
-
-    /**
-     * This method tests for cases that sends an email
-     */
+    
     @Test
+    public void JagEmailTesting()
+    {
+        MailerImpl m = new MailerImpl(cfg);
+        
+        JagEmail sendingEmail = m.sendEmail(emailReceive, emailCC, emailBCC, subject, text, html, embedded, attachment);
+        
+        cfg.setEmailAddress("williamngoreceive@gmail.com");
+        cfg.setEmailAddressPwd("receiveanemail");
+        
+        JagEmail[] receivedEmail = m.receiveEmail();
+        JagEmail receivingEmail = receivedEmail[0];
+        
+        assertTrue(sendingEmail.equals(receivingEmail));
+    }
+    
+    
+    
+    
+    /**
+
+    //@Test
     public void sendEmail_test_assertTrue() {
-        MailController m = new MailController(cfg);
+        MailerImpl m = new MailerImpl(cfg);
 
         
         JagEmail myEmail = m.sendEmail(emailReceive, emailCC, emailBCC, subject, text, html, embedded, attachment);
@@ -205,12 +197,10 @@ public class SendEmail_Equals_test {
         assertTrue(myEmail.equals(expectedEmail));
     }
     
-    /**
-     * This tests for cases that sends an email. Checks when an email is not equal
-     */
+    //@Test
     public void sendEmail_test_assertFalse()
     {
-        MailController m = new MailController(cfg);
+        MailerImpl m = new MailerImpl(cfg);
         
         JagEmail myEmail = m.sendEmail(emailReceive, emailCC, emailBCC, subject, text, html, embedded, attachment);
         log.info("Created JagEmail Object");
@@ -222,13 +212,7 @@ public class SendEmail_Equals_test {
         assertFalse(myEmail.equals(differentEmail));
     }
     
-    /**
-     * Creates a JagEmail object that contains the same information as the
-     * JagEmail that is in the Collection<Object> Data. Used to assertTrue or assertFalse
-     * on two identical email
-     *
-     * @return expected - The JagEmail that is expected to be equal to
-     */
+
     public JagEmail createExpectedJagEmail() {
         log.info("Creating expected Jag Email...");
         //JagEmail object to be compared with
@@ -283,4 +267,5 @@ public class SendEmail_Equals_test {
         log.info("returning expected JagEmail...");
         return expected;
     }
+    */
 }

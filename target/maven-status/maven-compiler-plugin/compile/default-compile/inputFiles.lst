@@ -1,5 +1,5 @@
-C:\Users\1435707\Desktop\JagEmail_Client\src\main\java\com\mycompany\firstproject\MailController.java
-C:\Users\1435707\Desktop\JagEmail_Client\src\main\java\com\mycompany\firstproject\IMailer.java
-C:\Users\1435707\Desktop\JagEmail_Client\src\main\java\com\mycompany\firstproject\JagEmail.java
-C:\Users\1435707\Desktop\JagEmail_Client\src\main\java\com\mycompany\firstproject\ConfigBean.java
-C:\Users\1435707\Desktop\JagEmail_Client\src\main\java\com\mycompany\firstproject\FXMLController.java
+C:\Users\1435707\Desktop\JagEmail_Client\src\main\java\com\williamngo\JagEmail\FXMLController.java
+C:\Users\1435707\Desktop\JagEmail_Client\src\main\java\com\williamngo\JagEmail\MailerImpl.java
+C:\Users\1435707\Desktop\JagEmail_Client\src\main\java\com\williamngo\JagEmail\ConfigBean.java
+C:\Users\1435707\Desktop\JagEmail_Client\src\main\java\com\williamngo\JagEmail\JagEmail.java
+C:\Users\1435707\Desktop\JagEmail_Client\src\main\java\com\williamngo\interfaces\Mailer.java

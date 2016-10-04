@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: com.williamngo.test.TestReceiveEmail_test
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 42.406 sec <<< FAILURE! - in com.williamngo.test.TestReceiveEmail_test
+receiveEmail_test_Null[0](com.williamngo.test.TestReceiveEmail_test)  Time elapsed: 32.938 sec  <<< FAILURE!
+java.lang.AssertionError: expected null, but was:<[Lcom.mycompany.firstproject.JagEmail;@16610890>
+	at com.williamngo.test.TestReceiveEmail_test.receiveEmail_test_Null(TestReceiveEmail_test.java:121)
+

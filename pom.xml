@@ -7,7 +7,7 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>firstproject</name>
+    <name>JagEmail</name>
 
     <!-- Global settings for the project. Settings can be accessed in the pom
     by placing the tag name in ${...} ex. ${mainClass} -->

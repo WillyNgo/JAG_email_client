@@ -1,5 +1,5 @@
-com\mycompany\firstproject\FXMLController.class
-com\mycompany\firstproject\IMailer.class
-com\mycompany\firstproject\MailController.class
-com\mycompany\firstproject\ConfigBean.class
-com\mycompany\firstproject\JagEmail.class
+com\williamngo\JagEmail\ConfigBean.class
+com\williamngo\interfaces\Mailer.class
+com\williamngo\JagEmail\MailerImpl.class
+com\williamngo\JagEmail\JagEmail.class
+com\williamngo\JagEmail\FXMLController.class

@@ -1,13 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.williamngo.test;
 
-import com.mycompany.firstproject.ConfigBean;
-import com.mycompany.firstproject.JagEmail;
-import com.mycompany.firstproject.MailController;
+import com.williamngo.JagEmail.ConfigBean;
+import com.williamngo.JagEmail.JagEmail;
+import com.williamngo.JagEmail.MailerImpl;
 import java.io.File;
 import java.util.Arrays;
 import java.util.Collection;
@@ -31,7 +26,7 @@ import org.slf4j.LoggerFactory;
  * @author William Ngo
  */
 @RunWith(Parameterized.class)
-public class SendEmail_iae_test {
+public class TestSendEmail_iae_test {
 
     //private final Logger log = LoggerFactory.getLogger(getClass().getName());
     ConfigBean cfg;
@@ -44,7 +39,7 @@ public class SendEmail_iae_test {
     String embedded;
     String attachment;
 
-    public SendEmail_iae_test(
+    public TestSendEmail_iae_test(
             ConfigBean cfg,
             Optional<String> emailReceive,
             Optional<String> emailCC,
@@ -125,7 +120,7 @@ public class SendEmail_iae_test {
     @Test(expected=IllegalArgumentException.class)
     public void sendEmail_test_noRecipient()
     {
-        MailController m = new MailController(cfg);
+        MailerImpl m = new MailerImpl(cfg);
         JagEmail myEmail = m.sendEmail(Optional.ofNullable(null), Optional.ofNullable(null), Optional.ofNullable(null), subject, text, html, embedded, attachment);
     }
 }
