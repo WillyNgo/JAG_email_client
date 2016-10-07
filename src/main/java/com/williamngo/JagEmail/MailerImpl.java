@@ -22,6 +22,7 @@ import jodd.mail.*;
 public class MailerImpl implements Mailer {
     private final Logger log = LoggerFactory.getLogger(getClass().getName());
     private ConfigBean configBean;
+    private boolean containsEmbed = false;
     
     public MailerImpl(ConfigBean c)
     {
@@ -80,6 +81,7 @@ public class MailerImpl implements Mailer {
         //Checks for attachments
         if(embedded != null)
         {
+            containsEmbed = true;
             log.info("embedded found, setting embedded in email");
             String[] embedStrArray = embedded.split(",");
             for(String e : embedStrArray)
@@ -137,6 +139,13 @@ public class MailerImpl implements Mailer {
         
         //Solution for embedded attachment
         //if there is embedded, set it back
+        if(containsEmbed == true)
+        {
+            log.info("embedded found, setting embedded back to email");
+            String[] embedStrArray = embedded.split(",");
+            for(String e : embedStrArray)
+                email.embed(EmailAttachment.attachment().bytes(new File(e)));
+        }
         
         session.close();
         
@@ -194,21 +203,36 @@ public class MailerImpl implements Mailer {
     private JagEmail[] convertBean(ReceivedEmail[] r)
     {
         JagEmail[] myEmailArray = new JagEmail[r.length];
-        int e = myEmailArray.length;
+        //int e = myEmailArray.length;
         for(int i = 0; i < r.length; i++)
         {
             myEmailArray[i] = new JagEmail();
+            myEmailArray[i].setTo(r[i].getTo());
+            myEmailArray[i].setFrom(r[i].getFrom());
             myEmailArray[i].setBcc(r[i].getBcc());
             myEmailArray[i].setCc(r[i].getCc());
             myEmailArray[i].setAttachedMessages(r[i].getAttachedMessages());
-            
-            if(r[i].getAttachments() != null)
-                myEmailArray[i].setEmailAttachment(new ArrayList<>(r[i].getAttachments()));
+            myEmailArray[i].setSubject(r[i].getSubject());
             myEmailArray[i].setFlags(r[i].getFlags());
-            //Message number not used currently
-            //myEmailArray[i].setMessageNumber(r[i].getMessageNumber());
             myEmailArray[i].setReceiveDate(r[i].getReceiveDate());
             myEmailArray[i].setFolder("Inbox");
+            //Message number not used currently
+            //myEmailArray[i].setMessageNumber(r[i].getMessageNumber());
+            
+            //Get messages
+            if(r[i].getAttachments() != null)
+                myEmailArray[i].setEmailAttachment(new ArrayList<>(r[i].getAttachments()));
+            
+            //Get content of messages
+            List<EmailMessage> content = r[i].getAllMessages();
+            for(int j = 0; j < content.size(); j++)
+            {
+                //Check if message is plain text or html, then set correct type
+                if(content.get(j).getMimeType().equalsIgnoreCase("TEXT/PLAIN"))
+                    myEmailArray[i].addText(content.get(j).getContent().replace("\n", "").replace("\r", ""));
+                else if(content.get(j).getMimeType().equalsIgnoreCase("TEXT/HTML"))
+                    myEmailArray[i].addText(content.get(j).getContent().replace("\n", "").replace("\r", ""));
+            } 
         }
         
         log.info("successfully converted ReceivedEmail to JagEmail");

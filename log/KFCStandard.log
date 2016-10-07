@@ -133,3 +133,170 @@
 [INFO ] 2016-10-04 12:37:31.611 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:106) - Recipient TO found
 [INFO ] 2016-10-04 12:37:31.611 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:116) - Recipient CC found
 [INFO ] 2016-10-04 12:37:31.611 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:124) - Recipient BCC found
+[INFO ] 2016-10-07 10:20:21.963 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:45) - Created SmtpServer
+[INFO ] 2016-10-07 10:20:21.963 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:71) - Created JagEmail object
+[INFO ] 2016-10-07 10:20:21.963 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:93) - attachment found, setting attachment in email
+[INFO ] 2016-10-07 10:20:21.979 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:106) - Recipient TO found
+[INFO ] 2016-10-07 10:20:21.979 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:116) - Recipient CC found
+[INFO ] 2016-10-07 10:20:21.979 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:124) - Recipient BCC found
+[INFO ] 2016-10-07 10:20:28.963 [main] com.williamngo.JagEmail.MailerImpl.convertBean(MailerImpl.java:214) - successfully converted ReceivedEmail to JagEmail
+[INFO ] 2016-10-07 10:20:35.963 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:45) - Created SmtpServer
+[INFO ] 2016-10-07 10:20:35.963 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:71) - Created JagEmail object
+[INFO ] 2016-10-07 10:20:35.963 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:93) - attachment found, setting attachment in email
+[INFO ] 2016-10-07 10:20:35.963 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:106) - Recipient TO found
+[INFO ] 2016-10-07 10:20:43.622 [main] com.williamngo.JagEmail.MailerImpl.convertBean(MailerImpl.java:214) - successfully converted ReceivedEmail to JagEmail
+[INFO ] 2016-10-07 10:20:43.685 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:45) - Created SmtpServer
+[INFO ] 2016-10-07 10:25:18.409 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:45) - Created SmtpServer
+[INFO ] 2016-10-07 10:25:18.441 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:71) - Created JagEmail object
+[INFO ] 2016-10-07 10:25:18.441 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:93) - attachment found, setting attachment in email
+[INFO ] 2016-10-07 10:25:18.472 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:106) - Recipient TO found
+[INFO ] 2016-10-07 10:25:18.472 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:116) - Recipient CC found
+[INFO ] 2016-10-07 10:25:18.472 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:124) - Recipient BCC found
+[INFO ] 2016-10-07 10:25:40.724 [main] com.williamngo.JagEmail.MailerImpl.convertBean(MailerImpl.java:214) - successfully converted ReceivedEmail to JagEmail
+[INFO ] 2016-10-07 10:29:36.704 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:45) - Created SmtpServer
+[INFO ] 2016-10-07 10:29:36.735 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:71) - Created JagEmail object
+[INFO ] 2016-10-07 10:29:36.735 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:93) - attachment found, setting attachment in email
+[INFO ] 2016-10-07 10:29:36.766 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:106) - Recipient TO found
+[INFO ] 2016-10-07 10:29:36.766 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:116) - Recipient CC found
+[INFO ] 2016-10-07 10:29:36.766 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:124) - Recipient BCC found
+[INFO ] 2016-10-07 10:32:20.924 [main] com.williamngo.JagEmail.MailerImpl.convertBean(MailerImpl.java:214) - successfully converted ReceivedEmail to JagEmail
+[INFO ] 2016-10-07 10:34:06.623 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:45) - Created SmtpServer
+[INFO ] 2016-10-07 10:34:06.654 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:71) - Created JagEmail object
+[INFO ] 2016-10-07 10:34:06.654 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:93) - attachment found, setting attachment in email
+[INFO ] 2016-10-07 10:34:06.686 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:106) - Recipient TO found
+[INFO ] 2016-10-07 10:34:06.686 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:116) - Recipient CC found
+[INFO ] 2016-10-07 10:34:06.686 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:124) - Recipient BCC found
+[INFO ] 2016-10-07 10:34:46.975 [main] com.williamngo.JagEmail.MailerImpl.convertBean(MailerImpl.java:215) - successfully converted ReceivedEmail to JagEmail
+[INFO ] 2016-10-07 10:37:39.736 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:45) - Created SmtpServer
+[INFO ] 2016-10-07 10:37:39.768 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:71) - Created JagEmail object
+[INFO ] 2016-10-07 10:37:39.768 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:93) - attachment found, setting attachment in email
+[INFO ] 2016-10-07 10:37:46.914 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:106) - Recipient TO found
+[INFO ] 2016-10-07 10:37:47.816 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:116) - Recipient CC found
+[INFO ] 2016-10-07 10:37:48.691 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:124) - Recipient BCC found
+[INFO ] 2016-10-07 10:46:13.245 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:45) - Created SmtpServer
+[INFO ] 2016-10-07 10:46:13.260 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:71) - Created JagEmail object
+[INFO ] 2016-10-07 10:46:13.260 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:93) - attachment found, setting attachment in email
+[INFO ] 2016-10-07 10:46:13.260 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:106) - Recipient TO found
+[INFO ] 2016-10-07 10:46:13.260 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:116) - Recipient CC found
+[INFO ] 2016-10-07 10:46:13.260 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:124) - Recipient BCC found
+[INFO ] 2016-10-07 10:46:23.009 [main] com.williamngo.JagEmail.MailerImpl.convertBean(MailerImpl.java:215) - successfully converted ReceivedEmail to JagEmail
+[INFO ] 2016-10-07 10:48:41.085 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:45) - Created SmtpServer
+[INFO ] 2016-10-07 10:48:41.117 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:71) - Created JagEmail object
+[INFO ] 2016-10-07 10:48:41.117 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:93) - attachment found, setting attachment in email
+[INFO ] 2016-10-07 10:48:48.073 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:106) - Recipient TO found
+[INFO ] 2016-10-07 10:48:49.344 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:116) - Recipient CC found
+[INFO ] 2016-10-07 10:48:50.810 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:124) - Recipient BCC found
+[INFO ] 2016-10-07 10:51:06.887 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:46) - Created SmtpServer
+[INFO ] 2016-10-07 10:51:06.919 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:72) - Created JagEmail object
+[INFO ] 2016-10-07 10:51:06.919 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:95) - attachment found, setting attachment in email
+[INFO ] 2016-10-07 10:51:06.950 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:108) - Recipient TO found
+[INFO ] 2016-10-07 10:51:06.950 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:118) - Recipient CC found
+[INFO ] 2016-10-07 10:51:06.965 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:126) - Recipient BCC found
+[INFO ] 2016-10-07 10:52:10.925 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:46) - Created SmtpServer
+[INFO ] 2016-10-07 10:52:10.956 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:72) - Created JagEmail object
+[INFO ] 2016-10-07 10:52:42.876 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:95) - attachment found, setting attachment in email
+[INFO ] 2016-10-07 10:52:45.340 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:108) - Recipient TO found
+[INFO ] 2016-10-07 10:52:46.608 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:118) - Recipient CC found
+[INFO ] 2016-10-07 10:52:47.793 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:126) - Recipient BCC found
+[INFO ] 2016-10-07 10:54:59.054 [main] com.williamngo.JagEmail.MailerImpl.convertBean(MailerImpl.java:224) - successfully converted ReceivedEmail to JagEmail
+[INFO ] 2016-10-07 11:01:11.443 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:46) - Created SmtpServer
+[INFO ] 2016-10-07 11:01:11.489 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:72) - Created JagEmail object
+[INFO ] 2016-10-07 11:01:12.181 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:95) - attachment found, setting attachment in email
+[INFO ] 2016-10-07 11:01:13.622 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:108) - Recipient TO found
+[INFO ] 2016-10-07 11:01:14.722 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:118) - Recipient CC found
+[INFO ] 2016-10-07 11:01:34.183 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:126) - Recipient BCC found
+[INFO ] 2016-10-07 11:27:46.864 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:46) - Created SmtpServer
+[INFO ] 2016-10-07 11:27:46.895 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:72) - Created JagEmail object
+[INFO ] 2016-10-07 11:27:48.349 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:95) - attachment found, setting attachment in email
+[INFO ] 2016-10-07 11:27:49.583 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:108) - Recipient TO found
+[INFO ] 2016-10-07 11:27:50.458 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:118) - Recipient CC found
+[INFO ] 2016-10-07 11:27:51.333 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:126) - Recipient BCC found
+[INFO ] 2016-10-07 11:28:40.814 [main] com.williamngo.JagEmail.MailerImpl.convertBean(MailerImpl.java:238) - successfully converted ReceivedEmail to JagEmail
+[INFO ] 2016-10-07 11:32:30.241 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:46) - Created SmtpServer
+[INFO ] 2016-10-07 11:32:30.257 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:72) - Created JagEmail object
+[INFO ] 2016-10-07 11:32:30.257 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:95) - attachment found, setting attachment in email
+[INFO ] 2016-10-07 11:32:30.257 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:108) - Recipient TO found
+[INFO ] 2016-10-07 11:32:30.273 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:118) - Recipient CC found
+[INFO ] 2016-10-07 11:32:30.273 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:126) - Recipient BCC found
+[INFO ] 2016-10-07 11:32:38.986 [main] com.williamngo.JagEmail.MailerImpl.convertBean(MailerImpl.java:238) - successfully converted ReceivedEmail to JagEmail
+[INFO ] 2016-10-07 11:34:22.351 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:46) - Created SmtpServer
+[INFO ] 2016-10-07 11:34:22.351 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:72) - Created JagEmail object
+[INFO ] 2016-10-07 11:34:22.351 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:95) - attachment found, setting attachment in email
+[INFO ] 2016-10-07 11:34:22.366 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:108) - Recipient TO found
+[INFO ] 2016-10-07 11:34:22.366 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:118) - Recipient CC found
+[INFO ] 2016-10-07 11:34:22.366 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:126) - Recipient BCC found
+[INFO ] 2016-10-07 11:34:31.474 [main] com.williamngo.JagEmail.MailerImpl.convertBean(MailerImpl.java:238) - successfully converted ReceivedEmail to JagEmail
+[INFO ] 2016-10-07 11:35:07.436 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:46) - Created SmtpServer
+[INFO ] 2016-10-07 11:35:07.452 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:72) - Created JagEmail object
+[INFO ] 2016-10-07 11:35:07.452 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:95) - attachment found, setting attachment in email
+[INFO ] 2016-10-07 11:35:07.452 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:108) - Recipient TO found
+[INFO ] 2016-10-07 11:35:07.452 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:118) - Recipient CC found
+[INFO ] 2016-10-07 11:35:07.452 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:126) - Recipient BCC found
+[INFO ] 2016-10-07 11:35:22.960 [main] com.williamngo.JagEmail.MailerImpl.convertBean(MailerImpl.java:238) - successfully converted ReceivedEmail to JagEmail
+[INFO ] 2016-10-07 11:36:17.572 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:46) - Created SmtpServer
+[INFO ] 2016-10-07 11:36:17.587 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:72) - Created JagEmail object
+[INFO ] 2016-10-07 11:36:17.587 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:95) - attachment found, setting attachment in email
+[INFO ] 2016-10-07 11:36:17.587 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:108) - Recipient TO found
+[INFO ] 2016-10-07 11:36:17.587 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:118) - Recipient CC found
+[INFO ] 2016-10-07 11:36:17.587 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:126) - Recipient BCC found
+[INFO ] 2016-10-07 11:36:25.986 [main] com.williamngo.JagEmail.MailerImpl.convertBean(MailerImpl.java:238) - successfully converted ReceivedEmail to JagEmail
+[INFO ] 2016-10-07 11:40:23.481 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:46) - Created SmtpServer
+[INFO ] 2016-10-07 11:40:23.481 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:72) - Created JagEmail object
+[INFO ] 2016-10-07 11:40:23.481 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:95) - attachment found, setting attachment in email
+[INFO ] 2016-10-07 11:40:23.496 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:108) - Recipient TO found
+[INFO ] 2016-10-07 11:40:23.496 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:118) - Recipient CC found
+[INFO ] 2016-10-07 11:40:23.496 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:126) - Recipient BCC found
+[INFO ] 2016-10-07 11:40:32.417 [main] com.williamngo.JagEmail.MailerImpl.convertBean(MailerImpl.java:238) - successfully converted ReceivedEmail to JagEmail
+[INFO ] 2016-10-07 11:40:32.495 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:46) - Created SmtpServer
+[INFO ] 2016-10-07 11:40:32.495 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:72) - Created JagEmail object
+[INFO ] 2016-10-07 11:40:32.495 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:95) - attachment found, setting attachment in email
+[INFO ] 2016-10-07 11:40:32.495 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:118) - Recipient CC found
+[INFO ] 2016-10-07 11:40:32.495 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:126) - Recipient BCC found
+[INFO ] 2016-10-07 11:41:04.209 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:46) - Created SmtpServer
+[INFO ] 2016-10-07 11:41:04.224 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:72) - Created JagEmail object
+[INFO ] 2016-10-07 11:41:04.224 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:95) - attachment found, setting attachment in email
+[INFO ] 2016-10-07 11:41:04.240 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:108) - Recipient TO found
+[INFO ] 2016-10-07 11:41:04.240 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:118) - Recipient CC found
+[INFO ] 2016-10-07 11:41:04.240 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:126) - Recipient BCC found
+[INFO ] 2016-10-07 11:41:12.335 [main] com.williamngo.JagEmail.MailerImpl.convertBean(MailerImpl.java:238) - successfully converted ReceivedEmail to JagEmail
+[INFO ] 2016-10-07 11:41:38.264 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:46) - Created SmtpServer
+[INFO ] 2016-10-07 11:41:38.264 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:72) - Created JagEmail object
+[INFO ] 2016-10-07 11:41:38.264 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:95) - attachment found, setting attachment in email
+[INFO ] 2016-10-07 11:41:38.264 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:118) - Recipient CC found
+[INFO ] 2016-10-07 11:41:38.264 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:126) - Recipient BCC found
+[INFO ] 2016-10-07 11:43:19.211 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:46) - Created SmtpServer
+[INFO ] 2016-10-07 11:43:19.226 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:72) - Created JagEmail object
+[INFO ] 2016-10-07 11:43:19.226 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:95) - attachment found, setting attachment in email
+[INFO ] 2016-10-07 11:43:19.226 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:108) - Recipient TO found
+[INFO ] 2016-10-07 11:43:19.226 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:118) - Recipient CC found
+[INFO ] 2016-10-07 11:43:19.226 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:126) - Recipient BCC found
+[INFO ] 2016-10-07 11:43:42.474 [main] com.williamngo.JagEmail.MailerImpl.convertBean(MailerImpl.java:238) - successfully converted ReceivedEmail to JagEmail
+[INFO ] 2016-10-07 11:43:51.726 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:46) - Created SmtpServer
+[INFO ] 2016-10-07 11:43:51.742 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:72) - Created JagEmail object
+[INFO ] 2016-10-07 11:43:51.742 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:95) - attachment found, setting attachment in email
+[INFO ] 2016-10-07 11:43:51.742 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:118) - Recipient CC found
+[INFO ] 2016-10-07 11:43:51.742 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:126) - Recipient BCC found
+[INFO ] 2016-10-07 11:49:14.835 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:46) - Created SmtpServer
+[INFO ] 2016-10-07 11:49:14.851 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:72) - Created JagEmail object
+[INFO ] 2016-10-07 11:49:14.851 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:95) - attachment found, setting attachment in email
+[INFO ] 2016-10-07 11:49:14.867 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:108) - Recipient TO found
+[INFO ] 2016-10-07 11:49:14.867 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:118) - Recipient CC found
+[INFO ] 2016-10-07 11:49:14.867 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:126) - Recipient BCC found
+[INFO ] 2016-10-07 11:49:49.310 [main] com.williamngo.JagEmail.MailerImpl.convertBean(MailerImpl.java:238) - successfully converted ReceivedEmail to JagEmail
+[INFO ] 2016-10-07 11:49:50.623 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:46) - Created SmtpServer
+[INFO ] 2016-10-07 11:49:50.623 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:72) - Created JagEmail object
+[INFO ] 2016-10-07 11:49:50.623 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:95) - attachment found, setting attachment in email
+[INFO ] 2016-10-07 11:49:50.623 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:118) - Recipient CC found
+[INFO ] 2016-10-07 11:49:50.623 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:126) - Recipient BCC found
+[INFO ] 2016-10-07 11:53:02.711 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:46) - Created SmtpServer
+[INFO ] 2016-10-07 11:53:02.726 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:72) - Created JagEmail object
+[INFO ] 2016-10-07 11:53:02.726 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:95) - attachment found, setting attachment in email
+[INFO ] 2016-10-07 11:53:02.726 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:108) - Recipient TO found
+[INFO ] 2016-10-07 11:53:02.726 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:118) - Recipient CC found
+[INFO ] 2016-10-07 11:53:02.726 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:126) - Recipient BCC found
+[INFO ] 2016-10-07 11:53:18.134 [main] com.williamngo.JagEmail.MailerImpl.convertBean(MailerImpl.java:238) - successfully converted ReceivedEmail to JagEmail
+[INFO ] 2016-10-07 11:53:21.259 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:46) - Created SmtpServer
+[INFO ] 2016-10-07 11:53:21.259 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:72) - Created JagEmail object
+[INFO ] 2016-10-07 11:53:21.259 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:95) - attachment found, setting attachment in email
+[INFO ] 2016-10-07 11:53:21.259 [main] com.williamngo.JagEmail.MailerImpl.sendEmail(MailerImpl.java:108) - Recipient TO found
+[INFO ] 2016-10-07 11:54:09.189 [main] com.williamngo.JagEmail.MailerImpl.convertBean(MailerImpl.java:238) - successfully converted ReceivedEmail to JagEmail

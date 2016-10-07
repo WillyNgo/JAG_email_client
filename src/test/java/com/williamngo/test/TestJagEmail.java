@@ -86,7 +86,7 @@ public class TestJagEmail {
                 null,
                 "pictures\\kimagura.jpg"
             }
-                /*,
+            ,/*
             //Testing for null in the to
             {
                 new ConfigBean("userName", "smtp.gmail.com", "imap.gmail.com", "williamngosend@gmail.com", "sendanemail", 465, 993),
@@ -98,7 +98,7 @@ public class TestJagEmail {
                 "<html><body><h1>" + msg + "</h1></body></html>",
                 null,
                 "pictures\\kimagura.jpg"
-            },
+            },*/
             //Testing for null in the cc and bcc
             {
                 new ConfigBean("userName", "smtp.gmail.com", "imap.gmail.com", "williamngosend@gmail.com", "sendanemail", 465, 993),
@@ -110,7 +110,7 @@ public class TestJagEmail {
                 "<html><body><h1>" + msg + "</h1></body></html>",
                 null,
                 "pictures\\kimagura.jpg"
-            },
+            },/*
             //No subject
             {
                 new ConfigBean("userName", "smtp.gmail.com", "imap.gmail.com", "williamngosend@gmail.com", "sendanemail", 465, 993),
@@ -165,17 +165,31 @@ public class TestJagEmail {
     }
     
     @Test
-    public void JagEmailTesting()
+    public void TestingAssertTrue()
     {
         MailerImpl m = new MailerImpl(cfg);
         
         JagEmail sendingEmail = m.sendEmail(emailReceive, emailCC, emailBCC, subject, text, html, embedded, attachment);
         
-        cfg.setEmailAddress("williamngoreceive@gmail.com");
-        cfg.setEmailAddressPwd("receiveanemail");
+        // Add a five second pause to allow the Gmail server to receive what has
+        // been sent
+        try {
+             Thread.sleep(5000);
+         } catch (InterruptedException e) {
+             log.error("Threaded sleep failed", e);
+             System.exit(1);
+         }
+        
+        //Email receiving
+        m = new MailerImpl(new ConfigBean("userName", "smtp.gmail.com", "imap.gmail.com", "williamngoreceive@gmail.com", "receiveanemail", 465, 993));
         
         JagEmail[] receivedEmail = m.receiveEmail();
-        JagEmail receivingEmail = receivedEmail[0];
+        JagEmail receivingEmail;
+        
+        if(receivedEmail[0] != null)
+            receivingEmail = receivedEmail[0];
+        else
+            receivingEmail = null;
         
         assertTrue(sendingEmail.equals(receivingEmail));
     }

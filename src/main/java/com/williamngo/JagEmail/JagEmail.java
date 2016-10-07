@@ -167,9 +167,6 @@ public class JagEmail extends Email{
             {
                 if(!Objects.equals(this.attachments.get(i).getName(), other.attachments.get(i).getName()))
                     return false;
-                
-                if(!Objects.equals(this.attachments.get(i).getSize(), other.attachments.get(i).getSize()))
-                    return false;
             }
 
         //Checks actual attachment
@@ -179,9 +176,6 @@ public class JagEmail extends Email{
                 EmailAttachment otherAttachment = other.attachments.get(i);
             
                 if(!Objects.equals(thisAttachment.getName(), otherAttachment.getName()))
-                    return false;
-            
-                if(!Objects.equals(thisAttachment.getSize(), otherAttachment.getSize()))
                     return false;
             }
         }

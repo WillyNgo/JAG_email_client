@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.williamngo.test.TestReceiveEmail_test" time="42.406" tests="2" errors="0" skipped="0" failures="1">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.williamngo.test.TestReceiveEmail_test" time="14.612" tests="2" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_102\jre\bin"/>
@@ -60,12 +60,6 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="receiveEmail_test_Null[0]" classname="com.williamngo.test.TestReceiveEmail_test" time="32.938">
-    <failure message="expected null, but was:&lt;[Lcom.mycompany.firstproject.JagEmail;@16610890&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected null, but was:<[Lcom.mycompany.firstproject.JagEmail;@16610890>
-	at com.williamngo.test.TestReceiveEmail_test.receiveEmail_test_Null(TestReceiveEmail_test.java:121)
-]]></failure>
-    <system-out><![CDATA[[INFO ] 2016-10-04 10:48:52.907 com.mycompany.firstproject.MailController.convertBean(MailController.java:238) - successfully converted ReceivedEmail to JagEmail
-]]></system-out>
-  </testcase>
-  <testcase name="receiveEmail_test_notNull[0]" classname="com.williamngo.test.TestReceiveEmail_test" time="9.093"/>
+  <testcase name="receiveEmail_test_Null[0]" classname="com.williamngo.test.TestReceiveEmail_test" time="6.89"/>
+  <testcase name="receiveEmail_test_notNull[0]" classname="com.williamngo.test.TestReceiveEmail_test" time="7.722"/>
 </testsuite>
