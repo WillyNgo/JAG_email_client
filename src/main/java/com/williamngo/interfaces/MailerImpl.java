@@ -1,5 +1,7 @@
-package com.williamngo.JagEmail;
+package com.williamngo.interfaces;
 
+import com.williamngo.configurations.ConfigBean;
+import com.williamngo.business.JagEmail;
 import com.williamngo.interfaces.Mailer;
 import java.io.File;
 import java.util.ArrayList;
@@ -30,7 +32,7 @@ public class MailerImpl implements Mailer {
     }
     
     @Override
-    public JagEmail sendEmail(Optional<String> listOfTo, Optional<String> listOfCc, Optional<String> listOfBcc, String subject, String message,
+    public JagEmail sendEmail(String listOfTo, Optional<String> listOfCc, Optional<String> listOfBcc, String subject, String message,
             String html, String embedded, String attachment)
     {       
         //Assign info of sender
@@ -46,28 +48,35 @@ public class MailerImpl implements Mailer {
         log.info("Created SmtpServer");     
         
         /********** Validate required information ***************/
-        
+        JagEmail email = new JagEmail();
+        email.from(emailSend);
+                
+        String[] toArray; //Array containing list of To
         //If there are no recipients, throw exception
-        if(!listOfTo.isPresent() && !listOfCc.isPresent() && !listOfBcc.isPresent())
+        if(listOfTo == null || listOfTo.equals(""))
             throw new IllegalArgumentException("Error in sendEmail - Must have at least one recipient");
-        
+        else
+        {
+            //Enhanced for loop in case we have many To recipients
+            for(String mail : listOfTo.split(","))
+            {
+                email.to(mail);
+            }
+        }
+            
         //Check if there are no subject, defaults to "(no subject)"
         if(subject == null || subject.length() == 0){
             log.info("Subject not found, defaulting to '(no subject)'");
             subject = "(no subject)";
         }
+        email.subject(subject);
         
         //If message is null, default to empty string
         if(message == null){
             log.info("Message found as null, defaulting to empty string");
             message = "";
         }
-        
-        //Email object to be sent
-        JagEmail email = new JagEmail();
-        email.from(emailSend)
-                .subject(subject)
-                .addText(message);
+        email.addText(message);
         
         log.info("Created JagEmail object");
         
@@ -96,18 +105,6 @@ public class MailerImpl implements Mailer {
             String[] attachStrArray = attachment.split(",");
             for(String a : attachStrArray)
                 email.attach(EmailAttachment.attachment().file(a));
-        }
-        
-        //An email may have either a recipient in To, Cc and/or Bcc,
-        //So I check if an email has at least one of these.
-        
-        //Check to see if there is a recipient in the To field
-        if(listOfTo.isPresent())
-        {
-            String emailTostr = listOfTo.get();
-            log.info("Recipient TO found");
-            String[] emailTo = emailTostr.split(",");
-            email.to(emailTo);
         }
 
         //Check to see if there is any CC, add if there is
@@ -148,7 +145,6 @@ public class MailerImpl implements Mailer {
         }
         
         session.close();
-        
         return email;
     }
     

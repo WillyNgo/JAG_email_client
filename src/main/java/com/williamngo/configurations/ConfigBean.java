@@ -1,4 +1,4 @@
-package com.williamngo.JagEmail;
+package com.williamngo.configurations;
 
 import org.slf4j.*;
 

@@ -1,6 +1,6 @@
 package com.williamngo.interfaces;
 
-import com.williamngo.JagEmail.JagEmail;
+import com.williamngo.business.JagEmail;
 import java.util.Optional;
 
 /**
@@ -9,7 +9,7 @@ import java.util.Optional;
  * @author William Ngo
  */
 public interface Mailer {
-    JagEmail sendEmail(Optional<String> listOfTo,Optional<String> listOfCc, Optional<String> listOfBcc, String subject, String message,
+    JagEmail sendEmail(String listOfTo,Optional<String> listOfCc, Optional<String> listOfBcc, String subject, String message,
             String html, String embedded, String attachment);
     JagEmail[] receiveEmail();
 }

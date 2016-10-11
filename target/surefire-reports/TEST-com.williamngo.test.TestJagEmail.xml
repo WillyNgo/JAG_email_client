@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.williamngo.test.TestJagEmail" time="70.306" tests="2" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.williamngo.test.TestJagEmail" time="56.114" tests="6" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_102\jre\bin"/>
@@ -16,7 +16,7 @@
     <property name="sun.os.patch.level" value=""/>
     <property name="test" value="com.williamngo.test.TestJagEmail"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="C:\Users\1435707\Desktop\JagEmail_Client"/>
+    <property name="user.dir" value="C:\Users\1435707\Documents\java\JagEmail_Client"/>
     <property name="java.runtime.version" value="1.8.0_102-b14"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
     <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_102\jre\lib\endorsed"/>
@@ -34,8 +34,6 @@
     <property name="java.class.version" value="52.0"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="os.version" value="10.0"/>
-    <property name="jpda.listen" value="true"/>
-    <property name="jpda.address" value="51588"/>
     <property name="user.home" value="C:\Users\1435707"/>
     <property name="user.timezone" value="America/New_York"/>
     <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
@@ -43,11 +41,10 @@
     <property name="file.encoding" value="UTF-8"/>
     <property name="user.name" value="1435707"/>
     <property name="java.class.path" value="C:\dev\NetBeans8.1\java\maven\boot\plexus-classworlds-2.4.jar"/>
-    <property name="maven.surefire.debug" value="-Xdebug -Xrunjdwp:transport=dt_socket,server=n,address=51588"/>
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_102\jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dtest=com.williamngo.test.TestJagEmail -DforkMode=once -Dmaven.surefire.debug=-Xdebug -Xrunjdwp:transport=dt_socket,server=n,address=51588 -Djpda.listen=true -Djpda.address=51588 -Dmaven.ext.class.path=C:\dev\NetBeans8.1\java\maven-nblib\netbeans-eventspy.jar -Dfile.encoding=UTF-8 test-compile surefire:test"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dtest=com.williamngo.test.TestJagEmail -Dmaven.ext.class.path=C:\dev\NetBeans8.1\java\maven-nblib\netbeans-eventspy.jar -Dfile.encoding=UTF-8 test-compile surefire:test"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="en"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -59,12 +56,15 @@
     <property name="maven.home" value="C:\dev\NetBeans8.1\java\maven"/>
     <property name="file.separator" value="\"/>
     <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
-    <property name="forkMode" value="once"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="TestingAssertTrue[0]" classname="com.williamngo.test.TestJagEmail" time="18.564"/>
-  <testcase name="TestingAssertTrue[1]" classname="com.williamngo.test.TestJagEmail" time="51.305"/>
+  <testcase name="TestingAssertTrue[0]" classname="com.williamngo.test.TestJagEmail" time="8.762"/>
+  <testcase name="TestingAssertTrue[1]" classname="com.williamngo.test.TestJagEmail" time="7.752"/>
+  <testcase name="TestingAssertTrue[2]" classname="com.williamngo.test.TestJagEmail" time="11.31"/>
+  <testcase name="TestingAssertTrue[3]" classname="com.williamngo.test.TestJagEmail" time="8.318"/>
+  <testcase name="TestingAssertTrue[4]" classname="com.williamngo.test.TestJagEmail" time="8.524"/>
+  <testcase name="TestingAssertTrue[5]" classname="com.williamngo.test.TestJagEmail" time="11.063"/>
 </testsuite>

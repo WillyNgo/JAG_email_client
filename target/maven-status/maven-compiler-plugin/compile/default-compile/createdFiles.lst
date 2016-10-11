@@ -1,5 +1,5 @@
-com\williamngo\JagEmail\ConfigBean.class
 com\williamngo\interfaces\Mailer.class
-com\williamngo\JagEmail\MailerImpl.class
-com\williamngo\JagEmail\JagEmail.class
-com\williamngo\JagEmail\FXMLController.class
+com\williamngo\business\FXMLController.class
+com\williamngo\business\JagEmail.class
+com\williamngo\configurations\ConfigBean.class
+com\williamngo\interfaces\MailerImpl.class
