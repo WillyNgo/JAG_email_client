@@ -146,6 +146,18 @@ public class TestJagEmail {
                 "<html><body><h1>" + msg + "</h1></body></html>",
                 null,
                 null
+            },
+            //Has embedded
+            {
+                new ConfigBean("userName", "smtp.gmail.com", "imap.gmail.com", "williamngosend@gmail.com", "sendanemail", 465, 993),
+                "williamngoreceive@gmail.com",
+                Optional.of("shiftkun662@gmail.com"),
+                Optional.of("devjlin1@gmail.com"),
+                "Subject Test - All values present",
+                msg,
+                "<html><body><h1>" + msg + "</h1></body></html>",
+                "pictures\\kimagura.jpg",
+                "pictures\\kimagura.jpg"
             }
            }
         );
@@ -173,6 +185,6 @@ public class TestJagEmail {
         JagEmail[] receivedEmail = m.receiveEmail();
         JagEmail receivingEmail = receivedEmail[0];
 
-        assertTrue(sendingEmail.equals(receivingEmail));
+        assertEquals(sendingEmail, receivingEmail);
     }
 }
