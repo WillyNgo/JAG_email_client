@@ -1,6 +1,6 @@
 package com.williamngo.test;
 
-import com.williamngo.configurations.ConfigBean;
+import com.williamngo.beans.ConfigBean;
 import com.williamngo.business.JagEmail;
 import com.williamngo.interfaces.MailerImpl;
 import java.io.File;
@@ -85,7 +85,7 @@ public class TestJagEmail {
                 "<html><body><h1>" + msg + "</h1></body></html>",
                 null,
                 "pictures\\kimagura.jpg"
-            }
+            }/*
             ,
             //Testing for null in the cc and bcc
             {
@@ -146,19 +146,19 @@ public class TestJagEmail {
                 "<html><body><h1>" + msg + "</h1></body></html>",
                 null,
                 null
-            },
+            },*/,
             //Has embedded
             {
                 new ConfigBean("userName", "smtp.gmail.com", "imap.gmail.com", "williamngosend@gmail.com", "sendanemail", 465, 993),
                 "williamngoreceive@gmail.com",
                 Optional.of("shiftkun662@gmail.com"),
                 Optional.of("devjlin1@gmail.com"),
-                "Subject Test - All values present",
+                "Subject Test - Had embedded and attach",
                 msg,
                 "<html><body><h1>" + msg + "</h1></body></html>",
-                "pictures\\kimagura.jpg",
+                "pictures\\edhappy.png",
                 "pictures\\kimagura.jpg"
-            },
+            },/*
             //Many to
             {
                 new ConfigBean("userName", "smtp.gmail.com", "imap.gmail.com", "williamngosend@gmail.com", "sendanemail", 465, 993),
@@ -170,7 +170,7 @@ public class TestJagEmail {
                 "<html><body><h1>" + msg + "</h1></body></html>",
                 null,
                 null
-            }
+            }*/
            }
         );
     }

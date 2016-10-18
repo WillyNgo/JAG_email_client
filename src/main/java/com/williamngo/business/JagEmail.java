@@ -163,25 +163,30 @@ public class JagEmail extends Email{
             if(!Objects.equals(this.attachments.size(), other.attachments.size()))
                     return false;
             
-            for(int i = 0; i < attachments.size(); i++)
+            boolean present = false;
+            //Checks actual attachment
+            //Checks if other.attachments contains same attachments as those in this.attachment
+            //Because when receiving an email, the attachments are not in the same order as the one sent
+            //So instead of verifying each email by the same subscript, 2 forloop to check if it contains.
+            for(int i = 0; i < this.attachments.size(); i++)
             {
-                if(!Objects.equals(this.attachments.get(i).getName(), other.attachments.get(i).getName()))
-                    return false;
+                present = false;
+                for(int j = 0; j < other.attachments.size(); j++)
+                {
+                    if(this.attachments.get(i).getName().contains(other.attachments.get(j).getName()))
+                    {
+                        present = true;
+                        break;
+                    }
+                }
             }
-
-        //Checks actual attachment
-            for(int i = 0; i < attachments.size(); i++)
-            {
-                EmailAttachment thisAttachment = this.attachments.get(i);
-                EmailAttachment otherAttachment = other.attachments.get(i);
             
-                if(!Objects.equals(thisAttachment.getName(), otherAttachment.getName()))
-                    return false;
+            //If name of the attachment wasn't found, then return false;
+            if(present == false)
+            {
+                return false;
             }
         }
-        
-        
-        
         return true;
     }
 }

@@ -1,5 +1,7 @@
-C:\Users\1435707\Documents\Java\JagEmail_Client\src\main\java\com\williamngo\business\FXMLController.java
-C:\Users\1435707\Documents\Java\JagEmail_Client\src\main\java\com\williamngo\configurations\ConfigBean.java
-C:\Users\1435707\Documents\Java\JagEmail_Client\src\main\java\com\williamngo\business\JagEmail.java
-C:\Users\1435707\Documents\Java\JagEmail_Client\src\main\java\com\williamngo\interfaces\MailerImpl.java
-C:\Users\1435707\Documents\Java\JagEmail_Client\src\main\java\com\williamngo\interfaces\Mailer.java
+C:\Users\1435707\Documents\JagEmail_Client\src\main\java\com\williamngo\interfaces\Mailer.java
+C:\Users\1435707\Documents\JagEmail_Client\src\main\java\com\williamngo\database\jagemail_database.java
+C:\Users\1435707\Documents\JagEmail_Client\src\main\java\com\williamngo\business\JagEmail.java
+C:\Users\1435707\Documents\JagEmail_Client\src\main\java\com\williamngo\interfaces\MailerImpl.java
+C:\Users\1435707\Documents\JagEmail_Client\src\main\java\com\williamngo\beans\attachmentBean.java
+C:\Users\1435707\Documents\JagEmail_Client\src\main\java\com\williamngo\business\FXMLController.java
+C:\Users\1435707\Documents\JagEmail_Client\src\main\java\com\williamngo\beans\ConfigBean.java

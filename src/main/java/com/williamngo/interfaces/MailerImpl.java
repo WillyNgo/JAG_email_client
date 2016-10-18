@@ -1,6 +1,6 @@
 package com.williamngo.interfaces;
 
-import com.williamngo.configurations.ConfigBean;
+import com.williamngo.beans.ConfigBean;
 import com.williamngo.business.JagEmail;
 import com.williamngo.interfaces.Mailer;
 import java.io.File;
@@ -88,6 +88,15 @@ public class MailerImpl implements Mailer {
         email.addHtml(html);
         
         //Checks for attachments
+        
+        if(attachment != null)
+        {
+            log.info("attachment found, setting attachment in email");
+            String[] attachStrArray = attachment.split(",");
+            for(String a : attachStrArray)
+                email.attach(EmailAttachment.attachment().file(a));
+        }
+        
         if(embedded != null)
         {
             containsEmbed = true;
@@ -97,14 +106,6 @@ public class MailerImpl implements Mailer {
                 email.embed(EmailAttachment.attachment().bytes(new File(e)));
             
             //email.addHtml("<img src=cid:C:\\Users\\1435707\\Pictures\\koala.jpg />");
-        }
-        
-        if(attachment != null)
-        {
-            log.info("attachment found, setting attachment in email");
-            String[] attachStrArray = attachment.split(",");
-            for(String a : attachStrArray)
-                email.attach(EmailAttachment.attachment().file(a));
         }
 
         //Check to see if there is any CC, add if there is
@@ -131,14 +132,20 @@ public class MailerImpl implements Mailer {
         //Open session and send mail
         SendMailSession session = mySmtpServer.createSession();
         
+        //Solution for embedded attachment
+        //if there is embedded, set it back
+        int before = email.getAttachments().size();
+        
         session.open();
         session.sendMail(email);
         
-        //Solution for embedded attachment
-        //if there is embedded, set it back
-        if(containsEmbed == true)
+        int after = email.getAttachments().size();
+        
+        //If before is > after, then put back embedded
+        if(before > after)
         {
-            log.info("embedded found, setting embedded back to email");
+            
+            log.info("embedded found, setting back embedded in email");
             String[] embedStrArray = embedded.split(",");
             for(String e : embedStrArray)
                 email.embed(EmailAttachment.attachment().bytes(new File(e)));
@@ -214,8 +221,7 @@ public class MailerImpl implements Mailer {
             myEmailArray[i].setFolder("Inbox");
             //Message number not used currently
             //myEmailArray[i].setMessageNumber(r[i].getMessageNumber());
-            
-            //Get messages
+            //Get attachments
             if(r[i].getAttachments() != null)
                 myEmailArray[i].setEmailAttachment(new ArrayList<>(r[i].getAttachments()));
             
@@ -227,7 +233,7 @@ public class MailerImpl implements Mailer {
                 if(content.get(j).getMimeType().equalsIgnoreCase("TEXT/PLAIN"))
                     myEmailArray[i].addText(content.get(j).getContent().replace("\n", "").replace("\r", ""));
                 else if(content.get(j).getMimeType().equalsIgnoreCase("TEXT/HTML"))
-                    myEmailArray[i].addText(content.get(j).getContent().replace("\n", "").replace("\r", ""));
+                    myEmailArray[i].addHtml(content.get(j).getContent().replace("\n", "").replace("\r", ""));
             } 
         }
         

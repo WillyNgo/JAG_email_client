@@ -1,4 +1,4 @@
-package com.williamngo.configurations;
+package com.williamngo.beans;
 
 import org.slf4j.*;
 
