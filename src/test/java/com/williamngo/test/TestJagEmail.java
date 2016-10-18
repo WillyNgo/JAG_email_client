@@ -158,6 +158,18 @@ public class TestJagEmail {
                 "<html><body><h1>" + msg + "</h1></body></html>",
                 "pictures\\kimagura.jpg",
                 "pictures\\kimagura.jpg"
+            },
+            //Many to
+            {
+                new ConfigBean("userName", "smtp.gmail.com", "imap.gmail.com", "williamngosend@gmail.com", "sendanemail", 465, 993),
+                "williamngoreceive@gmail.com,shiftkun662@gmail.com",
+                Optional.ofNullable(null),
+                Optional.ofNullable(null),
+                "Subject Test - No attachments",
+                msg,
+                "<html><body><h1>" + msg + "</h1></body></html>",
+                null,
+                null
             }
            }
         );
