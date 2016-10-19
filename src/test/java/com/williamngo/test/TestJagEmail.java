@@ -146,7 +146,7 @@ public class TestJagEmail {
                 "<html><body><h1>" + msg + "</h1></body></html>",
                 null,
                 null
-            },*/,
+            },
             //Has embedded
             {
                 new ConfigBean("userName", "smtp.gmail.com", "imap.gmail.com", "williamngosend@gmail.com", "sendanemail", 465, 993),
@@ -158,7 +158,7 @@ public class TestJagEmail {
                 "<html><body><h1>" + msg + "</h1></body></html>",
                 "pictures\\edhappy.png",
                 "pictures\\kimagura.jpg"
-            },/*
+            },
             //Many to
             {
                 new ConfigBean("userName", "smtp.gmail.com", "imap.gmail.com", "williamngosend@gmail.com", "sendanemail", 465, 993),

@@ -871,3 +871,82 @@
 [INFO ] 2016-10-18 19:29:22.991 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:124) - Recipient BCC found
 [INFO ] 2016-10-18 19:29:24.661 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:148) - embedded found, setting back embedded in email
 [INFO ] 2016-10-18 19:29:31.291 [main] com.williamngo.interfaces.MailerImpl.convertBean(MailerImpl.java:240) - successfully converted ReceivedEmail to JagEmail
+[INFO ] 2016-10-19 10:54:21.747 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:50) - Created SmtpServer
+[INFO ] 2016-10-19 10:54:21.747 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:83) - Created JagEmail object
+[INFO ] 2016-10-19 10:54:21.747 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:96) - attachment found, setting attachment in email
+[INFO ] 2016-10-19 10:54:21.763 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:117) - Recipient CC found
+[INFO ] 2016-10-19 10:54:21.763 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:125) - Recipient BCC found
+[ERROR] 2016-10-19 10:54:23.927 [main] com.williamngo.database.jagemail_database.populateEmailTable(jagemail_database.java:96) - Access denied for user 'CS1435707'@'%' to database 'cs1435707/'
+[INFO ] 2016-10-19 10:54:48.644 [main] com.williamngo.interfaces.MailerImpl.convertBean(MailerImpl.java:244) - successfully converted ReceivedEmail to JagEmail
+[INFO ] 2016-10-19 10:55:12.361 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:50) - Created SmtpServer
+[INFO ] 2016-10-19 10:55:12.377 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:83) - Created JagEmail object
+[INFO ] 2016-10-19 10:55:12.377 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:96) - attachment found, setting attachment in email
+[INFO ] 2016-10-19 10:55:12.377 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:117) - Recipient CC found
+[INFO ] 2016-10-19 10:55:12.377 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:125) - Recipient BCC found
+[INFO ] 2016-10-19 10:56:11.828 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:50) - Created SmtpServer
+[INFO ] 2016-10-19 10:56:11.843 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:83) - Created JagEmail object
+[INFO ] 2016-10-19 10:56:11.843 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:96) - attachment found, setting attachment in email
+[INFO ] 2016-10-19 10:56:11.843 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:117) - Recipient CC found
+[INFO ] 2016-10-19 10:56:11.843 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:125) - Recipient BCC found
+[INFO ] 2016-10-19 10:57:07.651 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:50) - Created SmtpServer
+[INFO ] 2016-10-19 10:57:07.667 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:83) - Created JagEmail object
+[INFO ] 2016-10-19 10:57:07.667 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:96) - attachment found, setting attachment in email
+[INFO ] 2016-10-19 10:57:07.667 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:117) - Recipient CC found
+[INFO ] 2016-10-19 10:57:07.667 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:125) - Recipient BCC found
+[INFO ] 2016-10-19 10:57:18.308 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:50) - Created SmtpServer
+[INFO ] 2016-10-19 10:57:18.323 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:83) - Created JagEmail object
+[INFO ] 2016-10-19 10:57:18.323 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:96) - attachment found, setting attachment in email
+[INFO ] 2016-10-19 10:57:18.323 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:117) - Recipient CC found
+[INFO ] 2016-10-19 10:57:18.323 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:125) - Recipient BCC found
+[INFO ] 2016-10-19 11:01:47.507 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:50) - Created SmtpServer
+[INFO ] 2016-10-19 11:01:47.523 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:83) - Created JagEmail object
+[INFO ] 2016-10-19 11:01:47.523 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:96) - attachment found, setting attachment in email
+[INFO ] 2016-10-19 11:01:47.539 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:117) - Recipient CC found
+[INFO ] 2016-10-19 11:01:47.539 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:125) - Recipient BCC found
+[INFO ] 2016-10-19 11:02:27.976 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:50) - Created SmtpServer
+[INFO ] 2016-10-19 11:02:27.992 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:83) - Created JagEmail object
+[INFO ] 2016-10-19 11:02:27.992 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:96) - attachment found, setting attachment in email
+[INFO ] 2016-10-19 11:02:28.007 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:117) - Recipient CC found
+[INFO ] 2016-10-19 11:02:28.007 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:125) - Recipient BCC found
+[INFO ] 2016-10-19 11:21:53.763 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:51) - Created SmtpServer
+[INFO ] 2016-10-19 11:21:53.774 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:84) - Created JagEmail object
+[INFO ] 2016-10-19 11:21:53.775 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:97) - attachment found, setting attachment in email
+[INFO ] 2016-10-19 11:21:53.783 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:118) - Recipient CC found
+[INFO ] 2016-10-19 11:21:53.784 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:126) - Recipient BCC found
+[ERROR] 2016-10-19 11:21:56.003 [main] com.williamngo.database.jagemail_database.populateEmailTable(jagemail_database.java:100) - Unknown column 'subject' in 'field list'
+[INFO ] 2016-10-19 11:22:08.091 [main] com.williamngo.interfaces.MailerImpl.convertBean(MailerImpl.java:249) - successfully converted ReceivedEmail to JagEmail
+[INFO ] 2016-10-19 11:23:06.127 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:51) - Created SmtpServer
+[INFO ] 2016-10-19 11:23:06.138 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:84) - Created JagEmail object
+[INFO ] 2016-10-19 11:23:06.139 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:97) - attachment found, setting attachment in email
+[INFO ] 2016-10-19 11:23:06.147 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:118) - Recipient CC found
+[INFO ] 2016-10-19 11:23:06.147 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:126) - Recipient BCC found
+[ERROR] 2016-10-19 11:23:08.057 [main] com.williamngo.database.jagemail_database.populateEmailTable(jagemail_database.java:100) - Field 'account_id' doesn't have a default value
+[INFO ] 2016-10-19 11:34:45.668 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:51) - Created SmtpServer
+[INFO ] 2016-10-19 11:34:45.679 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:84) - Created JagEmail object
+[INFO ] 2016-10-19 11:34:45.679 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:97) - attachment found, setting attachment in email
+[INFO ] 2016-10-19 11:34:45.687 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:118) - Recipient CC found
+[INFO ] 2016-10-19 11:34:45.688 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:126) - Recipient BCC found
+[ERROR] 2016-10-19 11:34:47.659 [main] com.williamngo.database.jagemail_database.populateEmailTable(jagemail_database.java:100) - Field 'account_id' doesn't have a default value
+[INFO ] 2016-10-19 11:36:12.888 [main] com.williamngo.interfaces.MailerImpl.convertBean(MailerImpl.java:249) - successfully converted ReceivedEmail to JagEmail
+[INFO ] 2016-10-19 11:37:26.419 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:51) - Created SmtpServer
+[INFO ] 2016-10-19 11:37:26.430 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:84) - Created JagEmail object
+[INFO ] 2016-10-19 11:37:26.430 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:97) - attachment found, setting attachment in email
+[INFO ] 2016-10-19 11:37:26.438 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:118) - Recipient CC found
+[INFO ] 2016-10-19 11:37:26.439 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:126) - Recipient BCC found
+[ERROR] 2016-10-19 11:37:28.617 [main] com.williamngo.database.jagemail_database.populateEmailTable(jagemail_database.java:100) - Field 'email_account_id' doesn't have a default value
+[INFO ] 2016-10-19 11:37:35.924 [main] com.williamngo.interfaces.MailerImpl.convertBean(MailerImpl.java:249) - successfully converted ReceivedEmail to JagEmail
+[INFO ] 2016-10-19 11:38:51.190 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:51) - Created SmtpServer
+[INFO ] 2016-10-19 11:38:51.200 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:84) - Created JagEmail object
+[INFO ] 2016-10-19 11:38:51.201 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:97) - attachment found, setting attachment in email
+[INFO ] 2016-10-19 11:38:51.209 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:118) - Recipient CC found
+[INFO ] 2016-10-19 11:38:51.209 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:126) - Recipient BCC found
+[INFO ] 2016-10-19 11:38:53.070 [main] com.williamngo.database.jagemail_database.populateEmailTable(jagemail_database.java:97) - Added 1 results in email table
+[INFO ] 2016-10-19 11:38:59.527 [main] com.williamngo.interfaces.MailerImpl.convertBean(MailerImpl.java:249) - successfully converted ReceivedEmail to JagEmail
+[INFO ] 2016-10-19 11:48:45.834 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:51) - Created SmtpServer
+[INFO ] 2016-10-19 11:48:45.846 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:84) - Created JagEmail object
+[INFO ] 2016-10-19 11:48:45.847 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:97) - attachment found, setting attachment in email
+[INFO ] 2016-10-19 11:48:45.855 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:118) - Recipient CC found
+[INFO ] 2016-10-19 11:48:45.855 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:126) - Recipient BCC found
+[INFO ] 2016-10-19 11:48:48.211 [main] com.williamngo.database.jagemail_database.populateEmailTable(jagemail_database.java:97) - Added 1 results in email table
+[INFO ] 2016-10-19 11:48:56.691 [main] com.williamngo.interfaces.MailerImpl.convertBean(MailerImpl.java:259) - successfully converted ReceivedEmail to JagEmail
+[INFO ] 2016-10-19 11:48:56.705 [main] com.williamngo.database.jagemail_database.populateEmailTable(jagemail_database.java:97) - Added 1 results in email table

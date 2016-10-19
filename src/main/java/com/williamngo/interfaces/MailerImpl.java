@@ -2,9 +2,11 @@ package com.williamngo.interfaces;
 
 import com.williamngo.beans.ConfigBean;
 import com.williamngo.business.JagEmail;
+import com.williamngo.database.jagemail_database;
 import com.williamngo.interfaces.Mailer;
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 import javax.mail.Flags;
@@ -24,11 +26,12 @@ import jodd.mail.*;
 public class MailerImpl implements Mailer {
     private final Logger log = LoggerFactory.getLogger(getClass().getName());
     private ConfigBean configBean;
-    private boolean containsEmbed = false;
+    private jagemail_database jdb;
     
     public MailerImpl(ConfigBean c)
     {
         this.configBean = c;
+        this.jdb = new jagemail_database(this.configBean);
     }
     
     @Override
@@ -99,7 +102,6 @@ public class MailerImpl implements Mailer {
         
         if(embedded != null)
         {
-            containsEmbed = true;
             log.info("embedded found, setting embedded in email");
             String[] embedStrArray = embedded.split(",");
             for(String e : embedStrArray)
@@ -129,6 +131,13 @@ public class MailerImpl implements Mailer {
         //Set folder to sent
         email.setFolder("sent");
         
+        //set sent date
+        Date d = new Date();
+        email.setSentDate(d);
+        
+        //Set typeFlag true (sent)
+        email.setTypeFlags(true);
+        
         //Open session and send mail
         SendMailSession session = mySmtpServer.createSession();
         
@@ -150,6 +159,9 @@ public class MailerImpl implements Mailer {
             for(String e : embedStrArray)
                 email.embed(EmailAttachment.attachment().bytes(new File(e)));
         }
+        
+        //Add email to database
+        jdb.populateEmailTable(email);
         
         session.close();
         return email;
@@ -191,6 +203,12 @@ public class MailerImpl implements Mailer {
             jagEmails = null;
         }
         
+        //Populate database with emails received
+        for(JagEmail rcvdMail: jagEmails)
+        {
+            jdb.populateEmailTable(rcvdMail);
+        }
+        
         session.close();
         return jagEmails;
     }
@@ -219,6 +237,7 @@ public class MailerImpl implements Mailer {
             myEmailArray[i].setFlags(r[i].getFlags());
             myEmailArray[i].setReceiveDate(r[i].getReceiveDate());
             myEmailArray[i].setFolder("Inbox");
+            myEmailArray[i].setTypeFlags(false);
             //Message number not used currently
             //myEmailArray[i].setMessageNumber(r[i].getMessageNumber());
             //Get attachments
