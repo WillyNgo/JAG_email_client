@@ -950,3 +950,189 @@
 [INFO ] 2016-10-19 11:48:48.211 [main] com.williamngo.database.jagemail_database.populateEmailTable(jagemail_database.java:97) - Added 1 results in email table
 [INFO ] 2016-10-19 11:48:56.691 [main] com.williamngo.interfaces.MailerImpl.convertBean(MailerImpl.java:259) - successfully converted ReceivedEmail to JagEmail
 [INFO ] 2016-10-19 11:48:56.705 [main] com.williamngo.database.jagemail_database.populateEmailTable(jagemail_database.java:97) - Added 1 results in email table
+[INFO ] 2016-10-19 16:50:48.138 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:51) - Created SmtpServer
+[INFO ] 2016-10-19 16:50:48.151 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:84) - Created JagEmail object
+[INFO ] 2016-10-19 16:50:48.151 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:97) - attachment found, setting attachment in email
+[INFO ] 2016-10-19 16:50:48.160 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:118) - Recipient CC found
+[INFO ] 2016-10-19 16:50:48.160 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:126) - Recipient BCC found
+[INFO ] 2016-10-19 16:51:23.885 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:51) - Created SmtpServer
+[INFO ] 2016-10-19 16:51:23.896 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:84) - Created JagEmail object
+[INFO ] 2016-10-19 16:51:23.897 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:97) - attachment found, setting attachment in email
+[INFO ] 2016-10-19 16:51:23.905 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:118) - Recipient CC found
+[INFO ] 2016-10-19 16:51:23.905 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:126) - Recipient BCC found
+[INFO ] 2016-10-19 16:52:32.917 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:51) - Created SmtpServer
+[INFO ] 2016-10-19 16:52:32.928 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:84) - Created JagEmail object
+[INFO ] 2016-10-19 16:52:32.928 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:97) - attachment found, setting attachment in email
+[INFO ] 2016-10-19 16:52:32.936 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:118) - Recipient CC found
+[INFO ] 2016-10-19 16:52:32.937 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:126) - Recipient BCC found
+[INFO ] 2016-10-19 16:53:59.075 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:51) - Created SmtpServer
+[INFO ] 2016-10-19 16:53:59.086 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:84) - Created JagEmail object
+[INFO ] 2016-10-19 16:53:59.087 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:97) - attachment found, setting attachment in email
+[INFO ] 2016-10-19 16:53:59.095 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:118) - Recipient CC found
+[INFO ] 2016-10-19 16:53:59.095 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:126) - Recipient BCC found
+[INFO ] 2016-10-19 16:54:01.141 [main] com.williamngo.database.jagemail_database.addEmailToDatabase(jagemail_database.java:106) - Added 1 results in email table
+[ERROR] 2016-10-19 16:54:01.277 [main] com.williamngo.database.jagemail_database.addAttachmentToDatabase(jagemail_database.java:142) - Field 'messageNumber' doesn't have a default value
+[INFO ] 2016-10-19 16:54:08.780 [main] com.williamngo.interfaces.MailerImpl.convertBean(MailerImpl.java:260) - successfully converted ReceivedEmail to JagEmail
+[INFO ] 2016-10-19 16:54:08.799 [main] com.williamngo.database.jagemail_database.addEmailToDatabase(jagemail_database.java:106) - Added 1 results in email table
+[INFO ] 2016-10-19 16:54:08.814 [main] com.williamngo.database.jagemail_database.addEmailToDatabase(jagemail_database.java:106) - Added 1 results in email table
+[INFO ] 2016-10-19 16:55:16.761 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:51) - Created SmtpServer
+[INFO ] 2016-10-19 16:55:16.772 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:84) - Created JagEmail object
+[INFO ] 2016-10-19 16:55:16.772 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:97) - attachment found, setting attachment in email
+[INFO ] 2016-10-19 16:55:16.781 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:118) - Recipient CC found
+[INFO ] 2016-10-19 16:55:16.781 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:126) - Recipient BCC found
+[INFO ] 2016-10-19 16:55:18.719 [main] com.williamngo.database.jagemail_database.addEmailToDatabase(jagemail_database.java:106) - Added 1 results in email table
+[ERROR] 2016-10-19 16:55:18.858 [main] com.williamngo.database.jagemail_database.addAttachmentToDatabase(jagemail_database.java:142) - Field 'attach_messageNumber' doesn't have a default value
+[INFO ] 2016-10-19 16:55:27.203 [main] com.williamngo.interfaces.MailerImpl.convertBean(MailerImpl.java:260) - successfully converted ReceivedEmail to JagEmail
+[INFO ] 2016-10-19 16:55:27.218 [main] com.williamngo.database.jagemail_database.addEmailToDatabase(jagemail_database.java:106) - Added 1 results in email table
+[INFO ] 2016-10-19 16:55:50.502 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:51) - Created SmtpServer
+[INFO ] 2016-10-19 16:55:50.513 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:84) - Created JagEmail object
+[INFO ] 2016-10-19 16:55:50.513 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:97) - attachment found, setting attachment in email
+[INFO ] 2016-10-19 16:55:50.522 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:118) - Recipient CC found
+[INFO ] 2016-10-19 16:55:50.522 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:126) - Recipient BCC found
+[INFO ] 2016-10-19 16:55:52.418 [main] com.williamngo.database.jagemail_database.addEmailToDatabase(jagemail_database.java:106) - Added 1 results in email table
+[INFO ] 2016-10-19 16:55:52.559 [main] com.williamngo.database.jagemail_database.addAttachmentToDatabase(jagemail_database.java:138) - Added 1 results in email table
+[INFO ] 2016-10-19 16:55:59.345 [main] com.williamngo.interfaces.MailerImpl.convertBean(MailerImpl.java:260) - successfully converted ReceivedEmail to JagEmail
+[INFO ] 2016-10-19 16:55:59.363 [main] com.williamngo.database.jagemail_database.addEmailToDatabase(jagemail_database.java:106) - Added 1 results in email table
+[INFO ] 2016-10-19 17:43:27.524 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:52) - Created SmtpServer
+[INFO ] 2016-10-19 17:43:27.760 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:88) - Created JagEmail object
+[INFO ] 2016-10-19 17:43:27.760 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:101) - attachment found, setting attachment in email
+[INFO ] 2016-10-19 17:43:27.769 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:122) - Recipient CC found
+[INFO ] 2016-10-19 17:43:27.769 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:130) - Recipient BCC found
+[ERROR] 2016-10-19 17:43:29.539 [main] com.williamngo.database.JagEmailDAO.addEmailToDatabase(JagEmailDAO.java:114) - Cannot add or update a child row: a foreign key constraint fails (`cs1435707`.`emails`, CONSTRAINT `fk_account_id` FOREIGN KEY (`email_account_id`) REFERENCES `accounts` (`account_id`))
+[INFO ] 2016-10-19 17:43:29.678 [main] com.williamngo.database.JagEmailDAO.addAttachmentToDatabase(JagEmailDAO.java:143) - Added 1 results in email table
+[INFO ] 2016-10-19 17:43:39.405 [main] com.williamngo.interfaces.MailerImpl.convertBean(MailerImpl.java:264) - successfully converted ReceivedEmail to JagEmail
+[ERROR] 2016-10-19 17:43:39.421 [main] com.williamngo.database.JagEmailDAO.addEmailToDatabase(JagEmailDAO.java:114) - Cannot add or update a child row: a foreign key constraint fails (`cs1435707`.`emails`, CONSTRAINT `fk_account_id` FOREIGN KEY (`email_account_id`) REFERENCES `accounts` (`account_id`))
+[INFO ] 2016-10-19 17:48:52.891 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:52) - Created SmtpServer
+[INFO ] 2016-10-19 17:48:53.445 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:88) - Created JagEmail object
+[INFO ] 2016-10-19 17:48:53.446 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:101) - attachment found, setting attachment in email
+[INFO ] 2016-10-19 17:48:53.455 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:122) - Recipient CC found
+[INFO ] 2016-10-19 17:48:53.456 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:130) - Recipient BCC found
+[ERROR] 2016-10-19 17:48:55.480 [main] com.williamngo.database.JagEmailDAO.addEmailToDatabase(JagEmailDAO.java:114) - Cannot add or update a child row: a foreign key constraint fails (`cs1435707`.`emails`, CONSTRAINT `fk_account_id` FOREIGN KEY (`email_account_id`) REFERENCES `accounts` (`account_id`))
+[INFO ] 2016-10-19 17:48:55.623 [main] com.williamngo.database.JagEmailDAO.addAttachmentToDatabase(JagEmailDAO.java:143) - Added 1 results in email table
+[INFO ] 2016-10-19 17:49:02.166 [main] com.williamngo.interfaces.MailerImpl.convertBean(MailerImpl.java:264) - successfully converted ReceivedEmail to JagEmail
+[ERROR] 2016-10-19 17:49:02.179 [main] com.williamngo.database.JagEmailDAO.addEmailToDatabase(JagEmailDAO.java:114) - Cannot add or update a child row: a foreign key constraint fails (`cs1435707`.`emails`, CONSTRAINT `fk_account_id` FOREIGN KEY (`email_account_id`) REFERENCES `accounts` (`account_id`))
+[INFO ] 2016-10-19 17:54:16.250 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:52) - Created SmtpServer
+[INFO ] 2016-10-19 17:54:56.707 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:52) - Created SmtpServer
+[INFO ] 2016-10-19 17:54:56.953 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:88) - Created JagEmail object
+[INFO ] 2016-10-19 17:54:56.953 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:101) - attachment found, setting attachment in email
+[INFO ] 2016-10-19 17:54:56.962 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:122) - Recipient CC found
+[INFO ] 2016-10-19 17:54:56.963 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:130) - Recipient BCC found
+[ERROR] 2016-10-19 17:54:58.841 [main] com.williamngo.database.JagEmailDAO.addEmailToDatabase(JagEmailDAO.java:115) - Cannot add or update a child row: a foreign key constraint fails (`cs1435707`.`emails`, CONSTRAINT `fk_account_id` FOREIGN KEY (`email_account_id`) REFERENCES `accounts` (`account_id`))
+[INFO ] 2016-10-19 17:54:58.987 [main] com.williamngo.database.JagEmailDAO.addAttachmentToDatabase(JagEmailDAO.java:144) - Added 1 results in email table
+[INFO ] 2016-10-19 17:55:05.566 [main] com.williamngo.interfaces.MailerImpl.convertBean(MailerImpl.java:264) - successfully converted ReceivedEmail to JagEmail
+[ERROR] 2016-10-19 17:55:05.584 [main] com.williamngo.database.JagEmailDAO.addEmailToDatabase(JagEmailDAO.java:115) - Cannot add or update a child row: a foreign key constraint fails (`cs1435707`.`emails`, CONSTRAINT `fk_account_id` FOREIGN KEY (`email_account_id`) REFERENCES `accounts` (`account_id`))
+[INFO ] 2016-10-19 17:55:35.792 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:52) - Created SmtpServer
+[INFO ] 2016-10-19 17:55:36.048 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:88) - Created JagEmail object
+[INFO ] 2016-10-19 17:55:36.048 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:101) - attachment found, setting attachment in email
+[INFO ] 2016-10-19 17:55:36.057 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:122) - Recipient CC found
+[INFO ] 2016-10-19 17:55:36.058 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:130) - Recipient BCC found
+[ERROR] 2016-10-19 17:55:37.814 [main] com.williamngo.database.JagEmailDAO.addEmailToDatabase(JagEmailDAO.java:115) - Cannot add or update a child row: a foreign key constraint fails (`cs1435707`.`emails`, CONSTRAINT `fk_account_id` FOREIGN KEY (`email_account_id`) REFERENCES `accounts` (`account_id`))
+[INFO ] 2016-10-19 17:55:37.957 [main] com.williamngo.database.JagEmailDAO.addAttachmentToDatabase(JagEmailDAO.java:144) - Added 1 results in email table
+[INFO ] 2016-10-19 17:55:44.519 [main] com.williamngo.interfaces.MailerImpl.convertBean(MailerImpl.java:264) - successfully converted ReceivedEmail to JagEmail
+[ERROR] 2016-10-19 17:55:44.534 [main] com.williamngo.database.JagEmailDAO.addEmailToDatabase(JagEmailDAO.java:115) - Cannot add or update a child row: a foreign key constraint fails (`cs1435707`.`emails`, CONSTRAINT `fk_account_id` FOREIGN KEY (`email_account_id`) REFERENCES `accounts` (`account_id`))
+[INFO ] 2016-10-19 17:57:50.273 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:52) - Created SmtpServer
+[INFO ] 2016-10-19 17:57:50.521 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:89) - Created JagEmail object
+[INFO ] 2016-10-19 17:57:50.522 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:102) - attachment found, setting attachment in email
+[INFO ] 2016-10-19 17:57:50.530 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:123) - Recipient CC found
+[INFO ] 2016-10-19 17:57:50.531 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:131) - Recipient BCC found
+[ERROR] 2016-10-19 17:57:52.276 [main] com.williamngo.database.JagEmailDAO.addEmailToDatabase(JagEmailDAO.java:115) - Cannot add or update a child row: a foreign key constraint fails (`cs1435707`.`emails`, CONSTRAINT `fk_account_id` FOREIGN KEY (`email_account_id`) REFERENCES `accounts` (`account_id`))
+[INFO ] 2016-10-19 17:57:52.421 [main] com.williamngo.database.JagEmailDAO.addAttachmentToDatabase(JagEmailDAO.java:144) - Added 1 results in email table
+[INFO ] 2016-10-19 17:57:58.927 [main] com.williamngo.interfaces.MailerImpl.convertBean(MailerImpl.java:266) - successfully converted ReceivedEmail to JagEmail
+[ERROR] 2016-10-19 17:57:58.943 [main] com.williamngo.database.JagEmailDAO.addEmailToDatabase(JagEmailDAO.java:115) - Cannot add or update a child row: a foreign key constraint fails (`cs1435707`.`emails`, CONSTRAINT `fk_account_id` FOREIGN KEY (`email_account_id`) REFERENCES `accounts` (`account_id`))
+[INFO ] 2016-10-19 17:58:45.088 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:52) - Created SmtpServer
+[INFO ] 2016-10-19 17:58:45.325 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:60) - userId of sending: -1
+[INFO ] 2016-10-19 17:58:45.332 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:89) - Created JagEmail object
+[INFO ] 2016-10-19 17:58:45.332 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:102) - attachment found, setting attachment in email
+[INFO ] 2016-10-19 17:58:45.341 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:123) - Recipient CC found
+[INFO ] 2016-10-19 17:58:45.341 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:131) - Recipient BCC found
+[ERROR] 2016-10-19 17:58:47.108 [main] com.williamngo.database.JagEmailDAO.addEmailToDatabase(JagEmailDAO.java:115) - Cannot add or update a child row: a foreign key constraint fails (`cs1435707`.`emails`, CONSTRAINT `fk_account_id` FOREIGN KEY (`email_account_id`) REFERENCES `accounts` (`account_id`))
+[INFO ] 2016-10-19 17:58:47.254 [main] com.williamngo.database.JagEmailDAO.addAttachmentToDatabase(JagEmailDAO.java:144) - Added 1 results in email table
+[INFO ] 2016-10-19 17:58:53.698 [main] com.williamngo.interfaces.MailerImpl.convertBean(MailerImpl.java:248) - user id when converingbean is -1
+[INFO ] 2016-10-19 17:58:53.699 [main] com.williamngo.interfaces.MailerImpl.convertBean(MailerImpl.java:266) - successfully converted ReceivedEmail to JagEmail
+[ERROR] 2016-10-19 17:58:53.713 [main] com.williamngo.database.JagEmailDAO.addEmailToDatabase(JagEmailDAO.java:115) - Cannot add or update a child row: a foreign key constraint fails (`cs1435707`.`emails`, CONSTRAINT `fk_account_id` FOREIGN KEY (`email_account_id`) REFERENCES `accounts` (`account_id`))
+[INFO ] 2016-10-19 17:59:49.153 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:52) - Created SmtpServer
+[INFO ] 2016-10-19 18:01:15.384 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:52) - Created SmtpServer
+[INFO ] 2016-10-19 18:02:02.621 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:52) - Created SmtpServer
+[INFO ] 2016-10-19 18:02:45.899 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:52) - Created SmtpServer
+[INFO ] 2016-10-19 18:08:02.992 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:52) - Created SmtpServer
+[INFO ] 2016-10-19 18:08:03.239 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:60) - userId of sending: -1
+[INFO ] 2016-10-19 18:08:03.246 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:89) - Created JagEmail object
+[INFO ] 2016-10-19 18:08:03.247 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:102) - attachment found, setting attachment in email
+[INFO ] 2016-10-19 18:08:03.256 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:123) - Recipient CC found
+[INFO ] 2016-10-19 18:08:03.256 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:131) - Recipient BCC found
+[ERROR] 2016-10-19 18:08:04.987 [main] com.williamngo.database.JagEmailDAO.addEmailToDatabase(JagEmailDAO.java:115) - Cannot add or update a child row: a foreign key constraint fails (`cs1435707`.`emails`, CONSTRAINT `fk_account_id` FOREIGN KEY (`email_account_id`) REFERENCES `accounts` (`account_id`))
+[INFO ] 2016-10-19 18:08:05.138 [main] com.williamngo.database.JagEmailDAO.addAttachmentToDatabase(JagEmailDAO.java:144) - Added 1 results in email table
+[INFO ] 2016-10-19 18:08:13.688 [main] com.williamngo.interfaces.MailerImpl.convertBean(MailerImpl.java:248) - user id when converingbean is -1
+[INFO ] 2016-10-19 18:08:13.688 [main] com.williamngo.interfaces.MailerImpl.convertBean(MailerImpl.java:266) - successfully converted ReceivedEmail to JagEmail
+[ERROR] 2016-10-19 18:08:13.704 [main] com.williamngo.database.JagEmailDAO.addEmailToDatabase(JagEmailDAO.java:115) - Cannot add or update a child row: a foreign key constraint fails (`cs1435707`.`emails`, CONSTRAINT `fk_account_id` FOREIGN KEY (`email_account_id`) REFERENCES `accounts` (`account_id`))
+[INFO ] 2016-10-19 18:12:09.639 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:52) - Created SmtpServer
+[INFO ] 2016-10-19 18:15:59.148 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:52) - Created SmtpServer
+[INFO ] 2016-10-19 18:15:59.385 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:60) - userId of sending: -1
+[INFO ] 2016-10-19 18:15:59.392 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:89) - Created JagEmail object
+[INFO ] 2016-10-19 18:15:59.392 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:102) - attachment found, setting attachment in email
+[INFO ] 2016-10-19 18:15:59.401 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:123) - Recipient CC found
+[INFO ] 2016-10-19 18:15:59.401 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:131) - Recipient BCC found
+[ERROR] 2016-10-19 18:16:01.715 [main] com.williamngo.database.JagEmailDAO.addEmailToDatabase(JagEmailDAO.java:115) - Cannot add or update a child row: a foreign key constraint fails (`cs1435707`.`emails`, CONSTRAINT `fk_account_id` FOREIGN KEY (`email_account_id`) REFERENCES `accounts` (`account_id`))
+[INFO ] 2016-10-19 18:16:01.857 [main] com.williamngo.database.JagEmailDAO.addAttachmentToDatabase(JagEmailDAO.java:144) - Added 1 results in email table
+[INFO ] 2016-10-19 18:16:08.442 [main] com.williamngo.interfaces.MailerImpl.convertBean(MailerImpl.java:248) - user id when converingbean is -1
+[INFO ] 2016-10-19 18:16:08.442 [main] com.williamngo.interfaces.MailerImpl.convertBean(MailerImpl.java:266) - successfully converted ReceivedEmail to JagEmail
+[ERROR] 2016-10-19 18:16:08.456 [main] com.williamngo.database.JagEmailDAO.addEmailToDatabase(JagEmailDAO.java:115) - Cannot add or update a child row: a foreign key constraint fails (`cs1435707`.`emails`, CONSTRAINT `fk_account_id` FOREIGN KEY (`email_account_id`) REFERENCES `accounts` (`account_id`))
+[INFO ] 2016-10-19 18:17:44.158 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:52) - Created SmtpServer
+[INFO ] 2016-10-19 18:19:52.120 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:52) - Created SmtpServer
+[INFO ] 2016-10-19 18:20:07.814 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:60) - userId of sending: 1
+[INFO ] 2016-10-19 18:20:07.926 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:89) - Created JagEmail object
+[INFO ] 2016-10-19 18:20:07.929 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:102) - attachment found, setting attachment in email
+[INFO ] 2016-10-19 18:20:08.079 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:123) - Recipient CC found
+[INFO ] 2016-10-19 18:20:08.082 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:131) - Recipient BCC found
+[INFO ] 2016-10-19 18:20:48.563 [main] com.williamngo.database.JagEmailDAO.addEmailToDatabase(JagEmailDAO.java:112) - Added 1 results in email table
+[INFO ] 2016-10-19 18:20:55.121 [main] com.williamngo.database.JagEmailDAO.addAttachmentToDatabase(JagEmailDAO.java:144) - Added 1 results in email table
+[INFO ] 2016-10-19 18:21:09.977 [main] com.williamngo.interfaces.MailerImpl.convertBean(MailerImpl.java:248) - user id when converingbean is 2
+[INFO ] 2016-10-19 18:21:09.982 [main] com.williamngo.interfaces.MailerImpl.convertBean(MailerImpl.java:266) - successfully converted ReceivedEmail to JagEmail
+[INFO ] 2016-10-19 18:21:11.428 [main] com.williamngo.database.JagEmailDAO.addEmailToDatabase(JagEmailDAO.java:112) - Added 1 results in email table
+[INFO ] 2016-10-19 18:23:43.761 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:52) - Created SmtpServer
+[INFO ] 2016-10-19 18:23:43.999 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:60) - userId of sending: 1
+[INFO ] 2016-10-19 18:23:44.006 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:89) - Created JagEmail object
+[INFO ] 2016-10-19 18:23:44.007 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:102) - attachment found, setting attachment in email
+[INFO ] 2016-10-19 18:23:44.016 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:123) - Recipient CC found
+[INFO ] 2016-10-19 18:23:44.016 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:131) - Recipient BCC found
+[INFO ] 2016-10-19 18:23:45.766 [main] com.williamngo.database.JagEmailDAO.addEmailToDatabase(JagEmailDAO.java:112) - Added 1 results in email table
+[INFO ] 2016-10-19 18:23:45.911 [main] com.williamngo.database.JagEmailDAO.addAttachmentToDatabase(JagEmailDAO.java:144) - Added 1 results in email table
+[INFO ] 2016-10-19 18:23:52.509 [main] com.williamngo.interfaces.MailerImpl.convertBean(MailerImpl.java:248) - user id when converingbean is 2
+[INFO ] 2016-10-19 18:23:52.510 [main] com.williamngo.interfaces.MailerImpl.convertBean(MailerImpl.java:266) - successfully converted ReceivedEmail to JagEmail
+[INFO ] 2016-10-19 18:23:52.524 [main] com.williamngo.database.JagEmailDAO.addEmailToDatabase(JagEmailDAO.java:112) - Added 1 results in email table
+[INFO ] 2016-10-19 18:35:42.251 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:52) - Created SmtpServer
+[INFO ] 2016-10-19 18:35:42.481 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:60) - userId of sending: 1
+[INFO ] 2016-10-19 18:35:42.488 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:89) - Created JagEmail object
+[INFO ] 2016-10-19 18:35:42.489 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:102) - attachment found, setting attachment in email
+[INFO ] 2016-10-19 18:35:42.498 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:123) - Recipient CC found
+[INFO ] 2016-10-19 18:35:42.498 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:131) - Recipient BCC found
+[INFO ] 2016-10-19 18:35:44.593 [main] com.williamngo.database.JagEmailDAO.addEmailToDatabase(JagEmailDAO.java:112) - Added 1 results in email table
+[ERROR] 2016-10-19 18:35:44.609 [main] com.williamngo.database.JagEmailDAO.addAttachmentToDatabase(JagEmailDAO.java:154) - Before start of result set
+[INFO ] 2016-10-19 18:35:51.433 [main] com.williamngo.interfaces.MailerImpl.convertBean(MailerImpl.java:247) - user id when converingbean is 2
+[INFO ] 2016-10-19 18:35:51.434 [main] com.williamngo.interfaces.MailerImpl.convertBean(MailerImpl.java:265) - successfully converted ReceivedEmail to JagEmail
+[INFO ] 2016-10-19 18:35:51.447 [main] com.williamngo.database.JagEmailDAO.addEmailToDatabase(JagEmailDAO.java:112) - Added 1 results in email table
+[ERROR] 2016-10-19 18:35:51.457 [main] com.williamngo.database.JagEmailDAO.addAttachmentToDatabase(JagEmailDAO.java:154) - Before start of result set
+[INFO ] 2016-10-19 18:38:00.139 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:52) - Created SmtpServer
+[INFO ] 2016-10-19 18:38:00.371 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:60) - userId of sending: 1
+[INFO ] 2016-10-19 18:38:00.378 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:89) - Created JagEmail object
+[INFO ] 2016-10-19 18:38:00.378 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:102) - attachment found, setting attachment in email
+[INFO ] 2016-10-19 18:38:00.388 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:123) - Recipient CC found
+[INFO ] 2016-10-19 18:38:00.388 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:131) - Recipient BCC found
+[INFO ] 2016-10-19 18:38:02.069 [main] com.williamngo.database.JagEmailDAO.addEmailToDatabase(JagEmailDAO.java:112) - Added 1 results in email table
+[INFO ] 2016-10-19 18:38:02.215 [main] com.williamngo.database.JagEmailDAO.addAttachmentToDatabase(JagEmailDAO.java:156) - Added 1 results in email table
+[INFO ] 2016-10-19 18:38:08.747 [main] com.williamngo.interfaces.MailerImpl.convertBean(MailerImpl.java:247) - user id when converingbean is 2
+[INFO ] 2016-10-19 18:38:08.748 [main] com.williamngo.interfaces.MailerImpl.convertBean(MailerImpl.java:265) - successfully converted ReceivedEmail to JagEmail
+[INFO ] 2016-10-19 18:38:08.759 [main] com.williamngo.database.JagEmailDAO.addEmailToDatabase(JagEmailDAO.java:112) - Added 1 results in email table
+[INFO ] 2016-10-19 18:38:08.863 [main] com.williamngo.database.JagEmailDAO.addAttachmentToDatabase(JagEmailDAO.java:156) - Added 1 results in email table
+[INFO ] 2016-10-19 18:38:29.611 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:52) - Created SmtpServer
+[INFO ] 2016-10-19 18:38:29.856 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:60) - userId of sending: 1
+[INFO ] 2016-10-19 18:38:29.863 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:89) - Created JagEmail object
+[INFO ] 2016-10-19 18:38:29.864 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:102) - attachment found, setting attachment in email
+[INFO ] 2016-10-19 18:38:29.873 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:123) - Recipient CC found
+[INFO ] 2016-10-19 18:38:29.873 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:131) - Recipient BCC found
+[INFO ] 2016-10-19 18:38:31.551 [main] com.williamngo.database.JagEmailDAO.addEmailToDatabase(JagEmailDAO.java:112) - Added 1 results in email table
+[INFO ] 2016-10-19 18:38:31.696 [main] com.williamngo.database.JagEmailDAO.addAttachmentToDatabase(JagEmailDAO.java:156) - Added 1 results in email table
+[INFO ] 2016-10-19 18:38:40.275 [main] com.williamngo.interfaces.MailerImpl.convertBean(MailerImpl.java:247) - user id when converingbean is 2
+[INFO ] 2016-10-19 18:38:40.276 [main] com.williamngo.interfaces.MailerImpl.convertBean(MailerImpl.java:265) - successfully converted ReceivedEmail to JagEmail
+[INFO ] 2016-10-19 18:38:40.288 [main] com.williamngo.database.JagEmailDAO.addEmailToDatabase(JagEmailDAO.java:112) - Added 1 results in email table
+[INFO ] 2016-10-19 18:38:40.393 [main] com.williamngo.database.JagEmailDAO.addAttachmentToDatabase(JagEmailDAO.java:156) - Added 1 results in email table

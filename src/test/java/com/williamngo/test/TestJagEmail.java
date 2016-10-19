@@ -14,6 +14,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import jodd.mail.*;
+import org.junit.Ignore;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
@@ -76,7 +77,7 @@ public class TestJagEmail {
         return Arrays.asList(new Object[][]
         {
             {
-                new ConfigBean("userName", "smtp.gmail.com", "imap.gmail.com", "williamngosend@gmail.com", "sendanemail", 465, 993),
+                new ConfigBean("sender", "smtp.gmail.com", "imap.gmail.com", "williamngosend@gmail.com", "sendanemail", 465, 993),
                 "williamngoreceive@gmail.com",
                 Optional.of("shiftkun662@gmail.com"),
                 Optional.of("devjlin1@gmail.com"),
@@ -89,7 +90,7 @@ public class TestJagEmail {
             ,
             //Testing for null in the cc and bcc
             {
-                new ConfigBean("userName", "smtp.gmail.com", "imap.gmail.com", "williamngosend@gmail.com", "sendanemail", 465, 993),
+                new ConfigBean("sender", "smtp.gmail.com", "imap.gmail.com", "williamngosend@gmail.com", "sendanemail", 465, 993),
                 "williamngoreceive@gmail.com",
                 Optional.ofNullable(null),
                 Optional.ofNullable(null),
@@ -101,7 +102,7 @@ public class TestJagEmail {
             },
             //No subject
             {
-                new ConfigBean("userName", "smtp.gmail.com", "imap.gmail.com", "williamngosend@gmail.com", "sendanemail", 465, 993),
+                new ConfigBean("sender", "smtp.gmail.com", "imap.gmail.com", "williamngosend@gmail.com", "sendanemail", 465, 993),
                 "williamngoreceive@gmail.com",
                 Optional.of("shiftkun662@gmail.com"),
                 Optional.of("devjlin1@gmail.com"),
@@ -113,7 +114,7 @@ public class TestJagEmail {
             },
             //No text in body, has html
             {
-                new ConfigBean("userName", "smtp.gmail.com", "imap.gmail.com", "williamngosend@gmail.com", "sendanemail", 465, 993),
+                new ConfigBean("sender", "smtp.gmail.com", "imap.gmail.com", "williamngosend@gmail.com", "sendanemail", 465, 993),
                 "williamngoreceive@gmail.com",
                 Optional.of("shiftkun662@gmail.com"),
                 Optional.of("devjlin1@gmail.com"),
@@ -125,7 +126,7 @@ public class TestJagEmail {
             },
             //No text or html
             {
-                new ConfigBean("userName", "smtp.gmail.com", "imap.gmail.com", "williamngosend@gmail.com", "sendanemail", 465, 993),
+                new ConfigBean("sender", "smtp.gmail.com", "imap.gmail.com", "williamngosend@gmail.com", "sendanemail", 465, 993),
                 "williamngoreceive@gmail.com",
                 Optional.of("shiftkun662@gmail.com"),
                 Optional.of("devjlin1@gmail.com"),
@@ -137,7 +138,7 @@ public class TestJagEmail {
             },
             //No attachments
             {
-                new ConfigBean("userName", "smtp.gmail.com", "imap.gmail.com", "williamngosend@gmail.com", "sendanemail", 465, 993),
+                new ConfigBean("sender", "smtp.gmail.com", "imap.gmail.com", "williamngosend@gmail.com", "sendanemail", 465, 993),
                 "williamngoreceive@gmail.com",
                 Optional.of("shiftkun662@gmail.com"),
                 Optional.of("devjlin1@gmail.com"),
@@ -149,7 +150,7 @@ public class TestJagEmail {
             },
             //Has embedded
             {
-                new ConfigBean("userName", "smtp.gmail.com", "imap.gmail.com", "williamngosend@gmail.com", "sendanemail", 465, 993),
+                new ConfigBean("sender", "smtp.gmail.com", "imap.gmail.com", "williamngosend@gmail.com", "sendanemail", 465, 993),
                 "williamngoreceive@gmail.com",
                 Optional.of("shiftkun662@gmail.com"),
                 Optional.of("devjlin1@gmail.com"),
@@ -161,7 +162,7 @@ public class TestJagEmail {
             },
             //Many to
             {
-                new ConfigBean("userName", "smtp.gmail.com", "imap.gmail.com", "williamngosend@gmail.com", "sendanemail", 465, 993),
+                new ConfigBean("sender", "smtp.gmail.com", "imap.gmail.com", "williamngosend@gmail.com", "sendanemail", 465, 993),
                 "williamngoreceive@gmail.com,shiftkun662@gmail.com",
                 Optional.ofNullable(null),
                 Optional.ofNullable(null),
@@ -176,7 +177,7 @@ public class TestJagEmail {
     }
     
     @Test
-    public void TestingAssertTrue()
+    public void TestingSendReceiveEmail()
     {
         MailerImpl m = new MailerImpl(cfg);
         
@@ -192,7 +193,7 @@ public class TestJagEmail {
          }
         
         //Email receiving
-        m = new MailerImpl(new ConfigBean("userName", "smtp.gmail.com", "imap.gmail.com", "williamngoreceive@gmail.com", "receiveanemail", 465, 993));
+        m = new MailerImpl(new ConfigBean("receiver", "smtp.gmail.com", "imap.gmail.com", "williamngoreceive@gmail.com", "receiveanemail", 465, 993));
         
         JagEmail[] receivedEmail = m.receiveEmail();
         JagEmail receivingEmail = receivedEmail[0];

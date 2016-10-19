@@ -2,7 +2,7 @@ package com.williamngo.interfaces;
 
 import com.williamngo.beans.ConfigBean;
 import com.williamngo.business.JagEmail;
-import com.williamngo.database.jagemail_database;
+import com.williamngo.database.JagEmailDAOImpl;
 import com.williamngo.interfaces.Mailer;
 import java.io.File;
 import java.util.ArrayList;
@@ -26,12 +26,12 @@ import jodd.mail.*;
 public class MailerImpl implements Mailer {
     private final Logger log = LoggerFactory.getLogger(getClass().getName());
     private ConfigBean configBean;
-    private jagemail_database jdb;
+    private JagEmailDAOImpl jdb;
     
     public MailerImpl(ConfigBean c)
     {
         this.configBean = c;
-        this.jdb = new jagemail_database(this.configBean);
+        this.jdb = new JagEmailDAOImpl(this.configBean);
     }
     
     @Override
@@ -43,7 +43,8 @@ public class MailerImpl implements Mailer {
         String emailSend = configBean.getEmailAddress();
         String emailSendPwd = configBean.getEmailAddressPwd();
         int smtpPortNo = configBean.getSmtpPort();
-
+        
+        
         //Creates server
         SmtpServer<SmtpSslServer> mySmtpServer = SmtpSslServer
                 .create(smtpServerName, smtpPortNo)
@@ -54,6 +55,10 @@ public class MailerImpl implements Mailer {
         JagEmail email = new JagEmail();
         email.from(emailSend);
                 
+        //Set user id associated with current user
+        email.setUserId(jdb.getUserIdFromDatabase());
+        log.info("userId of sending: " + email.getUserId());
+        
         String[] toArray; //Array containing list of To
         //If there are no recipients, throw exception
         if(listOfTo == null || listOfTo.equals(""))
@@ -161,7 +166,7 @@ public class MailerImpl implements Mailer {
         }
         
         //Add email to database
-        jdb.populateEmailTable(email);
+        jdb.addEmailToDatabase(email);
         
         session.close();
         return email;
@@ -206,7 +211,7 @@ public class MailerImpl implements Mailer {
         //Populate database with emails received
         for(JagEmail rcvdMail: jagEmails)
         {
-            jdb.populateEmailTable(rcvdMail);
+            jdb.addEmailToDatabase(rcvdMail);
         }
         
         session.close();
@@ -238,7 +243,8 @@ public class MailerImpl implements Mailer {
             myEmailArray[i].setReceiveDate(r[i].getReceiveDate());
             myEmailArray[i].setFolder("Inbox");
             myEmailArray[i].setTypeFlags(false);
-            //Message number not used currently
+            myEmailArray[i].setUserId(jdb.getUserIdFromDatabase());
+            log.info("user id when converingbean is " + myEmailArray[i].getUserId());
             //myEmailArray[i].setMessageNumber(r[i].getMessageNumber());
             //Get attachments
             if(r[i].getAttachments() != null)

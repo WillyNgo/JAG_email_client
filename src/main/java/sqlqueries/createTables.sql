@@ -8,7 +8,7 @@ CREATE TABLE accounts (
         account_username VARCHAR(255)NOT NULL,
         emailAddress VARCHAR(255) NOT NULL,
         account_password VARCHAR(255) NOT NULL
-);
+)ENGINE=InnoDB;
 
 create table emails (
 		messageNumber INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
@@ -23,14 +23,17 @@ create table emails (
         receive_date date,
         folder VARCHAR(255),
         CONSTRAINT fk_account_id FOREIGN KEY (email_account_id) REFERENCES accounts(account_id)
-);
+)ENGINE=InnoDB;
 
 
 CREATE TABLE attachments(
 	attachment_id int NOT NULL AUTO_INCREMENT,
-    messageNumber int NOT NULL,
-    attachName varchar(255),
+    attach_messageNumber int,
+    attachmentName varchar(255),
     attachmentByte mediumblob,
     PRIMARY KEY (attachment_id),
-    CONSTRAINT fk_messagenumber FOREIGN KEY (messageNumber) REFERENCES emails(messageNumber)
-);
+    CONSTRAINT fk_messagenumber FOREIGN KEY (attach_messageNumber) REFERENCES emails(messageNumber)
+)ENGINE=InnoDB;
+
+INSERT INTO accounts (account_username, emailAddress, account_password) VALUES ('sender', 'williamngosend@gmail.com', 'sendanemail');
+INSERT INTO accounts (account_username, emailAddress, account_password) VALUES ('receiver', 'williamngoreceive@gmail.com', 'receiveanemail');
