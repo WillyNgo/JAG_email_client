@@ -14,11 +14,12 @@ import java.util.List;
  * @author 1435707
  */
 public interface JagEmailDAO {
-    public void addAccountToDatabase(String username, String emailaddress, String password);
-    public void addEmailToDatabase(JagEmail jagemail);
-    public void addAttachmentToDatabase(JagEmail jagemail, ResultSet rs);
-    public void deleteEmailFromDatabase(JagEmail jagemail, int messageNumber);
-    public void deleteAccountFromDatabase(String emailAddress, String password);
+    public void addAccount(String username, String emailaddress, String password);
+    public void addEmail(JagEmail jagemail);
+    public void addAttachment(JagEmail jagemail, ResultSet rs);
+    public void updateAccount(String username, String emailaddress, String password);
+    public void deleteEmail(JagEmail jagemail, int messageNumber);
+    public void deleteAccount(String emailAddress, String password);
     public List<JagEmail> retrieveEmail(String folder);
     public List<JagEmail> searchEmail(String keyword);
 }

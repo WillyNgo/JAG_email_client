@@ -21,6 +21,10 @@ public class JagEmailDAOImpl implements JagEmailDAO {
     public final Logger log = LoggerFactory.getLogger(getClass().getName());
     public ConfigBean cb;
     
+    String url = "jdbc:mysql://waldo2.dawsoncollege.qc.ca:3306/cs1435707";
+    String user = "CS1435707";
+    String password = "tripermu";
+    
     public JagEmailDAOImpl(ConfigBean cb)
     {
         this.cb = cb;
@@ -34,7 +38,7 @@ public class JagEmailDAOImpl implements JagEmailDAO {
      * @param jagemail - JagEmail to be stored in the database
      */
     @Override
-    public void addEmailToDatabase(JagEmail jagemail)
+    public void addEmail(JagEmail jagemail)
     {
         String url = "jdbc:mysql://waldo2.dawsoncollege.qc.ca:3306/cs1435707";
         String user = "CS1435707";
@@ -113,7 +117,7 @@ public class JagEmailDAOImpl implements JagEmailDAO {
             log.info("Added " + result + " results in email table");
             
             //Add attachment into database
-            addAttachmentToDatabase(jagemail, stmt.getGeneratedKeys());
+            addAttachment(jagemail, stmt.getGeneratedKeys());
         }catch(SQLException sqle)
         {
             log.error(sqle.getMessage());
@@ -126,12 +130,8 @@ public class JagEmailDAOImpl implements JagEmailDAO {
      * @param rs 
      */
     @Override
-    public void addAttachmentToDatabase(JagEmail jagemail, ResultSet rs)
-    {
-        String url = "jdbc:mysql://waldo2.dawsoncollege.qc.ca:3306/cs1435707";
-        String user = "CS1435707";
-        String password = "tripermu";
-        
+    public void addAttachment(JagEmail jagemail, ResultSet rs)
+    {        
         String query = "INSERT INTO attachments (attach_messageNumber, attachmentName, attachmentByte) VALUES (?, ?, ?);";
         try(Connection conn = DriverManager.getConnection(url, user, password)){
             PreparedStatement stmt = conn.prepareStatement(query);
@@ -168,6 +168,30 @@ public class JagEmailDAOImpl implements JagEmailDAO {
         }
     }
     
+    @Override
+    public void updateAccount(int account_id, String account_username, String emailAddress, String account_password)
+    {
+        log.info("Updating account...");
+        String query = "UPDATE accounts SET account_username = ?, emailAddress = ?, account_password = ?"
+                + " WHERE account_id = ?;";
+        
+        try(Connection conn = DriverManager.getConnection(url, user, password)){
+            PreparedStatement stmt = conn.prepareStatement(query);
+            
+            stmt.setString(1, account_username);
+            stmt.setString(2, emailAddress);
+            stmt.setString(3, account_password);
+            stmt.setInt(4, account_id);
+            
+            int result = stmt.executeUpdate();
+            log.info("Updated " + result + " result(s)");
+        }
+        catch(SQLException sqle)
+        {
+            sqle.getMessage();
+        }
+    }
+    
     /**
      * Adds a user account into the database
      * 
@@ -176,11 +200,9 @@ public class JagEmailDAOImpl implements JagEmailDAO {
      * @param account_password - the password associated with its account
      */
     @Override
-    public void addAccountToDatabase(String account_username, String emailAddress, String account_password)
+    public void addAccount(String account_username, String emailAddress, String account_password)
     {
-        String url = "jdbc:mysql://waldo2.dawsoncollege.qc.ca:3306/cs1435707";
-        String user = "CS1435707";
-        String password = "tripermu";
+        
         
         String query = "INSERT INTO accounts (account_username, emailAddress, account_password) VALUES (?, ?, ?);";
          try(Connection conn = DriverManager.getConnection(url, user, password)){
@@ -199,7 +221,7 @@ public class JagEmailDAOImpl implements JagEmailDAO {
     }
     
     @Override
-    public void deleteEmailFromDatabase(JagEmail jagemail, int messageNumber)
+    public void deleteEmail(JagEmail jagemail, int messageNumber)
     {
          String url = "jdbc:mysql://waldo2.dawsoncollege.qc.ca:3306/cs1435707";
         String user = "CS1435707";
@@ -226,7 +248,7 @@ public class JagEmailDAOImpl implements JagEmailDAO {
      * @param account_password 
      */
     @Override
-    public void deleteAccountFromDatabase(String emailAddress, String account_password)
+    public void deleteAccount(String emailAddress, String account_password)
     {
         String url = "jdbc:mysql://waldo2.dawsoncollege.qc.ca:3306/cs1435707";
         String user = "CS1435707";
@@ -260,7 +282,7 @@ public class JagEmailDAOImpl implements JagEmailDAO {
         String user = "CS1435707";
         String password = "tripermu";
         List<JagEmail> emailFound = new ArrayList<JagEmail>();
-        int account_id = this.getUserIdFromDatabase();
+        int account_id = this.getAccountIdFromDatabase();
         
         String query = "SELECT sender, cc, subject_text, message, html, receive_date, folder, attachmentByte FROM emails WHERE account_id = ? AND folder = ?;";
         
@@ -327,7 +349,7 @@ public class JagEmailDAOImpl implements JagEmailDAO {
         String user = "CS1435707";
         String password = "tripermu";
         List<JagEmail> emailFound = new ArrayList<JagEmail>();
-        int account_id = this.getUserIdFromDatabase();
+        int account_id = this.getAccountIdFromDatabase();
         String query = "SELECT sender, cc, subject_text, message, html, receive_date, folder, attachmentByte FROM emails"
                 + " INNER JOIN attachments ON emails.messageNumber = attachments.attach_messageNumber\n" +
                 "WHERE account_id = ? AND (sender LIKE \"%?%\" OR cc LIKE \"%?%\" OR subject_text LIKE \"%?%\" OR message LIKE \"%?%\");";
@@ -423,7 +445,7 @@ public class JagEmailDAOImpl implements JagEmailDAO {
      * Returns the id of the current user
      * @return user_id - id of the user
      */
-    public int getUserIdFromDatabase()
+    public int getAccountIdFromDatabase()
     {
         String url = "jdbc:mysql://waldo2.dawsoncollege.qc.ca:3306/cs1435707";
         String user = "CS1435707";

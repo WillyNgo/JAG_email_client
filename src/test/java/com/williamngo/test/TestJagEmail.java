@@ -28,6 +28,8 @@ import org.slf4j.LoggerFactory;
  * 
  * @author William Ngo
  */
+
+@Ignore
 @RunWith(Parameterized.class)
 public class TestJagEmail {
 

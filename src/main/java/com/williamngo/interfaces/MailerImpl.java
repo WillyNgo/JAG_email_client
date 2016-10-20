@@ -56,7 +56,7 @@ public class MailerImpl implements Mailer {
         email.from(emailSend);
                 
         //Set user id associated with current user
-        email.setUserId(jdb.getUserIdFromDatabase());
+        email.setUserId(jdb.getAccountIdFromDatabase());
         log.info("userId of sending: " + email.getUserId());
         
         String[] toArray; //Array containing list of To
@@ -166,7 +166,7 @@ public class MailerImpl implements Mailer {
         }
         
         //Add email to database
-        jdb.addEmailToDatabase(email);
+        jdb.addEmail(email);
         
         session.close();
         return email;
@@ -211,7 +211,7 @@ public class MailerImpl implements Mailer {
         //Populate database with emails received
         for(JagEmail rcvdMail: jagEmails)
         {
-            jdb.addEmailToDatabase(rcvdMail);
+            jdb.addEmail(rcvdMail);
         }
         
         session.close();
@@ -243,7 +243,7 @@ public class MailerImpl implements Mailer {
             myEmailArray[i].setReceiveDate(r[i].getReceiveDate());
             myEmailArray[i].setFolder("Inbox");
             myEmailArray[i].setTypeFlags(false);
-            myEmailArray[i].setUserId(jdb.getUserIdFromDatabase());
+            myEmailArray[i].setUserId(jdb.getAccountIdFromDatabase());
             log.info("user id when converingbean is " + myEmailArray[i].getUserId());
             //myEmailArray[i].setMessageNumber(r[i].getMessageNumber());
             //Get attachments

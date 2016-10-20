@@ -1207,3 +1207,15 @@
 [INFO ] 2016-10-19 20:29:02.260 [main] com.williamngo.interfaces.MailerImpl.convertBean(MailerImpl.java:265) - successfully converted ReceivedEmail to JagEmail
 [INFO ] 2016-10-19 20:29:02.276 [main] com.williamngo.database.JagEmailDAOImpl.addEmailToDatabase(JagEmailDAOImpl.java:113) - Added 1 results in email table
 [INFO ] 2016-10-19 20:29:02.382 [main] com.williamngo.database.JagEmailDAOImpl.addAttachmentToDatabase(JagEmailDAOImpl.java:163) - Added 1 results in email table
+[INFO ] 2016-10-19 21:07:38.641 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:52) - Created SmtpServer
+[INFO ] 2016-10-19 21:07:38.876 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:60) - userId of sending: 1
+[INFO ] 2016-10-19 21:07:38.883 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:89) - Created JagEmail object
+[INFO ] 2016-10-19 21:07:38.884 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:102) - attachment found, setting attachment in email
+[INFO ] 2016-10-19 21:07:38.893 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:123) - Recipient CC found
+[INFO ] 2016-10-19 21:07:38.893 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:131) - Recipient BCC found
+[INFO ] 2016-10-19 21:07:40.838 [main] com.williamngo.database.JagEmailDAOImpl.addEmailToDatabase(JagEmailDAOImpl.java:113) - Added 1 results in email table
+[INFO ] 2016-10-19 21:07:40.984 [main] com.williamngo.database.JagEmailDAOImpl.addAttachmentToDatabase(JagEmailDAOImpl.java:163) - Added 1 results in email table
+[INFO ] 2016-10-19 21:07:47.633 [main] com.williamngo.interfaces.MailerImpl.convertBean(MailerImpl.java:247) - user id when converingbean is 2
+[INFO ] 2016-10-19 21:07:47.634 [main] com.williamngo.interfaces.MailerImpl.convertBean(MailerImpl.java:265) - successfully converted ReceivedEmail to JagEmail
+[INFO ] 2016-10-19 21:07:47.646 [main] com.williamngo.database.JagEmailDAOImpl.addEmailToDatabase(JagEmailDAOImpl.java:113) - Added 1 results in email table
+[INFO ] 2016-10-19 21:07:47.756 [main] com.williamngo.database.JagEmailDAOImpl.addAttachmentToDatabase(JagEmailDAOImpl.java:163) - Added 1 results in email table
