@@ -17,7 +17,7 @@ public interface JagEmailDAO {
     public void addAccount(String username, String emailaddress, String password);
     public void addEmail(JagEmail jagemail);
     public void addAttachment(JagEmail jagemail, ResultSet rs);
-    public void updateAccount(String username, String emailaddress, String password);
+    public void updateAccount(int account_id, String username, String emailaddress, String password);
     public void deleteEmail(JagEmail jagemail, int messageNumber);
     public void deleteAccount(String emailAddress, String password);
     public List<JagEmail> retrieveEmail(String folder);
