@@ -1,6 +1,7 @@
 com\williamngo\interfaces\Mailer.class
 com\williamngo\beans\attachmentBean.class
 com\williamngo\business\FXMLController.class
+com\williamngo\database\JagEmailDAOImpl.class
 com\williamngo\database\JagEmailDAO.class
 com\williamngo\business\JagEmail.class
 com\williamngo\interfaces\MailerImpl.class

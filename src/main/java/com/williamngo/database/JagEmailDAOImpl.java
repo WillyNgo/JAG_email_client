@@ -7,9 +7,9 @@ import com.williamngo.business.JagEmail;
 
 import java.sql.*;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 import jodd.mail.*;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -248,6 +248,78 @@ public class JagEmailDAOImpl implements JagEmailDAO {
          }
     }
     
+    /**
+     * Returns list of JagEmail based on folder name
+     * @param foldername
+     * @return 
+     */
+    @Override
+    public List<JagEmail> retrieveEmail(String foldername)
+    {
+        String url = "jdbc:mysql://waldo2.dawsoncollege.qc.ca:3306/cs1435707";
+        String user = "CS1435707";
+        String password = "tripermu";
+        List<JagEmail> emailFound = new ArrayList<JagEmail>();
+        int account_id = this.getUserIdFromDatabase();
+        
+        String query = "SELECT sender, cc, subject_text, message, html, receive_date, folder, attachmentByte FROM emails WHERE account_id = ? AND folder = ?;";
+        
+        try(Connection conn = DriverManager.getConnection(url, user, password)){
+            PreparedStatement stmt = conn.prepareStatement(query);
+            stmt.setInt(1, account_id);
+            stmt.setString(2, foldername);
+            
+            try(ResultSet rs = stmt.executeQuery())
+            {
+                while(rs.next())
+                {
+                    //Creates JagEmail to be put into the list if email was found
+                    String sender = rs.getString("sender");
+                    String cc = rs.getString("cc");
+                    String subject = rs.getString("subject_text");
+                    String message = rs.getString("message");
+                    String html = rs.getString("html");
+                    java.util.Date receiveDate = rs.getTimestamp("receive_date");
+                    String folder = rs.getString("folder");
+                    
+                    //Create email to be added to list
+                    JagEmail emailToBeAdded = new JagEmail();
+                    for(String mailAddressTo : sender.split(","))
+                    {
+                        emailToBeAdded.to(mailAddressTo);
+                    }
+                    for(String mailAddressCc : cc.split(","))
+                    {
+                        emailToBeAdded.cc(mailAddressCc);
+                    }
+                    emailToBeAdded.setSubject(subject);
+                    emailToBeAdded.setUserId(account_id);
+                    
+                    emailToBeAdded.addText(message);
+                    emailToBeAdded.addHtml(html);
+                    emailToBeAdded.setReceiveDate(receiveDate);
+                    emailToBeAdded.setFolder(folder);
+                    getAttachmentFromEmail(account_id, emailToBeAdded);
+                    
+                    emailFound.add(emailToBeAdded);
+                }
+            }
+        }
+        catch(SQLException sqle)
+        {
+            sqle.getMessage();
+        }
+        
+         return emailFound;
+    }
+    
+    
+    /**
+     * Returns an list of jag email whose subject, sender or content of email contains the specified keyword
+     * 
+     * @param keyword
+     * @return emailFound - List of email that contains the keyword
+     */
     @Override
     public List<JagEmail> searchEmail(String keyword)
     {
@@ -255,16 +327,54 @@ public class JagEmailDAOImpl implements JagEmailDAO {
         String user = "CS1435707";
         String password = "tripermu";
         List<JagEmail> emailFound = new ArrayList<JagEmail>();
-        
+        int account_id = this.getUserIdFromDatabase();
         String query = "SELECT sender, cc, subject_text, message, html, receive_date, folder, attachmentByte FROM emails"
                 + " INNER JOIN attachments ON emails.messageNumber = attachments.attach_messageNumber\n" +
-                "WHERE sender LIKE \"%text%\" OR cc LIKE \"%text%\" OR subject_text LIKE \"%text%\" OR message LIKE \"%text%\";";
+                "WHERE account_id = ? AND (sender LIKE \"%?%\" OR cc LIKE \"%?%\" OR subject_text LIKE \"%?%\" OR message LIKE \"%?%\");";
         
         try(Connection conn = DriverManager.getConnection(url, user, password)){
             PreparedStatement stmt = conn.prepareStatement(query);
             
+            //Setting user id so as to only search for emails that belongs to the current user
+            stmt.setInt(1, account_id);
+            stmt.setString(2, keyword);
+            stmt.setString(3, keyword);
+            stmt.setString(4, keyword);
+            stmt.setString(5, keyword);
             
-           
+            try(ResultSet rs = stmt.executeQuery())
+            {
+                while(rs.next())
+                {
+                    //Creates JagEmail to be put into the list if email was found
+                    String sender = rs.getString("sender");
+                    String cc = rs.getString("cc");
+                    String subject = rs.getString("subject_text");
+                    String message = rs.getString("message");
+                    String html = rs.getString("html");
+                    java.util.Date receiveDate = rs.getTimestamp("receive_date");
+                    String folder = rs.getString("folder");
+                    
+                    //Create email to be added to list
+                    JagEmail emailToBeAdded = new JagEmail();
+                    for(String mailAddressTo : sender.split(","))
+                    {
+                        emailToBeAdded.to(mailAddressTo);
+                    }
+                    for(String mailAddressCc : cc.split(","))
+                    {
+                        emailToBeAdded.cc(mailAddressCc);
+                    }
+                    emailToBeAdded.setSubject(subject);
+                    emailToBeAdded.setUserId(account_id);
+                    
+                    emailToBeAdded.addText(message);
+                    emailToBeAdded.addHtml(html);
+                    emailToBeAdded.setReceiveDate(receiveDate);
+                    emailToBeAdded.setFolder(folder);
+                    getAttachmentFromEmail(account_id, emailToBeAdded);
+                }
+            }
         }
         catch(SQLException sqle)
         {
@@ -274,7 +384,45 @@ public class JagEmailDAOImpl implements JagEmailDAO {
         return emailFound;
     }
     
+    /**
+     * Gets attachment associated with the email and attach them to the email.
+     * 
+     * @param attachment_id
+     * @param jagemail 
+     */
+    private void getAttachmentFromEmail(int attachment_id, JagEmail jagemail)
+    {
+        String url = "jdbc:mysql://waldo2.dawsoncollege.qc.ca:3306/cs1435707";
+        String user = "CS1435707";
+        String password = "tripermu";
+        String query = "SELECT attachmentByte, attachmentName, from attachments WHERE attachment_id = ?;";
+        try(Connection conn = DriverManager.getConnection(url, user, password)){
+            PreparedStatement stmt = conn.prepareStatement(query);
+            stmt.setInt(1, attachment_id);
+            
+            try(ResultSet rs = stmt.executeQuery())
+            {
+                while(rs.next())
+                {
+                    Blob fileData = rs.getBlob("attachmentByte");
+                    byte[] stream = fileData.getBytes(1, (int)fileData.length());
+                    String attachmentName = rs.getString("attachmentName");
+                    
+                    jagemail.attach(EmailAttachment.attachment().bytes(stream).setName(attachmentName).create());
+                }
+                
+            }
+        }
+        catch(SQLException sqle)
+        {
+            sqle.getMessage();
+        }
+    }
     
+    /**
+     * Returns the id of the current user
+     * @return user_id - id of the user
+     */
     public int getUserIdFromDatabase()
     {
         String url = "jdbc:mysql://waldo2.dawsoncollege.qc.ca:3306/cs1435707";

@@ -1136,3 +1136,74 @@
 [INFO ] 2016-10-19 18:38:40.276 [main] com.williamngo.interfaces.MailerImpl.convertBean(MailerImpl.java:265) - successfully converted ReceivedEmail to JagEmail
 [INFO ] 2016-10-19 18:38:40.288 [main] com.williamngo.database.JagEmailDAO.addEmailToDatabase(JagEmailDAO.java:112) - Added 1 results in email table
 [INFO ] 2016-10-19 18:38:40.393 [main] com.williamngo.database.JagEmailDAO.addAttachmentToDatabase(JagEmailDAO.java:156) - Added 1 results in email table
+[INFO ] 2016-10-19 20:27:20.713 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:52) - Created SmtpServer
+[INFO ] 2016-10-19 20:27:20.962 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:60) - userId of sending: 1
+[INFO ] 2016-10-19 20:27:20.970 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:89) - Created JagEmail object
+[INFO ] 2016-10-19 20:27:20.970 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:102) - attachment found, setting attachment in email
+[INFO ] 2016-10-19 20:27:20.980 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:123) - Recipient CC found
+[INFO ] 2016-10-19 20:27:20.980 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:131) - Recipient BCC found
+[INFO ] 2016-10-19 20:27:23.104 [main] com.williamngo.database.JagEmailDAOImpl.addEmailToDatabase(JagEmailDAOImpl.java:113) - Added 1 results in email table
+[INFO ] 2016-10-19 20:27:23.244 [main] com.williamngo.database.JagEmailDAOImpl.addAttachmentToDatabase(JagEmailDAOImpl.java:163) - Added 1 results in email table
+[INFO ] 2016-10-19 20:27:36.928 [main] com.williamngo.interfaces.MailerImpl.convertBean(MailerImpl.java:247) - user id when converingbean is 2
+[INFO ] 2016-10-19 20:27:36.938 [main] com.williamngo.interfaces.MailerImpl.convertBean(MailerImpl.java:247) - user id when converingbean is 2
+[INFO ] 2016-10-19 20:27:36.949 [main] com.williamngo.interfaces.MailerImpl.convertBean(MailerImpl.java:247) - user id when converingbean is 2
+[INFO ] 2016-10-19 20:27:36.959 [main] com.williamngo.interfaces.MailerImpl.convertBean(MailerImpl.java:247) - user id when converingbean is 2
+[INFO ] 2016-10-19 20:27:36.970 [main] com.williamngo.interfaces.MailerImpl.convertBean(MailerImpl.java:247) - user id when converingbean is 2
+[INFO ] 2016-10-19 20:27:36.982 [main] com.williamngo.interfaces.MailerImpl.convertBean(MailerImpl.java:247) - user id when converingbean is 2
+[INFO ] 2016-10-19 20:27:36.991 [main] com.williamngo.interfaces.MailerImpl.convertBean(MailerImpl.java:247) - user id when converingbean is 2
+[INFO ] 2016-10-19 20:27:37.000 [main] com.williamngo.interfaces.MailerImpl.convertBean(MailerImpl.java:247) - user id when converingbean is 2
+[INFO ] 2016-10-19 20:27:37.012 [main] com.williamngo.interfaces.MailerImpl.convertBean(MailerImpl.java:247) - user id when converingbean is 2
+[INFO ] 2016-10-19 20:27:37.025 [main] com.williamngo.interfaces.MailerImpl.convertBean(MailerImpl.java:247) - user id when converingbean is 2
+[INFO ] 2016-10-19 20:27:37.036 [main] com.williamngo.interfaces.MailerImpl.convertBean(MailerImpl.java:247) - user id when converingbean is 2
+[INFO ] 2016-10-19 20:27:37.036 [main] com.williamngo.interfaces.MailerImpl.convertBean(MailerImpl.java:265) - successfully converted ReceivedEmail to JagEmail
+[INFO ] 2016-10-19 20:27:37.053 [main] com.williamngo.database.JagEmailDAOImpl.addEmailToDatabase(JagEmailDAOImpl.java:113) - Added 1 results in email table
+[INFO ] 2016-10-19 20:27:37.072 [main] com.williamngo.database.JagEmailDAOImpl.addAttachmentToDatabase(JagEmailDAOImpl.java:163) - Added 1 results in email table
+[INFO ] 2016-10-19 20:27:37.080 [main] com.williamngo.database.JagEmailDAOImpl.addAttachmentToDatabase(JagEmailDAOImpl.java:163) - Added 1 results in email table
+[INFO ] 2016-10-19 20:27:37.094 [main] com.williamngo.database.JagEmailDAOImpl.addEmailToDatabase(JagEmailDAOImpl.java:113) - Added 1 results in email table
+[INFO ] 2016-10-19 20:27:37.108 [main] com.williamngo.database.JagEmailDAOImpl.addAttachmentToDatabase(JagEmailDAOImpl.java:163) - Added 1 results in email table
+[INFO ] 2016-10-19 20:27:37.113 [main] com.williamngo.database.JagEmailDAOImpl.addAttachmentToDatabase(JagEmailDAOImpl.java:163) - Added 1 results in email table
+[INFO ] 2016-10-19 20:27:37.129 [main] com.williamngo.database.JagEmailDAOImpl.addEmailToDatabase(JagEmailDAOImpl.java:113) - Added 1 results in email table
+[INFO ] 2016-10-19 20:27:37.162 [main] com.williamngo.database.JagEmailDAOImpl.addAttachmentToDatabase(JagEmailDAOImpl.java:163) - Added 1 results in email table
+[INFO ] 2016-10-19 20:27:37.170 [main] com.williamngo.database.JagEmailDAOImpl.addAttachmentToDatabase(JagEmailDAOImpl.java:163) - Added 1 results in email table
+[INFO ] 2016-10-19 20:27:37.192 [main] com.williamngo.database.JagEmailDAOImpl.addEmailToDatabase(JagEmailDAOImpl.java:113) - Added 1 results in email table
+[INFO ] 2016-10-19 20:27:37.222 [main] com.williamngo.database.JagEmailDAOImpl.addAttachmentToDatabase(JagEmailDAOImpl.java:163) - Added 1 results in email table
+[INFO ] 2016-10-19 20:27:37.231 [main] com.williamngo.database.JagEmailDAOImpl.addAttachmentToDatabase(JagEmailDAOImpl.java:163) - Added 1 results in email table
+[INFO ] 2016-10-19 20:27:37.248 [main] com.williamngo.database.JagEmailDAOImpl.addEmailToDatabase(JagEmailDAOImpl.java:113) - Added 1 results in email table
+[INFO ] 2016-10-19 20:27:37.272 [main] com.williamngo.database.JagEmailDAOImpl.addAttachmentToDatabase(JagEmailDAOImpl.java:163) - Added 1 results in email table
+[INFO ] 2016-10-19 20:27:37.289 [main] com.williamngo.database.JagEmailDAOImpl.addEmailToDatabase(JagEmailDAOImpl.java:113) - Added 1 results in email table
+[INFO ] 2016-10-19 20:27:37.307 [main] com.williamngo.database.JagEmailDAOImpl.addAttachmentToDatabase(JagEmailDAOImpl.java:163) - Added 1 results in email table
+[INFO ] 2016-10-19 20:27:37.318 [main] com.williamngo.database.JagEmailDAOImpl.addAttachmentToDatabase(JagEmailDAOImpl.java:163) - Added 1 results in email table
+[INFO ] 2016-10-19 20:27:37.336 [main] com.williamngo.database.JagEmailDAOImpl.addEmailToDatabase(JagEmailDAOImpl.java:113) - Added 1 results in email table
+[INFO ] 2016-10-19 20:27:37.367 [main] com.williamngo.database.JagEmailDAOImpl.addAttachmentToDatabase(JagEmailDAOImpl.java:163) - Added 1 results in email table
+[INFO ] 2016-10-19 20:27:37.389 [main] com.williamngo.database.JagEmailDAOImpl.addEmailToDatabase(JagEmailDAOImpl.java:113) - Added 1 results in email table
+[INFO ] 2016-10-19 20:27:37.423 [main] com.williamngo.database.JagEmailDAOImpl.addAttachmentToDatabase(JagEmailDAOImpl.java:163) - Added 1 results in email table
+[INFO ] 2016-10-19 20:27:37.439 [main] com.williamngo.database.JagEmailDAOImpl.addEmailToDatabase(JagEmailDAOImpl.java:113) - Added 1 results in email table
+[INFO ] 2016-10-19 20:27:37.467 [main] com.williamngo.database.JagEmailDAOImpl.addAttachmentToDatabase(JagEmailDAOImpl.java:163) - Added 1 results in email table
+[INFO ] 2016-10-19 20:27:37.485 [main] com.williamngo.database.JagEmailDAOImpl.addEmailToDatabase(JagEmailDAOImpl.java:113) - Added 1 results in email table
+[INFO ] 2016-10-19 20:27:37.508 [main] com.williamngo.database.JagEmailDAOImpl.addAttachmentToDatabase(JagEmailDAOImpl.java:163) - Added 1 results in email table
+[INFO ] 2016-10-19 20:27:37.520 [main] com.williamngo.database.JagEmailDAOImpl.addEmailToDatabase(JagEmailDAOImpl.java:113) - Added 1 results in email table
+[INFO ] 2016-10-19 20:27:37.624 [main] com.williamngo.database.JagEmailDAOImpl.addAttachmentToDatabase(JagEmailDAOImpl.java:163) - Added 1 results in email table
+[INFO ] 2016-10-19 20:28:18.873 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:52) - Created SmtpServer
+[INFO ] 2016-10-19 20:28:19.129 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:60) - userId of sending: 1
+[INFO ] 2016-10-19 20:28:19.137 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:89) - Created JagEmail object
+[INFO ] 2016-10-19 20:28:19.137 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:102) - attachment found, setting attachment in email
+[INFO ] 2016-10-19 20:28:19.146 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:123) - Recipient CC found
+[INFO ] 2016-10-19 20:28:19.146 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:131) - Recipient BCC found
+[INFO ] 2016-10-19 20:28:20.979 [main] com.williamngo.database.JagEmailDAOImpl.addEmailToDatabase(JagEmailDAOImpl.java:113) - Added 1 results in email table
+[INFO ] 2016-10-19 20:28:21.125 [main] com.williamngo.database.JagEmailDAOImpl.addAttachmentToDatabase(JagEmailDAOImpl.java:163) - Added 1 results in email table
+[INFO ] 2016-10-19 20:28:27.701 [main] com.williamngo.interfaces.MailerImpl.convertBean(MailerImpl.java:247) - user id when converingbean is 2
+[INFO ] 2016-10-19 20:28:27.702 [main] com.williamngo.interfaces.MailerImpl.convertBean(MailerImpl.java:265) - successfully converted ReceivedEmail to JagEmail
+[INFO ] 2016-10-19 20:28:27.722 [main] com.williamngo.database.JagEmailDAOImpl.addEmailToDatabase(JagEmailDAOImpl.java:113) - Added 1 results in email table
+[INFO ] 2016-10-19 20:28:27.834 [main] com.williamngo.database.JagEmailDAOImpl.addAttachmentToDatabase(JagEmailDAOImpl.java:163) - Added 1 results in email table
+[INFO ] 2016-10-19 20:28:53.462 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:52) - Created SmtpServer
+[INFO ] 2016-10-19 20:28:53.702 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:60) - userId of sending: 1
+[INFO ] 2016-10-19 20:28:53.709 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:89) - Created JagEmail object
+[INFO ] 2016-10-19 20:28:53.710 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:102) - attachment found, setting attachment in email
+[INFO ] 2016-10-19 20:28:53.719 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:123) - Recipient CC found
+[INFO ] 2016-10-19 20:28:53.719 [main] com.williamngo.interfaces.MailerImpl.sendEmail(MailerImpl.java:131) - Recipient BCC found
+[INFO ] 2016-10-19 20:28:55.597 [main] com.williamngo.database.JagEmailDAOImpl.addEmailToDatabase(JagEmailDAOImpl.java:113) - Added 1 results in email table
+[INFO ] 2016-10-19 20:28:55.738 [main] com.williamngo.database.JagEmailDAOImpl.addAttachmentToDatabase(JagEmailDAOImpl.java:163) - Added 1 results in email table
+[INFO ] 2016-10-19 20:29:02.260 [main] com.williamngo.interfaces.MailerImpl.convertBean(MailerImpl.java:247) - user id when converingbean is 2
+[INFO ] 2016-10-19 20:29:02.260 [main] com.williamngo.interfaces.MailerImpl.convertBean(MailerImpl.java:265) - successfully converted ReceivedEmail to JagEmail
+[INFO ] 2016-10-19 20:29:02.276 [main] com.williamngo.database.JagEmailDAOImpl.addEmailToDatabase(JagEmailDAOImpl.java:113) - Added 1 results in email table
+[INFO ] 2016-10-19 20:29:02.382 [main] com.williamngo.database.JagEmailDAOImpl.addAttachmentToDatabase(JagEmailDAOImpl.java:163) - Added 1 results in email table

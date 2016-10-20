@@ -19,5 +19,6 @@ public interface JagEmailDAO {
     public void addAttachmentToDatabase(JagEmail jagemail, ResultSet rs);
     public void deleteEmailFromDatabase(JagEmail jagemail, int messageNumber);
     public void deleteAccountFromDatabase(String emailAddress, String password);
+    public List<JagEmail> retrieveEmail(String folder);
     public List<JagEmail> searchEmail(String keyword);
 }
