@@ -10,13 +10,12 @@ import java.sql.ResultSet;
 import java.util.List;
 
 /**
- *
+ * Interface for database utilities
  * @author 1435707
  */
 public interface JagEmailDAO {
     public void addAccount(String username, String emailaddress, String password);
     public void addEmail(JagEmail jagemail);
-    public void addAttachment(JagEmail jagemail, ResultSet rs);
     public void updateAccount(int account_id, String username, String emailaddress, String password);
     public void deleteEmail(JagEmail jagemail, int messageNumber);
     public void deleteAccount(String emailAddress, String password);

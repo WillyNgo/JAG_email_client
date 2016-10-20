@@ -64,12 +64,12 @@ public class TestDatabase {
         
     }
     
-    public void addAttachmentToDatabase()
+    public void addAccountToDatabase()
     {
         
     }
     
-    public void addAccountToDatabase()
+    public void updateAccountToDatabase()
     {
         
     }
@@ -85,6 +85,11 @@ public class TestDatabase {
     }
     
     public void findEmailByFolder()
+    {
+        
+    }
+    
+    public void findEmailByKeyword()
     {
         
     }

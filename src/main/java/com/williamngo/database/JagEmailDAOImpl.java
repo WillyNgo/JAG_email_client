@@ -14,7 +14,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- *
+ * Implementation of database interface
  * @author 1435707
  */
 public class JagEmailDAOImpl implements JagEmailDAO {
@@ -124,49 +124,7 @@ public class JagEmailDAOImpl implements JagEmailDAO {
         }
     }
     
-    /**
-     * Adds attachment to database by converting it to byte array
-     * @param jagemail
-     * @param rs 
-     */
-    @Override
-    public void addAttachment(JagEmail jagemail, ResultSet rs)
-    {        
-        String query = "INSERT INTO attachments (attach_messageNumber, attachmentName, attachmentByte) VALUES (?, ?, ?);";
-        try(Connection conn = DriverManager.getConnection(url, user, password)){
-            PreparedStatement stmt = conn.prepareStatement(query);
-            
-            //Getting attachment name
-            String attachmentName = "";
-            byte[] attachmentByte;
-            
-            //rs contains primary key value of email sent. Use this key to set it to attachment
-            int key = -1;
-            if(rs.next())
-            {
-                key = rs.getInt(1);
-                stmt.setInt(1, key);
-            }
-            
-            //No set attachment name and byte array
-            for(EmailAttachment attach : jagemail.getAttachments())
-            {
-                attachmentName = attach.getName();
-                attachmentByte = attach.toByteArray();
-                
-                //Setting attachment
-                stmt.setString(2, attachmentName);
-                stmt.setBytes(3, attachmentByte);
-                
-                //Execute query
-                int result = stmt.executeUpdate();
-                log.info("Added " + result + " results in email table");
-            }
-        }catch(SQLException sqle)
-        {
-            log.error(sqle.getMessage());
-        }
-    }
+    
     
     @Override
     public void updateAccount(int account_id, String account_username, String emailAddress, String account_password)
@@ -479,5 +437,46 @@ public class JagEmailDAOImpl implements JagEmailDAO {
         return user_id;
     }
     
-    
+    /**
+     * Adds attachment to database by converting it to byte array
+     * @param jagemail
+     * @param rs 
+     */
+    private void addAttachment(JagEmail jagemail, ResultSet rs)
+    {        
+        String query = "INSERT INTO attachments (attach_messageNumber, attachmentName, attachmentByte) VALUES (?, ?, ?);";
+        try(Connection conn = DriverManager.getConnection(url, user, password)){
+            PreparedStatement stmt = conn.prepareStatement(query);
+            
+            //Getting attachment name
+            String attachmentName = "";
+            byte[] attachmentByte;
+            
+            //rs contains primary key value of email sent. Use this key to set it to attachment
+            int key = -1;
+            if(rs.next())
+            {
+                key = rs.getInt(1);
+                stmt.setInt(1, key);
+            }
+            
+            //No set attachment name and byte array
+            for(EmailAttachment attach : jagemail.getAttachments())
+            {
+                attachmentName = attach.getName();
+                attachmentByte = attach.toByteArray();
+                
+                //Setting attachment
+                stmt.setString(2, attachmentName);
+                stmt.setBytes(3, attachmentByte);
+                
+                //Execute query
+                int result = stmt.executeUpdate();
+                log.info("Added " + result + " results in email table");
+            }
+        }catch(SQLException sqle)
+        {
+            log.error(sqle.getMessage());
+        }
+    }
 }
