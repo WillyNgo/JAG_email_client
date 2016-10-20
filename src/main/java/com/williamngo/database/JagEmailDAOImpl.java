@@ -166,7 +166,7 @@ public class JagEmailDAOImpl implements JagEmailDAO {
             stmt.setString(2, emailAddress);
             stmt.setString(3, account_password);
             
-            stmt.executeQuery();
+            stmt.executeUpdate();
          }
          catch(SQLException sqle)
          {
@@ -175,15 +175,15 @@ public class JagEmailDAOImpl implements JagEmailDAO {
     }
     
     @Override
-    public void deleteEmail(JagEmail jagemail)
+    public void deleteEmail(int messageNumber)
     {
         String query = "DELETE FROM emails WHERE messageNumber = ?;";
          try(Connection conn = DriverManager.getConnection(url, user, password)){
             PreparedStatement stmt = conn.prepareStatement(query);
-            int messageNumber = jagemail.getMessageNumber();
+            
             stmt.setInt(1, messageNumber);
             
-            stmt.executeQuery();
+            stmt.executeUpdate();
          }
          catch(SQLException sqle)
          {
@@ -194,25 +194,38 @@ public class JagEmailDAOImpl implements JagEmailDAO {
     /**
      * 
      * 
+     * @param id
      * @param emailAddress
      * @param account_password 
      */
     @Override
-    public void deleteAccount(String emailAddress, String account_password)
-    {
-        String url = "jdbc:mysql://waldo2.dawsoncollege.qc.ca:3306/cs1435707";
-        String user = "CS1435707";
-        String password = "tripermu";
+    public void deleteAccount(int id, String emailAddress, String account_password)
+    {        
+        //Delete all emails associated with this account before hand
+        String emailQuery = "DELETE FROM emails WHERE email_account_id = ?;";
+        try(Connection conn = DriverManager.getConnection(url, user, password)){
+            PreparedStatement stmt = conn.prepareStatement(emailQuery);
+            
+            stmt.setInt(1, id);
+            
+            int result = stmt.executeUpdate();
+        }
+        catch(SQLException sqle)
+         {
+             sqle.getMessage();
+         }
         
+        //Now able to delete account
         String query = "DELETE FROM accounts WHERE emailAddress = ? AND account_password = ?;";
-         try(Connection conn = DriverManager.getConnection(url, user, password)){
+        try(Connection conn = DriverManager.getConnection(url, user, password)){
             PreparedStatement stmt = conn.prepareStatement(query);
             
             stmt.setString(1, emailAddress);
             stmt.setString(2, account_password);
             
-            stmt.executeQuery();
+            stmt.executeUpdate();
             log.info("Deleted account: " + emailAddress);
+            //If you wanna delete account I gotta delete all of its email associated with this accuount
          }
          catch(SQLException sqle)
          {
@@ -397,9 +410,6 @@ public class JagEmailDAOImpl implements JagEmailDAO {
      */
     public int getAccountIdFromDatabase()
     {
-        String url = "jdbc:mysql://waldo2.dawsoncollege.qc.ca:3306/cs1435707";
-        String user = "CS1435707";
-        String password = "tripermu";
         int user_id = -1;
         String query = "SELECT account_id FROM accounts WHERE account_username = ?;";
         try(Connection conn = DriverManager.getConnection(url, user, password)){

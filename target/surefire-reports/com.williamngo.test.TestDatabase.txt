@@ -1,15 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: com.williamngo.test.TestDatabase
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 2.514 sec <<< FAILURE! - in com.williamngo.test.TestDatabase
-findEmailByFolder(com.williamngo.test.TestDatabase)  Time elapsed: 2.128 sec  <<< ERROR!
-java.lang.RuntimeException: Failed seeding database
-	at com.williamngo.test.TestDatabase.seedDatabase(TestDatabase.java:88)
-Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: 
-Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-	at com.williamngo.test.TestDatabase.seedDatabase(TestDatabase.java:83)
-Caused by: java.net.ConnectException: Connection refused: connect
-	at com.williamngo.test.TestDatabase.seedDatabase(TestDatabase.java:83)
+Tests run: 6, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 1.499 sec <<< FAILURE! - in com.williamngo.test.TestDatabase
+findEmailByFolder[0](com.williamngo.test.TestDatabase)  Time elapsed: 0.127 sec  <<< FAILURE!
+java.lang.AssertionError: expected:<0> but was:<2>
+	at com.williamngo.test.TestDatabase.findEmailByFolder(TestDatabase.java:266)
 
