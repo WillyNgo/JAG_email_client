@@ -247,7 +247,8 @@ public class JagEmailDAOImpl implements JagEmailDAO {
         List<JagEmail> emailFound = new ArrayList<JagEmail>();
         int account_id = this.getAccountIdFromDatabase();
         
-        String query = "SELECT sender, cc, subject_text, message, html, receive_date, folder, attachmentByte FROM emails WHERE account_id = ? AND folder = ?;";
+        String query = "SELECT sender, cc, subject_text, message, html, receive_date, folder, attachmentByte FROM emails"
+                + "INNER JOIN attachments ON emails. WHERE account_id = ? AND folder = ?;";
         
         try(Connection conn = DriverManager.getConnection(url, user, password)){
             PreparedStatement stmt = conn.prepareStatement(query);
