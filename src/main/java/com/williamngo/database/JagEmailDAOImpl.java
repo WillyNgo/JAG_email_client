@@ -39,11 +39,7 @@ public class JagEmailDAOImpl implements JagEmailDAO {
      */
     @Override
     public void addEmail(JagEmail jagemail)
-    {
-        String url = "jdbc:mysql://waldo2.dawsoncollege.qc.ca:3306/cs1435707";
-        String user = "CS1435707";
-        String password = "tripermu";
-        
+    {        
         String query = "INSERT INTO emails (email_account_id, receiver, sender, cc, subject_text, message, html, typeFlag, receive_date, folder) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
         try(Connection conn = DriverManager.getConnection(url, user, password)){
             PreparedStatement stmt = conn.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
@@ -179,16 +175,12 @@ public class JagEmailDAOImpl implements JagEmailDAO {
     }
     
     @Override
-    public void deleteEmail(JagEmail jagemail, int messageNumber)
+    public void deleteEmail(JagEmail jagemail)
     {
-         String url = "jdbc:mysql://waldo2.dawsoncollege.qc.ca:3306/cs1435707";
-        String user = "CS1435707";
-        String password = "tripermu";
-        
         String query = "DELETE FROM emails WHERE messageNumber = ?;";
          try(Connection conn = DriverManager.getConnection(url, user, password)){
             PreparedStatement stmt = conn.prepareStatement(query);
-            
+            int messageNumber = jagemail.getMessageNumber();
             stmt.setInt(1, messageNumber);
             
             stmt.executeQuery();
