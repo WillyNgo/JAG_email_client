@@ -1,8 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.williamngo.test.TestDatabase
 -------------------------------------------------------------------------------
-Tests run: 6, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 1.499 sec <<< FAILURE! - in com.williamngo.test.TestDatabase
-findEmailByFolder[0](com.williamngo.test.TestDatabase)  Time elapsed: 0.127 sec  <<< FAILURE!
-java.lang.AssertionError: expected:<0> but was:<2>
-	at com.williamngo.test.TestDatabase.findEmailByFolder(TestDatabase.java:266)
-
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.82 sec - in com.williamngo.test.TestDatabase

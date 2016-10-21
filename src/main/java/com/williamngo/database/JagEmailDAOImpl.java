@@ -123,19 +123,61 @@ public class JagEmailDAOImpl implements JagEmailDAO {
     
     
     @Override
-    public void updateAccount(int account_id, String account_username, String emailAddress, String account_password)
+    public void updateAccountUsername(int account_id, String account_username)
     {
-        log.info("Updating account...");
-        String query = "UPDATE accounts SET account_username = ?, emailAddress = ?, account_password = ?"
+        log.info("Updating account username...");
+        String query = "UPDATE accounts SET account_username = ?"
                 + " WHERE account_id = ?;";
         
         try(Connection conn = DriverManager.getConnection(url, user, password)){
             PreparedStatement stmt = conn.prepareStatement(query);
             
             stmt.setString(1, account_username);
-            stmt.setString(2, emailAddress);
-            stmt.setString(3, account_password);
-            stmt.setInt(4, account_id);
+            stmt.setInt(2, account_id);
+            
+            int result = stmt.executeUpdate();
+            log.info("Updated " + result + " result(s)");
+        }
+        catch(SQLException sqle)
+        {
+            sqle.getMessage();
+        }
+    }
+    
+    @Override
+    public void updateAccountEmail(int account_id, String emailAddress)
+    {
+        log.info("Updating account email...");
+        String query = "UPDATE accounts SET emailAddress = ?"
+                + " WHERE account_id = ?;";
+        
+        try(Connection conn = DriverManager.getConnection(url, user, password)){
+            PreparedStatement stmt = conn.prepareStatement(query);
+            
+            stmt.setString(1, emailAddress);
+            stmt.setInt(2, account_id);
+            
+            int result = stmt.executeUpdate();
+            log.info("Updated " + result + " result(s)");
+        }
+        catch(SQLException sqle)
+        {
+            sqle.getMessage();
+        }
+    }
+    
+    @Override
+    public void updateAccountPassword(int account_id, String myPassword)
+    {
+        log.info("Updating account...");
+        String query = "UPDATE accounts SET account_password = ?"
+                + " WHERE account_id = ?;";
+        
+        try(Connection conn = DriverManager.getConnection(url, user, password)){
+            PreparedStatement stmt = conn.prepareStatement(query);
+            
+            stmt.setString(1, myPassword);
+            stmt.setInt(2, account_id);
             
             int result = stmt.executeUpdate();
             log.info("Updated " + result + " result(s)");
@@ -156,8 +198,6 @@ public class JagEmailDAOImpl implements JagEmailDAO {
     @Override
     public void addAccount(String account_username, String emailAddress, String account_password)
     {
-        
-        
         String query = "INSERT INTO accounts (account_username, emailAddress, account_password) VALUES (?, ?, ?);";
          try(Connection conn = DriverManager.getConnection(url, user, password)){
             PreparedStatement stmt = conn.prepareStatement(query);
@@ -167,6 +207,7 @@ public class JagEmailDAOImpl implements JagEmailDAO {
             stmt.setString(3, account_password);
             
             stmt.executeUpdate();
+            log.info("Added account: " + emailAddress);
          }
          catch(SQLException sqle)
          {
@@ -183,7 +224,8 @@ public class JagEmailDAOImpl implements JagEmailDAO {
             
             stmt.setInt(1, messageNumber);
             
-            stmt.executeUpdate();
+            int result = stmt.executeUpdate();
+            log.info("Deleted " + result + " email from database");
          }
          catch(SQLException sqle)
          {
@@ -241,14 +283,11 @@ public class JagEmailDAOImpl implements JagEmailDAO {
     @Override
     public List<JagEmail> retrieveEmail(String foldername)
     {
-        String url = "jdbc:mysql://waldo2.dawsoncollege.qc.ca:3306/cs1435707";
-        String user = "CS1435707";
-        String password = "tripermu";
         List<JagEmail> emailFound = new ArrayList<JagEmail>();
         int account_id = this.getAccountIdFromDatabase();
         
-        String query = "SELECT sender, cc, subject_text, message, html, receive_date, folder, attachmentByte FROM emails"
-                + "INNER JOIN attachments ON emails. WHERE account_id = ? AND folder = ?;";
+        String query = "SELECT sender, cc, subject_text, message, html, receive_date, folder FROM emails"
+                + " WHERE email_account_id = ? AND folder = ?;";
         
         try(Connection conn = DriverManager.getConnection(url, user, password)){
             PreparedStatement stmt = conn.prepareStatement(query);
@@ -309,24 +348,21 @@ public class JagEmailDAOImpl implements JagEmailDAO {
     @Override
     public List<JagEmail> searchEmail(String keyword)
     {
-        String url = "jdbc:mysql://waldo2.dawsoncollege.qc.ca:3306/cs1435707";
-        String user = "CS1435707";
-        String password = "tripermu";
+
         List<JagEmail> emailFound = new ArrayList<JagEmail>();
         int account_id = this.getAccountIdFromDatabase();
-        String query = "SELECT sender, cc, subject_text, message, html, receive_date, folder, attachmentByte FROM emails"
-                + " INNER JOIN attachments ON emails.messageNumber = attachments.attach_messageNumber\n" +
-                "WHERE account_id = ? AND (sender LIKE \"%?%\" OR cc LIKE \"%?%\" OR subject_text LIKE \"%?%\" OR message LIKE \"%?%\");";
+        String query = "SELECT sender, cc, subject_text, message, html, receive_date, folder FROM emails"
+               + " WHERE email_account_id = ? AND (sender LIKE ? OR cc LIKE ? OR subject_text LIKE ? OR message LIKE ?);";
         
         try(Connection conn = DriverManager.getConnection(url, user, password)){
             PreparedStatement stmt = conn.prepareStatement(query);
             
             //Setting user id so as to only search for emails that belongs to the current user
             stmt.setInt(1, account_id);
-            stmt.setString(2, keyword);
-            stmt.setString(3, keyword);
-            stmt.setString(4, keyword);
-            stmt.setString(5, keyword);
+            stmt.setString(2, "%"+keyword+"%");
+            stmt.setString(3, "%"+keyword+"%");
+            stmt.setString(4, "%"+keyword+"%");
+            stmt.setString(5, "%"+keyword+"%");
             
             try(ResultSet rs = stmt.executeQuery())
             {
@@ -359,6 +395,8 @@ public class JagEmailDAOImpl implements JagEmailDAO {
                     emailToBeAdded.setReceiveDate(receiveDate);
                     emailToBeAdded.setFolder(folder);
                     getAttachmentFromEmail(account_id, emailToBeAdded);
+                    
+                    emailFound.add(emailToBeAdded);
                 }
             }
         }
@@ -378,9 +416,6 @@ public class JagEmailDAOImpl implements JagEmailDAO {
      */
     private void getAttachmentFromEmail(int attachment_id, JagEmail jagemail)
     {
-        String url = "jdbc:mysql://waldo2.dawsoncollege.qc.ca:3306/cs1435707";
-        String user = "CS1435707";
-        String password = "tripermu";
         String query = "SELECT attachmentByte, attachmentName, from attachments WHERE attachment_id = ?;";
         try(Connection conn = DriverManager.getConnection(url, user, password)){
             PreparedStatement stmt = conn.prepareStatement(query);
@@ -475,7 +510,7 @@ public class JagEmailDAOImpl implements JagEmailDAO {
                 
                 //Execute query
                 int result = stmt.executeUpdate();
-                log.info("Added " + result + " results in email table");
+                log.info("Added " + result + " results in attachment table");
             }
         }catch(SQLException sqle)
         {

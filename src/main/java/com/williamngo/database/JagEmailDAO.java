@@ -16,7 +16,9 @@ import java.util.List;
 public interface JagEmailDAO {
     public void addAccount(String username, String emailaddress, String password);
     public void addEmail(JagEmail jagemail);
-    public void updateAccount(int account_id, String username, String emailaddress, String password);
+    public void updateAccountUsername(int account_id, String username);
+    public void updateAccountEmail(int account_id, String emailAddress);
+    public void updateAccountPassword(int account_id, String password);
     public void deleteEmail(int messageNumber);
     public void deleteAccount(int account_id, String emailAddress, String password);
     public List<JagEmail> retrieveEmail(String folder);
