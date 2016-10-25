@@ -135,11 +135,12 @@ public class TestDatabase {
                 count = rs.getInt("number");
             }
         } catch (SQLException sqle) {
+            log.error("Error occured during AddEmail: email was not added");
             sqle.getMessage();
         }
 
         //current number of emails should be greater after sending email.
-        assertEquals(count, 5);
+        assertEquals(5, count);
     }
     
 
@@ -160,11 +161,11 @@ public class TestDatabase {
                 count = rs.getInt("number");
             }
         } catch (SQLException sqle) {
-            sqle.getMessage();
+            log.error("Could not find specfied email: Email not deleted");
         }
 
         //current number of emails should be less after deleting which is from 4 to 3.
-        assertEquals(count, 3);
+        assertEquals(3, count);
     }
 
     @Test
@@ -219,6 +220,21 @@ public class TestDatabase {
                 "chicken,2",                        //SearchKeyword, ExpectedCount
                 jag = new JagEmailDAOImpl(cfgbn),   //JagEmailDao implementer
                 "sent,2",                           //foldername, expectedValue
+                1                                   //MessageNumber
+            },
+            {
+                cfgbn = new ConfigBean("sender", "smtp.gmail.com", "imap.gmail.com", "williamngosend@gmail.com", "sendanemail", 465, 993),
+                "williamngoreceive@gmail.com",
+                Optional.of("shiftkun662@gmail.com"),
+                Optional.of("devjlin1@gmail.com"),
+                "Subject Test - All values present",
+                msg,
+                "<html><body><h1>" + msg + "</h1></body></html>",
+                null,
+                "pictures\\kimagura.jpg",           //Attachment
+                "Pocket,0",                        //SearchKeyword, ExpectedCount
+                jag = new JagEmailDAOImpl(cfgbn),   //JagEmailDao implementer
+                "NoFolder,0",                           //foldername, expectedValue
                 1                                   //MessageNumber
             }
         }
