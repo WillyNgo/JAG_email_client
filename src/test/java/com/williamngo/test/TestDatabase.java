@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.williamngo.test;
 
 import com.williamngo.beans.ConfigBean;
@@ -110,14 +105,11 @@ public class TestDatabase {
     public void tearDown() {
     }
 
-    /**
-     *
-     */
     @Test
     public void addEmailToDatabase() {
         log.info("adding email to database...");
         int count = 0;
-        // Sql queries demo already has 2 emails in table by default
+        // Creating email to be added to database
         JagEmail email = new JagEmail();
         //Setup the email
         email.from(cfg.getEmailAddress());
@@ -156,8 +148,7 @@ public class TestDatabase {
         log.info("deleting email from database...");
         int count = 0;
         
-        // Sql queries demo already has 4 emails in table by default
-        //Deletes the email with id 1
+        //Deletes the email with associated id
         jdb.deleteEmail(msgNumber);
         
         String query = "SELECT COUNT(messageNumber) as number FROM emails;";
@@ -188,7 +179,7 @@ public class TestDatabase {
 
         count = found.size();
         
-        //There is a total of 4 emails in the database demo - 2 of them have the keyword
+        //There is a total of 4 emails in the database demo
         assertEquals(expectedCount, count);
     }
     
@@ -227,7 +218,7 @@ public class TestDatabase {
                 "pictures\\kimagura.jpg",           //Attachment
                 "chicken,2",                        //SearchKeyword, ExpectedCount
                 jag = new JagEmailDAOImpl(cfgbn),   //JagEmailDao implementer
-                "sent,2",                          //foldername, expectedValue
+                "sent,2",                           //foldername, expectedValue
                 1                                   //MessageNumber
             }
         }
@@ -235,7 +226,7 @@ public class TestDatabase {
     }
 
     /**
-     * Method to create database and teardown before anything
+     * Method to create database and teardown before each test
      */
     @Before
     public void createDatabase() {
@@ -253,15 +244,7 @@ public class TestDatabase {
                 stmt.executeUpdate();
                 log.info("dropped table with query: " + str);
             }
-            
-            /**
-             * String accountQuery = "CREATE TABLE accounts (\n"
-                    + "account_id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,\n"
-                    + "account_username VARCHAR(255)NOT NULL,\n"
-                    + "emailAddress VARCHAR(255) NOT NULL,\n"
-                    + "account_password VARCHAR(255) NOT NULL\n"
-                    + ")ENGINE=InnoDB;";
-                    * */
+
             String emailQuery = "create table emails (\n"
                     + "messageNumber INT PRIMARY KEY NOT NULL AUTO_INCREMENT,\n"
                     + "receiver VARCHAR(255) NOT NULL,\n"
@@ -290,18 +273,6 @@ public class TestDatabase {
             stmt = con.prepareStatement(attachmentQuery);
             stmt.executeUpdate();
             
-            /**
-            List<String> demoAccountsQuery = new ArrayList<String>();
-            demoAccountsQuery.add("INSERT INTO accounts (account_username, emailAddress, account_password) VALUES ('sender', 'williamngosend@gmail.com', 'sendanemail');\n");
-            demoAccountsQuery.add("INSERT INTO accounts (account_username, emailAddress, account_password) VALUES ('receiver', 'williamngoreceive@gmail.com', 'receiveanemail');");
-            for(String str : demoAccountsQuery)
-            {
-                stmt = con.prepareStatement(str);
-                stmt.executeUpdate();
-                log.info("Inserted accounts to database");
-            }
-            * */
-            
             List<String> demoEmailsQuery = new ArrayList<String>();
             demoEmailsQuery.add("INSERT INTO emails (receiver, sender, cc, subject_text, message, html, typeFlag, receive_date, folder) VALUES ('williamngoreceive@gmail.com', 'williamngosend@gmail.com', 'shiftkun662@gmail.com', 'values present', 'Hello chicken', '', true, NOW(), 'sent');");
             demoEmailsQuery.add("INSERT INTO emails (receiver, sender, cc, subject_text, message, html, typeFlag, receive_date, folder) VALUES ('williamngoreceive@gmail.com', 'williamngosend@gmail.com', 'shiftkun662@gmail.com', 'values present', 'Hello chicken', '', false, NOW(), 'inbox');");
@@ -320,50 +291,4 @@ public class TestDatabase {
             sqle.getMessage();
         }
     }
-
-    /**
-     * ********************* Utility methods provided by Ken Fogel
-     * ***************
-     *
-     * /**
-     * This routine recreates the database for every test. This makes sure that
-     * a destructive test will not interfere with any other test.
-     *
-     * This routine is courtesy of Bartosz Majsak, an Arquillian developer at
-     * JBoss who helped me out last winter with an issue with Arquillian. Look
-     * up Arquillian to learn what it is.
-     *
-     * @Before public void seedDatabase() { final String seedDataScript =
-     * loadAsString("createDatabase.sql"); try (Connection conn =
-     * DriverManager.getConnection(url, user, password)) { for (String statement
-     * : splitStatements(new StringReader(seedDataScript), ";")) {
-     * conn.prepareStatement(statement).execute(); } } catch (SQLException e) {
-     * throw new RuntimeException("Failed seeding database", e); } }
-     *
-     * /**
-     * The following methods support the seedDatabse method
-     *
-     * private String loadAsString(final String path) { try (InputStream
-     * inputStream =
-     * Thread.currentThread().getContextClassLoader().getResourceAsStream(path);
-     * Scanner scanner = new Scanner(inputStream)) { return
-     * scanner.useDelimiter("\\A").next(); } catch (IOException e) { throw new
-     * RuntimeException("Unable to close input stream.", e); } }
-     *
-     * private List<String> splitStatements(Reader reader, String
-     * statementDelimiter) { final BufferedReader bufferedReader = new
-     * BufferedReader(reader); final StringBuilder sqlStatement = new
-     * StringBuilder(); final List<String> statements = new
-     * LinkedList<String>(); try { String line = ""; while ((line =
-     * bufferedReader.readLine()) != null) { line = line.trim(); if
-     * (line.isEmpty() || isComment(line)) { continue; }
-     * sqlStatement.append(line); if (line.endsWith(statementDelimiter)) {
-     * statements.add(sqlStatement.toString()); sqlStatement.setLength(0); } }
-     * return statements; } catch (IOException e) { throw new
-     * RuntimeException("Failed parsing sql", e); } }
-     *
-     * private boolean isComment(final String line) { return
-     * line.startsWith("--") || line.startsWith("//") || line.startsWith("/*");
-     * }
-     */
 }
