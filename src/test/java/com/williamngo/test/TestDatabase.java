@@ -41,7 +41,7 @@ import org.slf4j.LoggerFactory;
  *
  * @author 1435707
  */
-@Ignore
+
 @RunWith(Parameterized.class)
 public class TestDatabase {
 
@@ -51,7 +51,7 @@ public class TestDatabase {
     private final String password = "tripermu";
 
     ConfigBean cfg;
-    String emailAddress;
+    String emailToBeReceived;
     Optional<String> emailCC;
     Optional<String> emailBCC;
     String subject;
@@ -61,15 +61,12 @@ public class TestDatabase {
     String attachment;
     String searchKeyword;
     JagEmailDAOImpl jdb;
-    int account_id;
-    String account_username;
-    String account_password;
     String foldername;
-    int emailId;
+    int msgNumber;
 
     public TestDatabase(
             ConfigBean cfg,
-            String emailAddress,
+            String emailToBeReceived,
             Optional<String> emailCC,
             Optional<String> emailBCC,
             String subject,
@@ -79,13 +76,10 @@ public class TestDatabase {
             String attachment,
             String keyword,
             JagEmailDAOImpl jdb,
-            int account_id,
-            String account_username,
-            String account_password,
             String foldername,
             int emailId) {
         this.cfg = cfg;
-        this.emailAddress = emailAddress;
+        this.emailToBeReceived = emailToBeReceived;
         this.emailCC = emailCC;
         this.emailBCC = emailBCC;
         this.subject = subject;
@@ -95,11 +89,8 @@ public class TestDatabase {
         this.attachment = attachment;
         this.searchKeyword = keyword;
         this.jdb = jdb;
-        this.account_id = account_id;
-        this.account_username = account_username;
-        this.account_password = account_password;
         this.foldername = foldername;
-        this.emailId = emailId;
+        this.msgNumber = emailId;
     }
 
     @BeforeClass
@@ -129,9 +120,8 @@ public class TestDatabase {
         // Sql queries demo already has 2 emails in table by default
         JagEmail email = new JagEmail();
         //Setup the email
-        email.setUserId(jdb.getAccountIdFromDatabase());
         email.from(cfg.getEmailAddress());
-        email.to(emailAddress);
+        email.to(emailToBeReceived);
         email.cc(emailCC.get().split(","));
         email.bcc(emailBCC.get().split(","));
         email.subject(subject);
@@ -143,7 +133,7 @@ public class TestDatabase {
 
         jdb.addEmail(email);
 
-        //Demo database already has 2 emails stored. after adding, database should contain 3
+        //Demo database already has 4 emails stored. after adding, database should contain 5
         String query = "SELECT COUNT(messageNumber) as number FROM emails;";
         try (Connection conn = DriverManager.getConnection(url, user, password)) {
             PreparedStatement stmt = conn.prepareStatement(query);
@@ -159,134 +149,6 @@ public class TestDatabase {
         //current number of emails should be greater after sending email.
         assertEquals(count, 5);
     }
-
-    @Test
-    public void addAccountToDatabase() {
-        log.info("adding account to database...");
-        int count = 0;
-        // Sql queries demo already has 2 emails in table by default
-        jdb.addAccount(account_username, emailAddress, account_password);
-
-        String query = "SELECT COUNT(account_id) as number FROM accounts;";
-        try (Connection conn = DriverManager.getConnection(url, user, password)) {
-            PreparedStatement stmt = conn.prepareStatement(query);
-            ResultSet rs = stmt.executeQuery();
-
-            if (rs.next()) {
-                count = rs.getInt("number");
-            }
-        } catch (SQLException sqle) {
-            sqle.getMessage();
-        }
-
-        //current number of emails should be greater after sending email.
-        assertEquals(count, 3);
-    }
-
-    @Test
-    public void updateAccountUsernameToDatabase() {
-        log.info("updating account to database...");
-        
-        String myUsername = "";
-        String myNewUsername = "";
-        String query = "SELECT account_username FROM accounts WHERE account_id = ?;";
-        try (Connection conn = DriverManager.getConnection(url, user, password)) {
-            PreparedStatement stmt = conn.prepareStatement(query);
-            stmt.setInt(1, account_id);
-
-            try (ResultSet rs = stmt.executeQuery()) {
-                if (rs.next()) {
-                    myUsername = rs.getString("account_username");
-                }
-            } catch (SQLException sqle) {
-                sqle.getMessage();
-            }
-
-            //Update username with new name
-            jdb.updateAccountUsername(account_id, "newUserName");
-
-            try (ResultSet rs = stmt.executeQuery()) {
-                if (rs.next()) {
-                    myNewUsername = rs.getString("account_username");
-                }
-            } catch (SQLException sqle) {
-                sqle.getMessage();
-            }
-        } catch (SQLException sqle) {
-            sqle.getMessage();
-        }
-        assertNotEquals(myUsername, myNewUsername);
-    }
-    
-    @Test
-    public void updateAccountEmailToDatabase() {
-        log.info("updating account to database...");
-        
-        String myOldEmail = "";
-        String myNewEmail = "";
-        String query = "SELECT emailAddress FROM accounts WHERE account_id = ?;";
-        try (Connection conn = DriverManager.getConnection(url, user, password)) {
-            PreparedStatement stmt = conn.prepareStatement(query);
-            stmt.setInt(1, account_id);
-
-            try (ResultSet rs = stmt.executeQuery()) {
-                if (rs.next()) {
-                    myOldEmail = rs.getString("emailAddress");
-                }
-            } catch (SQLException sqle) {
-                sqle.getMessage();
-            }
-
-            //Update username with new name
-            jdb.updateAccountEmail(account_id, "myNewEmail@gmail.com");
-
-            try (ResultSet rs = stmt.executeQuery()) {
-                if (rs.next()) {
-                    myNewEmail = rs.getString("emailAddress");
-                }
-            } catch (SQLException sqle) {
-                sqle.getMessage();
-            }
-        } catch (SQLException sqle) {
-            sqle.getMessage();
-        }
-        assertNotEquals(myOldEmail, myNewEmail);
-    }
-    
-    @Test
-    public void updateAccountPasswordToDatabase() {
-        log.info("updating account to database...");
-        
-        String myOldPasswprd = "";
-        String myNewPassword = "";
-        String query = "SELECT account_password FROM accounts WHERE account_id = ?;";
-        try (Connection conn = DriverManager.getConnection(url, user, password)) {
-            PreparedStatement stmt = conn.prepareStatement(query);
-            stmt.setInt(1, account_id);
-
-            try (ResultSet rs = stmt.executeQuery()) {
-                if (rs.next()) {
-                    myOldPasswprd = rs.getString("account_password");
-                }
-            } catch (SQLException sqle) {
-                sqle.getMessage();
-            }
-
-            //Update username with new name
-            jdb.updateAccountPassword(account_id, "myNewPassword");
-
-            try (ResultSet rs = stmt.executeQuery()) {
-                if (rs.next()) {
-                    myNewPassword = rs.getString("account_password");
-                }
-            } catch (SQLException sqle) {
-                sqle.getMessage();
-            }
-        } catch (SQLException sqle) {
-            sqle.getMessage();
-        }
-        assertNotEquals(myOldPasswprd, myNewPassword);
-    }
     
 
     @Test
@@ -296,7 +158,7 @@ public class TestDatabase {
         
         // Sql queries demo already has 4 emails in table by default
         //Deletes the email with id 1
-        jdb.deleteEmail(emailId);
+        jdb.deleteEmail(msgNumber);
         
         String query = "SELECT COUNT(messageNumber) as number FROM emails;";
         try (Connection conn = DriverManager.getConnection(url, user, password)) {
@@ -315,45 +177,6 @@ public class TestDatabase {
     }
 
     @Test
-    public void deleteAccountFromDatabase() {
-        log.info("deleting account from database...");
-        int count = 0;
-
-        jdb.deleteAccount(jdb.getAccountIdFromDatabase(), emailAddress, account_password);
-
-        String query = "SELECT COUNT(account_id) as number FROM accounts;";
-        try (Connection conn = DriverManager.getConnection(url, user, password)) {
-            PreparedStatement stmt = conn.prepareStatement(query);
-            ResultSet rs = stmt.executeQuery();
-
-            while (rs.next()) {
-                count = rs.getInt("number");
-            }
-        } catch (SQLException sqle) {
-            sqle.getMessage();
-        }
-
-        //Database demo has 2 accounts. Should be 1 after deleting
-        assertEquals(count, 1);
-    }
-
-    @Test
-    public void findEmailByFolder() {
-        int count = 0;
-        
-        String[] f = foldername.split(",");
-        String foldernameToSearch = f[0];
-        int expectedCount = Integer.parseInt(f[1]);
-        
-        List<JagEmail> found = jdb.retrieveEmail(foldernameToSearch);
-
-        count = found.size();
-        
-        //There is 2 emails in the sent folder for the database Demo
-        assertEquals(expectedCount, count);
-    }
-
-    @Test
     public void findEmailByKeyword() {
         int count = 0;
         
@@ -365,7 +188,23 @@ public class TestDatabase {
 
         count = found.size();
         
-        //There is a total of 4 emails in the database demo
+        //There is a total of 4 emails in the database demo - 2 of them have the keyword
+        assertEquals(expectedCount, count);
+    }
+    
+    @Test
+    public void findEmailByFoldername()
+    {
+        int count = 0;
+        
+        String[] f = foldername.split(",");
+        String myFoldername = f[0];
+        int expectedCount = Integer.parseInt(f[1]);
+        
+        List<JagEmail> found = jdb.retrieveEmail(myFoldername);
+        
+        count = found.size();
+        
         assertEquals(expectedCount, count);
     }
 
@@ -378,7 +217,7 @@ public class TestDatabase {
         return Arrays.asList(new Object[][]{
             {
                 cfgbn = new ConfigBean("sender", "smtp.gmail.com", "imap.gmail.com", "williamngosend@gmail.com", "sendanemail", 465, 993),
-                "williamngosend@gmail.com",
+                "williamngoreceive@gmail.com",
                 Optional.of("shiftkun662@gmail.com"),
                 Optional.of("devjlin1@gmail.com"),
                 "Subject Test - All values present",
@@ -386,13 +225,10 @@ public class TestDatabase {
                 "<html><body><h1>" + msg + "</h1></body></html>",
                 null,
                 "pictures\\kimagura.jpg",           //Attachment
-                "chicken,1",                          //SearchKeyword, ExpectedCount
+                "chicken,2",                        //SearchKeyword, ExpectedCount
                 jag = new JagEmailDAOImpl(cfgbn),   //JagEmailDao implementer
-                jag.getAccountIdFromDatabase(),     //Account ID
-                "receiver",                         //Username
-                "sendanemail",                      //Password
                 "sent,2",                          //foldername, expectedValue
-                1                                   //Email ID
+                1                                   //MessageNumber
             }
         }
         );
@@ -409,7 +245,7 @@ public class TestDatabase {
             List<String> queryDrop = new ArrayList<String>();
             queryDrop.add("DROP TABLE IF EXISTS attachments;");
             queryDrop.add("DROP TABLE IF EXISTS emails;");
-            queryDrop.add("DROP TABLE IF EXISTS accounts;");
+            //queryDrop.add("DROP TABLE IF EXISTS accounts;");
             
             for(String str : queryDrop)
             {
@@ -418,15 +254,16 @@ public class TestDatabase {
                 log.info("dropped table with query: " + str);
             }
             
-            String accountQuery = "CREATE TABLE accounts (\n"
+            /**
+             * String accountQuery = "CREATE TABLE accounts (\n"
                     + "account_id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,\n"
                     + "account_username VARCHAR(255)NOT NULL,\n"
                     + "emailAddress VARCHAR(255) NOT NULL,\n"
                     + "account_password VARCHAR(255) NOT NULL\n"
                     + ")ENGINE=InnoDB;";
+                    * */
             String emailQuery = "create table emails (\n"
                     + "messageNumber INT PRIMARY KEY NOT NULL AUTO_INCREMENT,\n"
-                    + "email_account_id INT,\n"
                     + "receiver VARCHAR(255) NOT NULL,\n"
                     + "sender VARCHAR(255) NOT NULL,\n"
                     + "cc varchar(255),\n"
@@ -435,8 +272,7 @@ public class TestDatabase {
                     + "html VARCHAR(255),\n"
                     + "typeFlag boolean,\n"
                     + "receive_date date,\n"
-                    + "folder VARCHAR(255),\n"
-                    + "CONSTRAINT fk_account_id FOREIGN KEY (email_account_id) REFERENCES accounts(account_id) ON DELETE CASCADE\n"
+                    + "folder VARCHAR(255)\n"
                     + ")ENGINE=InnoDB;";
 
             String attachmentQuery = "CREATE TABLE attachments(\n"
@@ -448,15 +284,13 @@ public class TestDatabase {
                     + "CONSTRAINT fk_messagenumber FOREIGN KEY (attach_messageNumber) REFERENCES emails(messageNumber) ON DELETE CASCADE\n"
                     + ")ENGINE=InnoDB;";
             
-            stmt = con.prepareStatement(accountQuery);
-            stmt.executeUpdate();
-            
             stmt = con.prepareStatement(emailQuery);
             stmt.executeUpdate();
             
             stmt = con.prepareStatement(attachmentQuery);
             stmt.executeUpdate();
             
+            /**
             List<String> demoAccountsQuery = new ArrayList<String>();
             demoAccountsQuery.add("INSERT INTO accounts (account_username, emailAddress, account_password) VALUES ('sender', 'williamngosend@gmail.com', 'sendanemail');\n");
             demoAccountsQuery.add("INSERT INTO accounts (account_username, emailAddress, account_password) VALUES ('receiver', 'williamngoreceive@gmail.com', 'receiveanemail');");
@@ -466,12 +300,13 @@ public class TestDatabase {
                 stmt.executeUpdate();
                 log.info("Inserted accounts to database");
             }
+            * */
             
             List<String> demoEmailsQuery = new ArrayList<String>();
-            demoEmailsQuery.add("INSERT INTO emails (email_account_id, receiver, sender, cc, subject_text, message, html, typeFlag, receive_date, folder) VALUES (1, 'williamngoreceive@gmail.com', 'williamngosend@gmail.com', 'shiftkun662@gmail.com', 'values present', 'Hello chicken', '', true, NOW(), 'sent');");
-            demoEmailsQuery.add("INSERT INTO emails (email_account_id, receiver, sender, cc, subject_text, message, html, typeFlag, receive_date, folder) VALUES (2, 'williamngoreceive@gmail.com', 'williamngosend@gmail.com', 'shiftkun662@gmail.com', 'values present', 'Hello chicken', '', false, NOW(), 'inbox');");
-            demoEmailsQuery.add("INSERT INTO emails (email_account_id, receiver, sender, cc, subject_text, message, html, typeFlag, receive_date, folder) VALUES (1, 'williamngoreceive@gmail.com', 'williamngosend@gmail.com', 'shiftkun662@gmail.com', 'my banana', 'submarine taurus', '', true, NOW(), 'sent');");
-            demoEmailsQuery.add("INSERT INTO emails (email_account_id, receiver, sender, cc, subject_text, message, html, typeFlag, receive_date, folder) VALUES (2, 'williamngoreceive@gmail.com', 'williamngosend@gmail.com', 'shiftkun662@gmail.com', 'my banana', 'submarine taurus', '', false, NOW(), 'inbox');");
+            demoEmailsQuery.add("INSERT INTO emails (receiver, sender, cc, subject_text, message, html, typeFlag, receive_date, folder) VALUES ('williamngoreceive@gmail.com', 'williamngosend@gmail.com', 'shiftkun662@gmail.com', 'values present', 'Hello chicken', '', true, NOW(), 'sent');");
+            demoEmailsQuery.add("INSERT INTO emails (receiver, sender, cc, subject_text, message, html, typeFlag, receive_date, folder) VALUES ('williamngoreceive@gmail.com', 'williamngosend@gmail.com', 'shiftkun662@gmail.com', 'values present', 'Hello chicken', '', false, NOW(), 'inbox');");
+            demoEmailsQuery.add("INSERT INTO emails (receiver, sender, cc, subject_text, message, html, typeFlag, receive_date, folder) VALUES ('williamngoreceive@gmail.com', 'williamngosend@gmail.com', 'shiftkun662@gmail.com', 'my banana', 'submarine taurus', '', true, NOW(), 'sent');");
+            demoEmailsQuery.add("INSERT INTO emails (receiver, sender, cc, subject_text, message, html, typeFlag, receive_date, folder) VALUES ('williamngoreceive@gmail.com', 'williamngosend@gmail.com', 'shiftkun662@gmail.com', 'my banana', 'submarine taurus', '', false, NOW(), 'inbox');");
             for(String str : demoEmailsQuery)
             {
                 stmt = con.prepareStatement(str);

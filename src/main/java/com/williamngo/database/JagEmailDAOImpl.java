@@ -40,7 +40,7 @@ public class JagEmailDAOImpl implements JagEmailDAO {
     @Override
     public void addEmail(JagEmail jagemail)
     {        
-        String query = "INSERT INTO emails (email_account_id, receiver, sender, cc, subject_text, message, html, typeFlag, receive_date, folder) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
+        String query = "INSERT INTO emails (receiver, sender, cc, subject_text, message, html, typeFlag, receive_date, folder) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);";
         try(Connection conn = DriverManager.getConnection(url, user, password)){
             PreparedStatement stmt = conn.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
             
@@ -52,10 +52,6 @@ public class JagEmailDAOImpl implements JagEmailDAO {
             {
                 receivers = (receivers.equals("") ? recipient + "" : receivers + "," + recipient);
             }
-            
-            //Get email account id
-            int email_account_id = jagemail.getUserId();
-            log.debug("user of sending email" + email_account_id);
             
             //Getting CCs
             String cc = "";
@@ -97,16 +93,15 @@ public class JagEmailDAOImpl implements JagEmailDAO {
             String folder = jagemail.getFolder();
             
             //Setting values to prepared statement
-            stmt.setInt(1, email_account_id);
-            stmt.setString(2, receivers);
-            stmt.setString(3, sender);
-            stmt.setString(4, cc);
-            stmt.setString(5, subject);
-            stmt.setString(6, String.join(",", message));
-            stmt.setString(7, String.join(",", html));
-            stmt.setBoolean(8, typeFlag);
-            stmt.setTimestamp(9, ts);
-            stmt.setString(10, folder);
+            stmt.setString(1, receivers);
+            stmt.setString(2, sender);
+            stmt.setString(3, cc);
+            stmt.setString(4, subject);
+            stmt.setString(5, String.join(",", message));
+            stmt.setString(6, String.join(",", html));
+            stmt.setBoolean(7, typeFlag);
+            stmt.setTimestamp(8, ts);
+            stmt.setString(9, folder);
             
             //Execute query
             int result = stmt.executeUpdate();
@@ -122,7 +117,7 @@ public class JagEmailDAOImpl implements JagEmailDAO {
     
     
     
-    @Override
+    @Deprecated
     public void updateAccountUsername(int account_id, String account_username)
     {
         log.info("Updating account username...");
@@ -144,7 +139,7 @@ public class JagEmailDAOImpl implements JagEmailDAO {
         }
     }
     
-    @Override
+    @Deprecated
     public void updateAccountEmail(int account_id, String emailAddress)
     {
         log.info("Updating account email...");
@@ -166,7 +161,13 @@ public class JagEmailDAOImpl implements JagEmailDAO {
         }
     }
     
-    @Override
+    /**
+     * 
+     * @param account_id
+     * @param myPassword
+     * @deprecated
+     */
+    @Deprecated
     public void updateAccountPassword(int account_id, String myPassword)
     {
         log.info("Updating account...");
@@ -195,7 +196,7 @@ public class JagEmailDAOImpl implements JagEmailDAO {
      * @param emailAddress - email address of the user
      * @param account_password - the password associated with its account
      */
-    @Override
+    @Deprecated
     public void addAccount(String account_username, String emailAddress, String account_password)
     {
         String query = "INSERT INTO accounts (account_username, emailAddress, account_password) VALUES (?, ?, ?);";
@@ -240,7 +241,7 @@ public class JagEmailDAOImpl implements JagEmailDAO {
      * @param emailAddress
      * @param account_password 
      */
-    @Override
+    @Deprecated
     public void deleteAccount(int id, String emailAddress, String account_password)
     {        
         //Delete all emails associated with this account before hand
@@ -284,15 +285,13 @@ public class JagEmailDAOImpl implements JagEmailDAO {
     public List<JagEmail> retrieveEmail(String foldername)
     {
         List<JagEmail> emailFound = new ArrayList<JagEmail>();
-        int account_id = this.getAccountIdFromDatabase();
         
-        String query = "SELECT sender, cc, subject_text, message, html, receive_date, folder FROM emails"
-                + " WHERE email_account_id = ? AND folder = ?;";
+        String query = "SELECT sender, receiver, cc, subject_text, message, html, receive_date, folder FROM emails"
+                + " WHERE folder = ?;";
         
         try(Connection conn = DriverManager.getConnection(url, user, password)){
             PreparedStatement stmt = conn.prepareStatement(query);
-            stmt.setInt(1, account_id);
-            stmt.setString(2, foldername);
+            stmt.setString(1, foldername);
             
             try(ResultSet rs = stmt.executeQuery())
             {
@@ -300,6 +299,7 @@ public class JagEmailDAOImpl implements JagEmailDAO {
                 {
                     //Creates JagEmail to be put into the list if email was found
                     String sender = rs.getString("sender");
+                    String receiver = rs.getString("receiver");
                     String cc = rs.getString("cc");
                     String subject = rs.getString("subject_text");
                     String message = rs.getString("message");
@@ -309,7 +309,8 @@ public class JagEmailDAOImpl implements JagEmailDAO {
                     
                     //Create email to be added to list
                     JagEmail emailToBeAdded = new JagEmail();
-                    for(String mailAddressTo : sender.split(","))
+                    emailToBeAdded.from(sender);
+                    for(String mailAddressTo : receiver.split(","))
                     {
                         emailToBeAdded.to(mailAddressTo);
                     }
@@ -318,13 +319,12 @@ public class JagEmailDAOImpl implements JagEmailDAO {
                         emailToBeAdded.cc(mailAddressCc);
                     }
                     emailToBeAdded.setSubject(subject);
-                    emailToBeAdded.setUserId(account_id);
                     
                     emailToBeAdded.addText(message);
                     emailToBeAdded.addHtml(html);
                     emailToBeAdded.setReceiveDate(receiveDate);
                     emailToBeAdded.setFolder(folder);
-                    getAttachmentFromEmail(account_id, emailToBeAdded);
+                    getAttachmentFromEmail(emailToBeAdded);
                     
                     emailFound.add(emailToBeAdded);
                 }
@@ -350,19 +350,18 @@ public class JagEmailDAOImpl implements JagEmailDAO {
     {
 
         List<JagEmail> emailFound = new ArrayList<JagEmail>();
-        int account_id = this.getAccountIdFromDatabase();
-        String query = "SELECT sender, cc, subject_text, message, html, receive_date, folder FROM emails"
-               + " WHERE email_account_id = ? AND (sender LIKE ? OR cc LIKE ? OR subject_text LIKE ? OR message LIKE ?);";
+        String query = "SELECT sender, receiver, cc, subject_text, message, html, receive_date, folder FROM emails"
+               + " WHERE (sender LIKE ? OR cc LIKE ? OR subject_text LIKE ? OR message LIKE ?);";
         
         try(Connection conn = DriverManager.getConnection(url, user, password)){
             PreparedStatement stmt = conn.prepareStatement(query);
             
             //Setting user id so as to only search for emails that belongs to the current user
-            stmt.setInt(1, account_id);
+            
+            stmt.setString(1, "%"+keyword+"%");
             stmt.setString(2, "%"+keyword+"%");
             stmt.setString(3, "%"+keyword+"%");
             stmt.setString(4, "%"+keyword+"%");
-            stmt.setString(5, "%"+keyword+"%");
             
             try(ResultSet rs = stmt.executeQuery())
             {
@@ -370,6 +369,7 @@ public class JagEmailDAOImpl implements JagEmailDAO {
                 {
                     //Creates JagEmail to be put into the list if email was found
                     String sender = rs.getString("sender");
+                    String receiver = rs.getString("receiver");
                     String cc = rs.getString("cc");
                     String subject = rs.getString("subject_text");
                     String message = rs.getString("message");
@@ -379,7 +379,8 @@ public class JagEmailDAOImpl implements JagEmailDAO {
                     
                     //Create email to be added to list
                     JagEmail emailToBeAdded = new JagEmail();
-                    for(String mailAddressTo : sender.split(","))
+                    emailToBeAdded.from(sender);
+                    for(String mailAddressTo : receiver.split(","))
                     {
                         emailToBeAdded.to(mailAddressTo);
                     }
@@ -388,13 +389,11 @@ public class JagEmailDAOImpl implements JagEmailDAO {
                         emailToBeAdded.cc(mailAddressCc);
                     }
                     emailToBeAdded.setSubject(subject);
-                    emailToBeAdded.setUserId(account_id);
-                    
                     emailToBeAdded.addText(message);
                     emailToBeAdded.addHtml(html);
                     emailToBeAdded.setReceiveDate(receiveDate);
                     emailToBeAdded.setFolder(folder);
-                    getAttachmentFromEmail(account_id, emailToBeAdded);
+                    getAttachmentFromEmail(emailToBeAdded);
                     
                     emailFound.add(emailToBeAdded);
                 }
@@ -414,12 +413,12 @@ public class JagEmailDAOImpl implements JagEmailDAO {
      * @param attachment_id
      * @param jagemail 
      */
-    private void getAttachmentFromEmail(int attachment_id, JagEmail jagemail)
+    private void getAttachmentFromEmail(JagEmail jagemail)
     {
-        String query = "SELECT attachmentByte, attachmentName, from attachments WHERE attachment_id = ?;";
+        String query = "SELECT attachmentByte, attachmentName, from attachments WHERE attachment_messageNumber = ?;";
         try(Connection conn = DriverManager.getConnection(url, user, password)){
             PreparedStatement stmt = conn.prepareStatement(query);
-            stmt.setInt(1, attachment_id);
+            stmt.setInt(1, jagemail.getMessageNumber());
             
             try(ResultSet rs = stmt.executeQuery())
             {
@@ -444,6 +443,7 @@ public class JagEmailDAOImpl implements JagEmailDAO {
      * Returns the id of the current user
      * @return user_id - id of the user
      */
+    @Deprecated
     public int getAccountIdFromDatabase()
     {
         int user_id = -1;
