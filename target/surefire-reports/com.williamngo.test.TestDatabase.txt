@@ -1,8 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.williamngo.test.TestDatabase
 -------------------------------------------------------------------------------
-Tests run: 8, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 2.699 sec <<< FAILURE! - in com.williamngo.test.TestDatabase
-deleteEmailFromDatabase[1](com.williamngo.test.TestDatabase)  Time elapsed: 0.078 sec  <<< FAILURE!
-java.lang.AssertionError: expected:<4> but was:<3>
-	at com.williamngo.test.TestDatabase.deleteEmailFromDatabase(TestDatabase.java:168)
-
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.043 sec - in com.williamngo.test.TestDatabase

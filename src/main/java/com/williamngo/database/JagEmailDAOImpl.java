@@ -41,7 +41,7 @@ public class JagEmailDAOImpl implements JagEmailDAO {
     public void addEmail(JagEmail jagemail)
     {        
         String query = "INSERT INTO emails (receiver, sender, cc, subject_text, message, html, typeFlag, receive_date, folder) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);";
-        try(Connection conn = DriverManager.getConnection(url, user, password)){
+        try(Connection conn = DriverManager.getConnection(cb.getDatabaseURL(), cb.getDatabaseUserName(), cb.getDatabasePassword())){
             PreparedStatement stmt = conn.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
             
             //get values to be set in the prepare statement
@@ -220,7 +220,7 @@ public class JagEmailDAOImpl implements JagEmailDAO {
     public void deleteEmail(int messageNumber)
     {
         String query = "DELETE FROM emails WHERE messageNumber = ?;";
-         try(Connection conn = DriverManager.getConnection(url, user, password)){
+         try(Connection conn = DriverManager.getConnection(cb.getDatabaseURL(), cb.getDatabaseUserName(), cb.getDatabasePassword())){
             PreparedStatement stmt = conn.prepareStatement(query);
             
             stmt.setInt(1, messageNumber);
@@ -289,7 +289,7 @@ public class JagEmailDAOImpl implements JagEmailDAO {
         String query = "SELECT sender, receiver, cc, subject_text, message, html, receive_date, folder FROM emails"
                 + " WHERE folder = ?;";
         
-        try(Connection conn = DriverManager.getConnection(url, user, password)){
+        try(Connection conn = DriverManager.getConnection(cb.getDatabaseURL(), cb.getDatabaseUserName(), cb.getDatabasePassword())){
             PreparedStatement stmt = conn.prepareStatement(query);
             stmt.setString(1, foldername);
             
@@ -353,7 +353,7 @@ public class JagEmailDAOImpl implements JagEmailDAO {
         String query = "SELECT sender, receiver, cc, subject_text, message, html, receive_date, folder FROM emails"
                + " WHERE (sender LIKE ? OR cc LIKE ? OR subject_text LIKE ? OR message LIKE ?);";
         
-        try(Connection conn = DriverManager.getConnection(url, user, password)){
+        try(Connection conn = DriverManager.getConnection(cb.getDatabaseURL(), cb.getDatabaseUserName(), cb.getDatabasePassword())){
             PreparedStatement stmt = conn.prepareStatement(query);
             
             //Setting user id so as to only search for emails that belongs to the current user
@@ -416,7 +416,7 @@ public class JagEmailDAOImpl implements JagEmailDAO {
     private void getAttachmentFromEmail(JagEmail jagemail)
     {
         String query = "SELECT attachmentByte, attachmentName, from attachments WHERE attachment_messageNumber = ?;";
-        try(Connection conn = DriverManager.getConnection(url, user, password)){
+        try(Connection conn = DriverManager.getConnection(cb.getDatabaseURL(), cb.getDatabaseUserName(), cb.getDatabasePassword())){
             PreparedStatement stmt = conn.prepareStatement(query);
             stmt.setInt(1, jagemail.getMessageNumber());
             
@@ -483,7 +483,7 @@ public class JagEmailDAOImpl implements JagEmailDAO {
     private void addAttachment(JagEmail jagemail, ResultSet rs)
     {        
         String query = "INSERT INTO attachments (attach_messageNumber, attachmentName, attachmentByte) VALUES (?, ?, ?);";
-        try(Connection conn = DriverManager.getConnection(url, user, password)){
+        try(Connection conn = DriverManager.getConnection(cb.getDatabaseURL(), cb.getDatabaseUserName(), cb.getDatabasePassword())){
             PreparedStatement stmt = conn.prepareStatement(query);
             
             //Getting attachment name

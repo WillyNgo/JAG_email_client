@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.williamngo.test.TestDatabase" time="2.699" tests="8" errors="0" skipped="0" failures="1">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.williamngo.test.TestDatabase" time="7.043" tests="8" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_102\jre\bin"/>
     <property name="java.vm.version" value="25.102-b14"/>
+    <property name="user.country.format" value="CA"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="java.vendor.url" value="http://java.oracle.com/"/>
     <property name="path.separator" value=";"/>
@@ -11,49 +12,50 @@
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
     <property name="file.encoding.pkg" value="sun.io"/>
     <property name="user.script" value=""/>
-    <property name="user.country" value="US"/>
+    <property name="user.country" value="FR"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
-    <property name="sun.os.patch.level" value=""/>
+    <property name="sun.os.patch.level" value="Service Pack 1"/>
     <property name="test" value="com.williamngo.test.TestDatabase"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="C:\Users\1435707\Documents\java\JagEmail_Client"/>
+    <property name="user.dir" value="C:\Users\Administrateur\Documents\DAWSON\Fall2016\JavaProject\JagEmail_Client"/>
     <property name="java.runtime.version" value="1.8.0_102-b14"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
     <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_102\jre\lib\endorsed"/>
     <property name="os.arch" value="amd64"/>
-    <property name="java.io.tmpdir" value="C:\Users\1435707\AppData\Local\Temp\"/>
+    <property name="java.io.tmpdir" value="C:\Users\ADMINI~1\AppData\Local\Temp\"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="user.variant" value=""/>
-    <property name="os.name" value="Windows 10"/>
-    <property name="maven.ext.class.path" value="C:\dev\NetBeans8.1\java\maven-nblib\netbeans-eventspy.jar"/>
-    <property name="classworlds.conf" value="C:\dev\NetBeans8.1\java\maven\bin\m2.conf"/>
+    <property name="os.name" value="Windows 7"/>
+    <property name="maven.ext.class.path" value="C:\Program Files\NetBeans 8.1\java\maven-nblib\netbeans-eventspy.jar"/>
+    <property name="classworlds.conf" value="C:\Program Files\NetBeans 8.1\java\maven\bin\m2.conf"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_102\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\app\Administrator\product\11.2.0\client_1\bin;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\HashiCorp\Vagrant\bin;C:\Program Files (x86)\Heroku\bin;C:\Program Files (x86)\git\cmd;C:\Program Files\Git\cmd;C:\WINDOWS\system32\config\systemprofile\.dnx\bin;C:\Program Files\Microsoft DNX\Dnvm\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files (x86)\Microsoft Emulator Manager\1.0\;C:\Program Files (x86)\nodejs\;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;;C:\Program Files (x86)\Microsoft VS Code\bin;C:\Users\Administrator\AppData\Roaming\npm;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps;."/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_102\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\ProgramData\Oracle\Java\javapath;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Program Files (x86)\Common Files\Microsoft Shared\Windows Live;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Windows Live\Shared;C:\Program Files (x86)\Druide\Antidote 7\Programmes32;C:\Program Files (x86)\Druide\Antidote 7\Programmes64;C:\Program Files (x86)\IVI Foundation\VISA\WinNT\Bin;C:\PROGRA~2\IVIFOU~1\VISA\WinNT\Bin;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x86;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x64;C:\Windows\system32\config\systemprofile\.dnx\bin;C:\Program Files\Microsoft DNX\Dnvm\;C:\Program Files\Java\jdk1.8.0_60\bin\;C:\Program Files (x86)\Skype\Phone\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\HashiCorp\Vagrant\bin;C:\Program Files\Git\cmd;C:\Program Files (x86)\SSH Communications Security\SSH Secure Shell;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.class.version" value="52.0"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
-    <property name="os.version" value="10.0"/>
-    <property name="user.home" value="C:\Users\1435707"/>
+    <property name="os.version" value="6.1"/>
+    <property name="user.home" value="C:\Users\Administrateur"/>
     <property name="user.timezone" value="America/New_York"/>
     <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
     <property name="java.specification.version" value="1.8"/>
     <property name="file.encoding" value="UTF-8"/>
-    <property name="user.name" value="1435707"/>
-    <property name="java.class.path" value="C:\dev\NetBeans8.1\java\maven\boot\plexus-classworlds-2.4.jar"/>
+    <property name="user.name" value="Willy"/>
+    <property name="java.class.path" value="C:\Program Files\NetBeans 8.1\java\maven\boot\plexus-classworlds-2.4.jar"/>
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_102\jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dtest=com.williamngo.test.TestDatabase -Dmaven.ext.class.path=C:\dev\NetBeans8.1\java\maven-nblib\netbeans-eventspy.jar -Dfile.encoding=UTF-8 test-compile surefire:test"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dtest=com.williamngo.test.TestDatabase -Dmaven.ext.class.path=C:\Program Files\NetBeans 8.1\java\maven-nblib\netbeans-eventspy.jar -Dfile.encoding=UTF-8 test-compile surefire:test"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
-    <property name="user.language" value="en"/>
+    <property name="user.language" value="fr"/>
+    <property name="user.language.format" value="en"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
     <property name="java.vm.info" value="mixed mode"/>
     <property name="java.version" value="1.8.0_102"/>
-    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_102\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_102\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
     <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_102\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_102\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_102\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_102\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_102\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_102\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_102\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_102\jre\classes"/>
     <property name="java.vendor" value="Oracle Corporation"/>
-    <property name="maven.home" value="C:\dev\NetBeans8.1\java\maven"/>
+    <property name="maven.home" value="C:\Program Files\NetBeans 8.1\java\maven"/>
     <property name="file.separator" value="\"/>
     <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -61,26 +63,12 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="addEmailToDatabase[0]" classname="com.williamngo.test.TestDatabase" time="0.461"/>
-  <testcase name="findEmailByFoldername[0]" classname="com.williamngo.test.TestDatabase" time="0.393"/>
-  <testcase name="findEmailByKeyword[0]" classname="com.williamngo.test.TestDatabase" time="0.691"/>
-  <testcase name="deleteEmailFromDatabase[0]" classname="com.williamngo.test.TestDatabase" time="0.08"/>
-  <testcase name="addEmailToDatabase[1]" classname="com.williamngo.test.TestDatabase" time="0.182"/>
-  <testcase name="findEmailByFoldername[1]" classname="com.williamngo.test.TestDatabase" time="0.06"/>
-  <testcase name="findEmailByKeyword[1]" classname="com.williamngo.test.TestDatabase" time="0.372"/>
-  <testcase name="deleteEmailFromDatabase[1]" classname="com.williamngo.test.TestDatabase" time="0.078">
-    <failure message="expected:&lt;4&gt; but was:&lt;3&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected:<4> but was:<3>
-	at com.williamngo.test.TestDatabase.deleteEmailFromDatabase(TestDatabase.java:168)
-]]></failure>
-    <system-out><![CDATA[[INFO ] 2016-10-25 11:59:00.428 com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS attachments;
-[INFO ] 2016-10-25 11:59:00.432 com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS emails;
-[INFO ] 2016-10-25 11:59:00.455 com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
-[INFO ] 2016-10-25 11:59:00.458 com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
-[INFO ] 2016-10-25 11:59:00.461 com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
-[INFO ] 2016-10-25 11:59:00.464 com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
-[INFO ] 2016-10-25 11:59:00.465 com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:304) - Database created!
-[INFO ] 2016-10-25 11:59:00.465 com.williamngo.test.TestDatabase.deleteEmailFromDatabase(TestDatabase.java:149) - deleting email from database...
-[INFO ] 2016-10-25 11:59:00.476 com.williamngo.database.JagEmailDAOImpl.deleteEmail(JagEmailDAOImpl.java:229) - Deleted 0 email from database
-]]></system-out>
-  </testcase>
+  <testcase name="addEmailToDatabase[0]" classname="com.williamngo.test.TestDatabase" time="1.937"/>
+  <testcase name="findEmailByFoldername[0]" classname="com.williamngo.test.TestDatabase" time="0.531"/>
+  <testcase name="findEmailByKeyword[0]" classname="com.williamngo.test.TestDatabase" time="0.549"/>
+  <testcase name="deleteEmailFromDatabase[0]" classname="com.williamngo.test.TestDatabase" time="0.405"/>
+  <testcase name="addEmailToDatabase[1]" classname="com.williamngo.test.TestDatabase" time="1.209"/>
+  <testcase name="findEmailByFoldername[1]" classname="com.williamngo.test.TestDatabase" time="0.395"/>
+  <testcase name="findEmailByKeyword[1]" classname="com.williamngo.test.TestDatabase" time="0.321"/>
+  <testcase name="deleteEmailFromDatabase[1]" classname="com.williamngo.test.TestDatabase" time="0.492"/>
 </testsuite>

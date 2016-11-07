@@ -39,9 +39,9 @@ public class MailerImpl implements Mailer {
             String html, String embedded, String attachment)
     {       
         //Assign info of sender
-        String smtpServerName = configBean.getSmtpServer();
+        String smtpServerName = configBean.getSmtpServerName();
         String emailSend = configBean.getEmailAddress();
-        String emailSendPwd = configBean.getEmailAddressPwd();
+        String emailSendPwd = configBean.getEmailPassword();
         int smtpPortNo = configBean.getSmtpPort();
         
         
@@ -182,9 +182,9 @@ public class MailerImpl implements Mailer {
     public JagEmail[] receiveEmail()
     {
         //Receiver information
-        String imapServerName = configBean.getImapServer();
+        String imapServerName = configBean.getImapServerName();
         String emailReceive = configBean.getEmailAddress(); //Receive the emails sent by the same account
-        String emailReceivePwd = configBean.getEmailAddressPwd();
+        String emailReceivePwd = configBean.getEmailPassword();
         int imapPortNo = configBean.getImapPort();
         
         //Instantiate server and session

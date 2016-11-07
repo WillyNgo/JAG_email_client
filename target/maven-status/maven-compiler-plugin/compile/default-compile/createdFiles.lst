@@ -1,3 +1,4 @@
+com\williamngo\business\PropertyManager.class
 com\williamngo\interfaces\Mailer.class
 com\williamngo\beans\attachmentBean.class
 com\williamngo\business\FXMLController.class

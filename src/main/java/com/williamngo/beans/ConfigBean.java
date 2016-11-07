@@ -16,20 +16,31 @@ public class ConfigBean {
     private String smtpServerName; //"smtp.gmail.com";
     private String imapServerName; //"imap.gmail.com";
     private String emailAddress; //williamngosend@gmail.com
-    private String emailAddressPwd; //sendanemail
+    private String emailPassword; //sendanemail
     private int smtpPortNo;
     private int imapPortNo; 
+    private String databaseURL;
+    private String databaseUserName;
+    private String databasePassword;
+    
+    public ConfigBean()
+    {
+        
+    }
     
     public ConfigBean (String userName, String smtpServerName, String imapServerName,
-            String emailAddress, String emailAddressPwd, int smtpPortNo, int imapPortNo)
+            String emailAddress, String emailAddressPwd, int smtpPortNo, int imapPortNo, String databaseURL, String databaseUserName, String databasePassword)
     {
         this.userName = userName;
         this.smtpServerName = smtpServerName;
         this.imapServerName = imapServerName;
         this.emailAddress = emailAddress;
-        this.emailAddressPwd = emailAddressPwd;
+        this.emailPassword = emailAddressPwd;
         this.smtpPortNo = smtpPortNo;
         this.imapPortNo = imapPortNo;
+        this.databaseURL = databaseURL;
+        this.databaseUserName = databaseUserName;
+        this.databasePassword = databasePassword;
     }
     
     public String getUserName()
@@ -37,12 +48,12 @@ public class ConfigBean {
         return userName;
     }
     
-    public String getSmtpServer()
+    public String getSmtpServerName()
     {
         return smtpServerName;
     }
     
-    public String getImapServer()
+    public String getImapServerName()
     {
         return imapServerName;
     }
@@ -52,9 +63,9 @@ public class ConfigBean {
         return emailAddress;
     }
     
-    public String getEmailAddressPwd() 
+    public String getEmailPassword() 
     {
-        return emailAddressPwd;
+        return emailPassword;
     }
     
     public int getSmtpPort()
@@ -67,17 +78,32 @@ public class ConfigBean {
         return imapPortNo;
     }
     
+    public String getDatabaseURL()
+    {
+        return databaseURL;
+    }
+    
+    public String getDatabaseUserName()
+    {
+        return databaseUserName;
+    }
+    
+    public String getDatabasePassword()
+    {
+        return databasePassword;
+    }
+    
     public void setUserName(String username)
     {
         this.userName = username;
     }
     
-    public void setSmtpServer(String smtpServerName)
+    public void setSmtpServerName(String smtpServerName)
     {
         this.smtpServerName = smtpServerName;
     }
     
-    public void setImapServer(String imapServerName)
+    public void setImapServerName(String imapServerName)
     {
         this.imapServerName = imapServerName;
     }
@@ -87,9 +113,9 @@ public class ConfigBean {
         this.emailAddress = emailAddress;
     }
     
-    public void setEmailAddressPwd(String emailAddressPwd) 
+    public void setEmailPassword(String emailAddressPwd) 
     {
-        this.emailAddressPwd = emailAddressPwd;
+        this.emailPassword = emailAddressPwd;
     }
     
     public void setSmtpPort(int smtpPort) 
@@ -100,5 +126,20 @@ public class ConfigBean {
     public void setImapPort(int imapPort) 
     {
             this.imapPortNo = imapPort;
+    }
+    
+    public void setDatabaseURL(String URL)
+    {
+        this.databaseURL = URL;
+    }
+    
+    public void setDatabaseUserName(String name)
+    {
+        this.databaseUserName = name;
+    }
+    
+    public void setDatabasePassword(String password)
+    {
+        this.databasePassword = password;
     }
 }

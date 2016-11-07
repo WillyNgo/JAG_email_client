@@ -41,11 +41,11 @@ import org.slf4j.LoggerFactory;
 public class TestDatabase {
 
     private final Logger log = LoggerFactory.getLogger(getClass().getName());
-    private final String url = "jdbc:mysql://waldo2.dawsoncollege.qc.ca:3306/cs1435707";
+    //private final String url = "jdbc:mysql://waldo2.dawsoncollege.qc.ca:3306/cs1435707";
     private final String user = "CS1435707";
     private final String password = "tripermu";
 
-    ConfigBean cfg;
+    ConfigBean cb;
     String emailToBeReceived;
     Optional<String> emailCC;
     Optional<String> emailBCC;
@@ -73,7 +73,7 @@ public class TestDatabase {
             JagEmailDAOImpl jdb,
             String foldername,
             int emailId) {
-        this.cfg = cfg;
+        this.cb = cfg;
         this.emailToBeReceived = emailToBeReceived;
         this.emailCC = emailCC;
         this.emailBCC = emailBCC;
@@ -112,7 +112,7 @@ public class TestDatabase {
         // Creating email to be added to database
         JagEmail email = new JagEmail();
         //Setup the email
-        email.from(cfg.getEmailAddress());
+        email.from(cb.getEmailAddress());
         email.to(emailToBeReceived);
         email.cc(emailCC.get().split(","));
         email.bcc(emailBCC.get().split(","));
@@ -127,7 +127,7 @@ public class TestDatabase {
 
         //Demo database already has 4 emails stored. after adding, database should contain 5
         String query = "SELECT COUNT(messageNumber) as number FROM emails;";
-        try (Connection conn = DriverManager.getConnection(url, user, password)) {
+        try (Connection conn = DriverManager.getConnection(cb.getDatabaseURL(), cb.getDatabaseUserName(), cb.getDatabasePassword())) {
             PreparedStatement stmt = conn.prepareStatement(query);
             ResultSet rs = stmt.executeQuery();
 
@@ -153,7 +153,7 @@ public class TestDatabase {
         jdb.deleteEmail(msgNumber);
         
         String query = "SELECT COUNT(messageNumber) as number FROM emails;";
-        try (Connection conn = DriverManager.getConnection(url, user, password)) {
+        try (Connection conn = DriverManager.getConnection(cb.getDatabaseURL(), cb.getDatabaseUserName(), cb.getDatabasePassword())) {
             PreparedStatement stmt = conn.prepareStatement(query);
             ResultSet rs = stmt.executeQuery();
 
@@ -204,11 +204,11 @@ public class TestDatabase {
     public static Collection<Object[]> data() {
         //Messaged used in the body of the email
         String msg = "Here is some text";
-        ConfigBean cfgbn;
+        ConfigBean cb;
         JagEmailDAOImpl jag;
         return Arrays.asList(new Object[][]{
             {
-                cfgbn = new ConfigBean("sender", "smtp.gmail.com", "imap.gmail.com", "williamngosend@gmail.com", "sendanemail", 465, 993),
+                cb = new ConfigBean("sender", "smtp.gmail.com", "imap.gmail.com", "williamngosend@gmail.com", "sendanemail", 465, 993, "jdbc:mysql://waldo2.dawsoncollege.qc.ca:3306/cs1435707", "CS1435707", "tripermu"),
                 "williamngoreceive@gmail.com",
                 Optional.of("shiftkun662@gmail.com"),
                 Optional.of("devjlin1@gmail.com"),
@@ -218,12 +218,12 @@ public class TestDatabase {
                 null,
                 "pictures\\kimagura.jpg",           //Attachment
                 "chicken,2",                        //SearchKeyword, ExpectedCount
-                jag = new JagEmailDAOImpl(cfgbn),   //JagEmailDao implementer
+                jag = new JagEmailDAOImpl(cb),   //JagEmailDao implementer
                 "sent,2",                           //foldername, expectedValue
-                1                                   //MessageNumber
+                1,                                  //MessageNumber
             },
             {
-                cfgbn = new ConfigBean("sender", "smtp.gmail.com", "imap.gmail.com", "williamngosend@gmail.com", "sendanemail", 465, 993),
+                cb = new ConfigBean("sender", "smtp.gmail.com", "imap.gmail.com", "williamngosend@gmail.com", "sendanemail", 465, 993, "jdbc:mysql://waldo2.dawsoncollege.qc.ca:3306/cs1435707", "CS1435707", "tripermu"),
                 "williamngoreceive@gmail.com",
                 Optional.of("shiftkun662@gmail.com"),
                 Optional.of("devjlin1@gmail.com"),
@@ -233,9 +233,9 @@ public class TestDatabase {
                 null,
                 "pictures\\kimagura.jpg",           //Attachment
                 "Pocket,0",                        //SearchKeyword, ExpectedCount
-                jag = new JagEmailDAOImpl(cfgbn),   //JagEmailDao implementer
+                jag = new JagEmailDAOImpl(cb),   //JagEmailDao implementer
                 "NoFolder,0",                           //foldername, expectedValue
-                1                                   //MessageNumber
+                1,                                  //MessageNumber  
             }
         }
         );
@@ -246,7 +246,7 @@ public class TestDatabase {
      */
     @Before
     public void createDatabase() {
-        try (Connection con = DriverManager.getConnection(url, user, password)) {
+        try (Connection con = DriverManager.getConnection(cb.getDatabaseURL(), cb.getDatabaseUserName(), cb.getDatabasePassword())) {
             PreparedStatement stmt;
             
             List<String> queryDrop = new ArrayList<String>();

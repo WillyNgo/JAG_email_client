@@ -79,7 +79,7 @@ public class TestJagEmail {
         return Arrays.asList(new Object[][]
         {
             {
-                new ConfigBean("sender", "smtp.gmail.com", "imap.gmail.com", "williamngosend@gmail.com", "sendanemail", 465, 993),
+                new ConfigBean("sender", "smtp.gmail.com", "imap.gmail.com", "williamngosend@gmail.com", "sendanemail", 465, 993, "jdbc:mysql://waldo2.dawsoncollege.qc.ca:3306/cs1435707", "CS1435707", "tripermu"),
                 "williamngoreceive@gmail.com",
                 Optional.of("shiftkun662@gmail.com"),
                 Optional.of("devjlin1@gmail.com"),
@@ -195,7 +195,7 @@ public class TestJagEmail {
          }
         
         //Email receiving
-        m = new MailerImpl(new ConfigBean("receiver", "smtp.gmail.com", "imap.gmail.com", "williamngoreceive@gmail.com", "receiveanemail", 465, 993));
+        m = new MailerImpl(new ConfigBean("receiver", "smtp.gmail.com", "imap.gmail.com", "williamngoreceive@gmail.com", "receiveanemail", 465, 993, "jdbc:mysql://waldo2.dawsoncollege.qc.ca:3306/cs1435707", "CS1435707", "tripermu"));
         
         JagEmail[] receivedEmail = m.receiveEmail();
         JagEmail receivingEmail = receivedEmail[0];
