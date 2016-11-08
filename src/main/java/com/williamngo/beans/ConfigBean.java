@@ -1,5 +1,9 @@
 package com.williamngo.beans;
 
+import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
 import org.slf4j.*;
 
 /**
@@ -12,134 +16,135 @@ import org.slf4j.*;
 public class ConfigBean {
     private final Logger log = LoggerFactory.getLogger(getClass().getName());
 
-    private String userName;
-    private String smtpServerName; //"smtp.gmail.com";
-    private String imapServerName; //"imap.gmail.com";
-    private String emailAddress; //williamngosend@gmail.com
-    private String emailPassword; //sendanemail
-    private int smtpPortNo;
-    private int imapPortNo; 
-    private String databaseURL;
-    private String databaseUserName;
-    private String databasePassword;
+    private StringProperty userName;
+    private StringProperty smtpServerName; //"smtp.gmail.com";
+    private StringProperty imapServerName; //"imap.gmail.com";
+    private StringProperty emailAddress; //williamngosend@gmail.com
+    private StringProperty emailPassword; //sendanemail
+    private IntegerProperty smtpPortNo;
+    private IntegerProperty imapPortNo; 
+    private StringProperty databaseURL;
+    private StringProperty databaseUserName;
+    private StringProperty databasePassword;
     
     public ConfigBean()
     {
         
     }
     
-    public ConfigBean (String userName, String smtpServerName, String imapServerName,
-            String emailAddress, String emailAddressPwd, int smtpPortNo, int imapPortNo, String databaseURL, String databaseUserName, String databasePassword)
+    public ConfigBean (final String userName, final String smtpServerName, final String imapServerName,
+            final String emailAddress, final String emailPassword, final int smtpPortNo, final int imapPortNo,
+            final String databaseURL, final String databaseUserName, final String databasePassword)
     {
-        this.userName = userName;
-        this.smtpServerName = smtpServerName;
-        this.imapServerName = imapServerName;
-        this.emailAddress = emailAddress;
-        this.emailPassword = emailAddressPwd;
-        this.smtpPortNo = smtpPortNo;
-        this.imapPortNo = imapPortNo;
-        this.databaseURL = databaseURL;
-        this.databaseUserName = databaseUserName;
-        this.databasePassword = databasePassword;
+        this.userName = new SimpleStringProperty(userName);
+        this.smtpServerName = new SimpleStringProperty(smtpServerName);
+        this.imapServerName = new SimpleStringProperty(imapServerName);
+        this.emailAddress = new SimpleStringProperty(emailAddress);
+        this.emailPassword = new SimpleStringProperty(emailPassword);
+        this.smtpPortNo = new SimpleIntegerProperty(smtpPortNo);
+        this.imapPortNo = new SimpleIntegerProperty(imapPortNo);
+        this.databaseURL = new SimpleStringProperty(databaseURL);
+        this.databaseUserName = new SimpleStringProperty(databaseUserName);
+        this.databasePassword = new SimpleStringProperty(databasePassword);
     }
     
     public String getUserName()
     {
-        return userName;
+        return userName.get();
     }
     
     public String getSmtpServerName()
     {
-        return smtpServerName;
+        return smtpServerName.get();
     }
     
     public String getImapServerName()
     {
-        return imapServerName;
+        return imapServerName.get();
     }
     
     public String getEmailAddress() 
     {
-        return emailAddress;
+        return emailAddress.get();
     }
     
     public String getEmailPassword() 
     {
-        return emailPassword;
+        return emailPassword.get();
     }
     
     public int getSmtpPort()
     {
-        return smtpPortNo;
+        return smtpPortNo.get();
     }
     
     public int getImapPort()
     {
-        return imapPortNo;
+        return imapPortNo.get();
     }
     
     public String getDatabaseURL()
     {
-        return databaseURL;
+        return databaseURL.get();
     }
     
     public String getDatabaseUserName()
     {
-        return databaseUserName;
+        return databaseUserName.get();
     }
     
     public String getDatabasePassword()
     {
-        return databasePassword;
+        return databasePassword.get();
     }
     
     public void setUserName(String username)
     {
-        this.userName = username;
+        this.userName.set(username);
     }
     
     public void setSmtpServerName(String smtpServerName)
     {
-        this.smtpServerName = smtpServerName;
+        this.smtpServerName.set(smtpServerName);
     }
     
     public void setImapServerName(String imapServerName)
     {
-        this.imapServerName = imapServerName;
+        this.imapServerName.set(imapServerName);
     }
     
     public void setEmailAddress(String emailAddress) 
     {
-        this.emailAddress = emailAddress;
+        this.emailAddress.set(emailAddress);
     }
     
     public void setEmailPassword(String emailAddressPwd) 
     {
-        this.emailPassword = emailAddressPwd;
+        this.emailPassword.set(emailAddressPwd);
     }
     
     public void setSmtpPort(int smtpPort) 
     {
-            this.smtpPortNo = smtpPort;
+            this.smtpPortNo.set(smtpPort);
     }
     
     public void setImapPort(int imapPort) 
     {
-            this.imapPortNo = imapPort;
+            this.imapPortNo.set(imapPort);
     }
     
     public void setDatabaseURL(String URL)
     {
-        this.databaseURL = URL;
+        this.databaseURL.set(URL);
     }
     
     public void setDatabaseUserName(String name)
     {
-        this.databaseUserName = name;
+        this.databaseUserName.set(name);
     }
     
     public void setDatabasePassword(String password)
     {
-        this.databasePassword = password;
+        this.databasePassword.set(password);
     }
 }

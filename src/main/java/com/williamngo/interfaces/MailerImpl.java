@@ -54,10 +54,6 @@ public class MailerImpl implements Mailer {
         /********** Validate required information ***************/
         JagEmail email = new JagEmail();
         email.from(emailSend);
-                
-        //Set user id associated with current user
-        email.setUserId(jdb.getAccountIdFromDatabase());
-        log.info("userId of sending: " + email.getUserId());
         
         String[] toArray; //Array containing list of To
         //If there are no recipients, throw exception
@@ -243,8 +239,6 @@ public class MailerImpl implements Mailer {
             myEmailArray[i].setReceiveDate(r[i].getReceiveDate());
             myEmailArray[i].setFolder("Inbox");
             myEmailArray[i].setTypeFlags(false);
-            myEmailArray[i].setUserId(jdb.getAccountIdFromDatabase());
-            log.info("user id when converingbean is " + myEmailArray[i].getUserId());
             //myEmailArray[i].setMessageNumber(r[i].getMessageNumber());
             //Get attachments
             if(r[i].getAttachments() != null)

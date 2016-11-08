@@ -11,7 +11,6 @@ import javax.mail.*;
  * @version 2016/04/10
  */
 public class JagEmail extends Email{
-    private int user_id;
     private String folder;
     private List<ReceivedEmail> attachedMessages;
     private Flags flags;
@@ -21,16 +20,6 @@ public class JagEmail extends Email{
    
     public JagEmail() {
         super();
-    }
-    
-    public int getUserId()
-    {
-        return this.user_id;
-    }
-    
-    public void setUserId(int user_id)
-    {
-        this.user_id = user_id;
     }
     
     public List<ReceivedEmail> getAttachedMessages()

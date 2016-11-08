@@ -324,7 +324,7 @@ public class JagEmailDAOImpl implements JagEmailDAO {
                     emailToBeAdded.addHtml(html);
                     emailToBeAdded.setReceiveDate(receiveDate);
                     emailToBeAdded.setFolder(folder);
-                    getAttachmentFromEmail(emailToBeAdded);
+                    getAttachmentAndSetToEmail(emailToBeAdded);
                     
                     emailFound.add(emailToBeAdded);
                 }
@@ -393,7 +393,7 @@ public class JagEmailDAOImpl implements JagEmailDAO {
                     emailToBeAdded.addHtml(html);
                     emailToBeAdded.setReceiveDate(receiveDate);
                     emailToBeAdded.setFolder(folder);
-                    getAttachmentFromEmail(emailToBeAdded);
+                    getAttachmentAndSetToEmail(emailToBeAdded);
                     
                     emailFound.add(emailToBeAdded);
                 }
@@ -413,7 +413,7 @@ public class JagEmailDAOImpl implements JagEmailDAO {
      * @param attachment_id
      * @param jagemail 
      */
-    private void getAttachmentFromEmail(JagEmail jagemail)
+    private void getAttachmentAndSetToEmail(JagEmail jagemail)
     {
         String query = "SELECT attachmentByte, attachmentName, from attachments WHERE attachment_messageNumber = ?;";
         try(Connection conn = DriverManager.getConnection(cb.getDatabaseURL(), cb.getDatabaseUserName(), cb.getDatabasePassword())){
@@ -477,6 +477,7 @@ public class JagEmailDAOImpl implements JagEmailDAO {
     
     /**
      * Adds attachment to database by converting it to byte array
+     * 
      * @param jagemail
      * @param rs 
      */

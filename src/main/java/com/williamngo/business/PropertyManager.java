@@ -11,72 +11,10 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Properties;
 import static java.nio.file.Paths.get;
-import static java.nio.file.Paths.get;
-import static java.nio.file.Paths.get;
-import static java.nio.file.Paths.get;
-import static java.nio.file.Paths.get;
-import static java.nio.file.Paths.get;
-import static java.nio.file.Paths.get;
-import static java.nio.file.Paths.get;
-import static java.nio.file.Paths.get;
-import static java.nio.file.Paths.get;
-import static java.nio.file.Paths.get;
-import static java.nio.file.Paths.get;
-import static java.nio.file.Paths.get;
-import static java.nio.file.Paths.get;
-import static java.nio.file.Paths.get;
-import static java.nio.file.Paths.get;
-import static java.nio.file.Paths.get;
-import static java.nio.file.Paths.get;
-import static java.nio.file.Paths.get;
-import static java.nio.file.Paths.get;
-import static java.nio.file.Paths.get;
-import static java.nio.file.Paths.get;
-import static java.nio.file.Paths.get;
-import static java.nio.file.Paths.get;
-import static java.nio.file.Paths.get;
-import static java.nio.file.Paths.get;
-import static java.nio.file.Paths.get;
-import static java.nio.file.Paths.get;
-import static java.nio.file.Paths.get;
-import static java.nio.file.Paths.get;
-import static java.nio.file.Paths.get;
-import static java.nio.file.Paths.get;
-import static java.nio.file.Paths.get;
-import static java.nio.file.Paths.get;
-import static java.nio.file.Paths.get;
-import static java.nio.file.Paths.get;
-import static java.nio.file.Paths.get;
-import static java.nio.file.Paths.get;
-import static java.nio.file.Paths.get;
-import static java.nio.file.Paths.get;
-import static java.nio.file.Paths.get;
-import static java.nio.file.Paths.get;
-import static java.nio.file.Paths.get;
-import static java.nio.file.Paths.get;
-import static java.nio.file.Paths.get;
-import static java.nio.file.Paths.get;
-import static java.nio.file.Paths.get;
-import static java.nio.file.Paths.get;
-import static java.nio.file.Paths.get;
-import static java.nio.file.Paths.get;
-import static java.nio.file.Paths.get;
-import static java.nio.file.Paths.get;
-import static java.nio.file.Paths.get;
-import static java.nio.file.Paths.get;
-import static java.nio.file.Paths.get;
-import static java.nio.file.Paths.get;
-import static java.nio.file.Paths.get;
-import static java.nio.file.Paths.get;
-import static java.nio.file.Paths.get;
-import static java.nio.file.Paths.get;
-import static java.nio.file.Paths.get;
-import static java.nio.file.Paths.get;
-import static java.nio.file.Paths.get;
-import static java.nio.file.Paths.get;
+
 /**
  *
- * @author Willy
+ * @author William Ngo
  */
 public class PropertyManager {
     
