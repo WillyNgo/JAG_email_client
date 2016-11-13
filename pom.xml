@@ -2,8 +2,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.mycompany</groupId>
-    <artifactId>firstproject</artifactId>
+    <groupId>com.williamngo</groupId>
+    <artifactId>jagemail</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
@@ -15,7 +15,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <!-- class that has the main method -->
-        <mainClass>${groupId}.${artifactId}.MainAppFX</mainClass>
+        <mainClass>${groupId}.${artifactId}.MainApp</mainClass>
     </properties>
 
     <dependencies>
@@ -67,7 +67,13 @@
             <artifactId>jodd-mail</artifactId>
             <version>3.7.1</version>
         </dependency>
-
+        <dependency>
+            <groupId>backport-util-concurrent</groupId>
+            <artifactId>backport-util-concurrent</artifactId>
+            <version>3.1</version>
+            <scope>test</scope>
+            <type>jar</type>
+        </dependency>
     </dependencies>
 
     <build>

@@ -5,9 +5,13 @@
  */
 package com.williamngo.controllers;
 
+import com.williamngo.database.JagEmailDAO;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.web.HTMLEditor;
 
 /**
  * FXML Controller class
@@ -15,7 +19,15 @@ import javafx.fxml.Initializable;
  * @author Willy
  */
 public class EditorController implements Initializable {
-
+    
+    private JagEmailDAO jagemailDAO;
+    
+    @FXML
+    private BorderPane editorLayout;
+    
+    @FXML
+    private HTMLEditor editor;
+    
     /**
      * Initializes the controller class.
      */

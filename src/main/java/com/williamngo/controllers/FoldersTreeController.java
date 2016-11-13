@@ -6,24 +6,37 @@
 package com.williamngo.controllers;
 
 import com.williamngo.beans.ConfigBean;
+import com.williamngo.business.Folder;
+import com.williamngo.database.JagEmailDAO;
+import com.williamngo.database.JagEmailDAOImpl;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.TreeView;
+import javafx.scene.layout.BorderPane;
 
 /**
  * FXML Controller class
  *
  * @author Willy
  */
-public class FoldersController implements Initializable {
-
+public class FoldersTreeController implements Initializable {
+    private JagEmailDAO jagemailDAO;
+    
+    @FXML
+    private BorderPane treeLayout;
+    
+    @FXML
+    private TreeView<Folder> folderTreeView;
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         
-        ConfigBean cb = new ConfigBean();
+        
+        
         /*
         
 		// We need a root node for the tree and it must be the same type as all nodes
@@ -49,5 +62,10 @@ public class FoldersController implements Initializable {
         
         */
     }    
+    
+    private void setJagEmailDAO(JagEmailDAO dao)
+    {
+        this.jagemailDAO = dao;
+    }
     
 }

@@ -1,2 +1,3 @@
 com\williamngo\test\TestDatabase.class
 com\williamngo\test\TestJagEmail.class
+com\williamngo\test\TestConfigController.class

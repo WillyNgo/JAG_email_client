@@ -48,6 +48,7 @@ public class ConfigBean {
         this.databasePassword = new SimpleStringProperty(databasePassword);
     }
     
+    //Getters
     public String getUserName()
     {
         return userName.get();
@@ -98,6 +99,7 @@ public class ConfigBean {
         return databasePassword.get();
     }
     
+    //Setters
     public void setUserName(String username)
     {
         this.userName.set(username);
@@ -146,5 +148,52 @@ public class ConfigBean {
     public void setDatabasePassword(String password)
     {
         this.databasePassword.set(password);
+    }
+    
+    //Properties method
+    public StringProperty userNameProperty()
+    {
+        return userName;
+    }
+    
+    public StringProperty smtpServerNameProperty()
+    {
+        return smtpServerName;
+    }
+    
+    public StringProperty imapServerNameProperty()
+    {
+        return imapServerName;
+    }
+    
+    public StringProperty emailAddressProperty()
+    {
+        return emailAddress;
+    }
+    
+    public StringProperty emailPasswordProperty()
+    {
+        return emailPassword;
+    }
+    
+    public IntegerProperty smtpPortNoProperty()
+    {
+        return smtpPortNo;
+    }
+    public IntegerProperty imapPortNoProperty()
+    {
+        return imapPortNo;
+    }
+    public StringProperty databaseURLProperty()
+    {
+        return databaseURL;
+    }
+    public StringProperty databaseUserNameProperty()
+    {
+        return databaseUserName;
+    }
+    public StringProperty databasePasswordProperty()
+    {
+        return databasePassword;
     }
 }

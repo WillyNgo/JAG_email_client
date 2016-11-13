@@ -21,13 +21,14 @@ public class JagEmailDAOImpl implements JagEmailDAO {
     public final Logger log = LoggerFactory.getLogger(getClass().getName());
     public ConfigBean cb;
     
-    String url = "jdbc:mysql://waldo2.dawsoncollege.qc.ca:3306/cs1435707";
-    String user = "CS1435707";
-    String password = "tripermu";
     
-    public JagEmailDAOImpl(ConfigBean cb)
-    {
+    
+    public JagEmailDAOImpl(ConfigBean cb){
         this.cb = cb;
+    }
+    
+    public JagEmailDAOImpl(){
+        super();
     }
     
     /**
@@ -67,8 +68,8 @@ public class JagEmailDAOImpl implements JagEmailDAO {
             String subject = jagemail.getSubject();
             
             //Getting message and html content;
-            List<String> message = new ArrayList();
-            List<String> html = new ArrayList();
+            List<String> message = new ArrayList<>();
+            List<String> html = new ArrayList<>();
             List<EmailMessage> msgList = jagemail.getAllMessages();
             for(EmailMessage msg : msgList)
             {
@@ -115,107 +116,6 @@ public class JagEmailDAOImpl implements JagEmailDAO {
         }
     }
     
-    
-    
-    @Deprecated
-    public void updateAccountUsername(int account_id, String account_username)
-    {
-        log.info("Updating account username...");
-        String query = "UPDATE accounts SET account_username = ?"
-                + " WHERE account_id = ?;";
-        
-        try(Connection conn = DriverManager.getConnection(url, user, password)){
-            PreparedStatement stmt = conn.prepareStatement(query);
-            
-            stmt.setString(1, account_username);
-            stmt.setInt(2, account_id);
-            
-            int result = stmt.executeUpdate();
-            log.info("Updated " + result + " result(s)");
-        }
-        catch(SQLException sqle)
-        {
-            sqle.getMessage();
-        }
-    }
-    
-    @Deprecated
-    public void updateAccountEmail(int account_id, String emailAddress)
-    {
-        log.info("Updating account email...");
-        String query = "UPDATE accounts SET emailAddress = ?"
-                + " WHERE account_id = ?;";
-        
-        try(Connection conn = DriverManager.getConnection(url, user, password)){
-            PreparedStatement stmt = conn.prepareStatement(query);
-            
-            stmt.setString(1, emailAddress);
-            stmt.setInt(2, account_id);
-            
-            int result = stmt.executeUpdate();
-            log.info("Updated " + result + " result(s)");
-        }
-        catch(SQLException sqle)
-        {
-            sqle.getMessage();
-        }
-    }
-    
-    /**
-     * 
-     * @param account_id
-     * @param myPassword
-     * @deprecated
-     */
-    @Deprecated
-    public void updateAccountPassword(int account_id, String myPassword)
-    {
-        log.info("Updating account...");
-        String query = "UPDATE accounts SET account_password = ?"
-                + " WHERE account_id = ?;";
-        
-        try(Connection conn = DriverManager.getConnection(url, user, password)){
-            PreparedStatement stmt = conn.prepareStatement(query);
-            
-            stmt.setString(1, myPassword);
-            stmt.setInt(2, account_id);
-            
-            int result = stmt.executeUpdate();
-            log.info("Updated " + result + " result(s)");
-        }
-        catch(SQLException sqle)
-        {
-            sqle.getMessage();
-        }
-    }
-    
-    /**
-     * Adds a user account into the database
-     * 
-     * @param account_username - Username of the user
-     * @param emailAddress - email address of the user
-     * @param account_password - the password associated with its account
-     */
-    @Deprecated
-    public void addAccount(String account_username, String emailAddress, String account_password)
-    {
-        String query = "INSERT INTO accounts (account_username, emailAddress, account_password) VALUES (?, ?, ?);";
-         try(Connection conn = DriverManager.getConnection(url, user, password)){
-            PreparedStatement stmt = conn.prepareStatement(query);
-            
-            stmt.setString(1, account_username);
-            stmt.setString(2, emailAddress);
-            stmt.setString(3, account_password);
-            
-            stmt.executeUpdate();
-            log.info("Added account: " + emailAddress);
-         }
-         catch(SQLException sqle)
-         {
-             sqle.getMessage();
-         }
-    }
-    
     @Override
     public void deleteEmail(int messageNumber)
     {
@@ -227,48 +127,6 @@ public class JagEmailDAOImpl implements JagEmailDAO {
             
             int result = stmt.executeUpdate();
             log.info("Deleted " + result + " email from database");
-         }
-         catch(SQLException sqle)
-         {
-             sqle.getMessage();
-         }
-    }
-    
-    /**
-     * 
-     * 
-     * @param id
-     * @param emailAddress
-     * @param account_password 
-     */
-    @Deprecated
-    public void deleteAccount(int id, String emailAddress, String account_password)
-    {        
-        //Delete all emails associated with this account before hand
-        String emailQuery = "DELETE FROM emails WHERE email_account_id = ?;";
-        try(Connection conn = DriverManager.getConnection(url, user, password)){
-            PreparedStatement stmt = conn.prepareStatement(emailQuery);
-            
-            stmt.setInt(1, id);
-            
-            int result = stmt.executeUpdate();
-        }
-        catch(SQLException sqle)
-         {
-             sqle.getMessage();
-         }
-        
-        //Now able to delete account
-        String query = "DELETE FROM accounts WHERE emailAddress = ? AND account_password = ?;";
-        try(Connection conn = DriverManager.getConnection(url, user, password)){
-            PreparedStatement stmt = conn.prepareStatement(query);
-            
-            stmt.setString(1, emailAddress);
-            stmt.setString(2, account_password);
-            
-            stmt.executeUpdate();
-            log.info("Deleted account: " + emailAddress);
-            //If you wanna delete account I gotta delete all of its email associated with this accuount
          }
          catch(SQLException sqle)
          {
@@ -437,42 +295,6 @@ public class JagEmailDAOImpl implements JagEmailDAO {
         {
             sqle.getMessage();
         }
-    }
-    
-    /**
-     * Returns the id of the current user
-     * @return user_id - id of the user
-     */
-    @Deprecated
-    public int getAccountIdFromDatabase()
-    {
-        int user_id = -1;
-        String query = "SELECT account_id FROM accounts WHERE account_username = ?;";
-        try(Connection conn = DriverManager.getConnection(url, user, password)){
-            PreparedStatement stmt = conn.prepareStatement(query);
-            
-            String username = cb.getUserName();
-            stmt.setString(1, username);
-            
-            try(ResultSet rs = stmt.executeQuery())
-            {
-                if(rs.next())
-                {
-                    user_id = rs.getInt("account_id");
-                    
-                }
-            }
-            catch(SQLException sqle)
-            {
-                sqle.getMessage();
-            }
-        }
-        catch(SQLException sqle)
-        {
-            sqle.getMessage();
-        }
-        
-        return user_id;
     }
     
     /**

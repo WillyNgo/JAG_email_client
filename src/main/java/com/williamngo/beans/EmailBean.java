@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.williamngo.beans;
 
 import java.util.Date;
@@ -17,30 +12,26 @@ import javax.mail.Flags;
 import jodd.mail.ReceivedEmail;
 
 /**
- *
+ * Email bean to display emails in the table of the user
+ * 
  * @author William Ngo
  */
 public class EmailBean {
     private StringProperty from;
     private StringProperty subject;
-    private StringProperty folder;
-    private BooleanProperty typeFlag; //True = Sent || False = Received
-    private IntegerProperty messageNumber;
     private Date receiveDate;
     
     public EmailBean()
     {}
     
-    public EmailBean(final String from, final String subject, final String folder,
-            final boolean typeFlag, final int messageNumber, final Date receiveDate)
+    public EmailBean(final String from, final String subject, final Date receiveDate)
     {
         this.from = new SimpleStringProperty(from);
-        this.subject = new SimpleStringProperty(subject);
-        this.folder = new SimpleStringProperty(folder);
-        this.messageNumber = new SimpleIntegerProperty(messageNumber); 
+        this.subject = new SimpleStringProperty(subject); 
         this.receiveDate = receiveDate;
     }
     
+    //Getters
     public String getFrom()
     {
         return this.from.get();
@@ -51,18 +42,24 @@ public class EmailBean {
         return this.subject.get();
     }
     
-    public String getFolder()
+    public Date getReceiveDate()
     {
-        return this.folder.get();
+        return this.receiveDate;
     }
     
-    public Boolean getTypeFlag()
+    //Setters
+    public void setFrom(String from)
     {
-        return this.typeFlag.get();
+        this.from.set(from);
     }
     
-    public int getMessageNumber()
+    public void setSubject(String subject)
     {
-        return this.messageNumber.get();
+        this.subject.set(subject);
+    }
+    
+    public void setReceiveDate(Date date)
+    {
+        this.receiveDate = date;
     }
 }
