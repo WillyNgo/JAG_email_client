@@ -5,6 +5,8 @@
  */
 package com.williamngo.database;
 
+import com.williamngo.beans.FolderBean;
+import com.williamngo.business.Folder;
 import com.williamngo.business.JagEmail;
 import java.sql.ResultSet;
 import java.util.List;
@@ -23,4 +25,5 @@ public interface JagEmailDAO {
     //public void deleteAccount(int account_id, String emailAddress, String password);
     public List<JagEmail> retrieveEmail(String folder);
     public List<JagEmail> searchEmail(String keyword);
+    public List<Folder> getAllFolders();
 }

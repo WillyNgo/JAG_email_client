@@ -5,10 +5,20 @@
  */
 package com.williamngo.business;
 
+import javafx.beans.property.StringProperty;
+
 /**
  * Folder objects
  * @author William Ngo
  */
 public class Folder {
     private String folderName;
+    
+    public String getFolderName(){
+        return folderName;
+    }
+    
+    public void setFolderName(String name){
+        this.folderName = name;
+    }
 }

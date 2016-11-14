@@ -62,4 +62,6 @@ public class EmailBean {
     {
         this.receiveDate = date;
     }
+    
+    //Property method
 }

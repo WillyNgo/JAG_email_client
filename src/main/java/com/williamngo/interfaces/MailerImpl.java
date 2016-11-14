@@ -34,6 +34,11 @@ public class MailerImpl implements Mailer {
         this.jdb = new JagEmailDAOImpl(this.configBean);
     }
     
+    public MailerImpl()
+    {
+        
+    }
+    
     @Override
     public JagEmail sendEmail(String listOfTo, Optional<String> listOfCc, Optional<String> listOfBcc, String subject, String message,
             String html, String embedded, String attachment)

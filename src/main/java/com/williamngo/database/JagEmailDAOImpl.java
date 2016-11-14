@@ -3,11 +3,14 @@ package com.williamngo.database;
 
 import com.mysql.jdbc.log.Log;
 import com.williamngo.beans.ConfigBean;
+import com.williamngo.beans.FolderBean;
+import com.williamngo.business.Folder;
 import com.williamngo.business.JagEmail;
 
 import java.sql.*;
 
 import java.util.*;
+import javafx.collections.FXCollections;
 import jodd.mail.*;
 
 import org.slf4j.Logger;
@@ -20,11 +23,18 @@ import org.slf4j.LoggerFactory;
 public class JagEmailDAOImpl implements JagEmailDAO {
     public final Logger log = LoggerFactory.getLogger(getClass().getName());
     public ConfigBean cb;
+    public FolderBean fb;
     
     
-    
-    public JagEmailDAOImpl(ConfigBean cb){
+    public JagEmailDAOImpl(ConfigBean cb, FolderBean fb){
         this.cb = cb;
+        this.fb = fb;
+    }
+    
+    public JagEmailDAOImpl(ConfigBean cb)
+    {
+        this.cb = cb;
+        this.fb = new FolderBean();
     }
     
     public JagEmailDAOImpl(){
@@ -263,6 +273,35 @@ public class JagEmailDAOImpl implements JagEmailDAO {
         }
         
         return emailFound;
+    }
+    
+    /**
+     * Retrieves all folder name in a list
+     * @return myList - List containing all folder names
+     */
+    @Override
+    public List<Folder> getAllFolders() 
+    {
+        List<Folder> myList = FXCollections.observableArrayList();
+        String query = "SELECT foldername FROM Folders";
+        
+        try(Connection con = DriverManager.getConnection(cb.getDatabaseURL(), cb.getDatabaseUserName(), cb.getDatabasePassword()))
+        {
+            PreparedStatement stmt = con.prepareStatement(query);
+            ResultSet rs = stmt.executeQuery();
+            Folder folderToAdd;
+            while(rs.next())
+            {
+                folderToAdd = new Folder();
+                folderToAdd.setFolderName(rs.getString("foldername"));
+                myList.add(folderToAdd);
+            }
+        }catch(SQLException sqle)
+        {
+            System.out.println(sqle.getMessage());
+        }
+        
+        return myList;
     }
     
     /**
