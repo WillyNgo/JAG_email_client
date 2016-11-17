@@ -32,7 +32,7 @@ public class ConfigBean {
         
     }
     
-    public ConfigBean (final String userName, final String smtpServerName, final String imapServerName,
+    public ConfigBean (String userName, final String smtpServerName, final String imapServerName,
             final String emailAddress, final String emailPassword, final int smtpPortNo, final int imapPortNo,
             final String databaseURL, final String databaseUserName, final String databasePassword)
     {

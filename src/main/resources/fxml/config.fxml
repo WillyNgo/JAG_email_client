@@ -41,14 +41,14 @@
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Database URL" GridPane.rowIndex="7" />
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Database Username" GridPane.rowIndex="8" />
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Database Password" GridPane.rowIndex="9" />
-            <TextField id="usernameTextField" GridPane.columnIndex="1" />
+            <TextField id="userNameTextField" GridPane.columnIndex="1" />
             <TextField id="SMTPServerNameTextField" promptText="e.g. smtp.gmail.com" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <TextField id="IMAPServerNameTextField" promptText="e.g. imap.gmail.com" GridPane.columnIndex="1" GridPane.rowIndex="2" />
             <TextField id="emailAddressTextField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
             <TextField id="SMTPPortNoTextField" promptText="e.g. 465" GridPane.columnIndex="1" GridPane.rowIndex="5" />
             <TextField id="IMAPPortNoTextField" promptText="e.g. 993" GridPane.columnIndex="1" GridPane.rowIndex="6" />
             <TextField id="databaseURLTextField" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-            <TextField id="databaseUsernameTextField" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <TextField id="databaseUserNameTextField" GridPane.columnIndex="1" GridPane.rowIndex="8" />
             <PasswordField id="emailPasswordField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
             <PasswordField id="databasePasswordField" GridPane.columnIndex="1" GridPane.rowIndex="9" />
          </children>
@@ -67,7 +67,7 @@
       <ButtonBar prefHeight="40.0" BorderPane.alignment="CENTER">
         <buttons>
           <Button id="submitButton" mnemonicParsing="false" onAction="#submitForm" text="Submit" />
-            <Button id="clearButton" mnemonicParsing="false" text="Clear" />
+          <Button id="clearButton" mnemonicParsing="false" onAction="#clearForm" text="Clear" />
         </buttons>
          <BorderPane.margin>
             <Insets bottom="30.0" />

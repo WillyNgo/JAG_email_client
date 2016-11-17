@@ -18,17 +18,25 @@ import static java.nio.file.Paths.get;
  */
 public class PropertyManager {
     
+    private String path;
+    
+    public PropertyManager(){
+        this.path = "src/main/resources";
+    }
+    public PropertyManager(String path){
+        this.path = path;
+    }
     /**
-     * Returns a MailConfigBean object with the contents of the properties file
+     * Returns a ConfigBean object with the contents of the properties file. The
+     * property files name should be named "config.properties".
      *
      * @param path Must exist, will not be created
-     * @param propFileName Name of the properties file
      * @return The bean loaded with the properties
      * @throws IOException
      */
-    public final ConfigBean loadTextProperties(final String path, final String propFileName) throws IOException {
+    public final ConfigBean loadTextProperties() throws IOException {
         Properties prop = new Properties();
-        Path txtFile = get(path, propFileName + ".properties");
+        Path txtFile = get(this.path, "config.properties");
         ConfigBean cb = new ConfigBean();
         // File must exist
         if (Files.exists(txtFile)) {
@@ -42,9 +50,12 @@ public class PropertyManager {
             cb.setImapServerName(prop.getProperty("imapServerName"));
             cb.setSmtpPort(Integer.parseInt(prop.getProperty("smtpPort")));
             cb.setImapPort(Integer.parseInt(prop.getProperty("imapPort")));
-            cb.setDatabaseUserName(prop.getProperty("databaseName"));
+            cb.setDatabaseUserName(prop.getProperty("databaseUserName"));
             cb.setDatabaseURL(prop.getProperty("databaseURL"));
             cb.setDatabasePassword(prop.getProperty("databasePassword"));
+        }
+        else{
+            cb = null;
         }
         return cb;
     }
