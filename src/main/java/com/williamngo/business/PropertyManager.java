@@ -11,13 +11,15 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Properties;
 import static java.nio.file.Paths.get;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  *
  * @author William Ngo
  */
 public class PropertyManager {
-    
+    private final Logger log = LoggerFactory.getLogger(getClass().getName());
     private String path;
     
     public PropertyManager(){
@@ -26,6 +28,11 @@ public class PropertyManager {
     public PropertyManager(String path){
         this.path = path;
     }
+    
+    public final saveProperties(){
+        
+    }
+    
     /**
      * Returns a ConfigBean object with the contents of the properties file. The
      * property files name should be named "config.properties".
@@ -43,6 +50,7 @@ public class PropertyManager {
             try (InputStream propFileStream = newInputStream(txtFile);) {
                 prop.load(propFileStream);
             }
+            log.info("File does exists, now going through settings");
             cb.setUserName(prop.getProperty("userName"));
             cb.setEmailPassword(prop.getProperty("emailPassword"));
             cb.setEmailAddress(prop.getProperty("emailAddress"));

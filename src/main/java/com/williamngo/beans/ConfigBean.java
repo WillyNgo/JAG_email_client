@@ -29,7 +29,7 @@ public class ConfigBean {
     
     public ConfigBean()
     {
-        
+        this("", "", "", "", "", 465, 993, "", "", "");
     }
     
     public ConfigBean (String userName, final String smtpServerName, final String imapServerName,

@@ -8,9 +8,11 @@ package com.williamngo.jagemail;
 import com.williamngo.beans.ConfigBean;
 import com.williamngo.business.PropertyManager;
 import com.williamngo.controllers.ConfigController;
+import com.williamngo.controllers.RootController;
 import com.williamngo.database.JagEmailDAO;
 import com.williamngo.database.JagEmailDAOImpl;
 import java.io.IOException;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.file.Paths;
 import java.sql.SQLException;
@@ -78,8 +80,28 @@ public class MainApp extends Application {
         try {
             PropertyManager pm = new PropertyManager("src/main/resources");
             this.cb = pm.loadTextProperties();
+
+            //If there is no properties file, open the configuration window for
+            //User to input new configuration file.
+            if (this.cb == null) {
+                showConfigWindow(primaryStage);
+            } else {
+                showUserInterface(primaryStage);
+            }
+
+        } catch (IOException ex) {
+            log.error(null, ex);
+            System.exit(1);
+        }
+    }
+
+    /**
+     * Shows configuration window for the user to input a new config file.
+     */
+    public void showConfigWindow(Stage stage) {
+        try {
             FXMLLoader loader = null;
-            
+
             URL path = Paths.get("src/main/resources/fxml/config.fxml").toUri().toURL();
 
             // Set the location of the fxml file in the FXMLLoader
@@ -90,21 +112,49 @@ public class MainApp extends Application {
             Scene scene = new Scene(loader.load());
 
             ConfigController controller = (ConfigController) loader.getController();
-
-            //Controller.setProManager(pm);
             controller.setConfigBean(this.cb);
-            controller.setJagEmailDAO(jagDAO);
+            controller.setJagEmailDAO(this.jagDAO);
 
             // Parent is the base class for all nodes that have children in the
             // scene graph such as AnchorPane and most other containers
-            primaryStage.setTitle("Email Client");
-            primaryStage.setResizable(false);
-            primaryStage.setScene(scene);
-            primaryStage.show();
+            stage.setTitle("JagEmail Client");
+            stage.setResizable(false);
+            stage.setScene(scene);
+            stage.show();
+        } catch (MalformedURLException mue) {
+            mue.getMessage();
+        } catch (IOException ioe) {
+            ioe.getMessage();
+        }
+    }
 
-        } catch (IOException ex) {
-            log.error(null, ex);
-            System.exit(1);
+    /**
+     * Shows the main application page.
+     * @param stage 
+     */
+    private void showUserInterface(Stage stage) {
+        try {
+            FXMLLoader loader = null;
+
+            URL path = Paths.get("src/main/resources/fxml/root.fxml").toUri().toURL();
+            
+            loader = new FXMLLoader();
+            loader.setLocation(path);
+            loader.setBuilderFactory(new JavaFXBuilderFactory());
+            
+            Scene scene = new Scene(loader.load());
+            
+            RootController controller = (RootController) loader.getController();
+            
+            stage.setTitle("Email Client");
+            stage.setResizable(true);
+            stage.setScene(scene);
+            stage.show();
+
+        } catch (MalformedURLException mue) {
+            mue.getMessage();
+        } catch (IOException ioe) {
+            ioe.getMessage();
         }
     }
 
@@ -116,4 +166,5 @@ public class MainApp extends Application {
     public static void main(String[] args) {
         launch(args);
     }
+
 }

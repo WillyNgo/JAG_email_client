@@ -5,10 +5,23 @@
  */
 package com.williamngo.controllers;
 
+import java.net.URL;
+import java.util.ResourceBundle;
+import javafx.fxml.Initializable;
+
 /**
+ * FXML Controller class
  *
  * @author 1435707
  */
-class RootController {
+public class RootController implements Initializable {
+
+    /**
+     * Initializes the controller class.
+     */
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+        // TODO
+    }    
     
 }

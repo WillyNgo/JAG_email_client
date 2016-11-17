@@ -95,6 +95,10 @@ public class ConfigController {
             Bindings.bindBidirectional(databasePasswordField.textProperty(), cb.databasePasswordProperty());
             log.info("cb is not null.");
         }
+        else{
+            log.info("cb is null.");
+
+        }
     }
 
     @FXML
@@ -105,12 +109,6 @@ public class ConfigController {
         else{
             System.out.println("You have errors!");
         }
-    }
-
-    @FXML
-    void clearForm(ActionEvent event)throws IOException {
-        //cb.userNameProperty().set("Nothing");
-        System.out.println("Clicked CLEAR BIT");
     }
 
     private boolean validateForm() {
@@ -133,6 +131,7 @@ public class ConfigController {
     }
 
     public void setConfigBean(ConfigBean cb) {
+        log.info("SETTING CONFIG BEAN");
         this.cb = cb;
     }
 

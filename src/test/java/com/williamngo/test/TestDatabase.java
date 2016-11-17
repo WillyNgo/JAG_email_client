@@ -42,8 +42,8 @@ public class TestDatabase {
 
     private final Logger log = LoggerFactory.getLogger(getClass().getName());
     //private final String url = "jdbc:mysql://waldo2.dawsoncollege.qc.ca:3306/cs1435707";
-    private final String user = "CS1435707";
-    private final String password = "tripermu";
+    //private final String user = "CS1435707";
+    //private final String password = "tripermu";
 
     ConfigBean cb;
     String emailToBeReceived;
