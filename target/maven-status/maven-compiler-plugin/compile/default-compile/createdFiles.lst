@@ -1,5 +1,4 @@
 com\williamngo\controllers\EditorController.class
-com\williamngo\main\MainApp.class
 com\williamngo\business\JagEmail.class
 com\williamngo\business\Folder.class
 com\williamngo\beans\FolderBean.class

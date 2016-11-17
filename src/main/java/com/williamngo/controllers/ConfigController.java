@@ -6,6 +6,7 @@ package com.williamngo.controllers;
  * and open the template in the editor.
  */
 import com.williamngo.beans.ConfigBean;
+import com.williamngo.business.PropertyManager;
 import com.williamngo.database.JagEmailDAO;
 import java.io.IOException;
 import java.net.URL;
@@ -34,6 +35,7 @@ public class ConfigController {
 
     private ConfigBean cb;
     private JagEmailDAO jagemailDAO;
+    private PropertyManager pm;
     private Stage stage;
     private RootController controller;
 
@@ -97,13 +99,12 @@ public class ConfigController {
         }
         else{
             log.info("cb is null.");
-
         }
     }
 
     @FXML
     void submitForm(ActionEvent event) throws SQLException {
-        if (true) {
+        if (validateForm()) {
             System.out.println("Everything good!");
         }
         else{
@@ -114,20 +115,59 @@ public class ConfigController {
     private boolean validateForm() {
         boolean isValid = true;
         //Validate email address for correct format: check if there's a @ sign
-        String email = cb.getEmailAddress();
-        if (email.indexOf("@") == -1) {
-            Text t = new Text();
-            t.setText("Please input a valid email address");
-            t.setFill(Color.RED);
-            emailAddressTextField.textProperty().set(t.toString());
+        if(isFieldsEmpty()){
+            log.info("You have empty fields");
             isValid = false;
         }
 
         return isValid;
     }
+    
+    private boolean isFieldsEmpty()throws IllegalArgumentException{
+        boolean valid = false;
+        if(cb.getUserName().length() == 0){
+            valid = true;
+            log.info("getUserName");
+        }
+        if(cb.getEmailAddress().length() == 0){
+            valid = true;
+            log.info("getEmailAddress");
+        }
+        if(cb.getEmailPassword().length() == 0){
+            valid = true;
+            log.info("getEmailPassword");
+        }
+        if(cb.getImapServerName().length() == 0){
+            valid = true;
+            log.info("getImapServerName");
+        }
+        if(cb.getSmtpServerName().length() == 0){
+            valid = true;
+            log.info("getSmtpServerName");
+        }
+        if(cb.getDatabaseURL().length() == 0){
+            valid = true;
+            log.info("getDatabaseURL");
+        }
+        if(cb.getDatabaseUserName().length() == 0){
+            valid = true;
+            log.info("getDatabaseUserName");
+        }
+        if(cb.getDatabasePassword().length() == 0){
+            valid = true;
+            log.info("getDatabasePassword");
+        }
+        
+        return valid;
+        
+    }
 
     public void setJagEmailDAO(JagEmailDAO jag) {
         this.jagemailDAO = jag;
+    }
+    
+    public void setPropertyManager(PropertyManager pm){
+        this.pm = pm;
     }
 
     public void setConfigBean(ConfigBean cb) {

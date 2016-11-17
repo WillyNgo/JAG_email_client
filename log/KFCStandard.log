@@ -9022,3 +9022,585 @@ Caused by: java.lang.NullPointerException
 [INFO ] 2016-11-17 14:00:43.339 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.start(MainApp.java:63) - Program Begins
 [INFO ] 2016-11-17 14:00:43.535 [JavaFX Application Thread] com.williamngo.controllers.ConfigController.initialize(ConfigController.java:99) - cb is null.
 [INFO ] 2016-11-17 14:00:43.562 [JavaFX Application Thread] com.williamngo.controllers.ConfigController.setConfigBean(ConfigController.java:140) - SETTING CONFIG BEAN
+[INFO ] 2016-11-17 15:24:54.860 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS attachments;
+[INFO ] 2016-11-17 15:24:54.867 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS emails;
+[INFO ] 2016-11-17 15:24:54.902 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:24:54.906 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:24:54.910 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:24:54.913 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:24:54.914 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:304) - Database created!
+[INFO ] 2016-11-17 15:24:54.915 [main] com.williamngo.test.TestDatabase.addEmailToDatabase(TestDatabase.java:110) - adding email to database...
+[INFO ] 2016-11-17 15:24:54.955 [main] com.williamngo.database.JagEmailDAOImpl.addEmail(JagEmailDAOImpl.java:119) - Added 1 results in email table
+[INFO ] 2016-11-17 15:24:55.100 [main] com.williamngo.database.JagEmailDAOImpl.addAttachment(JagEmailDAOImpl.java:375) - Added 1 results in attachment table
+[INFO ] 2016-11-17 15:24:55.128 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS attachments;
+[INFO ] 2016-11-17 15:24:55.133 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS emails;
+[INFO ] 2016-11-17 15:24:55.165 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:24:55.169 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:24:55.172 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:24:55.175 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:24:55.175 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:304) - Database created!
+[INFO ] 2016-11-17 15:24:55.231 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS attachments;
+[INFO ] 2016-11-17 15:24:55.235 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS emails;
+[INFO ] 2016-11-17 15:24:55.269 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:24:55.274 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:24:55.278 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:24:55.284 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:24:55.284 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:304) - Database created!
+[INFO ] 2016-11-17 15:24:55.331 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS attachments;
+[INFO ] 2016-11-17 15:24:55.337 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS emails;
+[INFO ] 2016-11-17 15:24:55.368 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:24:55.371 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:24:55.374 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:24:55.377 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:24:55.378 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:304) - Database created!
+[INFO ] 2016-11-17 15:24:55.378 [main] com.williamngo.test.TestDatabase.deleteEmailFromDatabase(TestDatabase.java:149) - deleting email from database...
+[INFO ] 2016-11-17 15:24:55.390 [main] com.williamngo.database.JagEmailDAOImpl.deleteEmail(JagEmailDAOImpl.java:139) - Deleted 1 email from database
+[INFO ] 2016-11-17 15:24:55.415 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS attachments;
+[INFO ] 2016-11-17 15:24:55.421 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS emails;
+[INFO ] 2016-11-17 15:24:55.451 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:24:55.454 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:24:55.457 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:24:55.460 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:24:55.460 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:304) - Database created!
+[INFO ] 2016-11-17 15:24:55.460 [main] com.williamngo.test.TestDatabase.addEmailToDatabase(TestDatabase.java:110) - adding email to database...
+[INFO ] 2016-11-17 15:24:55.474 [main] com.williamngo.database.JagEmailDAOImpl.addEmail(JagEmailDAOImpl.java:119) - Added 1 results in email table
+[INFO ] 2016-11-17 15:24:55.594 [main] com.williamngo.database.JagEmailDAOImpl.addAttachment(JagEmailDAOImpl.java:375) - Added 1 results in attachment table
+[INFO ] 2016-11-17 15:24:55.621 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS attachments;
+[INFO ] 2016-11-17 15:24:55.626 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS emails;
+[INFO ] 2016-11-17 15:24:55.659 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:24:55.663 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:24:55.667 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:24:55.670 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:24:55.670 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:304) - Database created!
+[INFO ] 2016-11-17 15:24:55.702 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS attachments;
+[INFO ] 2016-11-17 15:24:55.706 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS emails;
+[INFO ] 2016-11-17 15:24:55.739 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:24:55.742 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:24:55.745 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:24:55.749 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:24:55.749 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:304) - Database created!
+[INFO ] 2016-11-17 15:24:55.776 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS attachments;
+[INFO ] 2016-11-17 15:24:55.781 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS emails;
+[INFO ] 2016-11-17 15:24:55.825 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:24:55.830 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:24:55.834 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:24:55.834 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:24:55.834 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:304) - Database created!
+[INFO ] 2016-11-17 15:24:55.834 [main] com.williamngo.test.TestDatabase.deleteEmailFromDatabase(TestDatabase.java:149) - deleting email from database...
+[INFO ] 2016-11-17 15:24:55.850 [main] com.williamngo.database.JagEmailDAOImpl.deleteEmail(JagEmailDAOImpl.java:139) - Deleted 1 email from database
+[INFO ] 2016-11-17 15:25:51.827 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.start(MainApp.java:63) - Program Begins
+[INFO ] 2016-11-17 15:29:28.943 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.start(MainApp.java:63) - Program Begins
+[INFO ] 2016-11-17 15:29:37.965 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS attachments;
+[INFO ] 2016-11-17 15:29:37.981 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS emails;
+[INFO ] 2016-11-17 15:29:38.012 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:29:38.012 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:29:38.012 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:29:38.012 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:29:38.012 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:304) - Database created!
+[INFO ] 2016-11-17 15:29:38.028 [main] com.williamngo.test.TestDatabase.addEmailToDatabase(TestDatabase.java:110) - adding email to database...
+[INFO ] 2016-11-17 15:29:38.059 [main] com.williamngo.database.JagEmailDAOImpl.addEmail(JagEmailDAOImpl.java:119) - Added 1 results in email table
+[INFO ] 2016-11-17 15:29:38.215 [main] com.williamngo.database.JagEmailDAOImpl.addAttachment(JagEmailDAOImpl.java:375) - Added 1 results in attachment table
+[INFO ] 2016-11-17 15:29:38.542 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS attachments;
+[INFO ] 2016-11-17 15:29:38.542 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS emails;
+[INFO ] 2016-11-17 15:29:38.573 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:29:38.573 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:29:38.573 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:29:38.573 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:29:38.573 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:304) - Database created!
+[INFO ] 2016-11-17 15:29:38.636 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS attachments;
+[INFO ] 2016-11-17 15:29:38.636 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS emails;
+[INFO ] 2016-11-17 15:29:38.651 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:29:38.651 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:29:38.651 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:29:38.667 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:29:38.667 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:304) - Database created!
+[INFO ] 2016-11-17 15:29:38.698 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS attachments;
+[INFO ] 2016-11-17 15:29:38.714 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS emails;
+[INFO ] 2016-11-17 15:29:38.729 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:29:38.729 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:29:38.729 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:29:38.745 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:29:38.745 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:304) - Database created!
+[INFO ] 2016-11-17 15:29:38.745 [main] com.williamngo.test.TestDatabase.deleteEmailFromDatabase(TestDatabase.java:149) - deleting email from database...
+[INFO ] 2016-11-17 15:29:38.745 [main] com.williamngo.database.JagEmailDAOImpl.deleteEmail(JagEmailDAOImpl.java:139) - Deleted 1 email from database
+[INFO ] 2016-11-17 15:29:38.776 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS attachments;
+[INFO ] 2016-11-17 15:29:38.792 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS emails;
+[INFO ] 2016-11-17 15:29:38.823 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:29:38.823 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:29:38.823 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:29:38.839 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:29:38.839 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:304) - Database created!
+[INFO ] 2016-11-17 15:29:38.839 [main] com.williamngo.test.TestDatabase.addEmailToDatabase(TestDatabase.java:110) - adding email to database...
+[INFO ] 2016-11-17 15:29:38.839 [main] com.williamngo.database.JagEmailDAOImpl.addEmail(JagEmailDAOImpl.java:119) - Added 1 results in email table
+[INFO ] 2016-11-17 15:29:38.979 [main] com.williamngo.database.JagEmailDAOImpl.addAttachment(JagEmailDAOImpl.java:375) - Added 1 results in attachment table
+[INFO ] 2016-11-17 15:29:39.010 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS attachments;
+[INFO ] 2016-11-17 15:29:39.010 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS emails;
+[INFO ] 2016-11-17 15:29:39.041 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:29:39.057 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:29:39.057 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:29:39.057 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:29:39.057 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:304) - Database created!
+[INFO ] 2016-11-17 15:29:39.088 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS attachments;
+[INFO ] 2016-11-17 15:29:39.088 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS emails;
+[INFO ] 2016-11-17 15:29:39.119 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:29:39.119 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:29:39.135 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:29:39.135 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:29:39.135 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:304) - Database created!
+[INFO ] 2016-11-17 15:29:39.151 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS attachments;
+[INFO ] 2016-11-17 15:29:39.166 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS emails;
+[INFO ] 2016-11-17 15:29:39.494 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:29:39.494 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:29:39.509 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:29:39.509 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:29:39.509 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:304) - Database created!
+[INFO ] 2016-11-17 15:29:39.509 [main] com.williamngo.test.TestDatabase.deleteEmailFromDatabase(TestDatabase.java:149) - deleting email from database...
+[INFO ] 2016-11-17 15:29:39.525 [main] com.williamngo.database.JagEmailDAOImpl.deleteEmail(JagEmailDAOImpl.java:139) - Deleted 1 email from database
+[INFO ] 2016-11-17 15:29:46.746 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.start(MainApp.java:63) - Program Begins
+[INFO ] 2016-11-17 15:37:00.508 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS attachments;
+[INFO ] 2016-11-17 15:37:00.524 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS emails;
+[INFO ] 2016-11-17 15:37:00.555 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:37:00.555 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:37:00.571 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:37:00.571 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:37:00.571 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:304) - Database created!
+[INFO ] 2016-11-17 15:37:00.571 [main] com.williamngo.test.TestDatabase.addEmailToDatabase(TestDatabase.java:110) - adding email to database...
+[INFO ] 2016-11-17 15:37:00.617 [main] com.williamngo.database.JagEmailDAOImpl.addEmail(JagEmailDAOImpl.java:119) - Added 1 results in email table
+[INFO ] 2016-11-17 15:37:00.758 [main] com.williamngo.database.JagEmailDAOImpl.addAttachment(JagEmailDAOImpl.java:375) - Added 1 results in attachment table
+[INFO ] 2016-11-17 15:37:00.789 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS attachments;
+[INFO ] 2016-11-17 15:37:00.789 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS emails;
+[INFO ] 2016-11-17 15:37:00.821 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:37:00.836 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:37:00.836 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:37:00.836 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:37:00.836 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:304) - Database created!
+[INFO ] 2016-11-17 15:37:00.899 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS attachments;
+[INFO ] 2016-11-17 15:37:00.899 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS emails;
+[INFO ] 2016-11-17 15:37:00.930 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:37:00.930 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:37:00.946 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:37:00.946 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:37:00.946 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:304) - Database created!
+[INFO ] 2016-11-17 15:37:00.992 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS attachments;
+[INFO ] 2016-11-17 15:37:00.992 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS emails;
+[INFO ] 2016-11-17 15:37:01.024 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:37:01.024 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:37:01.024 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:37:01.039 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:37:01.039 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:304) - Database created!
+[INFO ] 2016-11-17 15:37:01.039 [main] com.williamngo.test.TestDatabase.deleteEmailFromDatabase(TestDatabase.java:149) - deleting email from database...
+[INFO ] 2016-11-17 15:37:01.039 [main] com.williamngo.database.JagEmailDAOImpl.deleteEmail(JagEmailDAOImpl.java:139) - Deleted 1 email from database
+[INFO ] 2016-11-17 15:37:01.071 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS attachments;
+[INFO ] 2016-11-17 15:37:01.071 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS emails;
+[INFO ] 2016-11-17 15:37:01.102 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:37:01.102 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:37:01.117 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:37:01.117 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:37:01.117 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:304) - Database created!
+[INFO ] 2016-11-17 15:37:01.117 [main] com.williamngo.test.TestDatabase.addEmailToDatabase(TestDatabase.java:110) - adding email to database...
+[INFO ] 2016-11-17 15:37:01.133 [main] com.williamngo.database.JagEmailDAOImpl.addEmail(JagEmailDAOImpl.java:119) - Added 1 results in email table
+[INFO ] 2016-11-17 15:37:01.258 [main] com.williamngo.database.JagEmailDAOImpl.addAttachment(JagEmailDAOImpl.java:375) - Added 1 results in attachment table
+[INFO ] 2016-11-17 15:37:01.289 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS attachments;
+[INFO ] 2016-11-17 15:37:01.305 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS emails;
+[INFO ] 2016-11-17 15:37:01.336 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:37:01.336 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:37:01.336 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:37:01.336 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:37:01.336 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:304) - Database created!
+[INFO ] 2016-11-17 15:37:01.367 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS attachments;
+[INFO ] 2016-11-17 15:37:01.367 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS emails;
+[INFO ] 2016-11-17 15:37:01.399 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:37:01.399 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:37:01.399 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:37:01.399 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:37:01.414 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:304) - Database created!
+[INFO ] 2016-11-17 15:37:01.430 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS attachments;
+[INFO ] 2016-11-17 15:37:01.430 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS emails;
+[INFO ] 2016-11-17 15:37:01.461 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:37:01.461 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:37:01.461 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:37:01.477 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:37:01.477 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:304) - Database created!
+[INFO ] 2016-11-17 15:37:01.477 [main] com.williamngo.test.TestDatabase.deleteEmailFromDatabase(TestDatabase.java:149) - deleting email from database...
+[INFO ] 2016-11-17 15:37:01.477 [main] com.williamngo.database.JagEmailDAOImpl.deleteEmail(JagEmailDAOImpl.java:139) - Deleted 1 email from database
+[INFO ] 2016-11-17 15:37:21.466 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.start(MainApp.java:64) - Program Begins
+[INFO ] 2016-11-17 15:37:21.483 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.showConfigWindow(MainApp.java:112) - Loader done loading
+[INFO ] 2016-11-17 15:38:41.244 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS attachments;
+[INFO ] 2016-11-17 15:38:41.244 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS emails;
+[INFO ] 2016-11-17 15:38:41.275 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:38:41.291 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:38:41.291 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:38:41.291 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:38:41.291 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:304) - Database created!
+[INFO ] 2016-11-17 15:38:41.291 [main] com.williamngo.test.TestDatabase.addEmailToDatabase(TestDatabase.java:110) - adding email to database...
+[INFO ] 2016-11-17 15:38:41.338 [main] com.williamngo.database.JagEmailDAOImpl.addEmail(JagEmailDAOImpl.java:119) - Added 1 results in email table
+[INFO ] 2016-11-17 15:38:41.478 [main] com.williamngo.database.JagEmailDAOImpl.addAttachment(JagEmailDAOImpl.java:375) - Added 1 results in attachment table
+[INFO ] 2016-11-17 15:38:41.510 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS attachments;
+[INFO ] 2016-11-17 15:38:41.510 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS emails;
+[INFO ] 2016-11-17 15:38:41.541 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:38:41.556 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:38:41.556 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:38:41.556 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:38:41.556 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:304) - Database created!
+[INFO ] 2016-11-17 15:38:41.603 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS attachments;
+[INFO ] 2016-11-17 15:38:41.619 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS emails;
+[INFO ] 2016-11-17 15:38:41.650 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:38:41.650 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:38:41.650 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:38:41.666 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:38:41.666 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:304) - Database created!
+[INFO ] 2016-11-17 15:38:41.713 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS attachments;
+[INFO ] 2016-11-17 15:38:41.713 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS emails;
+[INFO ] 2016-11-17 15:38:41.744 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:38:41.744 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:38:41.744 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:38:41.760 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:38:41.760 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:304) - Database created!
+[INFO ] 2016-11-17 15:38:41.760 [main] com.williamngo.test.TestDatabase.deleteEmailFromDatabase(TestDatabase.java:149) - deleting email from database...
+[INFO ] 2016-11-17 15:38:41.775 [main] com.williamngo.database.JagEmailDAOImpl.deleteEmail(JagEmailDAOImpl.java:139) - Deleted 1 email from database
+[INFO ] 2016-11-17 15:38:41.791 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS attachments;
+[INFO ] 2016-11-17 15:38:41.791 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS emails;
+[INFO ] 2016-11-17 15:38:41.822 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:38:41.838 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:38:41.838 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:38:41.838 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:38:41.838 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:304) - Database created!
+[INFO ] 2016-11-17 15:38:41.838 [main] com.williamngo.test.TestDatabase.addEmailToDatabase(TestDatabase.java:110) - adding email to database...
+[INFO ] 2016-11-17 15:38:41.853 [main] com.williamngo.database.JagEmailDAOImpl.addEmail(JagEmailDAOImpl.java:119) - Added 1 results in email table
+[INFO ] 2016-11-17 15:38:41.963 [main] com.williamngo.database.JagEmailDAOImpl.addAttachment(JagEmailDAOImpl.java:375) - Added 1 results in attachment table
+[INFO ] 2016-11-17 15:38:41.994 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS attachments;
+[INFO ] 2016-11-17 15:38:42.010 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS emails;
+[INFO ] 2016-11-17 15:38:42.056 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:38:42.056 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:38:42.056 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:38:42.056 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:38:42.056 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:304) - Database created!
+[INFO ] 2016-11-17 15:38:42.088 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS attachments;
+[INFO ] 2016-11-17 15:38:42.088 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS emails;
+[INFO ] 2016-11-17 15:38:42.119 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:38:42.135 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:38:42.135 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:38:42.135 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:38:42.135 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:304) - Database created!
+[INFO ] 2016-11-17 15:38:42.166 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS attachments;
+[INFO ] 2016-11-17 15:38:42.166 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS emails;
+[INFO ] 2016-11-17 15:38:42.197 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:38:42.197 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:38:42.197 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:38:42.213 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:38:42.213 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:304) - Database created!
+[INFO ] 2016-11-17 15:38:42.213 [main] com.williamngo.test.TestDatabase.deleteEmailFromDatabase(TestDatabase.java:149) - deleting email from database...
+[INFO ] 2016-11-17 15:38:42.213 [main] com.williamngo.database.JagEmailDAOImpl.deleteEmail(JagEmailDAOImpl.java:139) - Deleted 1 email from database
+[INFO ] 2016-11-17 15:38:50.474 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.start(MainApp.java:64) - Program Begins
+[INFO ] 2016-11-17 15:38:50.491 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.showConfigWindow(MainApp.java:112) - Loader done loading
+[INFO ] 2016-11-17 15:38:50.664 [JavaFX Application Thread] com.williamngo.controllers.ConfigController.initialize(ConfigController.java:101) - cb is null.
+[INFO ] 2016-11-17 15:38:50.691 [JavaFX Application Thread] com.williamngo.controllers.ConfigController.setConfigBean(ConfigController.java:140) - SETTING CONFIG BEAN
+[INFO ] 2016-11-17 15:40:12.057 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.start(MainApp.java:64) - Program Begins
+[INFO ] 2016-11-17 15:40:12.074 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.showConfigWindow(MainApp.java:112) - Loader done loading
+[INFO ] 2016-11-17 15:40:12.245 [JavaFX Application Thread] com.williamngo.controllers.ConfigController.initialize(ConfigController.java:101) - cb is null.
+[INFO ] 2016-11-17 15:40:12.272 [JavaFX Application Thread] com.williamngo.controllers.ConfigController.setConfigBean(ConfigController.java:140) - SETTING CONFIG BEAN
+[INFO ] 2016-11-17 15:40:39.354 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS attachments;
+[INFO ] 2016-11-17 15:40:39.354 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS emails;
+[INFO ] 2016-11-17 15:40:39.386 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:40:39.401 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:40:39.401 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:40:39.401 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:40:39.401 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:304) - Database created!
+[INFO ] 2016-11-17 15:40:39.401 [main] com.williamngo.test.TestDatabase.addEmailToDatabase(TestDatabase.java:110) - adding email to database...
+[INFO ] 2016-11-17 15:40:39.776 [main] com.williamngo.database.JagEmailDAOImpl.addEmail(JagEmailDAOImpl.java:119) - Added 1 results in email table
+[INFO ] 2016-11-17 15:40:40.448 [main] com.williamngo.database.JagEmailDAOImpl.addAttachment(JagEmailDAOImpl.java:375) - Added 1 results in attachment table
+[INFO ] 2016-11-17 15:40:40.464 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS attachments;
+[INFO ] 2016-11-17 15:40:40.464 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS emails;
+[INFO ] 2016-11-17 15:40:40.495 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:40:40.495 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:40:40.495 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:40:40.495 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:40:40.495 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:304) - Database created!
+[INFO ] 2016-11-17 15:40:40.557 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS attachments;
+[INFO ] 2016-11-17 15:40:40.557 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS emails;
+[INFO ] 2016-11-17 15:40:40.573 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:40:40.573 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:40:40.573 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:40:40.588 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:40:40.588 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:304) - Database created!
+[INFO ] 2016-11-17 15:40:40.620 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS attachments;
+[INFO ] 2016-11-17 15:40:40.635 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS emails;
+[INFO ] 2016-11-17 15:40:40.651 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:40:40.651 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:40:40.651 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:40:40.651 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:40:40.651 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:304) - Database created!
+[INFO ] 2016-11-17 15:40:40.651 [main] com.williamngo.test.TestDatabase.deleteEmailFromDatabase(TestDatabase.java:149) - deleting email from database...
+[INFO ] 2016-11-17 15:40:40.667 [main] com.williamngo.database.JagEmailDAOImpl.deleteEmail(JagEmailDAOImpl.java:139) - Deleted 1 email from database
+[INFO ] 2016-11-17 15:40:40.698 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS attachments;
+[INFO ] 2016-11-17 15:40:40.698 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS emails;
+[INFO ] 2016-11-17 15:40:40.729 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:40:40.729 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:40:40.729 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:40:40.745 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:40:40.745 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:304) - Database created!
+[INFO ] 2016-11-17 15:40:40.745 [main] com.williamngo.test.TestDatabase.addEmailToDatabase(TestDatabase.java:110) - adding email to database...
+[INFO ] 2016-11-17 15:40:40.745 [main] com.williamngo.database.JagEmailDAOImpl.addEmail(JagEmailDAOImpl.java:119) - Added 1 results in email table
+[INFO ] 2016-11-17 15:40:40.885 [main] com.williamngo.database.JagEmailDAOImpl.addAttachment(JagEmailDAOImpl.java:375) - Added 1 results in attachment table
+[INFO ] 2016-11-17 15:40:40.916 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS attachments;
+[INFO ] 2016-11-17 15:40:40.916 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS emails;
+[INFO ] 2016-11-17 15:40:40.947 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:40:40.947 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:40:40.947 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:40:40.947 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:40:40.963 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:304) - Database created!
+[INFO ] 2016-11-17 15:40:40.978 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS attachments;
+[INFO ] 2016-11-17 15:40:40.978 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS emails;
+[INFO ] 2016-11-17 15:40:41.010 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:40:41.010 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:40:41.025 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:40:41.025 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:40:41.025 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:304) - Database created!
+[INFO ] 2016-11-17 15:40:41.057 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS attachments;
+[INFO ] 2016-11-17 15:40:41.057 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS emails;
+[INFO ] 2016-11-17 15:40:41.088 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:40:41.088 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:40:41.088 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:40:41.088 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 15:40:41.088 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:304) - Database created!
+[INFO ] 2016-11-17 15:40:41.088 [main] com.williamngo.test.TestDatabase.deleteEmailFromDatabase(TestDatabase.java:149) - deleting email from database...
+[INFO ] 2016-11-17 15:40:41.103 [main] com.williamngo.database.JagEmailDAOImpl.deleteEmail(JagEmailDAOImpl.java:139) - Deleted 1 email from database
+[INFO ] 2016-11-17 15:40:46.734 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.start(MainApp.java:64) - Program Begins
+[INFO ] 2016-11-17 15:40:46.751 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.showConfigWindow(MainApp.java:112) - Loader done loading
+[INFO ] 2016-11-17 15:40:46.918 [JavaFX Application Thread] com.williamngo.controllers.ConfigController.initialize(ConfigController.java:101) - cb is null.
+[INFO ] 2016-11-17 15:40:46.944 [JavaFX Application Thread] com.williamngo.controllers.ConfigController.setConfigBean(ConfigController.java:140) - SETTING CONFIG BEAN
+[INFO ] 2016-11-17 15:48:35.141 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.start(MainApp.java:64) - Program Begins
+[INFO ] 2016-11-17 15:48:35.161 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.showConfigWindow(MainApp.java:112) - Loader done loading
+[INFO ] 2016-11-17 15:48:35.344 [JavaFX Application Thread] com.williamngo.controllers.ConfigController.initialize(ConfigController.java:101) - cb is null.
+[INFO ] 2016-11-17 15:48:35.373 [JavaFX Application Thread] com.williamngo.controllers.ConfigController.setConfigBean(ConfigController.java:140) - SETTING CONFIG BEAN
+[INFO ] 2016-11-17 16:00:50.244 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS attachments;
+[INFO ] 2016-11-17 16:00:50.249 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS emails;
+[INFO ] 2016-11-17 16:00:50.269 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:00:50.272 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:00:50.274 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:00:50.277 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:00:50.278 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:304) - Database created!
+[INFO ] 2016-11-17 16:00:50.279 [main] com.williamngo.test.TestDatabase.addEmailToDatabase(TestDatabase.java:110) - adding email to database...
+[INFO ] 2016-11-17 16:00:50.323 [main] com.williamngo.database.JagEmailDAOImpl.addEmail(JagEmailDAOImpl.java:119) - Added 1 results in email table
+[INFO ] 2016-11-17 16:00:50.452 [main] com.williamngo.database.JagEmailDAOImpl.addAttachment(JagEmailDAOImpl.java:375) - Added 1 results in attachment table
+[INFO ] 2016-11-17 16:00:50.477 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS attachments;
+[INFO ] 2016-11-17 16:00:50.480 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS emails;
+[INFO ] 2016-11-17 16:00:50.500 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:00:50.502 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:00:50.505 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:00:50.508 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:00:50.508 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:304) - Database created!
+[INFO ] 2016-11-17 16:00:50.557 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS attachments;
+[INFO ] 2016-11-17 16:00:50.561 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS emails;
+[INFO ] 2016-11-17 16:00:50.579 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:00:50.583 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:00:50.585 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:00:50.588 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:00:50.588 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:304) - Database created!
+[INFO ] 2016-11-17 16:00:50.631 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS attachments;
+[INFO ] 2016-11-17 16:00:50.635 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS emails;
+[INFO ] 2016-11-17 16:00:50.654 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:00:50.657 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:00:50.660 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:00:50.662 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:00:50.663 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:304) - Database created!
+[INFO ] 2016-11-17 16:00:50.663 [main] com.williamngo.test.TestDatabase.deleteEmailFromDatabase(TestDatabase.java:149) - deleting email from database...
+[INFO ] 2016-11-17 16:00:50.676 [main] com.williamngo.database.JagEmailDAOImpl.deleteEmail(JagEmailDAOImpl.java:139) - Deleted 1 email from database
+[INFO ] 2016-11-17 16:00:50.702 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS attachments;
+[INFO ] 2016-11-17 16:00:50.708 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS emails;
+[INFO ] 2016-11-17 16:00:50.740 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:00:50.744 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:00:50.747 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:00:50.750 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:00:50.750 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:304) - Database created!
+[INFO ] 2016-11-17 16:00:50.751 [main] com.williamngo.test.TestDatabase.addEmailToDatabase(TestDatabase.java:110) - adding email to database...
+[INFO ] 2016-11-17 16:00:50.762 [main] com.williamngo.database.JagEmailDAOImpl.addEmail(JagEmailDAOImpl.java:119) - Added 1 results in email table
+[INFO ] 2016-11-17 16:00:50.897 [main] com.williamngo.database.JagEmailDAOImpl.addAttachment(JagEmailDAOImpl.java:375) - Added 1 results in attachment table
+[INFO ] 2016-11-17 16:00:50.922 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS attachments;
+[INFO ] 2016-11-17 16:00:50.928 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS emails;
+[INFO ] 2016-11-17 16:00:50.959 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:00:50.962 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:00:50.966 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:00:50.969 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:00:50.969 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:304) - Database created!
+[INFO ] 2016-11-17 16:00:50.994 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS attachments;
+[INFO ] 2016-11-17 16:00:50.998 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS emails;
+[INFO ] 2016-11-17 16:00:51.034 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:00:51.037 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:00:51.041 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:00:51.044 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:00:51.044 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:304) - Database created!
+[INFO ] 2016-11-17 16:00:51.067 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS attachments;
+[INFO ] 2016-11-17 16:00:51.073 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS emails;
+[INFO ] 2016-11-17 16:00:51.103 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:00:51.106 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:00:51.108 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:00:51.112 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:00:51.112 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:304) - Database created!
+[INFO ] 2016-11-17 16:00:51.112 [main] com.williamngo.test.TestDatabase.deleteEmailFromDatabase(TestDatabase.java:149) - deleting email from database...
+[INFO ] 2016-11-17 16:00:51.125 [main] com.williamngo.database.JagEmailDAOImpl.deleteEmail(JagEmailDAOImpl.java:139) - Deleted 1 email from database
+[INFO ] 2016-11-17 16:01:02.440 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.start(MainApp.java:64) - Program Begins
+[INFO ] 2016-11-17 16:01:02.458 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.showConfigWindow(MainApp.java:112) - Loader done loading
+[INFO ] 2016-11-17 16:01:02.629 [JavaFX Application Thread] com.williamngo.controllers.ConfigController.initialize(ConfigController.java:101) - cb is null.
+[INFO ] 2016-11-17 16:01:02.657 [JavaFX Application Thread] com.williamngo.controllers.ConfigController.setConfigBean(ConfigController.java:169) - SETTING CONFIG BEAN
+[INFO ] 2016-11-17 16:01:07.201 [JavaFX Application Thread] com.williamngo.controllers.ConfigController.validateForm(ConfigController.java:119) - You have empty fields
+[INFO ] 2016-11-17 16:04:47.356 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.start(MainApp.java:64) - Program Begins
+[INFO ] 2016-11-17 16:04:47.374 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.showConfigWindow(MainApp.java:112) - Loader done loading
+[INFO ] 2016-11-17 16:04:47.550 [JavaFX Application Thread] com.williamngo.controllers.ConfigController.initialize(ConfigController.java:101) - cb is null.
+[INFO ] 2016-11-17 16:04:47.578 [JavaFX Application Thread] com.williamngo.controllers.ConfigController.setConfigBean(ConfigController.java:169) - SETTING CONFIG BEAN
+[INFO ] 2016-11-17 16:04:56.837 [JavaFX Application Thread] com.williamngo.controllers.ConfigController.validateForm(ConfigController.java:119) - You have empty fields
+[INFO ] 2016-11-17 16:05:04.759 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.start(MainApp.java:64) - Program Begins
+[INFO ] 2016-11-17 16:05:04.778 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.showConfigWindow(MainApp.java:112) - Loader done loading
+[INFO ] 2016-11-17 16:05:04.956 [JavaFX Application Thread] com.williamngo.controllers.ConfigController.initialize(ConfigController.java:101) - cb is null.
+[INFO ] 2016-11-17 16:05:04.984 [JavaFX Application Thread] com.williamngo.controllers.ConfigController.setConfigBean(ConfigController.java:169) - SETTING CONFIG BEAN
+[INFO ] 2016-11-17 16:05:26.781 [JavaFX Application Thread] com.williamngo.controllers.ConfigController.validateForm(ConfigController.java:119) - You have empty fields
+[INFO ] 2016-11-17 16:06:23.181 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS attachments;
+[INFO ] 2016-11-17 16:06:23.189 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS emails;
+[INFO ] 2016-11-17 16:06:23.226 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:06:23.229 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:06:23.232 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:06:23.236 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:06:23.236 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:304) - Database created!
+[INFO ] 2016-11-17 16:06:23.237 [main] com.williamngo.test.TestDatabase.addEmailToDatabase(TestDatabase.java:110) - adding email to database...
+[INFO ] 2016-11-17 16:06:26.295 [main] com.williamngo.database.JagEmailDAOImpl.addEmail(JagEmailDAOImpl.java:119) - Added 1 results in email table
+[INFO ] 2016-11-17 16:06:26.450 [main] com.williamngo.database.JagEmailDAOImpl.addAttachment(JagEmailDAOImpl.java:375) - Added 1 results in attachment table
+[INFO ] 2016-11-17 16:06:26.481 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS attachments;
+[INFO ] 2016-11-17 16:06:26.486 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS emails;
+[INFO ] 2016-11-17 16:06:26.522 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:06:26.526 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:06:26.529 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:06:26.533 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:06:26.533 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:304) - Database created!
+[INFO ] 2016-11-17 16:06:26.590 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS attachments;
+[INFO ] 2016-11-17 16:06:26.595 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS emails;
+[INFO ] 2016-11-17 16:06:26.627 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:06:26.632 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:06:26.635 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:06:26.640 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:06:26.640 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:304) - Database created!
+[INFO ] 2016-11-17 16:06:26.691 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS attachments;
+[INFO ] 2016-11-17 16:06:26.697 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS emails;
+[INFO ] 2016-11-17 16:06:26.729 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:06:26.734 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:06:26.738 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:06:26.741 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:06:26.741 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:304) - Database created!
+[INFO ] 2016-11-17 16:06:26.742 [main] com.williamngo.test.TestDatabase.deleteEmailFromDatabase(TestDatabase.java:149) - deleting email from database...
+[INFO ] 2016-11-17 16:06:26.756 [main] com.williamngo.database.JagEmailDAOImpl.deleteEmail(JagEmailDAOImpl.java:139) - Deleted 1 email from database
+[INFO ] 2016-11-17 16:06:26.785 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS attachments;
+[INFO ] 2016-11-17 16:06:26.793 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS emails;
+[INFO ] 2016-11-17 16:06:26.830 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:06:26.833 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:06:26.837 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:06:26.841 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:06:26.841 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:304) - Database created!
+[INFO ] 2016-11-17 16:06:26.842 [main] com.williamngo.test.TestDatabase.addEmailToDatabase(TestDatabase.java:110) - adding email to database...
+[INFO ] 2016-11-17 16:06:26.854 [main] com.williamngo.database.JagEmailDAOImpl.addEmail(JagEmailDAOImpl.java:119) - Added 1 results in email table
+[INFO ] 2016-11-17 16:06:26.983 [main] com.williamngo.database.JagEmailDAOImpl.addAttachment(JagEmailDAOImpl.java:375) - Added 1 results in attachment table
+[INFO ] 2016-11-17 16:06:27.014 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS attachments;
+[INFO ] 2016-11-17 16:06:27.026 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS emails;
+[INFO ] 2016-11-17 16:06:27.059 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:06:27.062 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:06:27.066 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:06:27.070 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:06:27.070 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:304) - Database created!
+[INFO ] 2016-11-17 16:06:27.097 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS attachments;
+[INFO ] 2016-11-17 16:06:27.101 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS emails;
+[INFO ] 2016-11-17 16:06:27.134 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:06:27.137 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:06:27.140 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:06:27.143 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:06:27.144 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:304) - Database created!
+[INFO ] 2016-11-17 16:06:27.168 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS attachments;
+[INFO ] 2016-11-17 16:06:27.172 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS emails;
+[INFO ] 2016-11-17 16:06:27.190 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:06:27.192 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:06:27.196 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:06:27.198 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:06:27.199 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:304) - Database created!
+[INFO ] 2016-11-17 16:06:27.199 [main] com.williamngo.test.TestDatabase.deleteEmailFromDatabase(TestDatabase.java:149) - deleting email from database...
+[INFO ] 2016-11-17 16:06:27.210 [main] com.williamngo.database.JagEmailDAOImpl.deleteEmail(JagEmailDAOImpl.java:139) - Deleted 1 email from database
+[INFO ] 2016-11-17 16:06:39.957 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.start(MainApp.java:64) - Program Begins
+[INFO ] 2016-11-17 16:06:39.976 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.showConfigWindow(MainApp.java:112) - Loader done loading
+[INFO ] 2016-11-17 16:06:40.152 [JavaFX Application Thread] com.williamngo.controllers.ConfigController.initialize(ConfigController.java:101) - cb is null.
+[INFO ] 2016-11-17 16:06:40.180 [JavaFX Application Thread] com.williamngo.controllers.ConfigController.setConfigBean(ConfigController.java:166) - SETTING CONFIG BEAN
+[INFO ] 2016-11-17 16:06:53.900 [JavaFX Application Thread] com.williamngo.controllers.ConfigController.validateForm(ConfigController.java:119) - You have empty fields
+[INFO ] 2016-11-17 16:07:54.438 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS attachments;
+[INFO ] 2016-11-17 16:07:54.445 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS emails;
+[INFO ] 2016-11-17 16:07:54.479 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:07:54.482 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:07:54.486 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:07:54.489 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:07:54.489 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:304) - Database created!
+[INFO ] 2016-11-17 16:07:54.490 [main] com.williamngo.test.TestDatabase.addEmailToDatabase(TestDatabase.java:110) - adding email to database...
+[INFO ] 2016-11-17 16:07:54.539 [main] com.williamngo.database.JagEmailDAOImpl.addEmail(JagEmailDAOImpl.java:119) - Added 1 results in email table
+[INFO ] 2016-11-17 16:07:54.685 [main] com.williamngo.database.JagEmailDAOImpl.addAttachment(JagEmailDAOImpl.java:375) - Added 1 results in attachment table
+[INFO ] 2016-11-17 16:07:54.713 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS attachments;
+[INFO ] 2016-11-17 16:07:54.718 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS emails;
+[INFO ] 2016-11-17 16:07:54.751 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:07:54.754 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:07:54.757 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:07:54.761 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:07:54.761 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:304) - Database created!
+[INFO ] 2016-11-17 16:07:54.820 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS attachments;
+[INFO ] 2016-11-17 16:07:54.825 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS emails;
+[INFO ] 2016-11-17 16:07:54.857 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:07:54.862 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:07:54.865 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:07:54.869 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:07:54.869 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:304) - Database created!
+[INFO ] 2016-11-17 16:07:54.922 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS attachments;
+[INFO ] 2016-11-17 16:07:55.232 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS emails;
+[INFO ] 2016-11-17 16:07:55.267 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:07:55.271 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:07:55.274 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:07:55.278 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:07:55.278 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:304) - Database created!
+[INFO ] 2016-11-17 16:07:55.279 [main] com.williamngo.test.TestDatabase.deleteEmailFromDatabase(TestDatabase.java:149) - deleting email from database...
+[INFO ] 2016-11-17 16:07:55.292 [main] com.williamngo.database.JagEmailDAOImpl.deleteEmail(JagEmailDAOImpl.java:139) - Deleted 1 email from database
+[INFO ] 2016-11-17 16:07:55.318 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS attachments;
+[INFO ] 2016-11-17 16:07:55.323 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS emails;
+[INFO ] 2016-11-17 16:07:55.354 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:07:55.357 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:07:55.360 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:07:55.363 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:07:55.363 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:304) - Database created!
+[INFO ] 2016-11-17 16:07:55.364 [main] com.williamngo.test.TestDatabase.addEmailToDatabase(TestDatabase.java:110) - adding email to database...
+[INFO ] 2016-11-17 16:07:55.676 [main] com.williamngo.database.JagEmailDAOImpl.addEmail(JagEmailDAOImpl.java:119) - Added 1 results in email table
+[INFO ] 2016-11-17 16:07:55.795 [main] com.williamngo.database.JagEmailDAOImpl.addAttachment(JagEmailDAOImpl.java:375) - Added 1 results in attachment table
+[INFO ] 2016-11-17 16:07:55.820 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS attachments;
+[INFO ] 2016-11-17 16:07:55.823 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS emails;
+[INFO ] 2016-11-17 16:07:55.842 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:07:55.845 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:07:55.848 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:07:55.851 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:07:55.851 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:304) - Database created!
+[INFO ] 2016-11-17 16:07:55.875 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS attachments;
+[INFO ] 2016-11-17 16:07:55.878 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS emails;
+[INFO ] 2016-11-17 16:07:55.910 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:07:55.913 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:07:55.916 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:07:55.918 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:07:55.919 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:304) - Database created!
+[INFO ] 2016-11-17 16:07:55.945 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS attachments;
+[INFO ] 2016-11-17 16:07:55.949 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:261) - dropped table with query: DROP TABLE IF EXISTS emails;
+[INFO ] 2016-11-17 16:07:55.968 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:07:55.971 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:07:55.974 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:07:55.976 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:301) - Inserted emails to database
+[INFO ] 2016-11-17 16:07:55.977 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:304) - Database created!
+[INFO ] 2016-11-17 16:07:55.977 [main] com.williamngo.test.TestDatabase.deleteEmailFromDatabase(TestDatabase.java:149) - deleting email from database...
+[INFO ] 2016-11-17 16:07:55.988 [main] com.williamngo.database.JagEmailDAOImpl.deleteEmail(JagEmailDAOImpl.java:139) - Deleted 1 email from database
+[INFO ] 2016-11-17 16:08:04.215 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.start(MainApp.java:64) - Program Begins
+[INFO ] 2016-11-17 16:08:04.233 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.showConfigWindow(MainApp.java:112) - Loader done loading
+[INFO ] 2016-11-17 16:08:04.408 [JavaFX Application Thread] com.williamngo.controllers.ConfigController.initialize(ConfigController.java:101) - cb is null.
+[INFO ] 2016-11-17 16:08:04.437 [JavaFX Application Thread] com.williamngo.controllers.ConfigController.setConfigBean(ConfigController.java:174) - SETTING CONFIG BEAN
+[INFO ] 2016-11-17 16:08:15.483 [JavaFX Application Thread] com.williamngo.controllers.ConfigController.isFieldsEmpty(ConfigController.java:130) - getUserName
+[INFO ] 2016-11-17 16:08:15.484 [JavaFX Application Thread] com.williamngo.controllers.ConfigController.isFieldsEmpty(ConfigController.java:134) - getEmailAddress
+[INFO ] 2016-11-17 16:08:15.484 [JavaFX Application Thread] com.williamngo.controllers.ConfigController.isFieldsEmpty(ConfigController.java:138) - getEmailPassword
+[INFO ] 2016-11-17 16:08:15.485 [JavaFX Application Thread] com.williamngo.controllers.ConfigController.isFieldsEmpty(ConfigController.java:142) - getImapServerName
+[INFO ] 2016-11-17 16:08:15.485 [JavaFX Application Thread] com.williamngo.controllers.ConfigController.isFieldsEmpty(ConfigController.java:146) - getSmtpServerName
+[INFO ] 2016-11-17 16:08:15.485 [JavaFX Application Thread] com.williamngo.controllers.ConfigController.isFieldsEmpty(ConfigController.java:150) - getDatabaseURL
+[INFO ] 2016-11-17 16:08:15.486 [JavaFX Application Thread] com.williamngo.controllers.ConfigController.isFieldsEmpty(ConfigController.java:154) - getDatabaseUserName
+[INFO ] 2016-11-17 16:08:15.486 [JavaFX Application Thread] com.williamngo.controllers.ConfigController.isFieldsEmpty(ConfigController.java:158) - getDatabasePassword
+[INFO ] 2016-11-17 16:08:15.486 [JavaFX Application Thread] com.williamngo.controllers.ConfigController.validateForm(ConfigController.java:119) - You have empty fields

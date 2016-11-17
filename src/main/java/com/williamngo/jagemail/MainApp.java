@@ -41,6 +41,7 @@ public class MainApp extends Application {
     // The primary window or frame of this application
     private Stage primaryStage;
     private JagEmailDAO jagDAO;
+    private PropertyManager pm;
     private ConfigBean cb;
 
     /**
@@ -78,7 +79,7 @@ public class MainApp extends Application {
     private void configureStage(Stage primaryStage) {
         // Instantiate the FXMLLoader
         try {
-            PropertyManager pm = new PropertyManager("src/main/resources");
+            this.pm = new PropertyManager("src/main/resources");
             this.cb = pm.loadTextProperties();
 
             //If there is no properties file, open the configuration window for
@@ -99,32 +100,31 @@ public class MainApp extends Application {
      * Shows configuration window for the user to input a new config file.
      */
     public void showConfigWindow(Stage stage) {
-        try {
-            FXMLLoader loader = null;
-
+        this.cb = new ConfigBean();
+        FXMLLoader loader = null;
+        
+        try{
             URL path = Paths.get("src/main/resources/fxml/config.fxml").toUri().toURL();
-
-            // Set the location of the fxml file in the FXMLLoader
+            
             loader = new FXMLLoader();
             loader.setLocation(path);
             loader.setBuilderFactory(new JavaFXBuilderFactory());
-
+            log.info("Loader done loading");
             Scene scene = new Scene(loader.load());
-
-            ConfigController controller = (ConfigController) loader.getController();
-            controller.setConfigBean(this.cb);
-            controller.setJagEmailDAO(this.jagDAO);
-
-            // Parent is the base class for all nodes that have children in the
-            // scene graph such as AnchorPane and most other containers
+            
+            ConfigController control = (ConfigController) loader.getController();
+            
+            control.setJagEmailDAO(this.jagDAO);
+            control.setConfigBean(this.cb);
+            control.setPropertyManager(this.pm);
+            
+            //Set stage
             stage.setTitle("JagEmail Client");
             stage.setResizable(false);
             stage.setScene(scene);
             stage.show();
-        } catch (MalformedURLException mue) {
-            mue.getMessage();
-        } catch (IOException ioe) {
-            ioe.getMessage();
+        }catch(Exception e){
+            e.printStackTrace();
         }
     }
 
@@ -155,6 +155,8 @@ public class MainApp extends Application {
             mue.getMessage();
         } catch (IOException ioe) {
             ioe.getMessage();
+        } catch (Exception e){
+            e.printStackTrace();
         }
     }
 

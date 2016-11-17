@@ -67,7 +67,6 @@
       <ButtonBar prefHeight="40.0" BorderPane.alignment="CENTER">
         <buttons>
           <Button id="submitButton" mnemonicParsing="false" onAction="#submitForm" text="Submit" />
-          <Button id="clearButton" mnemonicParsing="false" onAction="#clearForm" text="Clear" />
         </buttons>
          <BorderPane.margin>
             <Insets bottom="30.0" />

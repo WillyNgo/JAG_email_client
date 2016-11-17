@@ -29,10 +29,6 @@ public class PropertyManager {
         this.path = path;
     }
     
-    public final saveProperties(){
-        
-    }
-    
     /**
      * Returns a ConfigBean object with the contents of the properties file. The
      * property files name should be named "config.properties".
