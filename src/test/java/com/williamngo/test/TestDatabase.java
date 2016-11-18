@@ -314,6 +314,11 @@ public class TestDatabase {
             demoFoldersQuery.add("INSERT INTO folders(foldername) VALUES ('sent');");
             demoFoldersQuery.add("INSERT INTO folders(foldername) VALUES ('inbox');");
             
+            for(String str : demoFoldersQuery){
+                stmt = con.prepareStatement(str);
+                stmt.executeUpdate();
+                log.info("Inserted Folders to database");
+            }
             log.info("Database created!");
             
         } catch (SQLException sqle) {

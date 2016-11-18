@@ -280,21 +280,18 @@ public class JagEmailDAOImpl implements JagEmailDAO {
      * @return myList - List containing all folder names
      */
     @Override
-    public List<Folder> getAllFolders() 
+    public List<String> getAllFolders() 
     {
-        List<Folder> myList = FXCollections.observableArrayList();
+        List<String> myList = FXCollections.observableArrayList();
         String query = "SELECT foldername FROM Folders";
         
         try(Connection con = DriverManager.getConnection(cb.getDatabaseURL(), cb.getDatabaseUserName(), cb.getDatabasePassword()))
         {
             PreparedStatement stmt = con.prepareStatement(query);
             ResultSet rs = stmt.executeQuery();
-            Folder folderToAdd;
             while(rs.next())
             {
-                folderToAdd = new Folder();
-                folderToAdd.setFolderName(rs.getString("foldername"));
-                myList.add(folderToAdd);
+                myList.add(rs.getString("foldername"));
             }
         }catch(SQLException sqle)
         {

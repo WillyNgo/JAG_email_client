@@ -25,5 +25,5 @@ public interface JagEmailDAO {
     //public void deleteAccount(int account_id, String emailAddress, String password);
     public List<JagEmail> retrieveEmail(String folder);
     public List<JagEmail> searchEmail(String keyword);
-    public List<Folder> getAllFolders();
+    public List<String> getAllFolders();
 }

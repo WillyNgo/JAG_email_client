@@ -72,8 +72,10 @@ public class PropertyManager {
      * @param cb The bean to store into the properties
      * @throws IOException
      */
-    public final void writeTextProperties(final String path, final String propFileName, final ConfigBean cb) throws IOException {
+    public final void writeTextProperties(final ConfigBean cb) throws IOException {
         Properties prop = new Properties();
+        Path txtFile = get(path, "config.properties");
+        
         prop.setProperty("userName", cb.getUserName());
         prop.setProperty("emailPassword", cb.getEmailPassword());
         prop.setProperty("emailAddress", cb.getEmailAddress());
@@ -84,7 +86,7 @@ public class PropertyManager {
         prop.setProperty("databaseName", cb.getDatabaseUserName());
         prop.setProperty("databaseURL", cb.getDatabaseURL());
         prop.setProperty("databasePassword", cb.getDatabasePassword());
-        Path txtFile = get(path, propFileName + ".properties");
+        
         // Creates the file or if file exists it is truncated to length of zero
         // before writing
         try (OutputStream propFileStream = newOutputStream(txtFile)) {

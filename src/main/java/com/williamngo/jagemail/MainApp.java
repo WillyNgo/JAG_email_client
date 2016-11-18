@@ -89,9 +89,8 @@ public class MainApp extends Application {
      * Shows configuration window for the user to input a new config file.
      */
     public void showConfigWindow(Stage stage) {
-        this.cb = new ConfigBean();
+
         FXMLLoader loader = null;
-        
         try{
             URL path = Paths.get("src/main/resources/fxml/config.fxml").toUri().toURL();
             
@@ -99,12 +98,12 @@ public class MainApp extends Application {
             loader.setLocation(path);
             loader.setBuilderFactory(new JavaFXBuilderFactory());
             log.info("Loader done loading");
+            //A new configBean is created in the initialize() to allow user to input new information
             Scene scene = new Scene(loader.load());
             log.info("Scene loaded");
             ConfigController control = (ConfigController) loader.getController();
-            
+            control.setCurrentStage(stage);
             control.setJagEmailDAO(this.jagDAO);
-            control.setConfigBean(this.cb);
             control.setPropertyManager(this.pm);
             
             
@@ -119,7 +118,7 @@ public class MainApp extends Application {
     }
 
     /**
-     * Shows the main application page.
+     * Shows the main application page. 
      * @param stage 
      */
     private void showUserInterface(Stage stage) {

@@ -18,8 +18,12 @@ import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.text.Text;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * FXML Controller class
@@ -27,12 +31,13 @@ import javafx.scene.layout.BorderPane;
  * @author 1435707
  */
 public class RootController implements Initializable {
+    private final Logger log = LoggerFactory.getLogger(getClass().getName());
     
     private TreeController treeControl;
     private EditorController editorControl;
     private TableController tableControl;
-    //private QuickViewController quickViewCon;
-    //private MailDetailsController detailsCon;
+    
+    private Label welcomeLabel;
     
     private ConfigBean cb; 
     private JagEmailDAO jagDAO;
@@ -60,18 +65,45 @@ public class RootController implements Initializable {
         }
         
         if(cb != null){
+            try{
             //SetDatabase()
-            this.mailer = new MailerImpl(cb);
+            //this.mailer = new MailerImpl(cb);
             //SetDAO()
-            this.jagDAO = new JagEmailDAOImpl(cb);
-            //Receive Email here
+            //this.jagDAO = new JagEmailDAOImpl(cb);
+            
+            //Initializes the config, dao and properties
+            setUpNewRoot();showProperties();
+            //TODO: Receive Email here
             
             //Insert editor
             insertEditor();
             insertTree();
             insertTable();
+            }
+            catch(IOException ioe){
+                log.info(ioe.getMessage());
+            }
         }
         
+    }
+    
+    public void setUpNewRoot() throws IOException{
+        try{
+            //Setting up new config, dao and mailer
+            this.cb = pm.loadTextProperties();
+            this.jagDAO = new JagEmailDAOImpl(cb);
+            this.mailer = new MailerImpl(cb);
+            
+            
+            /*TODO: grab emails here
+            mailer.receiveEmail();
+            
+            treeControl
+            */
+        }
+        catch (IOException ioe){
+            log.info(ioe.getMessage());
+        }
     }
     
     /**
@@ -122,5 +154,20 @@ public class RootController implements Initializable {
         }catch(Exception e){
             e.printStackTrace();
         }
+    }
+    
+    
+    private void setWelcomeMessage(){
+        welcomeLabel = new Label();
+        Text t = new Text();
+        t.setText("Welcome " + cb.getUserName());
+        welcomeLabel.setText("WELCOME: " + cb.getUserName());
+    }
+    
+    //DELETE THIS
+    public void showProperties() {
+        log.info("YOUR CURRENT USERNAME IS: " + cb.getUserName());
+        log.info("YOUR CURRENT EMAILADDRESS IS: " + cb.getEmailAddress());
+        log.info("YOUR CURRENT PASSWORD IS: " + cb.getEmailPassword());
     }
 }
