@@ -6,7 +6,7 @@
 
 <BorderPane fx:id="tablePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.williamngo.controllers.TableController">
    <center>
-      <TableView fx:id="emailTable" BorderPane.alignment="CENTER">
+      <TableView fx:id="emailsTableView" BorderPane.alignment="CENTER">
         <columns>
           <TableColumn fx:id="fromColumn" prefWidth="75.0" text="From" />
           <TableColumn fx:id="subjectColumn" prefWidth="75.0" text="Subject" />

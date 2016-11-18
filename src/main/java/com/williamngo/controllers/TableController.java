@@ -33,7 +33,7 @@ public class TableController implements Initializable {
     private final Logger log = LoggerFactory.getLogger(this.getClass()
 			.getName());
     
-    private JagEmailDAO jagDAO;
+    private JagEmailDAOImpl jagDAO;
     private String foldername;
     private EditorController editorControl;
     private JagEmail email;
@@ -42,7 +42,7 @@ public class TableController implements Initializable {
     private BorderPane tablePane;
     
     @FXML
-    private TableView<JagEmail> emailTable; 
+    private TableView<JagEmail> emailsTableView; 
     
     @FXML
     private TableColumn<JagEmail, String> fromColumn;
@@ -56,7 +56,7 @@ public class TableController implements Initializable {
     public TableController()
     {
         super();
-        log.info("Ok at least constructor works");
+        log.info("Ok at least constructor: TableControl works");
     }
     /**
      * Initializes the controller class.
@@ -72,12 +72,12 @@ public class TableController implements Initializable {
         dateRecvColumn.setCellValueFactory(cellData -> new SimpleStringProperty(
         cellData.getValue().getReceiveDate().toString()));
         
-        /*
-        emailTable.getSelectionModel()
+        
+        emailsTableView.getSelectionModel()
         .selectedItemProperty()
         .addListener((observable, oldValue, newValue) -> clickOnEmail(newValue));
         
-        */
+        
     }    
     
     public void clickOnEmail(JagEmail mail){
@@ -95,7 +95,7 @@ public class TableController implements Initializable {
     }
     
     public void displayTable() throws SQLException {
-        emailTable.setItems(getAllEmails());
+        emailsTableView.setItems(getAllEmails());
     }
     
     private ObservableList<JagEmail> getAllEmails() throws SQLException{
@@ -122,7 +122,7 @@ public class TableController implements Initializable {
         this.editorControl = editorControl;
     }
     
-    public TableView<JagEmail> getEmailTable(){
-        return emailTable;
+    public TableView<JagEmail> getEmailsTable(){
+        return emailsTableView;
     }
 }

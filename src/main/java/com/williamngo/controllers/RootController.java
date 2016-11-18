@@ -40,7 +40,7 @@ public class RootController implements Initializable {
     private Label welcomeLabel;
     
     private ConfigBean cb; 
-    private JagEmailDAO jagDAO;
+    private JagEmailDAOImpl jagDAO;
     private MailerImpl mailer; 
     private PropertyManager pm = new PropertyManager("src/main/resources");
     
@@ -66,19 +66,14 @@ public class RootController implements Initializable {
         
         if(cb != null){
             try{
-            //SetDatabase()
-            //this.mailer = new MailerImpl(cb);
-            //SetDAO()
-            //this.jagDAO = new JagEmailDAOImpl(cb);
-            
             //Initializes the config, dao and properties
             setUpNewRoot();showProperties();
             //TODO: Receive Email here
             
             //Insert editor
             insertEditor();
-            insertTree();
             insertTable();
+            insertTree();
             }
             catch(IOException ioe){
                 log.info(ioe.getMessage());
@@ -135,6 +130,10 @@ public class RootController implements Initializable {
             
             treeControl = loader.getController();
             
+            treeControl.setJagEmailDAO(jagDAO);
+            treeControl.setTableController(tableControl);
+            treeControl.displayTree();
+            
             treePane.getChildren().add(bp);
         }catch(Exception e){
             e.printStackTrace();
@@ -149,6 +148,9 @@ public class RootController implements Initializable {
             BorderPane bp = (BorderPane) loader.load();
             
             tableControl = loader.getController();
+            
+            tableControl.setEditorController(editorControl);
+            tableControl.setJagDAO(jagDAO);
             
             tablePane.getChildren().add(bp);
         }catch(Exception e){

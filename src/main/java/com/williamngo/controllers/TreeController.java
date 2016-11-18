@@ -10,6 +10,7 @@ import com.williamngo.beans.FolderBean;
 import com.williamngo.business.Folder;
 import com.williamngo.database.JagEmailDAO;
 import com.williamngo.database.JagEmailDAOImpl;
+import com.williamngo.interfaces.MailerImpl;
 import java.net.URL;
 import java.sql.SQLException;
 import java.util.List;
@@ -41,7 +42,7 @@ public class TreeController implements Initializable {
     private BorderPane treePane;
 
     @FXML
-    private TreeView<String> folderTreeView;
+    private TreeView<String> foldersTreeView;
     
     @FXML
     ObservableList<String> allFolders;
@@ -74,8 +75,13 @@ public class TreeController implements Initializable {
         */
     }
 
-    private void setJagEmailDAO(JagEmailDAO dao) {
+    public void setJagEmailDAO(JagEmailDAO dao) {
         this.jagDAO = dao;
+    }
+    
+    public void setTableController(TableController control){
+        this.tableControl = control;
+        log.info("TABLE CONTROLLER HAS BEEN PASSED TO TREE CONTROLLER!");
     }
 
     /**
@@ -86,16 +92,18 @@ public class TreeController implements Initializable {
     public void displayTree() throws SQLException {
         // Retreive the list of fish
         List<String> foldersList = jagDAO.getAllFolders();
-        folderTreeView.setRoot(new TreeItem(new String("ROOT folder")));
-        folderTreeView.setCellFactory((e) -> new TreeCell<String>(){
+        foldersTreeView.setRoot(new TreeItem(new String("Folders")));
+        foldersTreeView.setCellFactory((e) -> new TreeCell<String>(){
             @Override
             protected void updateItem(String item, boolean empty){
                 super.updateItem(item, empty);
                 if(item != null){
+                    log.info("FOLDERS ARE NOT EMPTY");
                     setText(item);
                     setGraphic(getTreeItem().getGraphic());
                 }
                 else{
+                    log.info("FOLDERS ARE EMPTY");
                     setText("");
                     setGraphic(null);
                 }
@@ -112,19 +120,19 @@ public class TreeController implements Initializable {
             for(String fName : allFolders){
                 TreeItem<String> item = new TreeItem<>(fName);
                 
-                Image img = new Image("images/folder.png");
+                Image img = new Image("icons/folderImage.png");
                 ImageView folderImg = new ImageView(img);
                 item.setGraphic(folderImg);
                 item.setValue(fName);
-                folderTreeView.getRoot().getChildren().add(item);
+                foldersTreeView.getRoot().getChildren().add(item);
             }
         }
         
         // Open the tree
-        folderTreeView.getRoot().setExpanded(true);
+        foldersTreeView.getRoot().setExpanded(true);
 
         // Listen for selection changes and show the fishData details when changed.
-        folderTreeView
+        foldersTreeView
                 .getSelectionModel()
                 .selectedItemProperty()
                 .addListener(
