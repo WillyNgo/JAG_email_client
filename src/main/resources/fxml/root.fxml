@@ -8,8 +8,7 @@
 <?import javafx.scene.control.ToolBar?>
 <?import javafx.scene.layout.BorderPane?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.101" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.williamngo.controllers.RootController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.williamngo.controllers.RootController">
    <top>
       <MenuBar BorderPane.alignment="CENTER">
         <menus>
@@ -43,13 +42,13 @@
          <center>
             <SplitPane dividerPositions="0.2993311036789298" prefHeight="160.0" prefWidth="200.0" BorderPane.alignment="CENTER">
               <items>
-                  <BorderPane prefHeight="200.0" prefWidth="200.0" />
+                  <BorderPane fx:id="treePane" prefHeight="200.0" prefWidth="200.0" />
                   <BorderPane prefHeight="200.0" prefWidth="200.0">
                      <center>
                         <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" BorderPane.alignment="CENTER">
                            <items>
-                              <BorderPane prefHeight="200.0" prefWidth="200.0" />
-                              <BorderPane prefHeight="200.0" prefWidth="200.0">
+                              <BorderPane fx:id="tablePane" prefHeight="200.0" prefWidth="200.0" />
+                              <BorderPane fx:id="editorPane" prefHeight="200.0" prefWidth="200.0">
                                  <bottom>
                                     <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                                       <items>

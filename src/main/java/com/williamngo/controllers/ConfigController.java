@@ -103,8 +103,8 @@ public class ConfigController {
     }
 
     @FXML
-    void submitForm(ActionEvent event) throws SQLException {
-        if (validateForm()) {
+    void submitForm(ActionEvent event) throws IOException {
+        if (validateForm(cb)) {
             System.out.println("Everything good!");
         }
         else{
@@ -112,10 +112,11 @@ public class ConfigController {
         }
     }
 
-    private boolean validateForm() {
+    private boolean validateForm(ConfigBean myCb) {
         boolean isValid = true;
+        log.info("USERNAME IN VALIDATE IS: " + myCb.getDatabaseUserName());
         //Validate email address for correct format: check if there's a @ sign
-        if(isFieldsEmpty()){
+        if(isFieldsEmpty(myCb)){
             log.info("You have empty fields");
             isValid = false;
         }
@@ -123,37 +124,37 @@ public class ConfigController {
         return isValid;
     }
     
-    private boolean isFieldsEmpty()throws IllegalArgumentException{
+    private boolean isFieldsEmpty(ConfigBean myCb)throws IllegalArgumentException{
         boolean valid = false;
-        if(cb.getUserName().length() == 0){
+        if(myCb.getUserName().length() == 0){
             valid = true;
             log.info("getUserName");
         }
-        if(cb.getEmailAddress().length() == 0){
+        if(myCb.getEmailAddress().length() == 0){
             valid = true;
             log.info("getEmailAddress");
         }
-        if(cb.getEmailPassword().length() == 0){
+        if(myCb.getEmailPassword().length() == 0){
             valid = true;
             log.info("getEmailPassword");
         }
-        if(cb.getImapServerName().length() == 0){
+        if(myCb.getImapServerName().length() == 0){
             valid = true;
             log.info("getImapServerName");
         }
-        if(cb.getSmtpServerName().length() == 0){
+        if(myCb.getSmtpServerName().length() == 0){
             valid = true;
             log.info("getSmtpServerName");
         }
-        if(cb.getDatabaseURL().length() == 0){
+        if(myCb.getDatabaseURL().length() == 0){
             valid = true;
             log.info("getDatabaseURL");
         }
-        if(cb.getDatabaseUserName().length() == 0){
+        if(myCb.getDatabaseUserName().length() == 0){
             valid = true;
             log.info("getDatabaseUserName");
         }
-        if(cb.getDatabasePassword().length() == 0){
+        if(myCb.getDatabasePassword().length() == 0){
             valid = true;
             log.info("getDatabasePassword");
         }

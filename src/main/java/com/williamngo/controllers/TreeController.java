@@ -28,22 +28,25 @@ import javafx.scene.layout.BorderPane;
  *
  * @author Willy
  */
-public class FoldersTreeController implements Initializable {
+public class TreeController implements Initializable {
 
     private JagEmailDAO jagemailDAO;
 
     @FXML
-    private BorderPane treeLayout;
+    private BorderPane treePane;
 
     @FXML
     private TreeView<Folder> folderTreeView;
+    
+    @FXML
+    ObservableList<String> allFolders;
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-
+        /*
         Folder root = new Folder();
         FolderBean rootFb = new FolderBean();
 
@@ -63,6 +66,7 @@ public class FoldersTreeController implements Initializable {
                 }
             }
         });
+        */
     }
 
     private void setJagEmailDAO(JagEmailDAO dao) {

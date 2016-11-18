@@ -100,7 +100,7 @@ public class MainApp extends Application {
      * Shows configuration window for the user to input a new config file.
      */
     public void showConfigWindow(Stage stage) {
-        this.cb = new ConfigBean();
+        ConfigBean newCb = new ConfigBean();
         FXMLLoader loader = null;
         
         try{
@@ -115,8 +115,9 @@ public class MainApp extends Application {
             ConfigController control = (ConfigController) loader.getController();
             
             control.setJagEmailDAO(this.jagDAO);
-            control.setConfigBean(this.cb);
+            control.setConfigBean(newCb);
             control.setPropertyManager(this.pm);
+            
             
             //Set stage
             stage.setTitle("JagEmail Client");

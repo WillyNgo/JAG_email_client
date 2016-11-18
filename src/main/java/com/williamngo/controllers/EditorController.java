@@ -5,7 +5,9 @@
  */
 package com.williamngo.controllers;
 
+import com.williamngo.business.JagEmail;
 import com.williamngo.database.JagEmailDAO;
+import com.williamngo.interfaces.MailerImpl;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
@@ -23,10 +25,35 @@ public class EditorController implements Initializable {
     private JagEmailDAO jagemailDAO;
     
     @FXML
-    private BorderPane editorLayout;
+    private BorderPane editorPane;
     
     @FXML
     private HTMLEditor editor;
+    
+    
+    private JagEmail email;
+    private MailerImpl mailer;
+    
+    
+    public EditorController(){
+        super();
+    }
+    
+    public JagEmail getEmail(){
+        return this.email;
+    }
+    
+    public void setEmail(JagEmail email){
+        this.email = email;
+    }
+    
+    /**
+     * Displays the content of the email that a user clicked on the table.
+     * @param email 
+     */
+    public void displayEmailContent(JagEmail email){
+        
+    }
     
     /**
      * Initializes the controller class.
