@@ -30,7 +30,7 @@ import javafx.scene.layout.BorderPane;
  */
 public class TreeController implements Initializable {
 
-    private JagEmailDAO jagemailDAO;
+    private JagEmailDAO jagDAO;
 
     @FXML
     private BorderPane treePane;
@@ -70,7 +70,7 @@ public class TreeController implements Initializable {
     }
 
     private void setJagEmailDAO(JagEmailDAO dao) {
-        this.jagemailDAO = dao;
+        this.jagDAO = dao;
     }
 
     /**
@@ -80,7 +80,7 @@ public class TreeController implements Initializable {
      */
     public void displayTree() throws SQLException {
         // Retreive the list of fish
-        List<Folder> foldersList = jagemailDAO.getAllFolders();
+        List<Folder> foldersList = jagDAO.getAllFolders();
         
         // Build an item for each fish and add it to the root
         if (foldersList != null) {

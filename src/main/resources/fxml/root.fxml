@@ -50,11 +50,7 @@
                               <BorderPane fx:id="tablePane" prefHeight="200.0" prefWidth="200.0" />
                               <BorderPane fx:id="editorPane" prefHeight="200.0" prefWidth="200.0">
                                  <bottom>
-                                    <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-                                      <items>
-                                        <Button mnemonicParsing="false" text="Button" />
-                                      </items>
-                                    </ToolBar>
+                                    
                                  </bottom>
                               </BorderPane>
                            </items>

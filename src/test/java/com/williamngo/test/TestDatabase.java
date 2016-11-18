@@ -250,6 +250,7 @@ public class TestDatabase {
             PreparedStatement stmt;
             
             List<String> queryDrop = new ArrayList<String>();
+            queryDrop.add("DROP TABLE IF EXISTS folders");
             queryDrop.add("DROP TABLE IF EXISTS attachments;");
             queryDrop.add("DROP TABLE IF EXISTS emails;");
             //queryDrop.add("DROP TABLE IF EXISTS accounts;");
@@ -283,10 +284,18 @@ public class TestDatabase {
                     + "CONSTRAINT fk_messagenumber FOREIGN KEY (attach_messageNumber) REFERENCES emails(messageNumber) ON DELETE CASCADE\n"
                     + ")ENGINE=InnoDB;";
             
+            String foldersQuery = "CREATE TABLE folders(\n"
+                    + "folder_id int PRIMARY KEY AUTO_INCREMENT,\n"
+                    + "foldername VARCHAR(50)\n"
+                    + ")ENGINE=InnoDB;";
+            
             stmt = con.prepareStatement(emailQuery);
             stmt.executeUpdate();
             
             stmt = con.prepareStatement(attachmentQuery);
+            stmt.executeUpdate();
+            
+            stmt = con.prepareStatement(foldersQuery);
             stmt.executeUpdate();
             
             List<String> demoEmailsQuery = new ArrayList<String>();
@@ -300,6 +309,10 @@ public class TestDatabase {
                 stmt.executeUpdate();
                 log.info("Inserted emails to database");
             }
+            
+            List<String> demoFoldersQuery = new ArrayList<String>();
+            demoFoldersQuery.add("INSERT INTO folders(foldername) VALUES ('sent');");
+            demoFoldersQuery.add("INSERT INTO folders(foldername) VALUES ('inbox');");
             
             log.info("Database created!");
             

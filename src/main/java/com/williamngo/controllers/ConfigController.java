@@ -84,6 +84,7 @@ public class ConfigController {
      */
     @FXML
     private void initialize() {
+        //cb = new ConfigBean();
         if (cb != null) {
             Bindings.bindBidirectional(userNameTextField.textProperty(), cb.userNameProperty());
             Bindings.bindBidirectional(SMTPServerNameTextField.textProperty(), cb.smtpServerNameProperty());
