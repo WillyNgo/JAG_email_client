@@ -13,17 +13,17 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.web.HTMLEditor?>
 
-<BorderPane fx:id="editorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.williamngo.controllers.EditorController">
+<BorderPane fx:id="editorPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="401.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.williamngo.controllers.EditorController">
    <center>
-      <HTMLEditor fx:id="editor" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" prefHeight="200.0" prefWidth="506.0" BorderPane.alignment="CENTER" />
+      <HTMLEditor fx:id="editor" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="201.0" prefWidth="800.0" BorderPane.alignment="CENTER" />
    </center>
    <bottom>
-      <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <ToolBar maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" BorderPane.alignment="CENTER">
         <items>
-          <Button fx:id="editorSendButton" minHeight="40.0" minWidth="40.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="Send" />
-          <Button minWidth="40.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="">
+          <Button fx:id="sendButton" onAction="#sendMail" minHeight="40.0" minWidth="40.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="Send" />
+          <Button fx:id="attachButton" minWidth="40.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="">
                <graphic>
-                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="attachImage" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../icons/attach.png" />
                      </image>
@@ -49,22 +49,22 @@
             <Label text="Subject" GridPane.rowIndex="3" />
             <Label text="Cc:" GridPane.rowIndex="1" />
             <Label text="Bcc" GridPane.rowIndex="2" />
-            <TextField fx:id="editorToTextField" GridPane.columnIndex="1">
+            <TextField fx:id="toTextField" GridPane.columnIndex="1">
                <GridPane.margin>
                   <Insets right="50.0" />
                </GridPane.margin>
             </TextField>
-            <TextField fx:id="editorCcTextField" prefHeight="25.0" prefWidth="377.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <TextField fx:id="ccTextField" prefHeight="25.0" prefWidth="377.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <GridPane.margin>
                   <Insets right="50.0" />
                </GridPane.margin>
             </TextField>
-            <TextField fx:id="editorBccTextField" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <TextField fx:id="bccTextField" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <GridPane.margin>
                   <Insets right="50.0" />
                </GridPane.margin>
             </TextField>
-            <TextField fx:id="editorSubjectTextField" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <TextField fx:id="subjectTextField" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <GridPane.margin>
                   <Insets right="50.0" />
                </GridPane.margin>

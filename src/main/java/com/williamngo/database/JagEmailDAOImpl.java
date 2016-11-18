@@ -119,7 +119,9 @@ public class JagEmailDAOImpl implements JagEmailDAO {
             log.info("Added " + result + " results in email table");
             
             //Add attachment into database
-            addAttachment(jagemail, stmt.getGeneratedKeys());
+            if(jagemail.getAttachments() != null){
+                addAttachment(jagemail, stmt.getGeneratedKeys());
+            }
         }catch(SQLException sqle)
         {
             log.error(sqle.getMessage());
@@ -137,6 +139,22 @@ public class JagEmailDAOImpl implements JagEmailDAO {
             
             int result = stmt.executeUpdate();
             log.info("Deleted " + result + " email from database");
+         }
+         catch(SQLException sqle)
+         {
+             sqle.getMessage();
+         }
+    }
+    
+    public void deleteEmail(String foldername){
+        String query = "DELETE FROM emails WHERE folder = ?;";
+         try(Connection conn = DriverManager.getConnection(cb.getDatabaseURL(), cb.getDatabaseUserName(), cb.getDatabasePassword())){
+            PreparedStatement stmt = conn.prepareStatement(query);
+            
+            stmt.setString(1, foldername);
+            
+            int result = stmt.executeUpdate();
+            log.info("Deleted " + result + " email(s) from database");
          }
          catch(SQLException sqle)
          {
@@ -273,6 +291,37 @@ public class JagEmailDAOImpl implements JagEmailDAO {
         }
         
         return emailFound;
+    }
+    
+    public void addFolder(String foldername){
+        String query = "INSERT INTO folders(foldername) VALUES (?);";
+        try(Connection conn = DriverManager.getConnection(cb.getDatabaseURL(), cb.getDatabaseUserName(), cb.getDatabasePassword())){
+            PreparedStatement stmt = conn.prepareStatement(query);
+            stmt.setString(1, foldername);
+            
+            int result = stmt.executeUpdate();
+            log.info("Added " + result + " folder into folders table.");
+        }
+        catch(SQLException sqle){
+            sqle.getMessage();
+        }
+    }
+    
+    public void deleteFolder(String foldername){
+        String query = "DELETE FROM folders WHERE foldername = ?;";
+        try(Connection conn = DriverManager.getConnection(cb.getDatabaseURL(), cb.getDatabaseUserName(), cb.getDatabasePassword())){
+            PreparedStatement stmt = conn.prepareStatement(query);
+            stmt.setString(1, foldername);
+            
+            //Delete all emails associated with the folders
+            deleteEmail(foldername);
+            
+            int result = stmt.executeUpdate();
+            log.info("DELETED '" + foldername + "' folder from folders table.");
+        }
+        catch(SQLException sqle){
+            sqle.getMessage();
+        }
     }
     
     /**

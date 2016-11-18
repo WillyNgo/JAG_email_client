@@ -113,7 +113,7 @@ public class RootController implements Initializable {
 
             // Give the controller the data object.
             editorControl = loader.getController();
-            //detailsCon.setEmailClient(mailSystem);
+            editorControl.setMailer(mailer);
 
             editorPane.getChildren().add(bp);
         } catch (Exception e) {

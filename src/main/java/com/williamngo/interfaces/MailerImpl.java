@@ -149,14 +149,14 @@ public class MailerImpl implements Mailer {
         
         //Solution for embedded attachment
         //if there is embedded, set it back
-        int before = email.getAttachments().size();
+        //int before = email.getAttachments().size();
         
         session.open();
         session.sendMail(email);
         
-        int after = email.getAttachments().size();
+        //int after = email.getAttachments().size();
         
-        //If before is > after, then put back embedded
+        /*If before is > after, then put back embedded
         if(before > after)
         {
             
@@ -165,6 +165,7 @@ public class MailerImpl implements Mailer {
             for(String e : embedStrArray)
                 email.embed(EmailAttachment.attachment().bytes(new File(e)));
         }
+        */
         
         //Add email to database
         jdb.addEmail(email);
