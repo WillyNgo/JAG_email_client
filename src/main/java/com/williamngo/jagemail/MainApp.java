@@ -39,7 +39,7 @@ public class MainApp extends Application {
     private final Logger log = LoggerFactory.getLogger(getClass().getName());
 
     // The primary window or frame of this application
-    private Stage primaryStage;
+    //private Stage primaryStage;
     private JagEmailDAO jagDAO;
     private PropertyManager pm;
     private ConfigBean cb;
@@ -62,9 +62,10 @@ public class MainApp extends Application {
     public void start(Stage primaryStage) throws Exception {
 
         log.info("Program Begins");
-
+        this.pm = new PropertyManager("src/main/resources");
+        this.cb = pm.loadTextProperties();
         // The Stage comes from the framework so make a copy to use elsewhere
-        this.primaryStage = primaryStage;
+        //this.primaryStage = primaryStage;
         // Create the Scene and put it on the Stage
         configureStage(primaryStage);
     }
@@ -77,22 +78,10 @@ public class MainApp extends Application {
      * Not used in this archetype.
      */
     private void configureStage(Stage primaryStage) {
-        // Instantiate the FXMLLoader
-        try {
-            this.pm = new PropertyManager("src/main/resources");
-            this.cb = pm.loadTextProperties();
-
-            //If there is no properties file, open the configuration window for
-            //User to input new configuration file.
-            if (this.cb == null) {
-                showConfigWindow(primaryStage);
-            } else {
-                showUserInterface(primaryStage);
-            }
-
-        } catch (IOException ex) {
-            log.error(null, ex);
-            System.exit(1);
+        if (this.cb == null) {
+            showConfigWindow(primaryStage);
+        } else {
+            showUserInterface(primaryStage);
         }
     }
 
@@ -100,7 +89,7 @@ public class MainApp extends Application {
      * Shows configuration window for the user to input a new config file.
      */
     public void showConfigWindow(Stage stage) {
-        ConfigBean newCb = new ConfigBean();
+        this.cb = new ConfigBean();
         FXMLLoader loader = null;
         
         try{
@@ -111,11 +100,11 @@ public class MainApp extends Application {
             loader.setBuilderFactory(new JavaFXBuilderFactory());
             log.info("Loader done loading");
             Scene scene = new Scene(loader.load());
-            
+            log.info("Scene loaded");
             ConfigController control = (ConfigController) loader.getController();
             
             control.setJagEmailDAO(this.jagDAO);
-            control.setConfigBean(newCb);
+            control.setConfigBean(this.cb);
             control.setPropertyManager(this.pm);
             
             

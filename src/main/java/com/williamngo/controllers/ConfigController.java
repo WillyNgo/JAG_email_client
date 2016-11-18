@@ -84,7 +84,7 @@ public class ConfigController {
      */
     @FXML
     private void initialize() {
-        //cb = new ConfigBean();
+        cb = new ConfigBean();
         if (cb != null) {
             Bindings.bindBidirectional(userNameTextField.textProperty(), cb.userNameProperty());
             Bindings.bindBidirectional(SMTPServerNameTextField.textProperty(), cb.smtpServerNameProperty());
@@ -96,7 +96,7 @@ public class ConfigController {
             Bindings.bindBidirectional(databaseURLTextField.textProperty(), cb.databaseURLProperty());
             Bindings.bindBidirectional(databaseUserNameTextField.textProperty(), cb.databaseUserNameProperty());
             Bindings.bindBidirectional(databasePasswordField.textProperty(), cb.databasePasswordProperty());
-            log.info("cb is not null.");
+            log.info("BINDED cb is not null.");
         }
         else{
             log.info("cb is null.");
@@ -115,7 +115,7 @@ public class ConfigController {
 
     private boolean validateForm(ConfigBean myCb) {
         boolean isValid = true;
-        log.info("USERNAME IN VALIDATE IS: " + myCb.getDatabaseUserName());
+        log.info("USERNAME IN VALIDATE IS: " + userNameTextField.textProperty().get());
         //Validate email address for correct format: check if there's a @ sign
         if(isFieldsEmpty(myCb)){
             log.info("You have empty fields");
@@ -127,35 +127,35 @@ public class ConfigController {
     
     private boolean isFieldsEmpty(ConfigBean myCb)throws IllegalArgumentException{
         boolean valid = false;
-        if(myCb.getUserName().length() == 0){
+        if(userNameTextField.textProperty().get().length() == 0){
             valid = true;
             log.info("getUserName");
         }
-        if(myCb.getEmailAddress().length() == 0){
+        if(emailAddressTextField.textProperty().get().length() == 0){
             valid = true;
             log.info("getEmailAddress");
         }
-        if(myCb.getEmailPassword().length() == 0){
+        if(emailPasswordField.textProperty().get().length() == 0){
             valid = true;
             log.info("getEmailPassword");
         }
-        if(myCb.getImapServerName().length() == 0){
-            valid = true;
-            log.info("getImapServerName");
-        }
-        if(myCb.getSmtpServerName().length() == 0){
+        if(SMTPServerNameTextField.textProperty().get().length() == 0){
             valid = true;
             log.info("getSmtpServerName");
         }
-        if(myCb.getDatabaseURL().length() == 0){
+        if(IMAPServerNameTextField.textProperty().get().length() == 0){
+            valid = true;
+            log.info("getImapServerName");
+        }
+        if(databaseURLTextField.textProperty().get().length() == 0){
             valid = true;
             log.info("getDatabaseURL");
         }
-        if(myCb.getDatabaseUserName().length() == 0){
+        if(databaseUserNameTextField.textProperty().get().length() == 0){
             valid = true;
             log.info("getDatabaseUserName");
         }
-        if(myCb.getDatabasePassword().length() == 0){
+        if(databasePasswordField.textProperty().get().length() == 0){
             valid = true;
             log.info("getDatabasePassword");
         }

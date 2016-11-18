@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.101" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.williamngo.controllers.ConfigController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.williamngo.controllers.ConfigController">
    <center>
       <GridPane BorderPane.alignment="CENTER">
         <columnConstraints>
@@ -41,16 +41,16 @@
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Database URL" GridPane.rowIndex="7" />
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Database Username" GridPane.rowIndex="8" />
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Database Password" GridPane.rowIndex="9" />
-            <TextField id="userNameTextField" GridPane.columnIndex="1" />
-            <TextField id="SMTPServerNameTextField" promptText="e.g. smtp.gmail.com" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <TextField id="IMAPServerNameTextField" promptText="e.g. imap.gmail.com" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <TextField id="emailAddressTextField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <TextField id="SMTPPortNoTextField" promptText="e.g. 465" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-            <TextField id="IMAPPortNoTextField" promptText="e.g. 993" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-            <TextField id="databaseURLTextField" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-            <TextField id="databaseUserNameTextField" GridPane.columnIndex="1" GridPane.rowIndex="8" />
-            <PasswordField id="emailPasswordField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-            <PasswordField id="databasePasswordField" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+            <TextField id="userNameTextField" fx:id="userNameTextField" GridPane.columnIndex="1" />
+            <TextField id="SMTPServerNameTextField" fx:id="SMTPServerNameTextField" promptText="e.g. smtp.gmail.com" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField id="IMAPServerNameTextField" fx:id="IMAPServerNameTextField" promptText="e.g. imap.gmail.com" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField id="emailAddressTextField" fx:id="emailAddressTextField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField id="SMTPPortNoTextField" fx:id="SMTPPortNoTextField" promptText="e.g. 465" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <TextField id="IMAPPortNoTextField" fx:id="IMAPPortNoTextField" promptText="e.g. 993" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <TextField id="databaseURLTextField" fx:id="databaseURLTextField" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <TextField id="databaseUserNameTextField" fx:id="databaseUserNameTextField" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <PasswordField id="emailPasswordField" fx:id="emailPasswordField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <PasswordField id="databasePasswordField" fx:id="databasePasswordField" GridPane.columnIndex="1" GridPane.rowIndex="9" />
          </children>
          <padding>
             <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />

@@ -60,6 +60,7 @@ public class PropertyManager {
         }
         else{
             cb = null;
+            log.info("THE CB RETURNED IS NULL");
         }
         return cb;
     }
