@@ -271,7 +271,7 @@ public class TestDatabase {
                     + "message VARCHAR(255),\n"
                     + "html VARCHAR(255),\n"
                     + "typeFlag boolean,\n"
-                    + "receive_date date,\n"
+                    + "receive_date timestamp default current_timestamp(),\n"
                     + "folder VARCHAR(255)\n"
                     + ")ENGINE=InnoDB;";
 
@@ -299,10 +299,10 @@ public class TestDatabase {
             stmt.executeUpdate();
             
             List<String> demoEmailsQuery = new ArrayList<String>();
-            demoEmailsQuery.add("INSERT INTO emails (receiver, sender, cc, subject_text, message, html, typeFlag, receive_date, folder) VALUES ('williamngoreceive@gmail.com', 'williamngosend@gmail.com', 'shiftkun662@gmail.com', 'values present', 'Hello chicken', '', true, NOW(), 'sent');");
-            demoEmailsQuery.add("INSERT INTO emails (receiver, sender, cc, subject_text, message, html, typeFlag, receive_date, folder) VALUES ('williamngoreceive@gmail.com', 'williamngosend@gmail.com', 'shiftkun662@gmail.com', 'values present', 'Hello chicken', '', false, NOW(), 'inbox');");
-            demoEmailsQuery.add("INSERT INTO emails (receiver, sender, cc, subject_text, message, html, typeFlag, receive_date, folder) VALUES ('williamngoreceive@gmail.com', 'williamngosend@gmail.com', 'shiftkun662@gmail.com', 'my banana', 'submarine taurus', '', true, NOW(), 'sent');");
-            demoEmailsQuery.add("INSERT INTO emails (receiver, sender, cc, subject_text, message, html, typeFlag, receive_date, folder) VALUES ('williamngoreceive@gmail.com', 'williamngosend@gmail.com', 'shiftkun662@gmail.com', 'my banana', 'submarine taurus', '', false, NOW(), 'inbox');");
+            demoEmailsQuery.add("INSERT INTO emails (receiver, sender, cc, subject_text, message, html, typeFlag, receive_date, folder) VALUES ('williamngoreceive@gmail.com', 'williamngosend@gmail.com', 'shiftkun662@gmail.com', 'values present', 'Hello chicken', '', true, current_timestamp(), 'sent');");
+            demoEmailsQuery.add("INSERT INTO emails (receiver, sender, cc, subject_text, message, html, typeFlag, receive_date, folder) VALUES ('williamngoreceive@gmail.com', 'williamngosend@gmail.com', 'shiftkun662@gmail.com', 'values present', 'Hello chicken', '', false, current_timestamp(), 'inbox');");
+            demoEmailsQuery.add("INSERT INTO emails (receiver, sender, cc, subject_text, message, html, typeFlag, receive_date, folder) VALUES ('williamngoreceive@gmail.com', 'williamngosend@gmail.com', 'shiftkun662@gmail.com', 'my banana', 'submarine taurus', '', true, current_timestamp(), 'sent');");
+            demoEmailsQuery.add("INSERT INTO emails (receiver, sender, cc, subject_text, message, html, typeFlag, receive_date, folder) VALUES ('williamngoreceive@gmail.com', 'williamngosend@gmail.com', 'shiftkun662@gmail.com', 'my banana', 'submarine taurus', '', false, current_timestamp(), 'inbox');");
             for(String str : demoEmailsQuery)
             {
                 stmt = con.prepareStatement(str);

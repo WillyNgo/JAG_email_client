@@ -37,6 +37,7 @@ public class TreeController implements Initializable {
     private final Logger log = LoggerFactory.getLogger(getClass().getName());
     private JagEmailDAO jagDAO;
     private TableController tableControl;
+    private RootController rootControl;
     
     @FXML
     private BorderPane treePane;
@@ -46,6 +47,8 @@ public class TreeController implements Initializable {
     
     @FXML
     ObservableList<String> allFolders;
+    
+    
 
     /**
      * Initializes the controller class.
@@ -83,6 +86,14 @@ public class TreeController implements Initializable {
         this.tableControl = control;
         log.info("TABLE CONTROLLER HAS BEEN PASSED TO TREE CONTROLLER!");
     }
+    
+    public void setRootController(RootController rootControl){
+        this.rootControl = rootControl;
+    }
+    
+    public void enableDeleteFolderButton(){
+        rootControl.enableDeleteFolderButton();
+    }
 
     /**
      * Build the tree from the database
@@ -90,7 +101,7 @@ public class TreeController implements Initializable {
      * @throws SQLException
      */
     public void displayTree() throws SQLException {
-        // Retreive the list of fish
+        // Retreive the list of folder
         List<String> foldersList = jagDAO.getAllFolders();
         foldersTreeView.setRoot(new TreeItem(new String("Folders")));
         foldersTreeView.setCellFactory((e) -> new TreeCell<String>(){
@@ -131,7 +142,7 @@ public class TreeController implements Initializable {
         // Open the tree
         foldersTreeView.getRoot().setExpanded(true);
 
-        // Listen for selection changes and show the fishData details when changed.
+        // Listen for selection changes details when changed.
         foldersTreeView
                 .getSelectionModel()
                 .selectedItemProperty()
@@ -144,6 +155,7 @@ public class TreeController implements Initializable {
         try{
             tableControl.setFoldername(foldername);
             tableControl.displayTable();
+            rootControl.enableDeleteFolderButton();
         }
         catch(SQLException sqle){
             log.info(sqle.getMessage());

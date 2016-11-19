@@ -10,7 +10,7 @@
         <columns>
           <TableColumn fx:id="fromColumn" prefWidth="75.0" text="From" />
           <TableColumn fx:id="subjectColumn" prefWidth="75.0" text="Subject" />
-            <TableColumn fx:id="dateRecvColumn" prefWidth="118.0" text="Date Received" />
+            <TableColumn fx:id="dateRecvColumn" prefWidth="118.0" text="Date" />
         </columns>
       </TableView>
    </center>

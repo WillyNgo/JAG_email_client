@@ -64,10 +64,12 @@ public class MainApp extends Application {
         log.info("Program Begins");
         this.pm = new PropertyManager("src/main/resources");
         this.cb = pm.loadTextProperties();
+        
         // The Stage comes from the framework so make a copy to use elsewhere
         //this.primaryStage = primaryStage;
         // Create the Scene and put it on the Stage
         configureStage(primaryStage);
+        log.info("MAIN APP");
     }
 
     /**
@@ -122,6 +124,7 @@ public class MainApp extends Application {
      * @param stage 
      */
     private void showUserInterface(Stage stage) {
+        log.info("GOING INTO USERINTERFACE");
         try {
             FXMLLoader loader = null;
 
@@ -132,7 +135,7 @@ public class MainApp extends Application {
             loader.setBuilderFactory(new JavaFXBuilderFactory());
             
             Scene scene = new Scene(loader.load());
-            
+
             RootController controller = (RootController) loader.getController();
             
             stage.setTitle("Email Client");

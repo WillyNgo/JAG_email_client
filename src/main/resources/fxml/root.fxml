@@ -8,7 +8,7 @@
 <?import javafx.scene.control.ToolBar?>
 <?import javafx.scene.layout.BorderPane?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.williamngo.controllers.RootController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.williamngo.controllers.RootController">
    <top>
       <MenuBar BorderPane.alignment="CENTER">
         <menus>
@@ -35,14 +35,19 @@
          <top>
             <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
               <items>
-                <Button mnemonicParsing="false" text="Button" />
-                  <Button mnemonicParsing="false" text="Button" />
-                  <Button mnemonicParsing="false" text="Button" />
+                  <Button fx:id="newMessageButton" onAction="#clickOnNewMsg" mnemonicParsing="false" text="New Message" />
+                  <Button fx:id="replyButton" onAction="#clickOnReply" mnemonicParsing="false" text="Reply" />
+                  <Button fx:id="replyAllButton" onAction="#clickOnReplyAll" mnemonicParsing="false" text="Reply All" />
+                  <Button fx:id="deleteMessageButton" mnemonicParsing="false" text="Delete Message" />
+                  <Button fx:id="forwardButton" mnemonicParsing="false" text="Forward" />
+                  <Button fx:id="addFolderButton" mnemonicParsing="false" text="Add Folder" />
+                  <Button fx:id="deleteFolderButton" mnemonicParsing="false" text="Delete Folder" />
+                  <Button fx:id="refreshButton" mnemonicParsing="false" text="Refresh" />
               </items>
             </ToolBar>
          </top>
          <center>
-            <SplitPane dividerPositions="0.2993311036789298" prefHeight="160.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <SplitPane dividerPositions="0.289532293986637" prefHeight="160.0" prefWidth="200.0" BorderPane.alignment="CENTER">
               <items>
                   <BorderPane fx:id="treePane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" />
                   <BorderPane prefHeight="200.0" prefWidth="200.0">

@@ -48,6 +48,7 @@ public class PropertyManager {
             }
             log.info("File does exists, now going through settings");
             cb.setUserName(prop.getProperty("userName"));
+            
             cb.setEmailPassword(prop.getProperty("emailPassword"));
             cb.setEmailAddress(prop.getProperty("emailAddress"));
             cb.setSmtpServerName(prop.getProperty("smtpServerName"));
@@ -57,6 +58,7 @@ public class PropertyManager {
             cb.setDatabaseUserName(prop.getProperty("databaseUserName"));
             cb.setDatabaseURL(prop.getProperty("databaseURL"));
             cb.setDatabasePassword(prop.getProperty("databasePassword"));
+
         }
         else{
             cb = null;

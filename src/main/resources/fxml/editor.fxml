@@ -21,9 +21,9 @@
       <ToolBar maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" BorderPane.alignment="CENTER">
         <items>
           <Button fx:id="sendButton" onAction="#sendMail" minHeight="40.0" minWidth="40.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="Send" />
-          <Button fx:id="attachButton" minWidth="40.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="">
+          <Button fx:id="attachButton" onAction="#placeAttachment" minWidth="40.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="">
                <graphic>
-                  <ImageView fx:id="attachImage" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="attachImage"  fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../icons/attach.png" />
                      </image>

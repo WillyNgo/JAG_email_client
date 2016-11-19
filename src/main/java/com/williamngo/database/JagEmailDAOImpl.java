@@ -95,11 +95,13 @@ public class JagEmailDAOImpl implements JagEmailDAO {
             //Getting receive date
             
             java.util.Date date = new java.util.Date();
+            Timestamp ts;
             if(jagemail.getReceiveDate() != null)
             {   
-                date = jagemail.getReceiveDate(); 
-            }
-            Timestamp ts = new Timestamp(date.getTime());
+                date = jagemail.getReceiveDate();
+                ts = new Timestamp(date.getTime());
+            } else
+                ts = null;
             //Getting folder
             String folder = jagemail.getFolder();
             

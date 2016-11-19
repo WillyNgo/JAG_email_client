@@ -18,6 +18,7 @@ import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
@@ -37,8 +38,6 @@ public class RootController implements Initializable {
     private EditorController editorControl;
     private TableController tableControl;
     
-    private Label welcomeLabel;
-    
     private ConfigBean cb; 
     private JagEmailDAOImpl jagDAO;
     private MailerImpl mailer; 
@@ -52,6 +51,26 @@ public class RootController implements Initializable {
     @FXML
     private BorderPane editorPane;
     
+    //Buttons on the the task bar
+    @FXML
+    private Button newMessageButton;
+    @FXML
+    private Button replyButton;
+    @FXML
+    private Button replyAllButton;
+    @FXML
+    private Button deleteMessageButton;
+    @FXML
+    private Button forwardButton;
+    @FXML
+    private Button addFolderButton;
+    @FXML
+    private Button deleteFolderButton;
+    @FXML
+    private Button refreshButton;
+    
+    
+    
     
     /**
      * Initializes the controller class.
@@ -59,7 +78,9 @@ public class RootController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb){
         try{
+            log.info("BEFORE LOAD PROPERTIES ROOT INITIALIZE");
             cb = pm.loadTextProperties();
+            log.info("INITIALIZE ROOT CONTROLLER");
         }catch(IOException ioe){
             ioe.printStackTrace();
         }
@@ -67,13 +88,15 @@ public class RootController implements Initializable {
         if(cb != null){
             try{
             //Initializes the config, dao and properties
-            setUpNewRoot();showProperties();
-            //TODO: Receive Email here
+            setUpNewRoot();
             
             //Insert editor
             insertEditor();
             insertTable();
             insertTree();
+            
+            log.info("INSERTED ALL MODULES");
+            disableTaskBarButtons();
             }
             catch(IOException ioe){
                 log.info(ioe.getMessage());
@@ -82,19 +105,85 @@ public class RootController implements Initializable {
         
     }
     
+    /**
+     * Disables the buttons on the task bar until the user clicks on a certain
+     * element that interacts with the button.
+     */
+    public void disableTaskBarButtons(){
+            replyButton.setDisable(true);
+            replyAllButton.setDisable(true);
+            deleteFolderButton.setDisable(true);
+    }
+    
+    /**
+     * Enables reply and reply all button when user clicks on a message in the table
+     */
+    public void enableReplyButtons(){
+        replyButton.setDisable(false);
+        replyAllButton.setDisable(false);
+    }
+    
+    /**
+     * Enables the delete folder button when user selects a folder
+     */
+    public void enableDeleteFolderButton(){
+        try{
+            deleteFolderButton.setDisable(false);
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+    }
+    
+    /**
+     * Enables the send and attach button in the editor when use clicks on
+     * either new message or reply or reply all
+     */
+    public void enableEditorButtons(){
+        editorControl.enableEditorButtons();
+    }
+    
+    @FXML
+    public void clickOnNewMsg(){
+        //Clears input fields of the editor for a new message
+        clearInputFields();
+        enableEditorButtons();
+    }
+    
+    @FXML
+    public void clickOnReply(){
+        enableEditorButtons();
+    }
+    
+    @FXML
+    public void clickOnReplyAll(){
+        enableEditorButtons();
+    }
+    
+    @FXML
+    public void clickOnForward(){
+        enableEditorButtons();
+    }
+    
+    
+    
+    public void clearInputFields(){
+        editorControl.clearInputFields();
+    }
+    
+    
+    /**
+     * Set up new session
+     * @throws IOException 
+     */
     public void setUpNewRoot() throws IOException{
         try{
             //Setting up new config, dao and mailer
             this.cb = pm.loadTextProperties();
             this.jagDAO = new JagEmailDAOImpl(cb);
             this.mailer = new MailerImpl(cb);
+            log.info("SETTING UP NEW ROOT");
             
-            
-            /*TODO: grab emails here
-            mailer.receiveEmail();
-            
-            treeControl
-            */
         }
         catch (IOException ioe){
             log.info(ioe.getMessage());
@@ -113,6 +202,7 @@ public class RootController implements Initializable {
 
             // Give the controller the data object.
             editorControl = loader.getController();
+            editorControl.setRootController(this);
             editorControl.setMailer(mailer);
 
             editorPane.getChildren().add(bp);
@@ -132,6 +222,7 @@ public class RootController implements Initializable {
             
             treeControl.setJagEmailDAO(jagDAO);
             treeControl.setTableController(tableControl);
+            treeControl.setRootController(this);
             treeControl.displayTree();
             
             treePane.getChildren().add(bp);
@@ -150,20 +241,13 @@ public class RootController implements Initializable {
             tableControl = loader.getController();
             
             tableControl.setEditorController(editorControl);
+            tableControl.setRootController(this);
             tableControl.setJagDAO(jagDAO);
             
             tablePane.getChildren().add(bp);
         }catch(Exception e){
             e.printStackTrace();
         }
-    }
-    
-    
-    private void setWelcomeMessage(){
-        welcomeLabel = new Label();
-        Text t = new Text();
-        t.setText("Welcome " + cb.getUserName());
-        welcomeLabel.setText("WELCOME: " + cb.getUserName());
     }
     
     //DELETE THIS

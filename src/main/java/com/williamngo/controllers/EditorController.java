@@ -22,6 +22,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.web.HTMLEditor;
 import javafx.stage.DirectoryChooser;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import jodd.mail.EmailAddress;
 import jodd.mail.EmailAttachment;
@@ -40,6 +41,7 @@ public class EditorController implements Initializable {
     private final Logger log = LoggerFactory.getLogger(getClass().getName());
 
     private JagEmailDAO jagemailDAO;
+    private RootController rootControl;
 
     @FXML
     private BorderPane editorPane;
@@ -81,6 +83,10 @@ public class EditorController implements Initializable {
     public void setMailer(MailerImpl mailer){
         this.mailer = mailer;
     }
+    
+    public void setRootController(RootController rootControl){
+        this.rootControl = rootControl;
+    }
 
     /**
      * Displays the content of the email that a user clicked on the table.
@@ -88,7 +94,17 @@ public class EditorController implements Initializable {
      * @param email
      */
     public void displayEmailContent(JagEmail email) {
-
+        toTextField.setText(email.getFrom().getEmail());
+        subjectTextField.setText(email.getSubject());
+        ccTextField.setText(ccToString(email.getCc()));
+        
+        //Disable send button
+        //Disable textfields
+        
+        //Show messages
+        editor.setHtmlText(getMessageContent(email.getAllMessages()));
+        
+        //Look around attachment
     }
 
     /**
@@ -96,19 +112,32 @@ public class EditorController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        /*
-        sendButton.setVisible(false);
-        attachButton.setVisible(false);
-         */
+        disableEditorButtons();
     }
-
+    
     /**
-     * Displays content of email when user clicks on an email in the table
+     * Enables the send and attach button in the editor
      */
-    public void displayEmail() {
-        toTextField.setText(email.getFrom().getEmail());
-        ccTextField.setText(ccToString(email.getCc()));
-        subjectTextField.setText(email.getSubject());
+    public void enableEditorButtons(){
+        sendButton.setDisable(false);
+        attachButton.setDisable(false);
+    }
+    
+    /**
+     * Disables the send and attach buttons in the editor
+     */
+    
+    public void disableEditorButtons(){
+        sendButton.setDisable(true);
+        attachButton.setDisable(true);
+    }
+    
+    public void clearInputFields(){
+        toTextField.textProperty().set("");
+        subjectTextField.textProperty().set("");
+        ccTextField.textProperty().set("");
+        bccTextField.textProperty().set("");
+        editor.setHtmlText("");
     }
 
     /**
@@ -130,6 +159,8 @@ public class EditorController implements Initializable {
         for (EmailMessage em : msgList) {
             str.append(em.getContent());
         }
+        
+        
 
         result = str.toString();
 
@@ -204,13 +235,22 @@ public class EditorController implements Initializable {
         try{
             //Validate fields
             if(validateEmailFields(to, subject, cc, bcc)){
-                mailer.sendEmail(to, Optional.of(cc), Optional.of(bcc), subject, message, "", embedPath, attachPath);
-                log.info("SUCCESSFULLY SENT EMAIL");
+                
+                //Checks if message has any html content, if it does, 
+                //Switch the html parameters with the message paramters
+                if (message.matches(".*\\<[^>]+>.*")) {
+                    mailer.sendEmail(to, Optional.of(cc), Optional.of(bcc), subject, "", message, embedPath, attachPath);
+                } else {
+                    mailer.sendEmail(to, Optional.of(cc), Optional.of(bcc), subject, message, "", embedPath, attachPath);
+                }
+               log.info("SUCCESSFULLY SENT EMAIL");
             }
             else{
                 log.info("ERROR, EMAIL NOT SENT");
             }
             
+            //disables the send button after
+            disableEditorButtons();
         }
         catch(Exception e){
             e.printStackTrace();
@@ -231,7 +271,6 @@ public class EditorController implements Initializable {
         
         //Validate To field
         if(to.equals("")){
-            isValid = false;
             throw new IllegalArgumentException("Please provide a recipient");
         }
         //Determines if the email inputted is a valid email address
@@ -241,15 +280,11 @@ public class EditorController implements Initializable {
         
         //validate cc
         if(!cc.equals("")){
-            if(checkAddress(cc)){
-                isValid = false;
-            }
+            checkAddress(cc);
         }
         
         if(!bcc.equals("")){
-            if(checkAddress(bcc)){
-                isValid = false;
-            }
+            checkAddress(bcc);
         }
         
         return isValid;
@@ -260,18 +295,30 @@ public class EditorController implements Initializable {
      * @param myAddresses
      * @return 
      */
-    private boolean checkAddress(String myAddresses){
-        boolean isValid = true;
+    private void checkAddress(String myAddresses){
         String[] ccList = myAddresses.split(",");
             
         for(String CcAddress : ccList){
             EmailAddress addressToCheck = new EmailAddress(CcAddress);
             if(!addressToCheck.isValid()){
-                isValid = false;
+                throw new IllegalArgumentException("EMAIL IS NOT VALID");
             }
         }
+    }
+    
+    /**
+     * Allows user to select an attachment they would like to send
+     * and places it in the email
+     */
+    public void placeAttachment(){
+        Stage stage = new Stage();
+        FileChooser chooser = new FileChooser();
+        chooser.setTitle("Select attachment");
+        File file = chooser.showOpenDialog(stage);
         
-        return isValid;
+        if(file != null && file.exists()){
+             attachPath = file.getAbsolutePath();
+        }
     }
     
     private void saveAttachmentFromEmail(){

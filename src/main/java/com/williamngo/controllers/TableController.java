@@ -36,6 +36,7 @@ public class TableController implements Initializable {
     private JagEmailDAOImpl jagDAO;
     private String foldername;
     private EditorController editorControl;
+    private RootController rootControl;
     private JagEmail email;
     
     @FXML
@@ -67,7 +68,7 @@ public class TableController implements Initializable {
         cellData.getValue().getFrom().toString()));
         
         subjectColumn.setCellValueFactory(cellData -> new SimpleStringProperty(
-        cellData.getValue().getSubject().toString()));
+        cellData.getValue().getSubject()));
         
         dateRecvColumn.setCellValueFactory(cellData -> new SimpleStringProperty(
         cellData.getValue().getReceiveDate().toString()));
@@ -80,10 +81,20 @@ public class TableController implements Initializable {
         
     }    
     
+    /**
+     * Method is called when user clicks on an email in the table
+     * It will display 
+     * @param mail 
+     */
     public void clickOnEmail(JagEmail mail){
         email = mail;
         editorControl.setEmail(mail);
         editorControl.displayEmailContent(mail);
+        //When user clicks on new email from table, disables the send and attach
+        editorControl.disableEditorButtons();
+        //Enable the reply buttons
+        rootControl.enableReplyButtons();
+        
     }
     
     private void adjustColumnWidth(){
@@ -120,6 +131,10 @@ public class TableController implements Initializable {
     
     public void setEditorController(EditorController editorControl){
         this.editorControl = editorControl;
+    }
+    
+    public void setRootController(RootController rootControl){
+        this.rootControl = rootControl;
     }
     
     public TableView<JagEmail> getEmailsTable(){

@@ -166,7 +166,7 @@
                 <version>2.19.1</version>
                 <!-- Turn on tests: false, Turn off tests: true -->
                 <configuration>
-                    <skipTests>false</skipTests>
+                    <skipTests>true</skipTests>
                 </configuration>
             </plugin>
 
