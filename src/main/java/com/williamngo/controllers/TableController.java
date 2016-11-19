@@ -98,6 +98,8 @@ public class TableController implements Initializable {
         
     }
     
+    /*
+    TO BE USED LATER
     private void adjustColumnWidth(){
         double width = tablePane.getPrefWidth();
         
@@ -105,11 +107,19 @@ public class TableController implements Initializable {
         subjectColumn.setPrefWidth(width * .67);
         dateRecvColumn.setPrefWidth(width * .33);
     }
+    */
     
     public void displayTable() throws SQLException {
         emailsTableView.setItems(getAllEmails());
     }
     
+    
+    /**
+     * Retrieves all emails from the current selected folder
+     * and returns an observable list containing these emails
+     * @return
+     * @throws SQLException 
+     */
     private ObservableList<JagEmail> getAllEmails() throws SQLException{
         List<JagEmail> emails = this.jagDAO.retrieveEmail(foldername);
         

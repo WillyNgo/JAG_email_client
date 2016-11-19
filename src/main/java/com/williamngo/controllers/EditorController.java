@@ -104,7 +104,7 @@ public class EditorController implements Initializable {
         //Show messages
         editor.setHtmlText(getMessageContent(email.getAllMessages()));
         
-        //Look around attachment
+        //TODO: Look around attachment
     }
 
     /**
@@ -126,7 +126,6 @@ public class EditorController implements Initializable {
     /**
      * Disables the send and attach buttons in the editor
      */
-    
     public void disableEditorButtons(){
         sendButton.setDisable(true);
         attachButton.setDisable(true);
@@ -164,6 +163,10 @@ public class EditorController implements Initializable {
         ccTextField.textProperty().set(ccToString(email.getCc()));
     }
     
+    /**
+     * Fill out information for a forwarded message which is simply the content
+     * of the selected email.
+     */
     public void fillForwardInfo(){
         String prevMessage = getMessageContent(email.getAllMessages());
         editor.setHtmlText("FORWARDED MESSAGE:<br/>-------------------<br/>" + prevMessage);
@@ -353,6 +356,9 @@ public class EditorController implements Initializable {
         }
     }
     
+    /**
+     * TODO:
+     */
     private void saveAttachmentFromEmail(){
         
     }

@@ -43,6 +43,7 @@ public class MainApp extends Application {
     private JagEmailDAO jagDAO;
     private PropertyManager pm;
     private ConfigBean cb;
+    private RootController rootControl;
 
     /**
      * Constructor
@@ -65,11 +66,8 @@ public class MainApp extends Application {
         this.pm = new PropertyManager("src/main/resources");
         this.cb = pm.loadTextProperties();
         
-        // The Stage comes from the framework so make a copy to use elsewhere
-        //this.primaryStage = primaryStage;
         // Create the Scene and put it on the Stage
         configureStage(primaryStage);
-        log.info("MAIN APP");
     }
 
     /**
@@ -120,7 +118,8 @@ public class MainApp extends Application {
     }
 
     /**
-     * Shows the main application page. 
+     * Shows the main application page assuming there is already a property file
+     * in the resources
      * @param stage 
      */
     private void showUserInterface(Stage stage) {
@@ -136,7 +135,7 @@ public class MainApp extends Application {
             
             Scene scene = new Scene(loader.load());
 
-            RootController controller = (RootController) loader.getController();
+            rootControl = (RootController) loader.getController();
             
             stage.setTitle("Email Client");
             stage.setResizable(true);

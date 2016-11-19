@@ -13,17 +13,17 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.web.HTMLEditor?>
 
-<BorderPane fx:id="editorPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="401.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.williamngo.controllers.EditorController">
+<BorderPane fx:id="editorPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.williamngo.controllers.EditorController">
    <center>
       <HTMLEditor fx:id="editor" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="201.0" prefWidth="800.0" BorderPane.alignment="CENTER" />
    </center>
    <bottom>
       <ToolBar maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" BorderPane.alignment="CENTER">
         <items>
-          <Button fx:id="sendButton" onAction="#sendMail" minHeight="40.0" minWidth="40.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="Send" />
-          <Button fx:id="attachButton" onAction="#placeAttachment" minWidth="40.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="">
+          <Button fx:id="sendButton" minHeight="40.0" minWidth="40.0" mnemonicParsing="false" onAction="#sendMail" prefHeight="50.0" prefWidth="50.0" text="Send" />
+          <Button fx:id="attachButton" minWidth="40.0" mnemonicParsing="false" onAction="#placeAttachment" prefHeight="50.0" prefWidth="50.0" text="">
                <graphic>
-                  <ImageView fx:id="attachImage"  fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="attachImage" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../icons/attach.png" />
                      </image>
@@ -33,7 +33,7 @@
       </ToolBar>
    </bottom>
    <top>
-      <GridPane prefWidth="600.0" BorderPane.alignment="CENTER">
+      <GridPane prefHeight="100.0" prefWidth="600.0" BorderPane.alignment="CENTER">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="267.0" minWidth="10.0" prefWidth="228.0" />
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="455.0" minWidth="10.0" prefWidth="322.0" />

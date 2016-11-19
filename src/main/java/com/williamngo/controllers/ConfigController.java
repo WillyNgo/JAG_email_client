@@ -158,10 +158,10 @@ public class ConfigController {
 
         //Validate email address for correct format: check if there's a @ sign
         if (areFieldsEmpty(myCb)) {
-            displayError("You have empty fields");
+            displayMessageWindow("You have empty fields");
             isValid = false;
         }else{
-         //Check for others   
+         //Check for others 
         }
         return isValid;
     }
@@ -214,11 +214,14 @@ public class ConfigController {
 
     }
     
+    /**
+     * TODO:
+     */
     private void validateEmailAddress(){
         
     }
     
-    private void displayError(String msg) {
+    private void displayMessageWindow(String msg) {
         Stage stage = new Stage();
         Text t = new Text();
         t.setText(msg);
@@ -243,7 +246,8 @@ public class ConfigController {
     public void setCurrentStage(Stage stage) {
         this.stage = stage;
     }
-
+    
+    //FOR TESTING, DELETE LATER
     public void showProperties() {
         log.info("YOUR CURRENT USERNAME IS: " + cb.getUserName());
         log.info("YOUR CURRENT EMAILADDRESS IS: " + cb.getEmailAddress());
