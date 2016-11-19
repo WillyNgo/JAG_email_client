@@ -161,17 +161,23 @@ public class RootController implements Initializable {
     
     @FXML
     public void clickOnReply(){
-        enableEditorButtons();
+        editorControl.enableEditorButtons();
+        editorControl.clearInputFields();
+        editorControl.fillReplyInfo();
     }
     
     @FXML
     public void clickOnReplyAll(){
-        enableEditorButtons();
+        editorControl.enableEditorButtons();
+        editorControl.clearInputFields();
+        editorControl.fillReplyAllInfo();
     }
     
     @FXML
     public void clickOnForward(){
-        enableEditorButtons();
+        editorControl.enableEditorButtons();
+        editorControl.clearInputFields();
+        editorControl.fillForwardInfo();
     }
     
     

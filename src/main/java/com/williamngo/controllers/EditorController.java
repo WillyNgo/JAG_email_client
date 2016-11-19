@@ -132,6 +132,9 @@ public class EditorController implements Initializable {
         attachButton.setDisable(true);
     }
     
+    /**
+     * Clear input fields for user to enter new information for a new message
+     */
     public void clearInputFields(){
         toTextField.textProperty().set("");
         subjectTextField.textProperty().set("");
@@ -139,7 +142,33 @@ public class EditorController implements Initializable {
         bccTextField.textProperty().set("");
         editor.setHtmlText("");
     }
-
+    
+    /**
+     * Fill out the information needed to reply which is To, subject and the previous message
+     * appended to the new message.
+     */
+    public void fillReplyInfo(){
+        toTextField.textProperty().set(email.getFrom().getEmail());
+        subjectTextField.textProperty().set("RE: " + email.getSubject());
+        //Appends previous message to new message
+        String prevMessage = getMessageContent(email.getAllMessages());
+        editor.setHtmlText("<br/><br/><br/>-------------------<br/>" + prevMessage);
+    }
+    
+    /**
+     * Fill out the information needed to reply all. Similar to reply, but add
+     * the CC field
+     */
+    public void fillReplyAllInfo(){
+        fillReplyInfo();
+        ccTextField.textProperty().set(ccToString(email.getCc()));
+    }
+    
+    public void fillForwardInfo(){
+        String prevMessage = getMessageContent(email.getAllMessages());
+        editor.setHtmlText("FORWARDED MESSAGE:<br/>-------------------<br/>" + prevMessage);
+    }
+    
     /**
      * Get Content messages
      *
@@ -223,6 +252,9 @@ public class EditorController implements Initializable {
         }
     }
     
+    /**
+     * Validates the fields on the email and then send it
+     */
     @FXML
     public void sendMail(){
         String to = toTextField.getText();
