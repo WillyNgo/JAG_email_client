@@ -96,7 +96,8 @@ public class RootController implements Initializable {
             insertTree();
             
             log.info("INSERTED ALL MODULES");
-            disableTaskBarButtons();
+            disableMessageButtons();
+            disableDeleteFolderButton();
             }
             catch(IOException ioe){
                 log.info(ioe.getMessage());
@@ -106,33 +107,40 @@ public class RootController implements Initializable {
     }
     
     /**
-     * Disables the buttons on the task bar until the user clicks on a certain
-     * element that interacts with the button.
+     * Disables all buttons that interacts with messages when user clicks elsewhere
+     * than the table
      */
-    public void disableTaskBarButtons(){
+    public void disableMessageButtons(){
             replyButton.setDisable(true);
             replyAllButton.setDisable(true);
-            deleteFolderButton.setDisable(true);
+            forwardButton.setDisable(true);
+            deleteMessageButton.setDisable(true);
     }
     
     /**
-     * Enables reply and reply all button when user clicks on a message in the table
+     * Enables all buttons that interacts with messages
+     * when user clicks on a message in the table
      */
-    public void enableReplyButtons(){
+    public void enableMessageButtons(){
         replyButton.setDisable(false);
         replyAllButton.setDisable(false);
+        forwardButton.setDisable(false);
+        deleteMessageButton.setDisable(false);
     }
     
     /**
      * Enables the delete folder button when user selects a folder
      */
     public void enableDeleteFolderButton(){
-        try{
             deleteFolderButton.setDisable(false);
-        }
-        catch(Exception e){
-            e.printStackTrace();
-        }
+        
+    }
+    
+    /**
+     * Disables delete folder button when user clicks elsewhere than the treeView
+     */
+    public void disableDeleteFolderButton(){
+        deleteFolderButton.setDisable(true);
     }
     
     /**
@@ -148,6 +156,7 @@ public class RootController implements Initializable {
         //Clears input fields of the editor for a new message
         clearInputFields();
         enableEditorButtons();
+        disableMessageButtons();
     }
     
     @FXML

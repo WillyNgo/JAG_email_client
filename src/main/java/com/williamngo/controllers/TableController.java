@@ -92,8 +92,9 @@ public class TableController implements Initializable {
         editorControl.displayEmailContent(mail);
         //When user clicks on new email from table, disables the send and attach
         editorControl.disableEditorButtons();
-        //Enable the reply buttons
-        rootControl.enableReplyButtons();
+        //Enable the messages buttons
+        rootControl.enableMessageButtons();
+        rootControl.disableDeleteFolderButton();
         
     }
     
