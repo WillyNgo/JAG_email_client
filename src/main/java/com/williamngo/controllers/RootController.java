@@ -14,6 +14,7 @@ import com.williamngo.interfaces.MailerImpl;
 import com.williamngo.jagemail.MainApp;
 import java.io.IOException;
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -67,7 +68,7 @@ public class RootController implements Initializable {
     @FXML
     private Button deleteFolderButton;
     @FXML
-    private Button refreshButton;
+    private Button reloadButton;
     
     
     
@@ -178,6 +179,16 @@ public class RootController implements Initializable {
         editorControl.enableEditorButtons();
         editorControl.clearInputFields();
         editorControl.fillForwardInfo();
+    }
+    
+    @FXML
+    public void clickOnReload() throws SQLException{
+        tableControl.displayTable();
+    }
+    
+    @FXML
+    public void clickOnAddFolder() throws IOException{
+        treeControl.showAddFolderWindow();
     }
     
     

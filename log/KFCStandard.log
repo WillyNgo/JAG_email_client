@@ -22573,3 +22573,1038 @@ Caused by: java.lang.NullPointerException
 [INFO ] 2016-11-18 21:51:34.437 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:117) - FOLDERS ARE EMPTY
 [INFO ] 2016-11-18 21:51:34.438 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:117) - FOLDERS ARE EMPTY
 [INFO ] 2016-11-18 21:51:34.517 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.start(MainApp.java:72) - MAIN APP
+[INFO ] 2016-11-19 23:31:07.601 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:262) - dropped table with query: DROP TABLE IF EXISTS folders
+[INFO ] 2016-11-19 23:31:07.617 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:262) - dropped table with query: DROP TABLE IF EXISTS attachments;
+[INFO ] 2016-11-19 23:31:07.617 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:262) - dropped table with query: DROP TABLE IF EXISTS emails;
+[INFO ] 2016-11-19 23:31:07.706 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:310) - Inserted emails to database
+[INFO ] 2016-11-19 23:31:07.721 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:310) - Inserted emails to database
+[INFO ] 2016-11-19 23:31:07.737 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:310) - Inserted emails to database
+[INFO ] 2016-11-19 23:31:07.755 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:310) - Inserted emails to database
+[INFO ] 2016-11-19 23:31:07.755 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:320) - Inserted Folders to database
+[INFO ] 2016-11-19 23:31:07.780 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:320) - Inserted Folders to database
+[INFO ] 2016-11-19 23:31:07.780 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:322) - Database created!
+[INFO ] 2016-11-19 23:31:07.782 [main] com.williamngo.test.TestDatabase.addEmailToDatabase(TestDatabase.java:110) - adding email to database...
+[INFO ] 2016-11-19 23:31:07.921 [main] com.williamngo.database.JagEmailDAOImpl.addEmail(JagEmailDAOImpl.java:121) - Added 1 results in email table
+[INFO ] 2016-11-19 23:31:08.686 [main] com.williamngo.database.JagEmailDAOImpl.addAttachment(JagEmailDAOImpl.java:423) - Added 1 results in attachment table
+[INFO ] 2016-11-19 23:31:08.888 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:262) - dropped table with query: DROP TABLE IF EXISTS folders
+[INFO ] 2016-11-19 23:31:08.919 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:262) - dropped table with query: DROP TABLE IF EXISTS attachments;
+[INFO ] 2016-11-19 23:31:08.955 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:262) - dropped table with query: DROP TABLE IF EXISTS emails;
+[INFO ] 2016-11-19 23:31:09.087 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:310) - Inserted emails to database
+[INFO ] 2016-11-19 23:31:09.119 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:310) - Inserted emails to database
+[INFO ] 2016-11-19 23:31:09.157 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:310) - Inserted emails to database
+[INFO ] 2016-11-19 23:31:09.182 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:310) - Inserted emails to database
+[INFO ] 2016-11-19 23:31:09.207 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:320) - Inserted Folders to database
+[INFO ] 2016-11-19 23:31:09.223 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:320) - Inserted Folders to database
+[INFO ] 2016-11-19 23:31:09.223 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:322) - Database created!
+[INFO ] 2016-11-19 23:31:09.604 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:262) - dropped table with query: DROP TABLE IF EXISTS folders
+[INFO ] 2016-11-19 23:31:09.620 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:262) - dropped table with query: DROP TABLE IF EXISTS attachments;
+[INFO ] 2016-11-19 23:31:09.635 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:262) - dropped table with query: DROP TABLE IF EXISTS emails;
+[INFO ] 2016-11-19 23:31:09.713 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:310) - Inserted emails to database
+[INFO ] 2016-11-19 23:31:09.728 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:310) - Inserted emails to database
+[INFO ] 2016-11-19 23:31:09.728 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:310) - Inserted emails to database
+[INFO ] 2016-11-19 23:31:09.744 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:310) - Inserted emails to database
+[INFO ] 2016-11-19 23:31:09.761 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:320) - Inserted Folders to database
+[INFO ] 2016-11-19 23:31:09.761 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:320) - Inserted Folders to database
+[INFO ] 2016-11-19 23:31:09.777 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:322) - Database created!
+[INFO ] 2016-11-19 23:31:10.079 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:262) - dropped table with query: DROP TABLE IF EXISTS folders
+[INFO ] 2016-11-19 23:31:10.095 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:262) - dropped table with query: DROP TABLE IF EXISTS attachments;
+[INFO ] 2016-11-19 23:31:10.110 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:262) - dropped table with query: DROP TABLE IF EXISTS emails;
+[INFO ] 2016-11-19 23:31:10.179 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:310) - Inserted emails to database
+[INFO ] 2016-11-19 23:31:10.195 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:310) - Inserted emails to database
+[INFO ] 2016-11-19 23:31:10.214 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:310) - Inserted emails to database
+[INFO ] 2016-11-19 23:31:10.232 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:310) - Inserted emails to database
+[INFO ] 2016-11-19 23:31:10.263 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:320) - Inserted Folders to database
+[INFO ] 2016-11-19 23:31:10.295 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:320) - Inserted Folders to database
+[INFO ] 2016-11-19 23:31:10.295 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:322) - Database created!
+[INFO ] 2016-11-19 23:31:10.295 [main] com.williamngo.test.TestDatabase.deleteEmailFromDatabase(TestDatabase.java:149) - deleting email from database...
+[INFO ] 2016-11-19 23:31:10.363 [main] com.williamngo.database.JagEmailDAOImpl.deleteEmail(JagEmailDAOImpl.java:143) - Deleted 1 email from database
+[INFO ] 2016-11-19 23:31:10.527 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:262) - dropped table with query: DROP TABLE IF EXISTS folders
+[INFO ] 2016-11-19 23:31:10.527 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:262) - dropped table with query: DROP TABLE IF EXISTS attachments;
+[INFO ] 2016-11-19 23:31:10.543 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:262) - dropped table with query: DROP TABLE IF EXISTS emails;
+[INFO ] 2016-11-19 23:31:10.622 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:310) - Inserted emails to database
+[INFO ] 2016-11-19 23:31:10.622 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:310) - Inserted emails to database
+[INFO ] 2016-11-19 23:31:10.638 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:310) - Inserted emails to database
+[INFO ] 2016-11-19 23:31:10.638 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:310) - Inserted emails to database
+[INFO ] 2016-11-19 23:31:10.664 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:320) - Inserted Folders to database
+[INFO ] 2016-11-19 23:31:10.664 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:320) - Inserted Folders to database
+[INFO ] 2016-11-19 23:31:10.664 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:322) - Database created!
+[INFO ] 2016-11-19 23:31:10.664 [main] com.williamngo.test.TestDatabase.addEmailToDatabase(TestDatabase.java:110) - adding email to database...
+[INFO ] 2016-11-19 23:31:10.743 [main] com.williamngo.database.JagEmailDAOImpl.addEmail(JagEmailDAOImpl.java:121) - Added 1 results in email table
+[INFO ] 2016-11-19 23:31:11.480 [main] com.williamngo.database.JagEmailDAOImpl.addAttachment(JagEmailDAOImpl.java:423) - Added 1 results in attachment table
+[INFO ] 2016-11-19 23:31:11.631 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:262) - dropped table with query: DROP TABLE IF EXISTS folders
+[INFO ] 2016-11-19 23:31:11.644 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:262) - dropped table with query: DROP TABLE IF EXISTS attachments;
+[INFO ] 2016-11-19 23:31:11.656 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:262) - dropped table with query: DROP TABLE IF EXISTS emails;
+[INFO ] 2016-11-19 23:31:11.743 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:310) - Inserted emails to database
+[INFO ] 2016-11-19 23:31:11.756 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:310) - Inserted emails to database
+[INFO ] 2016-11-19 23:31:11.767 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:310) - Inserted emails to database
+[INFO ] 2016-11-19 23:31:11.778 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:310) - Inserted emails to database
+[INFO ] 2016-11-19 23:31:11.793 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:320) - Inserted Folders to database
+[INFO ] 2016-11-19 23:31:11.804 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:320) - Inserted Folders to database
+[INFO ] 2016-11-19 23:31:11.805 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:322) - Database created!
+[INFO ] 2016-11-19 23:31:11.968 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:262) - dropped table with query: DROP TABLE IF EXISTS folders
+[INFO ] 2016-11-19 23:31:11.983 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:262) - dropped table with query: DROP TABLE IF EXISTS attachments;
+[INFO ] 2016-11-19 23:31:11.995 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:262) - dropped table with query: DROP TABLE IF EXISTS emails;
+[INFO ] 2016-11-19 23:31:12.081 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:310) - Inserted emails to database
+[INFO ] 2016-11-19 23:31:12.092 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:310) - Inserted emails to database
+[INFO ] 2016-11-19 23:31:12.104 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:310) - Inserted emails to database
+[INFO ] 2016-11-19 23:31:12.116 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:310) - Inserted emails to database
+[INFO ] 2016-11-19 23:31:12.123 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:320) - Inserted Folders to database
+[INFO ] 2016-11-19 23:31:12.139 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:320) - Inserted Folders to database
+[INFO ] 2016-11-19 23:31:12.139 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:322) - Database created!
+[INFO ] 2016-11-19 23:31:12.306 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:262) - dropped table with query: DROP TABLE IF EXISTS folders
+[INFO ] 2016-11-19 23:31:12.330 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:262) - dropped table with query: DROP TABLE IF EXISTS attachments;
+[INFO ] 2016-11-19 23:31:12.345 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:262) - dropped table with query: DROP TABLE IF EXISTS emails;
+[INFO ] 2016-11-19 23:31:12.425 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:310) - Inserted emails to database
+[INFO ] 2016-11-19 23:31:12.436 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:310) - Inserted emails to database
+[INFO ] 2016-11-19 23:31:12.450 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:310) - Inserted emails to database
+[INFO ] 2016-11-19 23:31:12.463 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:310) - Inserted emails to database
+[INFO ] 2016-11-19 23:31:12.478 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:320) - Inserted Folders to database
+[INFO ] 2016-11-19 23:31:12.492 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:320) - Inserted Folders to database
+[INFO ] 2016-11-19 23:31:12.492 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:322) - Database created!
+[INFO ] 2016-11-19 23:31:12.492 [main] com.williamngo.test.TestDatabase.deleteEmailFromDatabase(TestDatabase.java:149) - deleting email from database...
+[INFO ] 2016-11-19 23:31:12.573 [main] com.williamngo.database.JagEmailDAOImpl.deleteEmail(JagEmailDAOImpl.java:143) - Deleted 1 email from database
+[INFO ] 2016-11-19 23:31:47.718 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.start(MainApp.java:65) - Program Begins
+[INFO ] 2016-11-19 23:31:47.744 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-19 23:31:47.745 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.showUserInterface(MainApp.java:126) - GOING INTO USERINTERFACE
+[INFO ] 2016-11-19 23:31:48.006 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:81) - BEFORE LOAD PROPERTIES ROOT INITIALIZE
+[INFO ] 2016-11-19 23:31:48.007 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-19 23:31:48.008 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:83) - INITIALIZE ROOT CONTROLLER
+[INFO ] 2016-11-19 23:31:48.009 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-19 23:31:48.010 [JavaFX Application Thread] com.williamngo.controllers.RootController.setUpNewRoot(RootController.java:200) - SETTING UP NEW ROOT
+[INFO ] 2016-11-19 23:31:48.853 [JavaFX Application Thread] com.williamngo.controllers.TableController.<init>(TableController.java:60) - Ok at least constructor: TableControl works
+[INFO ] 2016-11-19 23:31:48.948 [JavaFX Application Thread] com.williamngo.controllers.TreeController.setTableController(TreeController.java:87) - TABLE CONTROLLER HAS BEEN PASSED TO TREE CONTROLLER!
+[INFO ] 2016-11-19 23:31:49.230 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:98) - INSERTED ALL MODULES
+[INFO ] 2016-11-19 23:31:49.836 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:117) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-19 23:31:49.837 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:112) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-19 23:31:49.841 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:117) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-19 23:31:49.841 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:117) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-19 23:31:49.842 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:112) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-19 23:31:49.843 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:117) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-19 23:31:49.843 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:112) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-19 23:31:49.845 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:117) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-19 23:31:49.845 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:112) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-19 23:31:49.846 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:117) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-19 23:31:49.847 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:117) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-19 23:31:49.847 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:117) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-19 23:31:49.848 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:117) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-19 23:31:49.849 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:117) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-19 23:31:49.850 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:117) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-19 23:31:49.850 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:117) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-19 23:31:49.851 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:117) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-19 23:31:49.852 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:117) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-19 23:48:34.493 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.start(MainApp.java:65) - Program Begins
+[INFO ] 2016-11-19 23:48:34.501 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-19 23:48:34.502 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.showUserInterface(MainApp.java:126) - GOING INTO USERINTERFACE
+[INFO ] 2016-11-19 23:48:34.604 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:81) - BEFORE LOAD PROPERTIES ROOT INITIALIZE
+[INFO ] 2016-11-19 23:48:34.605 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-19 23:48:34.605 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:83) - INITIALIZE ROOT CONTROLLER
+[INFO ] 2016-11-19 23:48:34.605 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-19 23:48:34.607 [JavaFX Application Thread] com.williamngo.controllers.RootController.setUpNewRoot(RootController.java:200) - SETTING UP NEW ROOT
+[INFO ] 2016-11-19 23:48:34.710 [JavaFX Application Thread] com.williamngo.controllers.TableController.<init>(TableController.java:60) - Ok at least constructor: TableControl works
+[INFO ] 2016-11-19 23:48:34.745 [JavaFX Application Thread] com.williamngo.controllers.TreeController.setTableController(TreeController.java:87) - TABLE CONTROLLER HAS BEEN PASSED TO TREE CONTROLLER!
+[INFO ] 2016-11-19 23:48:35.038 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:98) - INSERTED ALL MODULES
+[INFO ] 2016-11-19 23:48:35.332 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:117) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-19 23:48:35.333 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:112) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-19 23:48:35.337 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:117) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-19 23:48:35.338 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:117) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-19 23:48:35.338 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:112) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-19 23:48:35.339 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:117) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-19 23:48:35.340 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:112) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-19 23:48:35.341 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:117) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-19 23:48:35.341 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:112) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-19 23:48:35.343 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:117) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-19 23:48:35.345 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:117) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-19 23:48:35.346 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:117) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-19 23:48:35.347 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:117) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-19 23:48:35.347 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:117) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-19 23:48:35.348 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:117) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-19 23:48:35.349 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:117) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-19 23:48:35.350 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:117) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-19 23:48:35.350 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:117) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 14:58:24.689 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:262) - dropped table with query: DROP TABLE IF EXISTS folders
+[INFO ] 2016-11-20 14:58:24.713 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:262) - dropped table with query: DROP TABLE IF EXISTS attachments;
+[INFO ] 2016-11-20 14:58:24.727 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:262) - dropped table with query: DROP TABLE IF EXISTS emails;
+[INFO ] 2016-11-20 14:58:24.819 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:310) - Inserted emails to database
+[INFO ] 2016-11-20 14:58:24.819 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:310) - Inserted emails to database
+[INFO ] 2016-11-20 14:58:24.835 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:310) - Inserted emails to database
+[INFO ] 2016-11-20 14:58:24.851 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:310) - Inserted emails to database
+[INFO ] 2016-11-20 14:58:24.866 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:320) - Inserted Folders to database
+[INFO ] 2016-11-20 14:58:24.884 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:320) - Inserted Folders to database
+[INFO ] 2016-11-20 14:58:24.884 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:322) - Database created!
+[INFO ] 2016-11-20 14:58:24.887 [main] com.williamngo.test.TestDatabase.addEmailToDatabase(TestDatabase.java:110) - adding email to database...
+[INFO ] 2016-11-20 14:58:25.004 [main] com.williamngo.database.JagEmailDAOImpl.addEmail(JagEmailDAOImpl.java:120) - Added 1 results in email table
+[INFO ] 2016-11-20 14:58:25.789 [main] com.williamngo.database.JagEmailDAOImpl.addAttachment(JagEmailDAOImpl.java:424) - Added 1 results in attachment table
+[INFO ] 2016-11-20 14:58:25.946 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:262) - dropped table with query: DROP TABLE IF EXISTS folders
+[INFO ] 2016-11-20 14:58:25.961 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:262) - dropped table with query: DROP TABLE IF EXISTS attachments;
+[INFO ] 2016-11-20 14:58:25.986 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:262) - dropped table with query: DROP TABLE IF EXISTS emails;
+[INFO ] 2016-11-20 14:58:26.059 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:310) - Inserted emails to database
+[INFO ] 2016-11-20 14:58:26.075 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:310) - Inserted emails to database
+[INFO ] 2016-11-20 14:58:26.089 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:310) - Inserted emails to database
+[INFO ] 2016-11-20 14:58:26.089 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:310) - Inserted emails to database
+[INFO ] 2016-11-20 14:58:26.117 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:320) - Inserted Folders to database
+[INFO ] 2016-11-20 14:58:26.128 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:320) - Inserted Folders to database
+[INFO ] 2016-11-20 14:58:26.128 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:322) - Database created!
+[INFO ] 2016-11-20 14:58:26.436 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:262) - dropped table with query: DROP TABLE IF EXISTS folders
+[INFO ] 2016-11-20 14:58:26.452 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:262) - dropped table with query: DROP TABLE IF EXISTS attachments;
+[INFO ] 2016-11-20 14:58:26.466 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:262) - dropped table with query: DROP TABLE IF EXISTS emails;
+[INFO ] 2016-11-20 14:58:26.536 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:310) - Inserted emails to database
+[INFO ] 2016-11-20 14:58:26.552 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:310) - Inserted emails to database
+[INFO ] 2016-11-20 14:58:26.567 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:310) - Inserted emails to database
+[INFO ] 2016-11-20 14:58:26.584 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:310) - Inserted emails to database
+[INFO ] 2016-11-20 14:58:26.589 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:320) - Inserted Folders to database
+[INFO ] 2016-11-20 14:58:26.605 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:320) - Inserted Folders to database
+[INFO ] 2016-11-20 14:58:26.605 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:322) - Database created!
+[INFO ] 2016-11-20 14:58:26.906 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:262) - dropped table with query: DROP TABLE IF EXISTS folders
+[INFO ] 2016-11-20 14:58:26.921 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:262) - dropped table with query: DROP TABLE IF EXISTS attachments;
+[INFO ] 2016-11-20 14:58:26.937 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:262) - dropped table with query: DROP TABLE IF EXISTS emails;
+[INFO ] 2016-11-20 14:58:27.012 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:310) - Inserted emails to database
+[INFO ] 2016-11-20 14:58:27.027 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:310) - Inserted emails to database
+[INFO ] 2016-11-20 14:58:27.059 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:310) - Inserted emails to database
+[INFO ] 2016-11-20 14:58:27.063 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:310) - Inserted emails to database
+[INFO ] 2016-11-20 14:58:27.089 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:320) - Inserted Folders to database
+[INFO ] 2016-11-20 14:58:27.090 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:320) - Inserted Folders to database
+[INFO ] 2016-11-20 14:58:27.090 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:322) - Database created!
+[INFO ] 2016-11-20 14:58:27.090 [main] com.williamngo.test.TestDatabase.deleteEmailFromDatabase(TestDatabase.java:149) - deleting email from database...
+[INFO ] 2016-11-20 14:58:27.176 [main] com.williamngo.database.JagEmailDAOImpl.deleteEmail(JagEmailDAOImpl.java:142) - Deleted 1 email from database
+[INFO ] 2016-11-20 14:58:27.345 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:262) - dropped table with query: DROP TABLE IF EXISTS folders
+[INFO ] 2016-11-20 14:58:27.361 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:262) - dropped table with query: DROP TABLE IF EXISTS attachments;
+[INFO ] 2016-11-20 14:58:27.378 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:262) - dropped table with query: DROP TABLE IF EXISTS emails;
+[INFO ] 2016-11-20 14:58:27.444 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:310) - Inserted emails to database
+[INFO ] 2016-11-20 14:58:27.459 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:310) - Inserted emails to database
+[INFO ] 2016-11-20 14:58:27.477 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:310) - Inserted emails to database
+[INFO ] 2016-11-20 14:58:27.487 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:310) - Inserted emails to database
+[INFO ] 2016-11-20 14:58:27.498 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:320) - Inserted Folders to database
+[INFO ] 2016-11-20 14:58:27.509 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:320) - Inserted Folders to database
+[INFO ] 2016-11-20 14:58:27.510 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:322) - Database created!
+[INFO ] 2016-11-20 14:58:27.511 [main] com.williamngo.test.TestDatabase.addEmailToDatabase(TestDatabase.java:110) - adding email to database...
+[INFO ] 2016-11-20 14:58:27.590 [main] com.williamngo.database.JagEmailDAOImpl.addEmail(JagEmailDAOImpl.java:120) - Added 1 results in email table
+[INFO ] 2016-11-20 14:58:28.274 [main] com.williamngo.database.JagEmailDAOImpl.addAttachment(JagEmailDAOImpl.java:424) - Added 1 results in attachment table
+[INFO ] 2016-11-20 14:58:28.427 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:262) - dropped table with query: DROP TABLE IF EXISTS folders
+[INFO ] 2016-11-20 14:58:28.442 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:262) - dropped table with query: DROP TABLE IF EXISTS attachments;
+[INFO ] 2016-11-20 14:58:28.461 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:262) - dropped table with query: DROP TABLE IF EXISTS emails;
+[INFO ] 2016-11-20 14:58:28.523 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:310) - Inserted emails to database
+[INFO ] 2016-11-20 14:58:28.540 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:310) - Inserted emails to database
+[INFO ] 2016-11-20 14:58:28.552 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:310) - Inserted emails to database
+[INFO ] 2016-11-20 14:58:28.566 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:310) - Inserted emails to database
+[INFO ] 2016-11-20 14:58:28.578 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:320) - Inserted Folders to database
+[INFO ] 2016-11-20 14:58:28.588 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:320) - Inserted Folders to database
+[INFO ] 2016-11-20 14:58:28.588 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:322) - Database created!
+[INFO ] 2016-11-20 14:58:28.723 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:262) - dropped table with query: DROP TABLE IF EXISTS folders
+[INFO ] 2016-11-20 14:58:28.740 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:262) - dropped table with query: DROP TABLE IF EXISTS attachments;
+[INFO ] 2016-11-20 14:58:28.746 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:262) - dropped table with query: DROP TABLE IF EXISTS emails;
+[INFO ] 2016-11-20 14:58:28.822 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:310) - Inserted emails to database
+[INFO ] 2016-11-20 14:58:28.833 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:310) - Inserted emails to database
+[INFO ] 2016-11-20 14:58:28.833 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:310) - Inserted emails to database
+[INFO ] 2016-11-20 14:58:28.849 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:310) - Inserted emails to database
+[INFO ] 2016-11-20 14:58:28.864 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:320) - Inserted Folders to database
+[INFO ] 2016-11-20 14:58:28.881 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:320) - Inserted Folders to database
+[INFO ] 2016-11-20 14:58:28.881 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:322) - Database created!
+[INFO ] 2016-11-20 14:58:29.024 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:262) - dropped table with query: DROP TABLE IF EXISTS folders
+[INFO ] 2016-11-20 14:58:29.039 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:262) - dropped table with query: DROP TABLE IF EXISTS attachments;
+[INFO ] 2016-11-20 14:58:29.062 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:262) - dropped table with query: DROP TABLE IF EXISTS emails;
+[INFO ] 2016-11-20 14:58:29.111 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:310) - Inserted emails to database
+[INFO ] 2016-11-20 14:58:29.127 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:310) - Inserted emails to database
+[INFO ] 2016-11-20 14:58:29.143 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:310) - Inserted emails to database
+[INFO ] 2016-11-20 14:58:29.163 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:310) - Inserted emails to database
+[INFO ] 2016-11-20 14:58:29.163 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:320) - Inserted Folders to database
+[INFO ] 2016-11-20 14:58:29.187 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:320) - Inserted Folders to database
+[INFO ] 2016-11-20 14:58:29.188 [main] com.williamngo.test.TestDatabase.createDatabase(TestDatabase.java:322) - Database created!
+[INFO ] 2016-11-20 14:58:29.188 [main] com.williamngo.test.TestDatabase.deleteEmailFromDatabase(TestDatabase.java:149) - deleting email from database...
+[INFO ] 2016-11-20 14:58:29.270 [main] com.williamngo.database.JagEmailDAOImpl.deleteEmail(JagEmailDAOImpl.java:142) - Deleted 1 email from database
+[INFO ] 2016-11-20 14:58:48.197 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.start(MainApp.java:65) - Program Begins
+[INFO ] 2016-11-20 14:58:48.206 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 14:58:48.207 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.showUserInterface(MainApp.java:126) - GOING INTO USERINTERFACE
+[INFO ] 2016-11-20 14:58:48.320 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:82) - BEFORE LOAD PROPERTIES ROOT INITIALIZE
+[INFO ] 2016-11-20 14:58:48.321 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 14:58:48.321 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:84) - INITIALIZE ROOT CONTROLLER
+[INFO ] 2016-11-20 14:58:48.322 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 14:58:48.323 [JavaFX Application Thread] com.williamngo.controllers.RootController.setUpNewRoot(RootController.java:211) - SETTING UP NEW ROOT
+[INFO ] 2016-11-20 14:58:48.574 [JavaFX Application Thread] com.williamngo.controllers.TableController.<init>(TableController.java:60) - Ok at least constructor: TableControl works
+[INFO ] 2016-11-20 14:58:48.673 [JavaFX Application Thread] com.williamngo.controllers.TreeController.setTableController(TreeController.java:93) - TABLE CONTROLLER HAS BEEN PASSED TO TREE CONTROLLER!
+[INFO ] 2016-11-20 14:58:48.970 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:99) - INSERTED ALL MODULES
+[INFO ] 2016-11-20 14:58:49.261 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:123) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 14:58:49.262 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:118) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 14:58:49.266 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:123) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 14:58:49.267 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:123) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 14:58:49.267 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:118) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 14:58:49.269 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:123) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 14:58:49.269 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:118) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 14:58:49.270 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:123) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 14:58:49.271 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:118) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 14:58:49.272 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:123) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 14:58:49.273 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:123) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 14:58:49.274 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:123) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 14:58:49.274 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:123) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 14:58:49.275 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:123) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 14:58:49.276 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:123) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 14:58:49.277 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:123) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 14:58:49.277 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:123) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 14:58:49.278 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:123) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:03:24.469 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.start(MainApp.java:65) - Program Begins
+[INFO ] 2016-11-20 15:03:24.478 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 15:03:24.479 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.showUserInterface(MainApp.java:126) - GOING INTO USERINTERFACE
+[INFO ] 2016-11-20 15:03:24.580 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:82) - BEFORE LOAD PROPERTIES ROOT INITIALIZE
+[INFO ] 2016-11-20 15:03:24.581 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 15:03:24.581 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:84) - INITIALIZE ROOT CONTROLLER
+[INFO ] 2016-11-20 15:03:24.582 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 15:03:24.583 [JavaFX Application Thread] com.williamngo.controllers.RootController.setUpNewRoot(RootController.java:211) - SETTING UP NEW ROOT
+[INFO ] 2016-11-20 15:03:24.688 [JavaFX Application Thread] com.williamngo.controllers.TableController.<init>(TableController.java:60) - Ok at least constructor: TableControl works
+[INFO ] 2016-11-20 15:03:24.724 [JavaFX Application Thread] com.williamngo.controllers.TreeController.setTableController(TreeController.java:94) - TABLE CONTROLLER HAS BEEN PASSED TO TREE CONTROLLER!
+[INFO ] 2016-11-20 15:03:25.018 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:99) - INSERTED ALL MODULES
+[INFO ] 2016-11-20 15:03:25.322 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:124) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:03:25.323 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:119) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 15:03:25.328 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:124) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:03:25.329 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:124) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:03:25.329 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:119) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 15:03:25.330 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:124) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:03:25.330 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:119) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 15:03:25.332 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:124) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:03:25.332 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:119) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 15:03:25.334 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:124) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:03:25.335 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:124) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:03:25.336 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:124) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:03:25.337 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:124) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:03:25.338 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:124) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:03:25.339 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:124) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:03:25.340 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:124) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:03:25.341 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:124) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:03:25.342 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:124) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:03:37.073 [JavaFX Application Thread] com.williamngo.database.JagEmailDAOImpl.addFolder(JagEmailDAOImpl.java:305) - Added 1 folder into folders table.
+[INFO ] 2016-11-20 15:03:37.073 [JavaFX Application Thread] com.williamngo.controllers.TreeController$2.handle(TreeController.java:189) - SUCCESSFULLY ADDED NEW FOLDER
+[INFO ] 2016-11-20 15:04:02.011 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.start(MainApp.java:65) - Program Begins
+[INFO ] 2016-11-20 15:04:02.020 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 15:04:02.021 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.showUserInterface(MainApp.java:126) - GOING INTO USERINTERFACE
+[INFO ] 2016-11-20 15:04:02.124 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:82) - BEFORE LOAD PROPERTIES ROOT INITIALIZE
+[INFO ] 2016-11-20 15:04:02.125 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 15:04:02.125 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:84) - INITIALIZE ROOT CONTROLLER
+[INFO ] 2016-11-20 15:04:02.126 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 15:04:02.127 [JavaFX Application Thread] com.williamngo.controllers.RootController.setUpNewRoot(RootController.java:211) - SETTING UP NEW ROOT
+[INFO ] 2016-11-20 15:04:02.232 [JavaFX Application Thread] com.williamngo.controllers.TableController.<init>(TableController.java:60) - Ok at least constructor: TableControl works
+[INFO ] 2016-11-20 15:04:02.268 [JavaFX Application Thread] com.williamngo.controllers.TreeController.setTableController(TreeController.java:94) - TABLE CONTROLLER HAS BEEN PASSED TO TREE CONTROLLER!
+[INFO ] 2016-11-20 15:04:02.598 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:99) - INSERTED ALL MODULES
+[INFO ] 2016-11-20 15:04:02.903 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:124) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:04:02.904 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:119) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 15:04:02.908 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:124) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:04:02.908 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:124) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:04:02.909 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:119) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 15:04:02.910 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:124) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:04:02.910 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:119) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 15:04:02.911 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:124) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:04:02.911 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:119) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 15:04:02.912 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:124) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:04:02.913 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:119) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 15:04:02.913 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:124) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:04:02.915 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:124) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:04:02.916 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:124) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:04:02.916 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:124) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:19:38.311 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.start(MainApp.java:65) - Program Begins
+[INFO ] 2016-11-20 15:19:38.399 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 15:19:38.400 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.showUserInterface(MainApp.java:126) - GOING INTO USERINTERFACE
+[INFO ] 2016-11-20 15:19:38.502 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:82) - BEFORE LOAD PROPERTIES ROOT INITIALIZE
+[INFO ] 2016-11-20 15:19:38.503 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 15:19:38.503 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:84) - INITIALIZE ROOT CONTROLLER
+[INFO ] 2016-11-20 15:19:38.504 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 15:19:38.505 [JavaFX Application Thread] com.williamngo.controllers.RootController.setUpNewRoot(RootController.java:211) - SETTING UP NEW ROOT
+[INFO ] 2016-11-20 15:19:38.610 [JavaFX Application Thread] com.williamngo.controllers.TableController.<init>(TableController.java:60) - Ok at least constructor: TableControl works
+[INFO ] 2016-11-20 15:19:38.646 [JavaFX Application Thread] com.williamngo.controllers.TreeController.setTableController(TreeController.java:100) - TABLE CONTROLLER HAS BEEN PASSED TO TREE CONTROLLER!
+[INFO ] 2016-11-20 15:19:38.954 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:99) - INSERTED ALL MODULES
+[INFO ] 2016-11-20 15:19:39.253 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:19:39.254 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:125) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 15:19:39.258 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:19:39.258 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:19:39.258 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:125) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 15:19:39.260 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:19:39.260 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:125) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 15:19:39.262 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:19:39.262 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:125) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 15:19:39.264 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:19:39.264 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:125) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 15:19:39.265 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:19:39.267 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:19:39.268 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:19:39.268 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:20:30.813 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.start(MainApp.java:65) - Program Begins
+[INFO ] 2016-11-20 15:20:30.822 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 15:20:30.823 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.showUserInterface(MainApp.java:126) - GOING INTO USERINTERFACE
+[INFO ] 2016-11-20 15:20:30.926 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:82) - BEFORE LOAD PROPERTIES ROOT INITIALIZE
+[INFO ] 2016-11-20 15:20:30.927 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 15:20:30.927 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:84) - INITIALIZE ROOT CONTROLLER
+[INFO ] 2016-11-20 15:20:30.928 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 15:20:30.929 [JavaFX Application Thread] com.williamngo.controllers.RootController.setUpNewRoot(RootController.java:211) - SETTING UP NEW ROOT
+[INFO ] 2016-11-20 15:20:31.031 [JavaFX Application Thread] com.williamngo.controllers.TableController.<init>(TableController.java:60) - Ok at least constructor: TableControl works
+[INFO ] 2016-11-20 15:20:31.067 [JavaFX Application Thread] com.williamngo.controllers.TreeController.setTableController(TreeController.java:100) - TABLE CONTROLLER HAS BEEN PASSED TO TREE CONTROLLER!
+[INFO ] 2016-11-20 15:20:31.402 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:99) - INSERTED ALL MODULES
+[INFO ] 2016-11-20 15:20:31.746 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:20:31.747 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:125) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 15:20:31.751 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:20:31.751 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:20:31.752 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:125) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 15:20:31.753 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:20:31.754 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:125) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 15:20:31.755 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:20:31.755 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:125) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 15:20:31.757 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:20:31.757 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:125) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 15:20:31.758 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:20:31.760 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:20:31.760 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:20:31.761 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:23:45.932 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.start(MainApp.java:65) - Program Begins
+[INFO ] 2016-11-20 15:23:45.941 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 15:23:45.942 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.showUserInterface(MainApp.java:126) - GOING INTO USERINTERFACE
+[INFO ] 2016-11-20 15:23:46.054 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:82) - BEFORE LOAD PROPERTIES ROOT INITIALIZE
+[INFO ] 2016-11-20 15:23:46.055 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 15:23:46.055 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:84) - INITIALIZE ROOT CONTROLLER
+[INFO ] 2016-11-20 15:23:46.056 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 15:23:46.058 [JavaFX Application Thread] com.williamngo.controllers.RootController.setUpNewRoot(RootController.java:211) - SETTING UP NEW ROOT
+[INFO ] 2016-11-20 15:23:46.180 [JavaFX Application Thread] com.williamngo.controllers.TableController.<init>(TableController.java:60) - Ok at least constructor: TableControl works
+[INFO ] 2016-11-20 15:23:46.221 [JavaFX Application Thread] com.williamngo.controllers.TreeController.setTableController(TreeController.java:100) - TABLE CONTROLLER HAS BEEN PASSED TO TREE CONTROLLER!
+[INFO ] 2016-11-20 15:23:46.531 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:99) - INSERTED ALL MODULES
+[INFO ] 2016-11-20 15:23:46.861 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:23:46.862 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:125) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 15:23:46.867 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:23:46.868 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:23:46.868 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:125) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 15:23:46.870 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:23:46.871 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:125) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 15:23:46.872 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:23:46.873 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:125) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 15:23:46.874 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:23:46.875 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:125) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 15:23:46.876 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:23:46.878 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:23:46.878 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:23:46.879 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:24:37.411 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.start(MainApp.java:65) - Program Begins
+[INFO ] 2016-11-20 15:24:37.420 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 15:24:37.421 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.showUserInterface(MainApp.java:126) - GOING INTO USERINTERFACE
+[INFO ] 2016-11-20 15:24:37.524 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:82) - BEFORE LOAD PROPERTIES ROOT INITIALIZE
+[INFO ] 2016-11-20 15:24:37.524 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 15:24:37.525 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:84) - INITIALIZE ROOT CONTROLLER
+[INFO ] 2016-11-20 15:24:37.525 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 15:24:37.527 [JavaFX Application Thread] com.williamngo.controllers.RootController.setUpNewRoot(RootController.java:211) - SETTING UP NEW ROOT
+[INFO ] 2016-11-20 15:24:37.633 [JavaFX Application Thread] com.williamngo.controllers.TableController.<init>(TableController.java:60) - Ok at least constructor: TableControl works
+[INFO ] 2016-11-20 15:24:37.670 [JavaFX Application Thread] com.williamngo.controllers.TreeController.setTableController(TreeController.java:100) - TABLE CONTROLLER HAS BEEN PASSED TO TREE CONTROLLER!
+[INFO ] 2016-11-20 15:24:37.991 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:99) - INSERTED ALL MODULES
+[INFO ] 2016-11-20 15:24:38.288 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:24:38.289 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:125) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 15:24:38.293 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:24:38.293 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:24:38.294 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:125) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 15:24:38.295 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:24:38.296 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:125) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 15:24:38.297 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:24:38.297 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:125) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 15:24:38.298 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:24:38.298 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:125) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 15:24:38.299 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:24:38.300 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:24:38.300 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:24:38.301 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:24:42.147 [JavaFX Application Thread] com.williamngo.controllers.TreeController.addFolder(TreeController.java:196) - FOLDER NAME IS: adf
+[INFO ] 2016-11-20 15:25:46.380 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.start(MainApp.java:65) - Program Begins
+[INFO ] 2016-11-20 15:25:46.389 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 15:25:46.390 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.showUserInterface(MainApp.java:126) - GOING INTO USERINTERFACE
+[INFO ] 2016-11-20 15:25:46.492 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:82) - BEFORE LOAD PROPERTIES ROOT INITIALIZE
+[INFO ] 2016-11-20 15:25:46.493 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 15:25:46.493 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:84) - INITIALIZE ROOT CONTROLLER
+[INFO ] 2016-11-20 15:25:46.494 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 15:25:46.496 [JavaFX Application Thread] com.williamngo.controllers.RootController.setUpNewRoot(RootController.java:211) - SETTING UP NEW ROOT
+[INFO ] 2016-11-20 15:25:46.599 [JavaFX Application Thread] com.williamngo.controllers.TableController.<init>(TableController.java:60) - Ok at least constructor: TableControl works
+[INFO ] 2016-11-20 15:25:46.635 [JavaFX Application Thread] com.williamngo.controllers.TreeController.setTableController(TreeController.java:100) - TABLE CONTROLLER HAS BEEN PASSED TO TREE CONTROLLER!
+[INFO ] 2016-11-20 15:25:46.929 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:99) - INSERTED ALL MODULES
+[INFO ] 2016-11-20 15:25:47.233 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:25:47.235 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:125) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 15:25:47.240 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:25:47.240 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:25:47.241 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:125) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 15:25:47.242 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:25:47.243 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:125) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 15:25:47.244 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:25:47.244 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:125) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 15:25:47.246 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:25:47.247 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:125) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 15:25:47.248 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:25:47.249 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:25:47.250 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:25:47.251 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:25:52.173 [JavaFX Application Thread] com.williamngo.controllers.TreeController.addFolder(TreeController.java:196) - FOLDER NAME IS: newfolder
+[INFO ] 2016-11-20 15:26:38.496 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.start(MainApp.java:65) - Program Begins
+[INFO ] 2016-11-20 15:26:38.505 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 15:26:38.505 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.showUserInterface(MainApp.java:126) - GOING INTO USERINTERFACE
+[INFO ] 2016-11-20 15:26:38.614 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:82) - BEFORE LOAD PROPERTIES ROOT INITIALIZE
+[INFO ] 2016-11-20 15:26:38.615 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 15:26:38.615 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:84) - INITIALIZE ROOT CONTROLLER
+[INFO ] 2016-11-20 15:26:38.615 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 15:26:38.617 [JavaFX Application Thread] com.williamngo.controllers.RootController.setUpNewRoot(RootController.java:211) - SETTING UP NEW ROOT
+[INFO ] 2016-11-20 15:26:38.723 [JavaFX Application Thread] com.williamngo.controllers.TableController.<init>(TableController.java:60) - Ok at least constructor: TableControl works
+[INFO ] 2016-11-20 15:26:38.763 [JavaFX Application Thread] com.williamngo.controllers.TreeController.setTableController(TreeController.java:100) - TABLE CONTROLLER HAS BEEN PASSED TO TREE CONTROLLER!
+[INFO ] 2016-11-20 15:26:39.058 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:99) - INSERTED ALL MODULES
+[INFO ] 2016-11-20 15:26:39.355 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:26:39.357 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:125) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 15:26:39.361 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:26:39.361 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:26:39.362 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:125) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 15:26:39.363 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:26:39.363 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:125) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 15:26:39.364 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:26:39.364 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:125) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 15:26:39.365 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:26:39.366 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:125) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 15:26:39.367 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:26:39.368 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:26:39.369 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:26:39.370 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:26:47.428 [JavaFX Application Thread] com.williamngo.controllers.TreeController.addFolder(TreeController.java:196) - FOLDER NAME IS: new
+[INFO ] 2016-11-20 15:28:02.968 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.start(MainApp.java:65) - Program Begins
+[INFO ] 2016-11-20 15:28:02.977 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 15:28:02.978 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.showUserInterface(MainApp.java:126) - GOING INTO USERINTERFACE
+[INFO ] 2016-11-20 15:28:03.100 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:82) - BEFORE LOAD PROPERTIES ROOT INITIALIZE
+[INFO ] 2016-11-20 15:28:03.101 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 15:28:03.101 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:84) - INITIALIZE ROOT CONTROLLER
+[INFO ] 2016-11-20 15:28:03.103 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 15:28:03.106 [JavaFX Application Thread] com.williamngo.controllers.RootController.setUpNewRoot(RootController.java:211) - SETTING UP NEW ROOT
+[INFO ] 2016-11-20 15:28:03.218 [JavaFX Application Thread] com.williamngo.controllers.TableController.<init>(TableController.java:60) - Ok at least constructor: TableControl works
+[INFO ] 2016-11-20 15:28:03.255 [JavaFX Application Thread] com.williamngo.controllers.TreeController.setTableController(TreeController.java:100) - TABLE CONTROLLER HAS BEEN PASSED TO TREE CONTROLLER!
+[INFO ] 2016-11-20 15:28:03.548 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:99) - INSERTED ALL MODULES
+[INFO ] 2016-11-20 15:28:03.907 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:28:03.907 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:125) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 15:28:03.911 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:28:03.912 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:28:03.912 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:125) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 15:28:03.913 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:28:03.913 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:125) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 15:28:03.914 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:28:03.915 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:125) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 15:28:03.916 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:28:03.917 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:125) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 15:28:03.918 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:28:03.920 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:28:03.921 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:28:03.922 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:28:09.566 [JavaFX Application Thread] com.williamngo.controllers.TreeController.addFolder(TreeController.java:196) - FOLDER NAME IS: new
+[INFO ] 2016-11-20 15:28:17.376 [JavaFX Application Thread] com.williamngo.controllers.TreeController.addFolder(TreeController.java:196) - FOLDER NAME IS: new
+[INFO ] 2016-11-20 15:31:05.880 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.start(MainApp.java:65) - Program Begins
+[INFO ] 2016-11-20 15:31:05.889 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 15:31:05.889 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.showUserInterface(MainApp.java:126) - GOING INTO USERINTERFACE
+[INFO ] 2016-11-20 15:31:05.991 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:82) - BEFORE LOAD PROPERTIES ROOT INITIALIZE
+[INFO ] 2016-11-20 15:31:05.992 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 15:31:05.993 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:84) - INITIALIZE ROOT CONTROLLER
+[INFO ] 2016-11-20 15:31:05.993 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 15:31:05.995 [JavaFX Application Thread] com.williamngo.controllers.RootController.setUpNewRoot(RootController.java:211) - SETTING UP NEW ROOT
+[INFO ] 2016-11-20 15:31:06.102 [JavaFX Application Thread] com.williamngo.controllers.TableController.<init>(TableController.java:60) - Ok at least constructor: TableControl works
+[INFO ] 2016-11-20 15:31:06.137 [JavaFX Application Thread] com.williamngo.controllers.TreeController.setTableController(TreeController.java:100) - TABLE CONTROLLER HAS BEEN PASSED TO TREE CONTROLLER!
+[INFO ] 2016-11-20 15:31:06.438 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:99) - INSERTED ALL MODULES
+[INFO ] 2016-11-20 15:31:06.753 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:31:06.754 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:125) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 15:31:06.757 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:31:06.758 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:31:06.758 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:125) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 15:31:06.760 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:31:06.760 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:125) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 15:31:06.761 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:31:06.762 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:125) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 15:31:06.763 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:31:06.763 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:125) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 15:31:06.764 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:31:06.765 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:31:06.766 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:31:06.767 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:31:16.823 [JavaFX Application Thread] com.williamngo.controllers.TreeController.addFolder(TreeController.java:196) - FOLDER NAME IS: new
+[INFO ] 2016-11-20 15:33:17.726 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.start(MainApp.java:65) - Program Begins
+[INFO ] 2016-11-20 15:33:17.735 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 15:33:17.735 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.showUserInterface(MainApp.java:126) - GOING INTO USERINTERFACE
+[INFO ] 2016-11-20 15:33:17.836 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:82) - BEFORE LOAD PROPERTIES ROOT INITIALIZE
+[INFO ] 2016-11-20 15:33:17.837 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 15:33:17.837 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:84) - INITIALIZE ROOT CONTROLLER
+[INFO ] 2016-11-20 15:33:17.838 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 15:33:17.839 [JavaFX Application Thread] com.williamngo.controllers.RootController.setUpNewRoot(RootController.java:211) - SETTING UP NEW ROOT
+[INFO ] 2016-11-20 15:33:17.943 [JavaFX Application Thread] com.williamngo.controllers.TableController.<init>(TableController.java:60) - Ok at least constructor: TableControl works
+[INFO ] 2016-11-20 15:33:17.978 [JavaFX Application Thread] com.williamngo.controllers.TreeController.setTableController(TreeController.java:100) - TABLE CONTROLLER HAS BEEN PASSED TO TREE CONTROLLER!
+[INFO ] 2016-11-20 15:33:18.287 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:99) - INSERTED ALL MODULES
+[INFO ] 2016-11-20 15:33:18.583 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:33:18.584 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:125) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 15:33:18.588 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:33:18.589 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:33:18.589 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:125) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 15:33:18.590 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:33:18.590 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:125) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 15:33:18.592 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:33:18.592 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:125) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 15:33:18.593 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:33:18.593 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:125) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 15:33:18.594 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:33:18.596 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:33:18.597 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:33:18.598 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:33:23.330 [JavaFX Application Thread] com.williamngo.controllers.TreeController.addFolder(TreeController.java:196) - FOLDER NAME IS: new
+[INFO ] 2016-11-20 15:34:05.197 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.start(MainApp.java:65) - Program Begins
+[INFO ] 2016-11-20 15:34:05.206 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 15:34:05.207 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.showUserInterface(MainApp.java:126) - GOING INTO USERINTERFACE
+[INFO ] 2016-11-20 15:34:05.308 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:82) - BEFORE LOAD PROPERTIES ROOT INITIALIZE
+[INFO ] 2016-11-20 15:34:05.309 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 15:34:05.309 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:84) - INITIALIZE ROOT CONTROLLER
+[INFO ] 2016-11-20 15:34:05.310 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 15:34:05.311 [JavaFX Application Thread] com.williamngo.controllers.RootController.setUpNewRoot(RootController.java:211) - SETTING UP NEW ROOT
+[INFO ] 2016-11-20 15:34:05.416 [JavaFX Application Thread] com.williamngo.controllers.TableController.<init>(TableController.java:60) - Ok at least constructor: TableControl works
+[INFO ] 2016-11-20 15:34:05.453 [JavaFX Application Thread] com.williamngo.controllers.TreeController.setTableController(TreeController.java:100) - TABLE CONTROLLER HAS BEEN PASSED TO TREE CONTROLLER!
+[INFO ] 2016-11-20 15:34:05.752 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:99) - INSERTED ALL MODULES
+[INFO ] 2016-11-20 15:34:06.054 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:34:06.055 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:125) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 15:34:06.058 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:34:06.059 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:34:06.059 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:125) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 15:34:06.061 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:34:06.061 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:125) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 15:34:06.062 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:34:06.063 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:125) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 15:34:06.064 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:34:06.064 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:125) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 15:34:06.065 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:34:06.066 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:34:06.067 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:34:06.068 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:34:11.513 [JavaFX Application Thread] com.williamngo.controllers.TreeController.addFolder(TreeController.java:196) - FOLDER NAME IS: new
+[INFO ] 2016-11-20 15:34:23.211 [JavaFX Application Thread] com.williamngo.controllers.TreeController.addFolder(TreeController.java:196) - FOLDER NAME IS: new
+[INFO ] 2016-11-20 15:34:43.782 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.start(MainApp.java:65) - Program Begins
+[INFO ] 2016-11-20 15:34:43.791 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 15:34:43.792 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.showUserInterface(MainApp.java:126) - GOING INTO USERINTERFACE
+[INFO ] 2016-11-20 15:34:43.894 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:82) - BEFORE LOAD PROPERTIES ROOT INITIALIZE
+[INFO ] 2016-11-20 15:34:43.895 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 15:34:43.895 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:84) - INITIALIZE ROOT CONTROLLER
+[INFO ] 2016-11-20 15:34:43.896 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 15:34:43.897 [JavaFX Application Thread] com.williamngo.controllers.RootController.setUpNewRoot(RootController.java:211) - SETTING UP NEW ROOT
+[INFO ] 2016-11-20 15:34:44.003 [JavaFX Application Thread] com.williamngo.controllers.TableController.<init>(TableController.java:60) - Ok at least constructor: TableControl works
+[INFO ] 2016-11-20 15:34:44.040 [JavaFX Application Thread] com.williamngo.controllers.TreeController.setTableController(TreeController.java:100) - TABLE CONTROLLER HAS BEEN PASSED TO TREE CONTROLLER!
+[INFO ] 2016-11-20 15:34:44.332 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:99) - INSERTED ALL MODULES
+[INFO ] 2016-11-20 15:34:44.627 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:34:44.628 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:125) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 15:34:44.633 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:34:44.633 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:34:44.634 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:125) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 15:34:44.635 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:34:44.636 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:125) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 15:34:44.637 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:34:44.638 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:125) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 15:34:44.639 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:34:44.640 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:125) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 15:34:44.640 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:34:44.641 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:34:44.643 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:34:44.644 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:34:48.661 [JavaFX Application Thread] com.williamngo.controllers.TreeController.addFolder(TreeController.java:196) - FOLDER NAME IS: new
+[INFO ] 2016-11-20 15:37:02.638 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.start(MainApp.java:65) - Program Begins
+[INFO ] 2016-11-20 15:37:02.647 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 15:37:02.647 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.showUserInterface(MainApp.java:126) - GOING INTO USERINTERFACE
+[INFO ] 2016-11-20 15:37:02.758 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:82) - BEFORE LOAD PROPERTIES ROOT INITIALIZE
+[INFO ] 2016-11-20 15:37:02.758 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 15:37:02.759 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:84) - INITIALIZE ROOT CONTROLLER
+[INFO ] 2016-11-20 15:37:02.759 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 15:37:02.761 [JavaFX Application Thread] com.williamngo.controllers.RootController.setUpNewRoot(RootController.java:211) - SETTING UP NEW ROOT
+[INFO ] 2016-11-20 15:37:02.866 [JavaFX Application Thread] com.williamngo.controllers.TableController.<init>(TableController.java:60) - Ok at least constructor: TableControl works
+[INFO ] 2016-11-20 15:37:02.904 [JavaFX Application Thread] com.williamngo.controllers.TreeController.setTableController(TreeController.java:100) - TABLE CONTROLLER HAS BEEN PASSED TO TREE CONTROLLER!
+[INFO ] 2016-11-20 15:37:03.188 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:99) - INSERTED ALL MODULES
+[INFO ] 2016-11-20 15:37:03.488 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:37:03.489 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:125) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 15:37:03.493 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:37:03.494 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:37:03.494 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:125) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 15:37:03.495 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:37:03.495 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:125) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 15:37:03.497 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:37:03.497 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:125) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 15:37:03.498 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:37:03.499 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:125) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 15:37:03.500 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:37:03.502 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:37:03.502 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:37:03.503 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:37:08.129 [JavaFX Application Thread] com.williamngo.controllers.TreeController.addFolder(TreeController.java:196) - FOLDER NAME IS: new
+[INFO ] 2016-11-20 15:45:25.642 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.start(MainApp.java:65) - Program Begins
+[INFO ] 2016-11-20 15:45:25.651 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 15:45:25.651 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.showUserInterface(MainApp.java:126) - GOING INTO USERINTERFACE
+[INFO ] 2016-11-20 15:45:25.756 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:82) - BEFORE LOAD PROPERTIES ROOT INITIALIZE
+[INFO ] 2016-11-20 15:45:25.757 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 15:45:25.757 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:84) - INITIALIZE ROOT CONTROLLER
+[INFO ] 2016-11-20 15:45:25.757 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 15:45:25.759 [JavaFX Application Thread] com.williamngo.controllers.RootController.setUpNewRoot(RootController.java:211) - SETTING UP NEW ROOT
+[INFO ] 2016-11-20 15:45:25.866 [JavaFX Application Thread] com.williamngo.controllers.TableController.<init>(TableController.java:60) - Ok at least constructor: TableControl works
+[INFO ] 2016-11-20 15:45:25.901 [JavaFX Application Thread] com.williamngo.controllers.TreeController.setTableController(TreeController.java:102) - TABLE CONTROLLER HAS BEEN PASSED TO TREE CONTROLLER!
+[INFO ] 2016-11-20 15:45:26.233 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:99) - INSERTED ALL MODULES
+[INFO ] 2016-11-20 15:45:26.537 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:131) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:45:26.538 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:127) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 15:45:26.542 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:131) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:45:26.542 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:131) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:45:26.543 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:127) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 15:45:26.544 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:131) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:45:26.545 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:127) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 15:45:26.546 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:131) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:45:26.546 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:127) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 15:45:26.547 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:131) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:45:26.547 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:127) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 15:45:26.548 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:131) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:45:26.549 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:131) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:45:26.550 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:131) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:45:26.550 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:131) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:45:55.188 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.start(MainApp.java:65) - Program Begins
+[INFO ] 2016-11-20 15:45:55.197 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 15:45:55.197 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.showUserInterface(MainApp.java:126) - GOING INTO USERINTERFACE
+[INFO ] 2016-11-20 15:45:55.302 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:82) - BEFORE LOAD PROPERTIES ROOT INITIALIZE
+[INFO ] 2016-11-20 15:45:55.303 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 15:45:55.303 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:84) - INITIALIZE ROOT CONTROLLER
+[INFO ] 2016-11-20 15:45:55.304 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 15:45:55.305 [JavaFX Application Thread] com.williamngo.controllers.RootController.setUpNewRoot(RootController.java:211) - SETTING UP NEW ROOT
+[INFO ] 2016-11-20 15:45:55.413 [JavaFX Application Thread] com.williamngo.controllers.TableController.<init>(TableController.java:60) - Ok at least constructor: TableControl works
+[INFO ] 2016-11-20 15:45:55.448 [JavaFX Application Thread] com.williamngo.controllers.TreeController.setTableController(TreeController.java:102) - TABLE CONTROLLER HAS BEEN PASSED TO TREE CONTROLLER!
+[INFO ] 2016-11-20 15:45:55.750 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:99) - INSERTED ALL MODULES
+[INFO ] 2016-11-20 15:45:56.077 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:131) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:45:56.079 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:127) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 15:45:56.084 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:131) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:45:56.085 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:131) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:45:56.085 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:127) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 15:45:56.087 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:131) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:45:56.087 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:127) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 15:45:56.089 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:131) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:45:56.089 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:127) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 15:45:56.091 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:131) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:45:56.091 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:127) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 15:45:56.093 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:131) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:45:56.094 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:131) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:45:56.095 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:131) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:45:56.095 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:131) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:49:20.171 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.start(MainApp.java:65) - Program Begins
+[INFO ] 2016-11-20 15:49:20.180 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 15:49:20.180 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.showUserInterface(MainApp.java:126) - GOING INTO USERINTERFACE
+[INFO ] 2016-11-20 15:49:20.283 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:82) - BEFORE LOAD PROPERTIES ROOT INITIALIZE
+[INFO ] 2016-11-20 15:49:20.284 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 15:49:20.284 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:84) - INITIALIZE ROOT CONTROLLER
+[INFO ] 2016-11-20 15:49:20.285 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 15:49:20.286 [JavaFX Application Thread] com.williamngo.controllers.RootController.setUpNewRoot(RootController.java:211) - SETTING UP NEW ROOT
+[INFO ] 2016-11-20 15:49:20.391 [JavaFX Application Thread] com.williamngo.controllers.TableController.<init>(TableController.java:60) - Ok at least constructor: TableControl works
+[INFO ] 2016-11-20 15:49:20.431 [JavaFX Application Thread] com.williamngo.controllers.TreeController.setTableController(TreeController.java:102) - TABLE CONTROLLER HAS BEEN PASSED TO TREE CONTROLLER!
+[INFO ] 2016-11-20 15:49:20.726 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:99) - INSERTED ALL MODULES
+[INFO ] 2016-11-20 15:49:21.025 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:131) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:49:21.026 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:127) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 15:49:21.030 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:131) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:49:21.030 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:131) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:49:21.031 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:127) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 15:49:21.032 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:131) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:49:21.032 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:127) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 15:49:21.033 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:131) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:49:21.034 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:127) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 15:49:21.035 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:131) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:49:21.035 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:127) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 15:49:21.036 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:131) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:49:21.037 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:131) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:49:21.037 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:131) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:49:21.038 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:131) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 15:49:25.570 [JavaFX Application Thread] com.williamngo.controllers.TreeController.addFolder(TreeController.java:199) - FOLDER NAME IS: new
+[INFO ] 2016-11-20 16:03:02.238 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.start(MainApp.java:65) - Program Begins
+[INFO ] 2016-11-20 16:03:02.247 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 16:03:02.248 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.showUserInterface(MainApp.java:126) - GOING INTO USERINTERFACE
+[INFO ] 2016-11-20 16:03:02.362 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:82) - BEFORE LOAD PROPERTIES ROOT INITIALIZE
+[INFO ] 2016-11-20 16:03:02.362 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 16:03:02.363 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:84) - INITIALIZE ROOT CONTROLLER
+[INFO ] 2016-11-20 16:03:02.363 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 16:03:02.365 [JavaFX Application Thread] com.williamngo.controllers.RootController.setUpNewRoot(RootController.java:211) - SETTING UP NEW ROOT
+[INFO ] 2016-11-20 16:03:02.484 [JavaFX Application Thread] com.williamngo.controllers.TableController.<init>(TableController.java:60) - Ok at least constructor: TableControl works
+[INFO ] 2016-11-20 16:03:02.523 [JavaFX Application Thread] com.williamngo.controllers.TreeController.setTableController(TreeController.java:102) - TABLE CONTROLLER HAS BEEN PASSED TO TREE CONTROLLER!
+[INFO ] 2016-11-20 16:03:02.839 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:99) - INSERTED ALL MODULES
+[INFO ] 2016-11-20 16:03:03.143 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:131) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:03:03.144 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:127) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 16:03:03.148 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:131) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:03:03.148 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:131) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:03:03.148 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:127) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 16:03:03.149 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:131) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:03:03.150 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:127) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 16:03:03.151 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:131) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:03:03.151 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:127) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 16:03:03.152 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:131) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:03:03.153 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:127) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 16:03:03.153 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:131) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:03:03.154 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:131) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:03:03.155 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:131) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:03:03.155 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:131) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:05:02.400 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.start(MainApp.java:65) - Program Begins
+[INFO ] 2016-11-20 16:05:02.409 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 16:05:02.410 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.showUserInterface(MainApp.java:126) - GOING INTO USERINTERFACE
+[INFO ] 2016-11-20 16:05:02.521 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:82) - BEFORE LOAD PROPERTIES ROOT INITIALIZE
+[INFO ] 2016-11-20 16:05:02.522 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 16:05:02.522 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:84) - INITIALIZE ROOT CONTROLLER
+[INFO ] 2016-11-20 16:05:02.523 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 16:05:02.524 [JavaFX Application Thread] com.williamngo.controllers.RootController.setUpNewRoot(RootController.java:211) - SETTING UP NEW ROOT
+[INFO ] 2016-11-20 16:05:02.643 [JavaFX Application Thread] com.williamngo.controllers.TableController.<init>(TableController.java:60) - Ok at least constructor: TableControl works
+[INFO ] 2016-11-20 16:05:02.685 [JavaFX Application Thread] com.williamngo.controllers.TreeController.setTableController(TreeController.java:102) - TABLE CONTROLLER HAS BEEN PASSED TO TREE CONTROLLER!
+[INFO ] 2016-11-20 16:05:02.998 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:99) - INSERTED ALL MODULES
+[INFO ] 2016-11-20 16:05:03.312 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:131) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:05:03.313 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:127) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 16:05:03.317 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:131) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:05:03.318 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:131) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:05:03.318 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:127) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 16:05:03.319 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:131) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:05:03.320 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:127) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 16:05:03.321 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:131) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:05:03.321 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:127) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 16:05:03.322 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:131) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:05:03.322 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:127) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 16:05:03.323 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:131) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:05:03.324 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:131) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:05:03.325 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:131) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:05:03.326 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:131) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:05:34.697 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.start(MainApp.java:65) - Program Begins
+[INFO ] 2016-11-20 16:05:34.706 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 16:05:34.707 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.showUserInterface(MainApp.java:126) - GOING INTO USERINTERFACE
+[INFO ] 2016-11-20 16:05:34.809 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:82) - BEFORE LOAD PROPERTIES ROOT INITIALIZE
+[INFO ] 2016-11-20 16:05:34.810 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 16:05:34.810 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:84) - INITIALIZE ROOT CONTROLLER
+[INFO ] 2016-11-20 16:05:34.811 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 16:05:34.812 [JavaFX Application Thread] com.williamngo.controllers.RootController.setUpNewRoot(RootController.java:211) - SETTING UP NEW ROOT
+[INFO ] 2016-11-20 16:05:34.916 [JavaFX Application Thread] com.williamngo.controllers.TableController.<init>(TableController.java:60) - Ok at least constructor: TableControl works
+[INFO ] 2016-11-20 16:05:34.951 [JavaFX Application Thread] com.williamngo.controllers.TreeController.setTableController(TreeController.java:102) - TABLE CONTROLLER HAS BEEN PASSED TO TREE CONTROLLER!
+[INFO ] 2016-11-20 16:05:35.235 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:99) - INSERTED ALL MODULES
+[INFO ] 2016-11-20 16:05:35.529 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:131) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:05:35.530 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:127) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 16:05:35.535 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:131) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:05:35.536 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:131) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:05:35.536 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:127) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 16:05:35.538 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:131) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:05:35.538 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:127) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 16:05:35.539 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:131) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:05:35.539 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:127) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 16:05:35.540 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:131) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:05:35.541 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:127) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 16:05:35.541 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:131) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:05:35.542 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:131) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:05:35.543 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:131) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:05:35.544 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:131) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:06:00.886 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.start(MainApp.java:65) - Program Begins
+[INFO ] 2016-11-20 16:06:00.896 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 16:06:00.896 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.showUserInterface(MainApp.java:126) - GOING INTO USERINTERFACE
+[INFO ] 2016-11-20 16:06:01.001 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:82) - BEFORE LOAD PROPERTIES ROOT INITIALIZE
+[INFO ] 2016-11-20 16:06:01.002 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 16:06:01.003 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:84) - INITIALIZE ROOT CONTROLLER
+[INFO ] 2016-11-20 16:06:01.004 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 16:06:01.005 [JavaFX Application Thread] com.williamngo.controllers.RootController.setUpNewRoot(RootController.java:211) - SETTING UP NEW ROOT
+[INFO ] 2016-11-20 16:06:01.109 [JavaFX Application Thread] com.williamngo.controllers.TableController.<init>(TableController.java:60) - Ok at least constructor: TableControl works
+[INFO ] 2016-11-20 16:06:01.144 [JavaFX Application Thread] com.williamngo.controllers.TreeController.setTableController(TreeController.java:102) - TABLE CONTROLLER HAS BEEN PASSED TO TREE CONTROLLER!
+[INFO ] 2016-11-20 16:06:01.429 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:99) - INSERTED ALL MODULES
+[INFO ] 2016-11-20 16:06:01.725 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:131) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:06:01.727 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:127) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 16:06:01.731 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:131) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:06:01.732 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:131) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:06:01.732 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:127) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 16:06:01.733 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:131) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:06:01.734 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:127) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 16:06:01.735 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:131) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:06:01.735 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:127) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 16:06:01.736 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:131) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:06:01.737 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:131) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:06:01.738 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:131) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:06:01.738 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:131) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:06:01.739 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:131) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:06:01.740 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:131) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:06:01.741 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:131) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:06:01.741 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:131) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:06:01.742 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:131) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:07:10.962 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.start(MainApp.java:65) - Program Begins
+[INFO ] 2016-11-20 16:07:10.971 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 16:07:10.971 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.showUserInterface(MainApp.java:126) - GOING INTO USERINTERFACE
+[INFO ] 2016-11-20 16:07:11.074 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:82) - BEFORE LOAD PROPERTIES ROOT INITIALIZE
+[INFO ] 2016-11-20 16:07:11.075 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 16:07:11.075 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:84) - INITIALIZE ROOT CONTROLLER
+[INFO ] 2016-11-20 16:07:11.076 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 16:07:11.078 [JavaFX Application Thread] com.williamngo.controllers.RootController.setUpNewRoot(RootController.java:211) - SETTING UP NEW ROOT
+[INFO ] 2016-11-20 16:07:11.186 [JavaFX Application Thread] com.williamngo.controllers.TableController.<init>(TableController.java:60) - Ok at least constructor: TableControl works
+[INFO ] 2016-11-20 16:07:11.222 [JavaFX Application Thread] com.williamngo.controllers.TreeController.setTableController(TreeController.java:102) - TABLE CONTROLLER HAS BEEN PASSED TO TREE CONTROLLER!
+[INFO ] 2016-11-20 16:07:11.562 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:99) - INSERTED ALL MODULES
+[INFO ] 2016-11-20 16:07:11.869 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:131) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:07:11.869 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:127) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 16:07:11.873 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:131) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:07:11.873 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:131) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:07:11.874 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:127) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 16:07:11.876 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:131) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:07:11.876 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:127) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 16:07:11.878 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:131) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:07:11.878 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:127) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 16:07:11.879 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:131) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:07:11.879 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:127) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 16:07:11.880 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:131) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:07:11.881 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:131) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:07:11.882 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:131) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:07:11.882 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:131) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:07:34.381 [JavaFX Application Thread] com.williamngo.controllers.TreeController.addFolder(TreeController.java:199) - FOLDER NAME IS: new
+[INFO ] 2016-11-20 16:14:58.072 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.start(MainApp.java:65) - Program Begins
+[INFO ] 2016-11-20 16:14:58.081 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 16:14:58.081 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.showUserInterface(MainApp.java:126) - GOING INTO USERINTERFACE
+[INFO ] 2016-11-20 16:14:58.188 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:82) - BEFORE LOAD PROPERTIES ROOT INITIALIZE
+[INFO ] 2016-11-20 16:14:58.189 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 16:14:58.189 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:84) - INITIALIZE ROOT CONTROLLER
+[INFO ] 2016-11-20 16:14:58.190 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 16:14:58.191 [JavaFX Application Thread] com.williamngo.controllers.RootController.setUpNewRoot(RootController.java:211) - SETTING UP NEW ROOT
+[INFO ] 2016-11-20 16:14:58.295 [JavaFX Application Thread] com.williamngo.controllers.TableController.<init>(TableController.java:60) - Ok at least constructor: TableControl works
+[INFO ] 2016-11-20 16:14:58.330 [JavaFX Application Thread] com.williamngo.controllers.TreeController.setTableController(TreeController.java:103) - TABLE CONTROLLER HAS BEEN PASSED TO TREE CONTROLLER!
+[INFO ] 2016-11-20 16:14:58.627 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:99) - INSERTED ALL MODULES
+[INFO ] 2016-11-20 16:14:58.934 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:132) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:14:58.935 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:128) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 16:14:58.939 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:132) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:14:58.939 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:132) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:14:58.940 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:128) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 16:14:58.941 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:132) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:14:58.941 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:128) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 16:14:58.942 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:132) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:14:58.943 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:128) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 16:14:58.944 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:132) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:14:58.944 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:128) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 16:14:58.945 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:132) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:14:58.946 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:132) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:14:58.947 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:132) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:14:58.949 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:132) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:15:47.788 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.start(MainApp.java:65) - Program Begins
+[INFO ] 2016-11-20 16:15:47.796 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 16:15:47.797 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.showUserInterface(MainApp.java:126) - GOING INTO USERINTERFACE
+[INFO ] 2016-11-20 16:15:47.904 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:82) - BEFORE LOAD PROPERTIES ROOT INITIALIZE
+[INFO ] 2016-11-20 16:15:47.905 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 16:15:47.905 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:84) - INITIALIZE ROOT CONTROLLER
+[INFO ] 2016-11-20 16:15:47.905 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 16:15:47.907 [JavaFX Application Thread] com.williamngo.controllers.RootController.setUpNewRoot(RootController.java:211) - SETTING UP NEW ROOT
+[INFO ] 2016-11-20 16:15:48.011 [JavaFX Application Thread] com.williamngo.controllers.TableController.<init>(TableController.java:60) - Ok at least constructor: TableControl works
+[INFO ] 2016-11-20 16:15:48.047 [JavaFX Application Thread] com.williamngo.controllers.TreeController.setTableController(TreeController.java:104) - TABLE CONTROLLER HAS BEEN PASSED TO TREE CONTROLLER!
+[INFO ] 2016-11-20 16:15:48.476 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:99) - INSERTED ALL MODULES
+[INFO ] 2016-11-20 16:15:48.780 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:133) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:15:48.781 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 16:15:48.786 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:133) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:15:48.787 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:133) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:15:48.787 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 16:15:48.788 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:133) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:15:48.789 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 16:15:48.790 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:133) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:15:48.790 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 16:15:48.791 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:133) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:15:48.792 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:129) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 16:15:48.793 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:133) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:15:48.795 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:133) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:15:48.796 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:133) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:15:48.797 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:133) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:15:56.067 [JavaFX Application Thread] com.williamngo.database.JagEmailDAOImpl.addFolder(JagEmailDAOImpl.java:299) - GOT HERE AT LEAST
+[INFO ] 2016-11-20 16:15:56.241 [JavaFX Application Thread] com.williamngo.database.JagEmailDAOImpl.addFolder(JagEmailDAOImpl.java:306) - Added 1 folder into folders table.
+[INFO ] 2016-11-20 16:15:56.241 [JavaFX Application Thread] com.williamngo.controllers.TreeController$2.handle(TreeController.java:205) - SUCCESSFULLY ADDED NEW FOLDER
+[INFO ] 2016-11-20 16:21:30.994 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.start(MainApp.java:65) - Program Begins
+[INFO ] 2016-11-20 16:21:31.034 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 16:21:31.035 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.showUserInterface(MainApp.java:126) - GOING INTO USERINTERFACE
+[INFO ] 2016-11-20 16:21:31.139 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:82) - BEFORE LOAD PROPERTIES ROOT INITIALIZE
+[INFO ] 2016-11-20 16:21:31.140 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 16:21:31.140 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:84) - INITIALIZE ROOT CONTROLLER
+[INFO ] 2016-11-20 16:21:31.141 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 16:21:31.142 [JavaFX Application Thread] com.williamngo.controllers.RootController.setUpNewRoot(RootController.java:211) - SETTING UP NEW ROOT
+[INFO ] 2016-11-20 16:21:31.247 [JavaFX Application Thread] com.williamngo.controllers.TableController.<init>(TableController.java:60) - Ok at least constructor: TableControl works
+[INFO ] 2016-11-20 16:21:31.282 [JavaFX Application Thread] com.williamngo.controllers.TreeController.setTableController(TreeController.java:105) - TABLE CONTROLLER HAS BEEN PASSED TO TREE CONTROLLER!
+[INFO ] 2016-11-20 16:21:31.575 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:99) - INSERTED ALL MODULES
+[INFO ] 2016-11-20 16:21:31.872 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:134) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:21:31.873 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:130) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 16:21:31.877 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:134) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:21:31.877 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:134) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:21:31.877 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:130) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 16:21:31.878 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:134) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:21:31.879 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:130) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 16:21:31.880 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:134) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:21:31.880 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:130) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 16:21:31.881 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:134) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:21:31.881 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:130) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 16:21:31.882 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:134) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:21:31.882 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:130) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 16:22:24.314 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.start(MainApp.java:65) - Program Begins
+[INFO ] 2016-11-20 16:22:24.324 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 16:22:24.325 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.showUserInterface(MainApp.java:126) - GOING INTO USERINTERFACE
+[INFO ] 2016-11-20 16:22:24.425 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:82) - BEFORE LOAD PROPERTIES ROOT INITIALIZE
+[INFO ] 2016-11-20 16:22:24.426 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 16:22:24.426 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:84) - INITIALIZE ROOT CONTROLLER
+[INFO ] 2016-11-20 16:22:24.427 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 16:22:24.428 [JavaFX Application Thread] com.williamngo.controllers.RootController.setUpNewRoot(RootController.java:211) - SETTING UP NEW ROOT
+[INFO ] 2016-11-20 16:22:24.533 [JavaFX Application Thread] com.williamngo.controllers.TableController.<init>(TableController.java:60) - Ok at least constructor: TableControl works
+[INFO ] 2016-11-20 16:22:24.568 [JavaFX Application Thread] com.williamngo.controllers.TreeController.setTableController(TreeController.java:105) - TABLE CONTROLLER HAS BEEN PASSED TO TREE CONTROLLER!
+[INFO ] 2016-11-20 16:22:24.905 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:99) - INSERTED ALL MODULES
+[INFO ] 2016-11-20 16:22:25.207 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:134) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:22:25.208 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:130) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 16:22:25.212 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:134) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:22:25.213 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:134) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:22:25.213 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:130) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 16:22:25.214 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:134) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:22:25.215 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:130) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 16:22:25.216 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:134) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:22:25.216 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:130) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 16:22:25.217 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:134) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:22:25.217 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:130) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 16:22:25.219 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:134) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:22:25.219 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:130) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 16:22:35.535 [JavaFX Application Thread] com.williamngo.database.JagEmailDAOImpl.addFolder(JagEmailDAOImpl.java:299) - GOT HERE AT LEAST
+[INFO ] 2016-11-20 16:22:35.618 [JavaFX Application Thread] com.williamngo.database.JagEmailDAOImpl.addFolder(JagEmailDAOImpl.java:306) - Added 1 folder into folders table.
+[INFO ] 2016-11-20 16:22:35.618 [JavaFX Application Thread] com.williamngo.controllers.TreeController$2.handle(TreeController.java:216) - SUCCESSFULLY ADDED NEW FOLDER
+[INFO ] 2016-11-20 16:22:35.696 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:130) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 16:22:35.697 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:134) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:22:35.698 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:134) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:22:35.698 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:134) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:22:35.699 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:134) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:22:35.701 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:134) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:22:35.703 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:134) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:22:35.705 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:134) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:22:35.706 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:134) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:22:35.708 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:134) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:22:35.709 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:134) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:22:35.710 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:134) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:22:35.712 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:134) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:22:35.713 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:134) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:22:35.715 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:134) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:22:35.716 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:134) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:22:35.717 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:134) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:22:35.719 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:134) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:22:35.720 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:134) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:22:35.721 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:134) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:22:35.723 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:134) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:22:35.724 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:134) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:22:35.740 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:134) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:22:35.740 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:130) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 16:22:35.741 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:134) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:22:35.741 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:134) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:22:35.742 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:130) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 16:22:35.742 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:134) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:22:35.743 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:130) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 16:22:35.743 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:134) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:22:35.743 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:130) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 16:22:35.744 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:134) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:22:35.744 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:130) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 16:22:35.745 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:134) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:22:35.745 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:130) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 16:22:35.746 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:134) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:22:35.746 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:134) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:22:35.746 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:134) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:22:35.746 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:134) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:22:35.746 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:134) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:22:35.747 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:130) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 16:22:35.747 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:130) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 16:22:35.748 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:130) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 16:22:35.748 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:130) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 16:22:35.748 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:130) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 16:22:37.512 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:130) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 16:22:37.514 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:134) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:22:37.515 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:130) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 16:22:38.369 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:130) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 16:22:38.776 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:130) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 16:22:38.777 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:134) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:22:38.778 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:130) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 16:22:40.928 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:130) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 16:22:41.297 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:130) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 16:22:41.298 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:134) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:22:41.299 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:130) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 16:22:41.617 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:130) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 16:22:42.104 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:130) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 16:22:42.105 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:134) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:22:42.106 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:130) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 16:22:42.770 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:130) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 16:22:43.394 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:130) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 16:22:43.395 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:134) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:22:43.396 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:130) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 16:22:44.065 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:130) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 16:22:44.969 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:130) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 16:22:44.970 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:134) - FOLDERS ARE EMPTY
+[INFO ] 2016-11-20 16:22:44.971 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:130) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 16:22:46.433 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:130) - FOLDERS ARE NOT EMPTY

@@ -4,7 +4,6 @@ package com.williamngo.database;
 import com.mysql.jdbc.log.Log;
 import com.williamngo.beans.ConfigBean;
 import com.williamngo.beans.FolderBean;
-import com.williamngo.business.Folder;
 import com.williamngo.business.JagEmail;
 
 import java.sql.*;
@@ -295,7 +294,9 @@ public class JagEmailDAOImpl implements JagEmailDAO {
         return emailFound;
     }
     
+    @Override
     public void addFolder(String foldername){
+        log.info("GOT HERE AT LEAST");
         String query = "INSERT INTO folders(foldername) VALUES (?);";
         try(Connection conn = DriverManager.getConnection(cb.getDatabaseURL(), cb.getDatabaseUserName(), cb.getDatabasePassword())){
             PreparedStatement stmt = conn.prepareStatement(query);
@@ -305,10 +306,12 @@ public class JagEmailDAOImpl implements JagEmailDAO {
             log.info("Added " + result + " folder into folders table.");
         }
         catch(SQLException sqle){
-            sqle.getMessage();
+            //sqle.getMessage();
+            sqle.printStackTrace();
         }
     }
     
+    @Override
     public void deleteFolder(String foldername){
         String query = "DELETE FROM folders WHERE foldername = ?;";
         try(Connection conn = DriverManager.getConnection(cb.getDatabaseURL(), cb.getDatabaseUserName(), cb.getDatabasePassword())){

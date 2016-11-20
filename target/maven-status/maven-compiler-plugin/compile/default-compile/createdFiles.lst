@@ -1,11 +1,11 @@
 com\williamngo\controllers\EditorController.class
 com\williamngo\business\JagEmail.class
-com\williamngo\business\Folder.class
 com\williamngo\beans\FolderBean.class
 com\williamngo\beans\attachmentBean.class
 com\williamngo\database\JagEmailDAOImpl.class
 com\williamngo\controllers\RootController.class
 com\williamngo\interfaces\MailerImpl.class
+com\williamngo\controllers\TreeController$2.class
 com\williamngo\database\JagEmailDAO.class
 com\williamngo\controllers\ConfigController.class
 com\williamngo\beans\EmailBean.class

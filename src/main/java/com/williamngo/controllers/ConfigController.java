@@ -30,6 +30,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.util.converter.NumberStringConverter;
+import jodd.mail.EmailAddress;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -160,8 +161,10 @@ public class ConfigController {
         if (areFieldsEmpty(myCb)) {
             displayMessageWindow("You have empty fields");
             isValid = false;
-        }else{
-         //Check for others 
+        }
+        if(!validateEmailAddress()){
+            displayMessageWindow("Email is not valid!");
+            isValid = false;
         }
         return isValid;
     }
@@ -217,17 +220,26 @@ public class ConfigController {
     /**
      * TODO:
      */
-    private void validateEmailAddress(){
+    private boolean validateEmailAddress() {
+        boolean isValid = true;
+        EmailAddress ea = new EmailAddress(cb.getEmailAddress());
+        if (!ea.isValid()) {
+            return false;
+        }
         
+        return isValid;
     }
+
+   
     
     private void displayMessageWindow(String msg) {
-        Stage stage = new Stage();
+        Stage myStage = new Stage();
         Text t = new Text();
         t.setText(msg);
 
         StackPane root = new StackPane();
         root.getChildren().add(t);
+        myStage.show();
     }
 
     public void setJagEmailDAO(JagEmailDAO jag) {
