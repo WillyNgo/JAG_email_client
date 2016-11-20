@@ -166,6 +166,11 @@ public class RootController implements Initializable {
     }
     
     @FXML
+    public void clickOnMoveMsg(){
+        
+    }
+    
+    @FXML
     public void clickOnReply(){
         editorControl.enableEditorButtons();
         editorControl.clearInputFields();
@@ -189,11 +194,17 @@ public class RootController implements Initializable {
     @FXML
     public void clickOnReload() throws SQLException{
         tableControl.displayTable();
+        treeControl.displayTree();
     }
     
     @FXML
     public void clickOnAddFolder() throws IOException{
         treeControl.showAddFolderWindow();
+    }
+    
+    @FXML
+    public void clickOnDeleteFolder(){
+        treeControl.showDeleteFolderWindow();
     }
     
     

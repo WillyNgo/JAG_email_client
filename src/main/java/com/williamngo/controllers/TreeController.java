@@ -127,11 +127,11 @@ public class TreeController implements Initializable {
             protected void updateItem(String item, boolean empty) {
                 super.updateItem(item, empty);
                 if (item != null) {
-                    log.info("FOLDERS ARE NOT EMPTY");
+                    
                     setText(item);
                     setGraphic(getTreeItem().getGraphic());
                 } else {
-                    log.info("FOLDERS ARE EMPTY");
+                    
                     setText("");
                     setGraphic(null);
                 }
@@ -219,7 +219,62 @@ public class TreeController implements Initializable {
         myStage.show();
     }
 
-    public void deleteFolder() {
-
+    public void showDeleteFolderWindow() {
+        Stage myStage = new Stage();
+        //SEtting label
+        Label l = new Label();
+        l.setLayoutX(95);
+        l.setLayoutY(125);
+        l.setText("Are you sure you want to delete this folder ?");
+        //Setting confirm button
+        Button bYes = new Button();
+        bYes.setLayoutX(225);
+        bYes.setLayoutY(145);
+        bYes.setText("Yes");
+        //Add onclick event that confirms deletion
+        bYes.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                deleteFolder();
+                try {
+                    displayTree();
+                } catch (SQLException ex) {
+                    ex.getMessage();
+                }
+                myStage.close();
+            }
+        });
+        
+        //Set decline button
+        Button bNo = new Button();
+        bNo.setLayoutX(275);
+        bNo.setLayoutY(145);
+        bNo.setText("No");
+        //Add onclick event that adds folder to database
+        bNo.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                myStage.close();
+            }
+        });
+        
+        
+        AnchorPane root = new AnchorPane();
+        root.getChildren().add(l);
+        root.getChildren().add(bYes);
+        root.getChildren().add(bNo);
+        myStage.setScene(new Scene(root, 600, 250));
+        myStage.show();
+    }
+    
+    private void deleteFolder(){
+        String foldername = foldersTreeView.getSelectionModel().getSelectedItem().getValue();
+        if(foldername.equals("inbox") || foldername.equals("sent")){
+            log.info("SORRY! CANNOT DELETE INBOX / SENT FOLDER");
+        }
+        else{
+            jagDAO.deleteFolder(foldername);
+        }
+        
     }
 }

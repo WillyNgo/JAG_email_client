@@ -1,4 +1,5 @@
 com\williamngo\controllers\EditorController.class
+com\williamngo\controllers\TreeController$3.class
 com\williamngo\business\JagEmail.class
 com\williamngo\beans\FolderBean.class
 com\williamngo\beans\attachmentBean.class
@@ -13,6 +14,7 @@ com\williamngo\beans\EmailBean.class
 com\williamngo\business\PropertyManager.class
 com\williamngo\interfaces\Mailer.class
 com\williamngo\controllers\TableController$1.class
+com\williamngo\controllers\TreeController$4.class
 com\williamngo\controllers\TreeController.class
 com\williamngo\jagemail\MainApp.class
 com\williamngo\controllers\TableController.class

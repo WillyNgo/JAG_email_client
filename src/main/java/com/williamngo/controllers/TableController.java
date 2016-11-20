@@ -39,63 +39,63 @@ import org.slf4j.LoggerFactory;
  * @author Willy
  */
 public class TableController implements Initializable {
+
     private final Logger log = LoggerFactory.getLogger(this.getClass()
-			.getName());
-    
+            .getName());
+
     private JagEmailDAOImpl jagDAO;
     private String foldername;
     private EditorController editorControl;
     private RootController rootControl;
     private JagEmail email;
-    
+
     @FXML
     private BorderPane tablePane;
-    
+
     @FXML
-    private TableView<JagEmail> emailsTableView; 
-    
+    private TableView<JagEmail> emailsTableView;
+
     @FXML
     private TableColumn<JagEmail, String> fromColumn;
-    
+
     @FXML
     private TableColumn<JagEmail, String> subjectColumn;
-    
+
     @FXML
     private TableColumn<JagEmail, String> dateRecvColumn;
-    
-    public TableController()
-    {
+
+    public TableController() {
         super();
         log.info("Ok at least constructor: TableControl works");
     }
+
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         fromColumn.setCellValueFactory(cellData -> new SimpleStringProperty(
-        cellData.getValue().getFrom().toString()));
-        
+                cellData.getValue().getFrom().toString()));
+
         subjectColumn.setCellValueFactory(cellData -> new SimpleStringProperty(
-        cellData.getValue().getSubject()));
-        
+                cellData.getValue().getSubject()));
+
         dateRecvColumn.setCellValueFactory(cellData -> new SimpleStringProperty(
-        cellData.getValue().getReceiveDate().toString()));
-        
-        
+                cellData.getValue().getReceiveDate().toString()));
+
         emailsTableView.getSelectionModel()
-        .selectedItemProperty()
-        .addListener((observable, oldValue, newValue) -> clickOnEmail(newValue));
-        
-        
-    }    
-    
+                .selectedItemProperty()
+                .addListener((observable, oldValue, newValue) -> clickOnEmail(newValue));
+
+    }
+
     /**
-     * Method is called when user clicks on an email in the table
-     * It will display 
-     * @param mail 
+     * Method is called when user clicks on an email in the table It will
+     * display
+     *
+     * @param mail
      */
-    public void clickOnEmail(JagEmail mail){
+    public void clickOnEmail(JagEmail mail) {
         this.email = mail;
         editorControl.setEmail(mail);
         editorControl.displayEmailContent(mail);
@@ -105,7 +105,7 @@ public class TableController implements Initializable {
         rootControl.enableMessageButtons();
         rootControl.disableDeleteFolderButton();
     }
-    
+
     /*
     TO BE USED LATER
     private void adjustColumnWidth(){
@@ -115,32 +115,31 @@ public class TableController implements Initializable {
         subjectColumn.setPrefWidth(width * .67);
         dateRecvColumn.setPrefWidth(width * .33);
     }
-    */
-    
+     */
     public void displayTable() throws SQLException {
         emailsTableView.setItems(getAllEmails());
     }
-    
-    
+
     /**
-     * Retrieves all emails from the current selected folder
-     * and returns an observable list containing these emails
+     * Retrieves all emails from the current selected folder and returns an
+     * observable list containing these emails
+     *
      * @return
-     * @throws SQLException 
+     * @throws SQLException
      */
-    private ObservableList<JagEmail> getAllEmails() throws SQLException{
+    private ObservableList<JagEmail> getAllEmails() throws SQLException {
         List<JagEmail> emails = this.jagDAO.retrieveEmail(foldername);
-        
+
         ObservableList<JagEmail> mails = FXCollections.observableArrayList();
-        
-        for(JagEmail j : emails){
+
+        for (JagEmail j : emails) {
             mails.add(j);
         }
-        
+
         return mails;
     }
-    
-    public void showDeleteEmailWindow(){
+
+    public void showDeleteEmailWindow() {
         Stage myStage = new Stage();
         //SEtting label
         Label l = new Label();
@@ -160,12 +159,12 @@ public class TableController implements Initializable {
                 try {
                     displayTable();
                 } catch (SQLException ex) {
-                    java.util.logging.Logger.getLogger(TableController.class.getName()).log(Level.SEVERE, null, ex);
+                    ex.getMessage();
                 }
                 myStage.close();
             }
         });
-        
+
         //Set decline button
         Button bNo = new Button();
         bNo.setLayoutX(275);
@@ -178,8 +177,7 @@ public class TableController implements Initializable {
                 myStage.close();
             }
         });
-        
-        
+
         AnchorPane root = new AnchorPane();
         root.getChildren().add(l);
         root.getChildren().add(bYes);
@@ -187,32 +185,32 @@ public class TableController implements Initializable {
         myStage.setScene(new Scene(root, 600, 250));
         myStage.show();
     }
-    
-    public void deleteEmail(){
+
+    public void deleteEmail() {
         int emailId = this.email.getMessageNumber();
         log.info("EMAIL SUBJECT IS: " + email.getSubject());
         log.info("EMAIL ID IS: " + emailId);
         jagDAO.deleteEmail(emailId);
-        
+
     }
-    
-    public void setFoldername(String foldername){
+
+    public void setFoldername(String foldername) {
         this.foldername = foldername;
     }
-    
-    public void setJagDAO(JagEmailDAOImpl jagDAO){
+
+    public void setJagDAO(JagEmailDAOImpl jagDAO) {
         this.jagDAO = jagDAO;
     }
-    
-    public void setEditorController(EditorController editorControl){
+
+    public void setEditorController(EditorController editorControl) {
         this.editorControl = editorControl;
     }
-    
-    public void setRootController(RootController rootControl){
+
+    public void setRootController(RootController rootControl) {
         this.rootControl = rootControl;
     }
-    
-    public TableView<JagEmail> getEmailsTable(){
+
+    public TableView<JagEmail> getEmailsTable() {
         return emailsTableView;
     }
 }
