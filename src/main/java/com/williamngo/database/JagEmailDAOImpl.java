@@ -173,7 +173,7 @@ public class JagEmailDAOImpl implements JagEmailDAO {
     {
         List<JagEmail> emailFound = new ArrayList<JagEmail>();
         
-        String query = "SELECT sender, receiver, cc, subject_text, message, html, receive_date, folder FROM emails"
+        String query = "SELECT messageNumber, sender, receiver, cc, subject_text, message, html, receive_date, folder FROM emails"
                 + " WHERE folder = ?;";
         
         try(Connection conn = DriverManager.getConnection(cb.getDatabaseURL(), cb.getDatabaseUserName(), cb.getDatabasePassword())){
@@ -185,6 +185,7 @@ public class JagEmailDAOImpl implements JagEmailDAO {
                 while(rs.next())
                 {
                     //Creates JagEmail to be put into the list if email was found
+                    int msgNumber = rs.getInt("messageNumber");
                     String sender = rs.getString("sender");
                     String receiver = rs.getString("receiver");
                     String cc = rs.getString("cc");
@@ -196,6 +197,7 @@ public class JagEmailDAOImpl implements JagEmailDAO {
                     
                     //Create email to be added to list
                     JagEmail emailToBeAdded = new JagEmail();
+                    emailToBeAdded.setMessageNumber(msgNumber);
                     emailToBeAdded.from(sender);
                     for(String mailAddressTo : receiver.split(","))
                     {
@@ -212,7 +214,6 @@ public class JagEmailDAOImpl implements JagEmailDAO {
                     emailToBeAdded.setReceiveDate(receiveDate);
                     emailToBeAdded.setFolder(folder);
                     getAttachmentAndSetToEmail(emailToBeAdded);
-                    
                     emailFound.add(emailToBeAdded);
                 }
             }

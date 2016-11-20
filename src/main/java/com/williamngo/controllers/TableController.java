@@ -13,14 +13,23 @@ import java.sql.SQLException;
 import java.util.Date;
 import java.util.List;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
+import javafx.stage.Stage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -87,7 +96,7 @@ public class TableController implements Initializable {
      * @param mail 
      */
     public void clickOnEmail(JagEmail mail){
-        email = mail;
+        this.email = mail;
         editorControl.setEmail(mail);
         editorControl.displayEmailContent(mail);
         //When user clicks on new email from table, disables the send and attach
@@ -95,7 +104,6 @@ public class TableController implements Initializable {
         //Enable the messages buttons
         rootControl.enableMessageButtons();
         rootControl.disableDeleteFolderButton();
-        
     }
     
     /*
@@ -130,6 +138,62 @@ public class TableController implements Initializable {
         }
         
         return mails;
+    }
+    
+    public void showDeleteEmailWindow(){
+        Stage myStage = new Stage();
+        //SEtting label
+        Label l = new Label();
+        l.setLayoutX(95);
+        l.setLayoutY(125);
+        l.setText("Are you sure you want to delete this email?");
+        //Setting confirm button
+        Button bYes = new Button();
+        bYes.setLayoutX(225);
+        bYes.setLayoutY(145);
+        bYes.setText("Yes");
+        //Add onclick event that confirms deletion
+        bYes.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                deleteEmail();
+                try {
+                    displayTable();
+                } catch (SQLException ex) {
+                    java.util.logging.Logger.getLogger(TableController.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                myStage.close();
+            }
+        });
+        
+        //Set decline button
+        Button bNo = new Button();
+        bNo.setLayoutX(275);
+        bNo.setLayoutY(145);
+        bNo.setText("No");
+        //Add onclick event that adds folder to database
+        bNo.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                myStage.close();
+            }
+        });
+        
+        
+        AnchorPane root = new AnchorPane();
+        root.getChildren().add(l);
+        root.getChildren().add(bYes);
+        root.getChildren().add(bNo);
+        myStage.setScene(new Scene(root, 600, 250));
+        myStage.show();
+    }
+    
+    public void deleteEmail(){
+        int emailId = this.email.getMessageNumber();
+        log.info("EMAIL SUBJECT IS: " + email.getSubject());
+        log.info("EMAIL ID IS: " + emailId);
+        jagDAO.deleteEmail(emailId);
+        
     }
     
     public void setFoldername(String foldername){

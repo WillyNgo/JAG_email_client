@@ -179,20 +179,6 @@ public class TreeController implements Initializable {
     }
 
     public void showAddFolderWindow() throws IOException {
-        /*Stage myStage = new Stage();
-        URL path = Paths.get("src/main/resources/fxml/addFolder.fxml").toUri().toURL();
-
-        FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(path);
-        loader.setBuilderFactory(new JavaFXBuilderFactory());
-
-        Scene scene = new Scene(loader.load());
-
-        myStage.setTitle("Add new Folder");
-        myStage.setScene(scene);
-        myStage.show();
-        */
-        
         Stage myStage = new Stage();
         //SEtting label
         Label l = new Label();
@@ -208,6 +194,7 @@ public class TreeController implements Initializable {
         b.setLayoutX(275);
         b.setLayoutY(175);
         b.setText("Submit");
+        //Add onclick event that adds folder to database
         b.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
@@ -230,17 +217,6 @@ public class TreeController implements Initializable {
         root.getChildren().add(b);
         myStage.setScene(new Scene(root, 600, 250));
         myStage.show();
-    }
-    
-    @FXML
-    public void addFolder(){
-        String newFolderName = addFolderTextField.textProperty().get();
-        if(newFolderName.equals("")){
-            newFolderName = "NO NAME";
-        }
-        log.info("FOLDER NAME IS: " + newFolderName);
-        this.jagDAO.addFolder(newFolderName);
-        
     }
 
     public void deleteFolder() {

@@ -44,6 +44,7 @@ public class RootController implements Initializable {
     private MailerImpl mailer; 
     private PropertyManager pm = new PropertyManager("src/main/resources");
     
+    
     //Each individual panes in the root
     @FXML
     private BorderPane treePane;
@@ -158,6 +159,10 @@ public class RootController implements Initializable {
         clearInputFields();
         enableEditorButtons();
         disableMessageButtons();
+    }
+    @FXML
+    public void clickOnDeleteMsg(){
+        tableControl.showDeleteEmailWindow();
     }
     
     @FXML
@@ -274,12 +279,5 @@ public class RootController implements Initializable {
         }catch(Exception e){
             e.printStackTrace();
         }
-    }
-    
-    //DELETE THIS
-    public void showProperties() {
-        log.info("YOUR CURRENT USERNAME IS: " + cb.getUserName());
-        log.info("YOUR CURRENT EMAILADDRESS IS: " + cb.getEmailAddress());
-        log.info("YOUR CURRENT PASSWORD IS: " + cb.getEmailPassword());
     }
 }

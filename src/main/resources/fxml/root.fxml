@@ -38,7 +38,7 @@
                   <Button fx:id="newMessageButton" mnemonicParsing="false" onAction="#clickOnNewMsg" text="New Message" />
                   <Button fx:id="replyButton" mnemonicParsing="false" onAction="#clickOnReply" text="Reply" />
                   <Button fx:id="replyAllButton" mnemonicParsing="false" onAction="#clickOnReplyAll" text="Reply All" />
-                  <Button fx:id="deleteMessageButton" mnemonicParsing="false" text="Delete Message" />
+                  <Button fx:id="deleteMessageButton" mnemonicParsing="false" onAction="#clickOnDeleteMsg"  text="Delete Message" />
                   <Button fx:id="forwardButton" mnemonicParsing="false" onAction="#clickOnForward" text="Forward" />
                   <Button fx:id="addFolderButton" mnemonicParsing="false" onAction="#clickOnAddFolder" text="Add Folder" />
                   <Button fx:id="deleteFolderButton" mnemonicParsing="false" text="Delete Folder" />
