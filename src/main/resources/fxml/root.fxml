@@ -40,7 +40,7 @@
                   <Button fx:id="replyAllButton" mnemonicParsing="false" onAction="#clickOnReplyAll" text="Reply All" />
                   <Button fx:id="forwardButton" mnemonicParsing="false" onAction="#clickOnForward" text="Forward" />
                   <Button fx:id="deleteMessageButton" mnemonicParsing="false" onAction="#clickOnDeleteMsg" text="Delete Message" />
-                  <Button fx:id="moveMessageButton" mnemonicParsing="false" onAction="clickOnMoveMsg" text="Move Message" />
+                  <Button fx:id="moveMessageButton" mnemonicParsing="false" onAction="#clickOnMoveMsg" text="Move Message" />
                   <Button fx:id="addFolderButton" mnemonicParsing="false" onAction="#clickOnAddFolder" text="Add Folder" />
                   <Button fx:id="deleteFolderButton" mnemonicParsing="false" onAction="#clickOnDeleteFolder" text="Delete Folder" />
                   <Button fx:id="reloadButton" mnemonicParsing="false" onAction="#clickOnReload" text="Reload" />

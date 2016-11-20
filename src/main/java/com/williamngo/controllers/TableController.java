@@ -139,6 +139,10 @@ public class TableController implements Initializable {
         return mails;
     }
 
+    /**
+     * Displays window to confirm whether or not the user would like to delete 
+     * the selected email.
+     */
     public void showDeleteEmailWindow() {
         Stage myStage = new Stage();
         //SEtting label
@@ -185,7 +189,10 @@ public class TableController implements Initializable {
         myStage.setScene(new Scene(root, 600, 250));
         myStage.show();
     }
-
+    
+    /**
+     * Calls the Database method to delete the email
+     */
     public void deleteEmail() {
         int emailId = this.email.getMessageNumber();
         log.info("EMAIL SUBJECT IS: " + email.getSubject());
@@ -194,6 +201,48 @@ public class TableController implements Initializable {
 
     }
 
+    public void showMoveEmailWindow(){
+        Stage myStage = new Stage();
+        //SEtting label
+        Label l = new Label();
+        l.setLayoutX(95);
+        l.setLayoutY(125);
+        l.setText("Specify new folder desintation: ");
+        //SEtting textfield
+        TextField tf = new TextField();
+        tf.setLayoutX(225);
+        tf.setLayoutY(120);
+        //Setting button
+        Button b = new Button();
+        b.setLayoutX(275);
+        b.setLayoutY(175);
+        b.setText("Submit");
+        //Add onclick event that adds folder to database
+        b.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                String newname = tf.textProperty().get();
+                int msgNumber = email.getMessageNumber();
+                jagDAO.moveEmail(msgNumber, newname);
+                log.info("SUCCESSFULLY ADDED NEW FOLDER");
+                try {
+                    displayTable();
+                } catch (SQLException ex) {
+                    ex.getMessage();
+                }
+                myStage.close();
+            }
+        });
+        
+        
+        AnchorPane root = new AnchorPane();
+        root.getChildren().add(l);
+        root.getChildren().add(tf);
+        root.getChildren().add(b);
+        myStage.setScene(new Scene(root, 600, 250));
+        myStage.show();
+    }
+    
     public void setFoldername(String foldername) {
         this.foldername = foldername;
     }

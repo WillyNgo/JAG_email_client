@@ -63,6 +63,8 @@ public class RootController implements Initializable {
     @FXML
     private Button deleteMessageButton;
     @FXML
+    private Button moveMessageButton;
+    @FXML
     private Button forwardButton;
     @FXML
     private Button addFolderButton;
@@ -117,6 +119,7 @@ public class RootController implements Initializable {
             replyAllButton.setDisable(true);
             forwardButton.setDisable(true);
             deleteMessageButton.setDisable(true);
+            moveMessageButton.setDisable(true);
     }
     
     /**
@@ -128,6 +131,7 @@ public class RootController implements Initializable {
         replyAllButton.setDisable(false);
         forwardButton.setDisable(false);
         deleteMessageButton.setDisable(false);
+        moveMessageButton.setDisable(false);
     }
     
     /**
@@ -167,7 +171,7 @@ public class RootController implements Initializable {
     
     @FXML
     public void clickOnMoveMsg(){
-        
+        tableControl.showMoveEmailWindow();
     }
     
     @FXML

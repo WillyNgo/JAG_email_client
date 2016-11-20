@@ -24217,3 +24217,47 @@ Caused by: java.lang.NullPointerException
 [INFO ] 2016-11-20 18:01:56.701 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:130) - FOLDERS ARE NOT EMPTY
 [INFO ] 2016-11-20 18:01:56.703 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:130) - FOLDERS ARE NOT EMPTY
 [INFO ] 2016-11-20 18:01:56.705 [JavaFX Application Thread] com.williamngo.controllers.TreeController$1.updateItem(TreeController.java:130) - FOLDERS ARE NOT EMPTY
+[INFO ] 2016-11-20 18:18:33.531 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.start(MainApp.java:65) - Program Begins
+[INFO ] 2016-11-20 18:18:33.541 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 18:18:33.541 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.showUserInterface(MainApp.java:126) - GOING INTO USERINTERFACE
+[INFO ] 2016-11-20 18:18:37.431 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.start(MainApp.java:65) - Program Begins
+[INFO ] 2016-11-20 18:18:37.440 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 18:18:37.441 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.showUserInterface(MainApp.java:126) - GOING INTO USERINTERFACE
+[INFO ] 2016-11-20 18:20:18.202 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.start(MainApp.java:65) - Program Begins
+[INFO ] 2016-11-20 18:20:18.211 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 18:20:18.212 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.showUserInterface(MainApp.java:126) - GOING INTO USERINTERFACE
+[INFO ] 2016-11-20 18:21:21.891 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.start(MainApp.java:65) - Program Begins
+[INFO ] 2016-11-20 18:21:21.900 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 18:21:21.901 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.showUserInterface(MainApp.java:126) - GOING INTO USERINTERFACE
+[INFO ] 2016-11-20 18:22:42.822 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.start(MainApp.java:65) - Program Begins
+[INFO ] 2016-11-20 18:22:42.831 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 18:22:42.831 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.showUserInterface(MainApp.java:126) - GOING INTO USERINTERFACE
+[INFO ] 2016-11-20 18:27:14.084 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.start(MainApp.java:65) - Program Begins
+[INFO ] 2016-11-20 18:27:14.092 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 18:27:14.093 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.showUserInterface(MainApp.java:126) - GOING INTO USERINTERFACE
+[INFO ] 2016-11-20 18:27:14.196 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:85) - BEFORE LOAD PROPERTIES ROOT INITIALIZE
+[INFO ] 2016-11-20 18:27:14.196 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 18:27:14.197 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:87) - INITIALIZE ROOT CONTROLLER
+[INFO ] 2016-11-20 18:27:14.197 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 18:27:14.199 [JavaFX Application Thread] com.williamngo.controllers.RootController.setUpNewRoot(RootController.java:229) - SETTING UP NEW ROOT
+[INFO ] 2016-11-20 18:27:14.302 [JavaFX Application Thread] com.williamngo.controllers.TableController.<init>(TableController.java:69) - Ok at least constructor: TableControl works
+[INFO ] 2016-11-20 18:27:14.337 [JavaFX Application Thread] com.williamngo.controllers.TreeController.setTableController(TreeController.java:105) - TABLE CONTROLLER HAS BEEN PASSED TO TREE CONTROLLER!
+[INFO ] 2016-11-20 18:27:14.657 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:102) - INSERTED ALL MODULES
+[INFO ] 2016-11-20 18:27:22.691 [JavaFX Application Thread] com.williamngo.database.JagEmailDAOImpl.addFolder(JagEmailDAOImpl.java:300) - GOT HERE AT LEAST
+[INFO ] 2016-11-20 18:27:22.773 [JavaFX Application Thread] com.williamngo.database.JagEmailDAOImpl.addFolder(JagEmailDAOImpl.java:307) - Added 1 folder into folders table.
+[INFO ] 2016-11-20 18:27:22.774 [JavaFX Application Thread] com.williamngo.controllers.TreeController$2.handle(TreeController.java:203) - SUCCESSFULLY ADDED NEW FOLDER
+[INFO ] 2016-11-20 18:27:35.029 [JavaFX Application Thread] com.williamngo.database.JagEmailDAOImpl.moveEmail(JagEmailDAOImpl.java:342) - MOVED '1' EMAIL(S) INTO FOLDER: new
+[INFO ] 2016-11-20 18:27:35.030 [JavaFX Application Thread] com.williamngo.controllers.TableController$3.handle(TableController.java:227) - SUCCESSFULLY ADDED NEW FOLDER
+[INFO ] 2016-11-20 18:29:16.098 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.start(MainApp.java:65) - Program Begins
+[INFO ] 2016-11-20 18:29:16.107 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 18:29:16.108 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.showUserInterface(MainApp.java:126) - GOING INTO USERINTERFACE
+[INFO ] 2016-11-20 18:29:16.209 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:85) - BEFORE LOAD PROPERTIES ROOT INITIALIZE
+[INFO ] 2016-11-20 18:29:16.210 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 18:29:16.210 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:87) - INITIALIZE ROOT CONTROLLER
+[INFO ] 2016-11-20 18:29:16.211 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-20 18:29:16.213 [JavaFX Application Thread] com.williamngo.controllers.RootController.setUpNewRoot(RootController.java:231) - SETTING UP NEW ROOT
+[INFO ] 2016-11-20 18:29:16.317 [JavaFX Application Thread] com.williamngo.controllers.TableController.<init>(TableController.java:69) - Ok at least constructor: TableControl works
+[INFO ] 2016-11-20 18:29:16.352 [JavaFX Application Thread] com.williamngo.controllers.TreeController.setTableController(TreeController.java:105) - TABLE CONTROLLER HAS BEEN PASSED TO TREE CONTROLLER!
+[INFO ] 2016-11-20 18:29:16.672 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:102) - INSERTED ALL MODULES
+[INFO ] 2016-11-20 18:29:28.263 [JavaFX Application Thread] com.williamngo.database.JagEmailDAOImpl.deleteEmail(JagEmailDAOImpl.java:158) - Deleted 1 email(s) from database
+[INFO ] 2016-11-20 18:29:28.274 [JavaFX Application Thread] com.williamngo.database.JagEmailDAOImpl.deleteFolder(JagEmailDAOImpl.java:326) - DELETED 'new' folder from folders table.

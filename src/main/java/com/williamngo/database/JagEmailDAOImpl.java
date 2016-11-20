@@ -330,6 +330,22 @@ public class JagEmailDAOImpl implements JagEmailDAO {
         }
     }
     
+    @Override
+    public void moveEmail(int messagenumber, String foldername){
+        String query = "UPDATE emails SET folder = ? WHERE messageNumber = ?;";
+        try(Connection conn = DriverManager.getConnection(cb.getDatabaseURL(), cb.getDatabaseUserName(), cb.getDatabasePassword())){
+            PreparedStatement stmt = conn.prepareStatement(query);
+            stmt.setString(1, foldername);
+            stmt.setInt(2, messagenumber);
+            
+            int result = stmt.executeUpdate();
+            log.info("MOVED '" + result + "' EMAIL(S) INTO FOLDER: " + foldername);
+        }
+        catch(SQLException sqle){
+            sqle.getMessage();
+        }
+    }
+    
     /**
      * Retrieves all folder name in a list
      * @return myList - List containing all folder names

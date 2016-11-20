@@ -3,6 +3,7 @@ com\williamngo\controllers\TreeController$3.class
 com\williamngo\business\JagEmail.class
 com\williamngo\beans\FolderBean.class
 com\williamngo\beans\attachmentBean.class
+com\williamngo\controllers\TableController$3.class
 com\williamngo\database\JagEmailDAOImpl.class
 com\williamngo\controllers\RootController.class
 com\williamngo\interfaces\MailerImpl.class

@@ -21,6 +21,7 @@ public interface JagEmailDAO {
     //public void updateAccountEmail(int account_id, String emailAddress);
     //public void updateAccountPassword(int account_id, String password);
     public void deleteEmail(int messageNumber);
+    public void moveEmail(int messageNumber, String foldername);
     //public void deleteAccount(int account_id, String emailAddress, String password);
     public List<JagEmail> retrieveEmail(String folder);
     public List<JagEmail> searchEmail(String keyword);
