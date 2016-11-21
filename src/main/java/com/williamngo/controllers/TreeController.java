@@ -167,6 +167,7 @@ public class TreeController implements Initializable {
             tableControl.displayTable();
             rootControl.enableDeleteFolderButton();
             rootControl.disableMessageButtons();
+            editorControl.disableAttachButton();
         } catch (SQLException sqle) {
             log.info(sqle.getMessage());
         }

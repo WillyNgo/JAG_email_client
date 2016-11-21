@@ -104,7 +104,7 @@ public class TableController implements Initializable {
         editorControl.displayEmailContent(mail);
         //Determines if the email has an attachment, if so it will enable the
         //Save attachment button. Otherwise, it will disable it.
-        editorControl.enableAttachButton();
+        editorControl.checkForAttachment();
         //When user clicks on new email from table, disables the send and attach
         editorControl.disableEditorButtons();
         //Enable the messages buttons
@@ -285,7 +285,7 @@ public class TableController implements Initializable {
         //SEtting textfield
         TextField tf = new TextField();
         tf.setLayoutX(225);
-        tf.setLayoutY(120);
+        tf.setLayoutY(150);
         //Setting button
         Button b = new Button();
         b.setLayoutX(275);

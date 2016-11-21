@@ -295,7 +295,7 @@ public class RootController implements Initializable {
             editorControl = loader.getController();
             editorControl.setRootController(this);
             editorControl.setMailer(mailer);
-
+            editorControl.disableAttachButton();
             editorPane.getChildren().add(bp);
         } catch (Exception e) {
             e.printStackTrace();
@@ -318,6 +318,7 @@ public class RootController implements Initializable {
             treeControl.setJagEmailDAO(jagDAO);
             treeControl.setTableController(tableControl);
             treeControl.setRootController(this);
+            treeControl.setEditorController(editorControl);
             treeControl.displayTree();
             
             treePane.getChildren().add(bp);

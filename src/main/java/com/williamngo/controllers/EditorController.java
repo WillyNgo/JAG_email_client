@@ -143,8 +143,9 @@ public class EditorController implements Initializable {
     }
     
     public void checkForAttachment(){
-        if(email.getAttachments() == null){
+        if(email.getAttachments() == null || email.getAttachments().isEmpty()){
             disableAttachButton();
+            log.info("NO ATTACHMENT");
         }
         else{
             enableAttachButton();
@@ -156,7 +157,7 @@ public class EditorController implements Initializable {
      * contains an attachment. Else, it will disable the button
      */
     public void enableAttachButton(){
-            saveAttachButton.setDisable(false);
+        saveAttachButton.setDisable(false);
     }
     
     public void disableAttachButton(){
@@ -262,6 +263,7 @@ public class EditorController implements Initializable {
         if (selectedDirectory != null && selectedDirectory.exists()) {
             String path = selectedDirectory.getAbsolutePath();
             writeFile(path);
+            
         }
     }
     
@@ -276,6 +278,7 @@ public class EditorController implements Initializable {
             for (EmailAttachment ea : attachments) {
                 try (FileOutputStream fos = new FileOutputStream(path + "\\" + ea.getName())) {
                     fos.write(ea.toByteArray());
+                    displayAlert("Successfully saved attachment");
                 }
             }
         } catch (IOException ioe) {

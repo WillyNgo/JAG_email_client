@@ -114,6 +114,7 @@ public class JagEmailDAOImpl implements JagEmailDAO {
             //Add attachment into database
             if(jagemail.getAttachments() != null){
                 addAttachment(jagemail, stmt.getGeneratedKeys());
+                log.info("ATTACHMENTS WAS SET");
             }
         }catch(SQLException sqle)
         {
@@ -372,23 +373,22 @@ public class JagEmailDAOImpl implements JagEmailDAO {
      */
     private void getAttachmentAndSetToEmail(JagEmail jagemail)
     {
-        String query = "SELECT attachmentByte, attachmentName, from attachments WHERE attachment_messageNumber = ?;";
-        try(Connection conn = DriverManager.getConnection(cb.getDatabaseURL(), cb.getDatabaseUserName(), cb.getDatabasePassword())){
+        String query = "SELECT attachmentByte, attachmentName from attachments WHERE attach_messageNumber = ?;";
+        try (Connection conn = DriverManager.getConnection(cb.getDatabaseURL(), cb.getDatabaseUserName(), cb.getDatabasePassword())) {
             PreparedStatement stmt = conn.prepareStatement(query);
+            log.info("message number is: " + jagemail.getMessageNumber());
             stmt.setInt(1, jagemail.getMessageNumber());
-            
-            try(ResultSet rs = stmt.executeQuery())
-            {
-                while(rs.next())
-                {
-                    Blob fileData = rs.getBlob("attachmentByte");
-                    byte[] stream = fileData.getBytes(1, (int)fileData.length());
-                    String attachmentName = rs.getString("attachmentName");
-                    
-                    jagemail.attach(EmailAttachment.attachment().bytes(stream).setName(attachmentName).create());
-                }
-                
+            log.info("WILL TRY TO GET ATTACHMENT FROM EMAIL");
+            ResultSet rs = stmt.executeQuery();
+            log.info("INSIDE RESULT SETT");
+            while (rs.next()) {
+                Blob fileData = rs.getBlob("attachmentByte");
+                byte[] stream = fileData.getBytes(1, (int) fileData.length());
+                String attachmentName = rs.getString("attachmentName");
+                log.info("SETTING ATTACHMENT TO EMAIL");
+                jagemail.attach(EmailAttachment.attachment().bytes(stream).setName(attachmentName).create());
             }
+
         }
         catch(SQLException sqle)
         {
