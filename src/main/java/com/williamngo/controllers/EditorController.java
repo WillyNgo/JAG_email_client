@@ -61,6 +61,8 @@ public class EditorController implements Initializable {
     private Button sendButton;
     @FXML
     private Button attachButton;
+    @FXML
+    private Button saveAttachButton;
     
     //Path to the attachments
     private String attachPath;
@@ -138,6 +140,27 @@ public class EditorController implements Initializable {
         ccTextField.textProperty().set("");
         bccTextField.textProperty().set("");
         editor.setHtmlText("");
+    }
+    
+    public void checkForAttachment(){
+        if(email.getAttachments() == null){
+            disableAttachButton();
+        }
+        else{
+            enableAttachButton();
+        }
+    }
+    
+    /**
+     * Enables the button to save attachment if the selected email
+     * contains an attachment. Else, it will disable the button
+     */
+    public void enableAttachButton(){
+            saveAttachButton.setDisable(false);
+    }
+    
+    public void disableAttachButton(){
+        saveAttachButton.setDisable(true);
     }
     
     /**
@@ -229,7 +252,7 @@ public class EditorController implements Initializable {
     /**
      * Prompts user for location of where to save the attachment
      */
-    private void saveFile() {
+    public void saveFile() {
         Stage stage = new Stage();
 
         DirectoryChooser chooser = new DirectoryChooser();

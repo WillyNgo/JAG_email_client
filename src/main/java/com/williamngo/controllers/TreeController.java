@@ -53,6 +53,7 @@ public class TreeController implements Initializable {
     private JagEmailDAOImpl jagDAO;
     private TableController tableControl;
     private RootController rootControl;
+    private EditorController editorControl;
 
     @FXML
     private BorderPane treePane;
@@ -85,6 +86,10 @@ public class TreeController implements Initializable {
     }
     public void setRootController(RootController rootControl) {
         this.rootControl = rootControl;
+    }
+    
+    public void setEditorController(EditorController editorControl){
+        this.editorControl = editorControl;
     }
     
     /**
@@ -162,7 +167,6 @@ public class TreeController implements Initializable {
             tableControl.displayTable();
             rootControl.enableDeleteFolderButton();
             rootControl.disableMessageButtons();
-            
         } catch (SQLException sqle) {
             log.info(sqle.getMessage());
         }

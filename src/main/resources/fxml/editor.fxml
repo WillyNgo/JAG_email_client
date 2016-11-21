@@ -29,6 +29,7 @@
                      </image>
                   </ImageView>
                </graphic></Button>
+            <Button fx:id="saveAttachButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="77.0" onAction="#saveFile" text="Save attach" />
         </items>
       </ToolBar>
    </bottom>

@@ -93,7 +93,8 @@ public class TableController implements Initializable {
 
     /**
      * Method is called when user clicks on an email in the table It will
-     * display
+     * display information about the email and enable buttons that interacts with
+     * the message such as reply/all, forward, delete. 
      *
      * @param mail
      */
@@ -101,6 +102,9 @@ public class TableController implements Initializable {
         this.email = mail;
         editorControl.setEmail(mail);
         editorControl.displayEmailContent(mail);
+        //Determines if the email has an attachment, if so it will enable the
+        //Save attachment button. Otherwise, it will disable it.
+        editorControl.enableAttachButton();
         //When user clicks on new email from table, disables the send and attach
         editorControl.disableEditorButtons();
         //Enable the messages buttons
