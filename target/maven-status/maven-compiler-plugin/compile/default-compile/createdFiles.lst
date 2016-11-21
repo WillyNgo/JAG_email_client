@@ -1,8 +1,8 @@
+com\williamngo\controllers\TableController$5.class
 com\williamngo\controllers\EditorController.class
 com\williamngo\controllers\TreeController$3.class
 com\williamngo\business\JagEmail.class
-com\williamngo\beans\FolderBean.class
-com\williamngo\beans\attachmentBean.class
+com\williamngo\business\utility.class
 com\williamngo\controllers\TableController$3.class
 com\williamngo\database\JagEmailDAOImpl.class
 com\williamngo\controllers\RootController.class
@@ -21,3 +21,4 @@ com\williamngo\jagemail\MainApp.class
 com\williamngo\controllers\TableController.class
 com\williamngo\controllers\TreeController$1.class
 com\williamngo\beans\ConfigBean.class
+com\williamngo\controllers\TableController$4.class

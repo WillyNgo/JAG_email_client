@@ -6,28 +6,20 @@ package com.williamngo.controllers;
  * and open the template in the editor.
  */
 import com.williamngo.beans.ConfigBean;
-import com.williamngo.business.PropertyManager;
 import com.williamngo.database.JagEmailDAO;
-import com.williamngo.jagemail.MainApp;
+import com.williamngo.business.*;
+import static com.williamngo.business.utility.displayAlert;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.file.Paths;
-import java.sql.SQLException;
-import java.util.ResourceBundle;
 import javafx.beans.binding.Bindings;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.fxml.JavaFXBuilderFactory;
 import javafx.scene.Scene;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.StackPane;
-import javafx.scene.paint.Color;
-import javafx.scene.text.Text;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 import javafx.util.converter.NumberStringConverter;
 import jodd.mail.EmailAddress;
@@ -110,22 +102,27 @@ public class ConfigController {
             log.info("BINDED cb is not null.");
         }
     }
-
+    /**
+     * This method will start the root view if user has submitted proper
+     * information in the configuration
+     * @param event
+     * @throws IOException 
+     */
     @FXML
     void submitForm(ActionEvent event) throws IOException {
         if (validateForm(cb)) {
             System.out.println("Everything good!");
-            //Save the config info into the properties file
+            //Save the config info into a new properties file
             pm.writeTextProperties(cb);
             log.info("ConfigController: New Properties updated");
             startRootView();
             stage.close();
-        } else {
-            //TODO: POPUP ERROR MSG
-            System.out.println("You have errors!");
-        }
+        } 
     }
-
+    
+    /**
+     * Starts a new root view
+     */
     private void startRootView() {
         try {
             FXMLLoader loader = null;
@@ -139,12 +136,13 @@ public class ConfigController {
             Scene scene = new Scene(loader.load());
             
             controller = loader.getController();
-            
-            myStage.setTitle("Email Client " + cb.getUserName());
+            //LAST THING I ADDED, TAKE THIS OUT IF DOESNT WORK TMR
+            controller.addDefaultFolders();
+            myStage.setTitle("Email Client - " + cb.getUserName());
             myStage.setResizable(true);
             myStage.setScene(scene);
             myStage.show();
-
+            showProperties();
         } catch (MalformedURLException mue) {
             mue.getMessage();
         } catch (IOException ioe) {
@@ -153,17 +151,20 @@ public class ConfigController {
             e.printStackTrace();
         }
     }
-
+    
+    /**
+     * Ensures that form has all the values given and validates email
+     * 
+     * @param myCb
+     * @return  isValid - indicates if config has valid information.
+     */
     private boolean validateForm(ConfigBean myCb) {
         boolean isValid = true;
-
-        //Validate email address for correct format: check if there's a @ sign
+        
         if (areFieldsEmpty(myCb)) {
-            displayMessageWindow("You have empty fields");
             isValid = false;
         }
         if(!validateEmailAddress()){
-            displayMessageWindow("Email is not valid!");
             isValid = false;
         }
         return isValid;
@@ -174,87 +175,92 @@ public class ConfigController {
      * false
      *
      * @param myCb
-     * @return
+     * @return isEmpty - boolean indicating if a field was found to be empty or not
      * @throws IllegalArgumentException
      */
     private boolean areFieldsEmpty(ConfigBean myCb) throws IllegalArgumentException {
-        boolean valid = false;
+        boolean isEmpty = false;
         if (myCb.getUserName().length() == 0) {
-            valid = true;
-            log.info("Empty field: getUserName");
+            isEmpty = true;
+            displayAlert("Empty field: getUserName");
             //userNameTextField.textProperty().get().length()
         }
         if (myCb.getEmailAddress().length() == 0) {
-            valid = true;
-            log.info("Empty field: getEmailAddress");
+            isEmpty = true;
+            displayAlert("Empty field: getEmailAddress");
         }
         if (myCb.getEmailPassword().length() == 0) {
-            valid = true;
-            log.info("Empty field: getEmailPassword");
+            isEmpty = true;
+            displayAlert("Empty field: getEmailPassword");
         }
         if (myCb.getSmtpServerName().length() == 0) {
-            valid = true;
-            log.info("Empty field: getSmtpServerName");
+            isEmpty = true;
+            displayAlert("Empty field: getSmtpServerName");
         }
         if (myCb.getImapServerName().length() == 0) {
-            valid = true;
-            log.info("Empty field: getImapServerName");
+            isEmpty = true;
+            displayAlert("Empty field: getImapServerName");
         }
         if (myCb.getDatabaseURL().length() == 0) {
-            valid = true;
-            log.info("Empty field: getDatabaseURL");
+            isEmpty = true;
+            displayAlert("Empty field: getDatabaseURL");
         }
         if (myCb.getDatabaseUserName().length() == 0) {
-            valid = true;
-            log.info("Empty field: getDatabaseUserName");
+            isEmpty = true;
+            displayAlert("Empty field: getDatabaseUserName");
         }
         if (myCb.getDatabasePassword().length() == 0) {
-            valid = true;
-            log.info("Empty field: getDatabasePassword");
+            isEmpty = true;
+            displayAlert("Empty field: getDatabasePassword");
         }
 
-        return valid;
+        return isEmpty;
 
     }
     
     /**
-     * TODO:
+     * Returns true if email address from configBean is valid
      */
     private boolean validateEmailAddress() {
         boolean isValid = true;
         EmailAddress ea = new EmailAddress(cb.getEmailAddress());
         if (!ea.isValid()) {
+            displayAlert("Invalid email address!");
             return false;
         }
         
         return isValid;
     }
-
-   
     
-    private void displayMessageWindow(String msg) {
-        Stage myStage = new Stage();
-        Text t = new Text();
-        t.setText(msg);
-
-        StackPane root = new StackPane();
-        root.getChildren().add(t);
-        myStage.show();
-    }
-
+    /**
+     * Setter for DAO object
+     * @param jag 
+     */
     public void setJagEmailDAO(JagEmailDAO jag) {
         this.jagemailDAO = jag;
     }
-
+    
+    /**
+     * Setter for property manager
+     * @param pm 
+     */
     public void setPropertyManager(PropertyManager pm) {
         this.pm = pm;
     }
-
+    
+    /**
+     * Setter for the configuration bean
+     * @param cb 
+     */
     public void setConfigBean(ConfigBean cb) {
         log.info("SETTING CONFIG BEAN");
         this.cb = cb;
     }
-
+    
+    /**
+     * NOT SURE IF SHOULD BE TAKEN OUT
+     * @param stage 
+     */
     public void setCurrentStage(Stage stage) {
         this.stage = stage;
     }
@@ -264,5 +270,6 @@ public class ConfigController {
         log.info("YOUR CURRENT USERNAME IS: " + cb.getUserName());
         log.info("YOUR CURRENT EMAILADDRESS IS: " + cb.getEmailAddress());
         log.info("YOUR CURRENT PASSWORD IS: " + cb.getEmailPassword());
+        log.info("YOUR CURRENT DATABASE URL IS: " + cb.getDatabaseURL());
     }
 }

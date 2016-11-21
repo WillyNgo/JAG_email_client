@@ -6,6 +6,7 @@
 package com.williamngo.controllers;
 
 import com.williamngo.business.JagEmail;
+import static com.williamngo.business.utility.displayAlert;
 import com.williamngo.database.JagEmailDAO;
 import com.williamngo.interfaces.MailerImpl;
 import java.io.File;
@@ -71,25 +72,33 @@ public class EditorController implements Initializable {
     public EditorController() {
         super();
     }
-
+    
+    
+    /**
+     * Initializes the controller class.
+     */
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+        disableEditorButtons();
+    }
+    
+    /********* GETTERS AND SETTERS **********/
     public JagEmail getEmail() {
         return this.email;
     }
-
     public void setEmail(JagEmail email) {
         this.email = email;
     }
-    
     public void setMailer(MailerImpl mailer){
         this.mailer = mailer;
     }
-    
     public void setRootController(RootController rootControl){
         this.rootControl = rootControl;
     }
 
     /**
-     * Displays the content of the email that a user clicked on the table.
+     * Displays the sender, the CC if any, the subject and the message
+     * content of the email that a user clicked on the table.
      *
      * @param email
      */
@@ -98,21 +107,10 @@ public class EditorController implements Initializable {
         subjectTextField.setText(email.getSubject());
         ccTextField.setText(ccToString(email.getCc()));
         
-        //Disable send button
-        //Disable textfields
-        
         //Show messages
         editor.setHtmlText(getMessageContent(email.getAllMessages()));
         
         //TODO: Look around attachment
-    }
-
-    /**
-     * Initializes the controller class.
-     */
-    @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        disableEditorButtons();
     }
     
     /**
@@ -227,7 +225,10 @@ public class EditorController implements Initializable {
 
         return result;
     }
-
+    
+    /**
+     * Prompts user for location of where to save the attachment
+     */
     private void saveFile() {
         Stage stage = new Stage();
 
@@ -240,7 +241,11 @@ public class EditorController implements Initializable {
             writeFile(path);
         }
     }
-
+    
+    /**
+     * Writes the data of the attachment into the disk
+     * @param path 
+     */
     private void writeFile(String path) {
         List<EmailAttachment> attachments = email.getAttachments();
 
@@ -264,7 +269,6 @@ public class EditorController implements Initializable {
         String subject = subjectTextField.getText();
         String cc = ccTextField.getText();
         String bcc = bccTextField.getText();
-        
         String message = editor.getHtmlText();
         
         try{
@@ -278,13 +282,13 @@ public class EditorController implements Initializable {
                 } else {
                     mailer.sendEmail(to, Optional.of(cc), Optional.of(bcc), subject, message, "", embedPath, attachPath);
                 }
-               log.info("SUCCESSFULLY SENT EMAIL");
+                displayAlert("SUCCESSFULLY SENT EMAIL");
             }
             else{
-                log.info("ERROR, EMAIL NOT SENT");
+                displayAlert("ERROR, EMAIL NOT SENT");
             }
             
-            //disables the send button after
+            //disables the send/attach button after
             disableEditorButtons();
         }
         catch(Exception e){
@@ -313,7 +317,7 @@ public class EditorController implements Initializable {
             checkAddress(to);
         }
         
-        //validate cc
+        //validate cc if there is any
         if(!cc.equals("")){
             checkAddress(cc);
         }
@@ -361,16 +365,5 @@ public class EditorController implements Initializable {
      */
     private void saveAttachmentFromEmail(){
         
-    }
-    
-    /**
-     * Enables fields to allow user to send.
-     */
-    public void sendEmailButtonClicked(){
-        /*
-        sendButton.setVisible(true);
-        bccTextField.setEditable(true);
-        attachButton.setVisible(true);
-        */
     }
 }

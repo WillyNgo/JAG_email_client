@@ -6,7 +6,7 @@
 package com.williamngo.controllers;
 
 import com.williamngo.beans.ConfigBean;
-import com.williamngo.beans.FolderBean;
+import static com.williamngo.business.utility.displayAlert;
 import com.williamngo.database.JagEmailDAO;
 import com.williamngo.database.JagEmailDAOImpl;
 import com.williamngo.interfaces.MailerImpl;
@@ -73,42 +73,24 @@ public class TreeController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        /*
-        Folder root = new Folder();
-        FolderBean rootFb = new FolderBean();
-
-        rootFb.setFoldername("root");
-        folderTreeView.setRoot(new TreeItem<Folder>(root));
-
-        folderTreeView.setCellFactory((e) -> new TreeCell<Folder>() {
-            @Override
-            protected void updateItem(Folder item, boolean empty) {
-                super.updateItem(item, empty);
-                if (item != null) {
-                    setText(item.getFolderName());
-                    setGraphic(getTreeItem().getGraphic());
-                } else {
-                    setText("");
-                    setGraphic(null);
-                }
-            }
-        });
-         */
+        
     }
-
+    /************* SETTERS ***********/
     public void setJagEmailDAO(JagEmailDAOImpl dao) {
         this.jagDAO = dao;
     }
-
     public void setTableController(TableController control) {
         this.tableControl = control;
         log.info("TABLE CONTROLLER HAS BEEN PASSED TO TREE CONTROLLER!");
     }
-
     public void setRootController(RootController rootControl) {
         this.rootControl = rootControl;
     }
-
+    
+    /**
+     * Enables the delete folder button when user has selected a folder,
+     * otherwise it should be disabled
+     */
     public void enableDeleteFolderButton() {
         rootControl.enableDeleteFolderButton();
     }
@@ -137,12 +119,14 @@ public class TreeController implements Initializable {
                 }
             }
         });
-
+        
+        //Puts all folder names inside an observable array list
         allFolders = FXCollections.observableArrayList();
         for (String name : foldersList) {
             allFolders.add(name);
         }
-
+        
+        //Creates a tree item for every foldername in the allFolders array list
         if (allFolders != null) {
             for (String fName : allFolders) {
                 TreeItem<String> item = new TreeItem<>(fName);
@@ -163,21 +147,33 @@ public class TreeController implements Initializable {
                 .getSelectionModel()
                 .selectedItemProperty()
                 .addListener(
-                        (observable, oldValue, newValue) -> showTree(newValue));
+                        (observable, oldValue, newValue) -> clickOnFolder(newValue));
     }
-
-    private void showTree(TreeItem<String> folder) {
+    
+    /**
+     * When user clicks on a folder, this method disables buttons that interacts
+     * with emails.
+     * @param folder 
+     */
+    private void clickOnFolder(TreeItem<String> folder) {
         String foldername = folder.getValue();
         try {
             tableControl.setFoldername(foldername);
             tableControl.displayTable();
             rootControl.enableDeleteFolderButton();
             rootControl.disableMessageButtons();
+            
         } catch (SQLException sqle) {
             log.info(sqle.getMessage());
         }
     }
-
+    
+    /**
+     * This method prompts the user for a name that will be associated with the
+     * newly created folder
+     * 
+     * @throws IOException 
+     */
     public void showAddFolderWindow() throws IOException {
         Stage myStage = new Stage();
         //SEtting label
@@ -200,7 +196,8 @@ public class TreeController implements Initializable {
             public void handle(ActionEvent event) {
                 String newname = tf.textProperty().get();
                 jagDAO.addFolder(newname);
-                log.info("SUCCESSFULLY ADDED NEW FOLDER");
+                displayAlert("SUCCESSFULLY ADDED NEW FOLDER");
+                //Reloads the tree view to display the created folder
                 try {
                     displayTree();
                 } catch (SQLException ex) {
@@ -218,7 +215,11 @@ public class TreeController implements Initializable {
         myStage.setScene(new Scene(root, 600, 250));
         myStage.show();
     }
-
+    
+    /**
+     * Displays a window prompting the user to confirm whether he deletes a 
+     * folder.
+     */
     public void showDeleteFolderWindow() {
         Stage myStage = new Stage();
         //SEtting label
@@ -226,6 +227,7 @@ public class TreeController implements Initializable {
         l.setLayoutX(95);
         l.setLayoutY(125);
         l.setText("Are you sure you want to delete this folder ?");
+        
         //Setting confirm button
         Button bYes = new Button();
         bYes.setLayoutX(225);
@@ -236,6 +238,7 @@ public class TreeController implements Initializable {
             @Override
             public void handle(ActionEvent event) {
                 deleteFolder();
+                displayAlert("SUCCESSFULLY DELETED FOLDER");
                 try {
                     displayTree();
                 } catch (SQLException ex) {
@@ -250,7 +253,7 @@ public class TreeController implements Initializable {
         bNo.setLayoutX(275);
         bNo.setLayoutY(145);
         bNo.setText("No");
-        //Add onclick event that adds folder to database
+        //Simply close prompt window
         bNo.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
@@ -267,14 +270,17 @@ public class TreeController implements Initializable {
         myStage.show();
     }
     
+    /**
+     * Deletes a folder, cannot delete inbox, sent or trash
+     */
     private void deleteFolder(){
         String foldername = foldersTreeView.getSelectionModel().getSelectedItem().getValue();
-        if(foldername.equals("inbox") || foldername.equals("sent")){
-            log.info("SORRY! CANNOT DELETE INBOX / SENT FOLDER");
+        if(foldername.equals("inbox") || foldername.equals("sent") || foldername.equals("trash")){
+            displayAlert("SORRY! CANNOT DELETE INBOX / SENT / TRASH FOLDER");
         }
         else{
             jagDAO.deleteFolder(foldername);
         }
-        
     }
+    
 }

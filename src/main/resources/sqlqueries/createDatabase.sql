@@ -37,3 +37,4 @@ INSERT INTO emails (receiver, sender, cc, subject_text, message, html, typeFlag,
 
 INSERT INTO folders(foldername) VALUES ('sent');
 INSERT INTO folders(foldername) VALUES ('inbox');
+INSERT INTO folders(foldername) VALUES ('trash');

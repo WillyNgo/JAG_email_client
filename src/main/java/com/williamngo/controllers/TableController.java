@@ -47,6 +47,7 @@ public class TableController implements Initializable {
     private String foldername;
     private EditorController editorControl;
     private RootController rootControl;
+    private TreeController treeControl;
     private JagEmail email;
 
     @FXML
@@ -63,6 +64,7 @@ public class TableController implements Initializable {
 
     @FXML
     private TableColumn<JagEmail, String> dateRecvColumn;
+    
 
     public TableController() {
         super();
@@ -106,15 +108,10 @@ public class TableController implements Initializable {
         rootControl.disableDeleteFolderButton();
     }
 
-    /*
-    TO BE USED LATER
-    private void adjustColumnWidth(){
-        double width = tablePane.getPrefWidth();
-        
-        fromColumn.setPrefWidth(width * .33);
-        subjectColumn.setPrefWidth(width * .67);
-        dateRecvColumn.setPrefWidth(width * .33);
-    }
+    /**
+     * Fetches the emails associated with the selected folders from the tree view
+     * and displays them in the table.
+     * @throws SQLException 
      */
     public void displayTable() throws SQLException {
         emailsTableView.setItems(getAllEmails());
@@ -129,7 +126,6 @@ public class TableController implements Initializable {
      */
     private ObservableList<JagEmail> getAllEmails() throws SQLException {
         List<JagEmail> emails = this.jagDAO.retrieveEmail(foldername);
-
         ObservableList<JagEmail> mails = FXCollections.observableArrayList();
 
         for (JagEmail j : emails) {
@@ -140,26 +136,45 @@ public class TableController implements Initializable {
     }
 
     /**
-     * Displays window to confirm whether or not the user would like to delete 
-     * the selected email.
+     * Displays window to confirm whether or not the user would like to delete
+     * the email. It will move the mail to the 'trash' folder first.
      */
-    public void showDeleteEmailWindow() {
+    public void showTrashEmailWindow() {
         Stage myStage = new Stage();
+        String currentFolder = foldername;
+        
+        //Sends email to trash folder, otherwise delete the email completely
+        if(!currentFolder.equals("trash")){
+            moveToTrash(myStage);
+        }
+        else{
+            deleteFromTrash(myStage);
+        }        
+    }
+    
+    /**
+     * Moves the email to the trash
+     * @param myStage 
+     */
+    public void moveToTrash(Stage myStage){
         //SEtting label
         Label l = new Label();
         l.setLayoutX(95);
         l.setLayoutY(125);
-        l.setText("Are you sure you want to delete this email?");
+        l.setText("Would you like to move this email to the trash?");
         //Setting confirm button
         Button bYes = new Button();
         bYes.setLayoutX(225);
         bYes.setLayoutY(145);
         bYes.setText("Yes");
-        //Add onclick event that confirms deletion
+        //Add onclick event that confirms deletion - Moves to the trash folders
         bYes.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                deleteEmail();
+                //Move email to 'trash' folder
+                int msgNum = email.getMessageNumber();
+                jagDAO.moveEmail(msgNum, "trash");
+                //Reloads table view
                 try {
                     displayTable();
                 } catch (SQLException ex) {
@@ -174,7 +189,59 @@ public class TableController implements Initializable {
         bNo.setLayoutX(275);
         bNo.setLayoutY(145);
         bNo.setText("No");
-        //Add onclick event that adds folder to database
+        //Add onclick event that simply closes the window on decline
+        bNo.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                myStage.close();
+            }
+        });
+
+        AnchorPane root = new AnchorPane();
+        root.getChildren().add(l);
+        root.getChildren().add(bYes);
+        root.getChildren().add(bNo);
+        myStage.setScene(new Scene(root, 600, 250));
+        myStage.show();
+    }
+    
+    /**
+     * Delete the email from the table and remove from the database
+     * @param myStage 
+     */
+    public void deleteFromTrash(Stage myStage){
+        //SEtting label
+        Label l = new Label();
+        l.setLayoutX(95);
+        l.setLayoutY(125);
+        l.setText("Are you sure you would like to delete this email forever?");
+        //Setting confirm button
+        Button bYes = new Button();
+        bYes.setLayoutX(225);
+        bYes.setLayoutY(145);
+        bYes.setText("Yes");
+        //Add onclick event that confirms deletion - Moves to the trash folders
+        bYes.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                //Delete the email
+                deleteEmail();
+                //Reloads table view
+                try {
+                    displayTable();
+                } catch (SQLException ex) {
+                    ex.getMessage();
+                }
+                myStage.close();
+            }
+        });
+
+        //Set decline button
+        Button bNo = new Button();
+        bNo.setLayoutX(275);
+        bNo.setLayoutY(145);
+        bNo.setText("No");
+        //Add onclick event that simply closes the window on decline
         bNo.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
@@ -200,14 +267,17 @@ public class TableController implements Initializable {
         jagDAO.deleteEmail(emailId);
 
     }
-
+    
+    /**
+     * Displays a window prompting user to specify a new folder destination
+     */
     public void showMoveEmailWindow(){
         Stage myStage = new Stage();
         //SEtting label
         Label l = new Label();
         l.setLayoutX(95);
         l.setLayoutY(125);
-        l.setText("Specify new folder desintation: ");
+        l.setText("Specify new folder destination: ");
         //SEtting textfield
         TextField tf = new TextField();
         tf.setLayoutX(225);
@@ -217,7 +287,7 @@ public class TableController implements Initializable {
         b.setLayoutX(275);
         b.setLayoutY(175);
         b.setText("Submit");
-        //Add onclick event that adds folder to database
+        //Add onclick event that moves the email to the newly specified folder
         b.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
@@ -225,6 +295,7 @@ public class TableController implements Initializable {
                 int msgNumber = email.getMessageNumber();
                 jagDAO.moveEmail(msgNumber, newname);
                 log.info("SUCCESSFULLY ADDED NEW FOLDER");
+                //Reloads the table
                 try {
                     displayTable();
                 } catch (SQLException ex) {
@@ -243,6 +314,8 @@ public class TableController implements Initializable {
         myStage.show();
     }
     
+    /***************** SETTERS *******************/
+    
     public void setFoldername(String foldername) {
         this.foldername = foldername;
     }
@@ -259,7 +332,17 @@ public class TableController implements Initializable {
         this.rootControl = rootControl;
     }
 
+    public void setTreeController(TreeController treeControl){
+        this.treeControl = treeControl;
+    }
     public TableView<JagEmail> getEmailsTable() {
         return emailsTableView;
+    }
+    
+    /**
+     * Clears the email selection when user clicks on another folder
+     */
+    public void clearEmailSelection(){
+        emailsTableView.getSelectionModel().clearSelection();
     }
 }

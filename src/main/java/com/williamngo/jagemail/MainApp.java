@@ -50,7 +50,7 @@ public class MainApp extends Application {
      */
     public MainApp() {
         super();
-        jagDAO = new JagEmailDAOImpl();
+        
     }
 
     /**
@@ -65,7 +65,7 @@ public class MainApp extends Application {
         log.info("Program Begins");
         this.pm = new PropertyManager("src/main/resources");
         this.cb = pm.loadTextProperties();
-        
+        this.jagDAO = new JagEmailDAOImpl();
         // Create the Scene and put it on the Stage
         configureStage(primaryStage);
     }
@@ -86,7 +86,8 @@ public class MainApp extends Application {
     }
 
     /**
-     * Shows configuration window for the user to input a new config file.
+     * Displays configuration window to allow user to type in their information
+     * @param stage 
      */
     public void showConfigWindow(Stage stage) {
 
@@ -102,7 +103,7 @@ public class MainApp extends Application {
             Scene scene = new Scene(loader.load());
             log.info("Scene loaded");
             ConfigController control = (ConfigController) loader.getController();
-            control.setCurrentStage(stage);
+            //control.setCurrentStage(stage);
             control.setJagEmailDAO(this.jagDAO);
             control.setPropertyManager(this.pm);
             
@@ -137,7 +138,7 @@ public class MainApp extends Application {
 
             rootControl = (RootController) loader.getController();
             
-            stage.setTitle("Email Client");
+            stage.setTitle("Email Client - " + cb.getUserName());
             stage.setResizable(true);
             stage.setScene(scene);
             stage.show();

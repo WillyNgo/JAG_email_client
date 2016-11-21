@@ -3,7 +3,6 @@ package com.williamngo.database;
 
 import com.mysql.jdbc.log.Log;
 import com.williamngo.beans.ConfigBean;
-import com.williamngo.beans.FolderBean;
 import com.williamngo.business.JagEmail;
 
 import java.sql.*;
@@ -22,22 +21,15 @@ import org.slf4j.LoggerFactory;
 public class JagEmailDAOImpl implements JagEmailDAO {
     public final Logger log = LoggerFactory.getLogger(getClass().getName());
     public ConfigBean cb;
-    public FolderBean fb;
-    
-    
-    public JagEmailDAOImpl(ConfigBean cb, FolderBean fb){
-        this.cb = cb;
-        this.fb = fb;
-    }
     
     public JagEmailDAOImpl(ConfigBean cb)
     {
         this.cb = cb;
-        this.fb = new FolderBean();
     }
     
     public JagEmailDAOImpl(){
         super();
+        this.cb = new ConfigBean();
     }
     
     /**

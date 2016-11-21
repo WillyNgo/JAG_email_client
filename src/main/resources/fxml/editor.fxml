@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.web.HTMLEditor?>
 
-<BorderPane fx:id="editorPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.williamngo.controllers.EditorController">
+<BorderPane fx:id="editorPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="365.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.williamngo.controllers.EditorController">
    <center>
       <HTMLEditor fx:id="editor" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="201.0" prefWidth="800.0" BorderPane.alignment="CENTER" />
    </center>
@@ -33,7 +33,7 @@
       </ToolBar>
    </bottom>
    <top>
-      <GridPane prefHeight="100.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+      <GridPane prefHeight="120.0" prefWidth="600.0" BorderPane.alignment="CENTER">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="267.0" minWidth="10.0" prefWidth="228.0" />
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="455.0" minWidth="10.0" prefWidth="322.0" />
@@ -54,12 +54,12 @@
                   <Insets right="50.0" />
                </GridPane.margin>
             </TextField>
-            <TextField fx:id="ccTextField" prefHeight="25.0" prefWidth="377.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <TextField fx:id="ccTextField" prefHeight="25.0" prefWidth="377.0" promptText="HINT: Seperate each addresses with comma" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <GridPane.margin>
                   <Insets right="50.0" />
                </GridPane.margin>
             </TextField>
-            <TextField fx:id="bccTextField" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <TextField fx:id="bccTextField" promptText="HINT: Seperate each addresses with comma" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <GridPane.margin>
                   <Insets right="50.0" />
                </GridPane.margin>

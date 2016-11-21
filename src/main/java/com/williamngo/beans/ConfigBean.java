@@ -29,7 +29,7 @@ public class ConfigBean {
     
     public ConfigBean()
     {
-        this("william", "williamngosend@gmail.com", "sendanemail", "smtp.gmail.com", "imap.gmail.com", 465, 993, "CS1435707", "jdbc:mysql://waldo2.dawsoncollege.qc.ca:3306/cs1435707", "tripermu");
+        this("william", "smtp.gmail.com", "imap.gmail.com", "williamngosend@gmail.com", "sendanemail", 465, 993, "jdbc:mysql://waldo2.dawsoncollege.qc.ca:3306/cs1435707", "CS1435707", "tripermu");
     }
     
     public ConfigBean (String userName, final String smtpServerName, final String imapServerName,

@@ -82,13 +82,12 @@ public class RootController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb){
         try{
-            log.info("BEFORE LOAD PROPERTIES ROOT INITIALIZE");
             cb = pm.loadTextProperties();
-            log.info("INITIALIZE ROOT CONTROLLER");
         }catch(IOException ioe){
             ioe.printStackTrace();
         }
         
+        //If a config.properties file was found in the resources, start the app
         if(cb != null){
             try{
             //Initializes the config, dao and properties
@@ -98,8 +97,9 @@ public class RootController implements Initializable {
             insertEditor();
             insertTable();
             insertTree();
-            
             log.info("INSERTED ALL MODULES");
+            
+            //Disables buttons that interacts with messages(reply/All, forward...)
             disableMessageButtons();
             disableDeleteFolderButton();
             }
@@ -151,12 +151,17 @@ public class RootController implements Initializable {
     
     /**
      * Enables the send and attach button in the editor when use clicks on
-     * either new message or reply or reply all
+     * either new message, reply, reply all or Forward
      */
     public void enableEditorButtons(){
         editorControl.enableEditorButtons();
     }
     
+    /**
+     * When user clicks on the new message button, this method will clear all
+     * the input fields on the editor and enable the send and attach button in
+     * then editor toolbar. It will also disable the reply/all and forward button
+     */
     @FXML
     public void clickOnNewMsg(){
         //Clears input fields of the editor for a new message
@@ -164,16 +169,33 @@ public class RootController implements Initializable {
         enableEditorButtons();
         disableMessageButtons();
     }
+    
+    /**
+     * This method will display a window that will prompt the user to confirm
+     * if they would like to send their mail to the trash. If the user is 
+     * selecting an email from the trash folder, it will prompt the user to
+     * confirm whether they would like to indefinetely delete the email.
+     */
     @FXML
     public void clickOnDeleteMsg(){
-        tableControl.showDeleteEmailWindow();
+        tableControl.showTrashEmailWindow();
     }
     
+    /**
+     * Will display a window that will ask the user to which folder they would
+     * like to move their selected email
+     */
     @FXML
     public void clickOnMoveMsg(){
         tableControl.showMoveEmailWindow();
     }
     
+    /**
+     * This method will fill the editor with the information necessary for
+     * replying to an email. It will input the sender for the TO field. It will
+     * append "RE: " at the beginning of the subject and will append the sender's
+     * original message at the end of the email.
+     */
     @FXML
     public void clickOnReply(){
         editorControl.enableEditorButtons();
@@ -181,6 +203,10 @@ public class RootController implements Initializable {
         editorControl.fillReplyInfo();
     }
     
+    /**
+     * Similar to the reply, it will additionally input the list of CCs into the
+     * CC field of the editor.
+     */
     @FXML
     public void clickOnReplyAll(){
         editorControl.enableEditorButtons();
@@ -188,6 +214,10 @@ public class RootController implements Initializable {
         editorControl.fillReplyAllInfo();
     }
     
+    /**
+     * This method will clear all fields aside from the message content of the
+     * selected email.
+     */
     @FXML
     public void clickOnForward(){
         editorControl.enableEditorButtons();
@@ -195,31 +225,46 @@ public class RootController implements Initializable {
         editorControl.fillForwardInfo();
     }
     
+    /**
+     * This method will reload the email table and the folder tree.
+     * @throws SQLException 
+     */
     @FXML
     public void clickOnReload() throws SQLException{
         tableControl.displayTable();
         treeControl.displayTree();
     }
     
+    /**
+     * This method will prompt the user for naming the new folder.
+     * @throws IOException 
+     */
     @FXML
     public void clickOnAddFolder() throws IOException{
         treeControl.showAddFolderWindow();
     }
     
+    /**
+     * Will prompt the user to confirm whether they would like to delete the 
+     * selected folder. It will additionally delete all emails associated with
+     * the folder.
+     */
     @FXML
     public void clickOnDeleteFolder(){
         treeControl.showDeleteFolderWindow();
     }
     
     
-    
+    /**
+     * Clears all input fields of the editor view.
+     */
     public void clearInputFields(){
         editorControl.clearInputFields();
     }
     
     
     /**
-     * Set up new session
+     * Set up new root view
      * @throws IOException 
      */
     public void setUpNewRoot() throws IOException{
@@ -237,7 +282,7 @@ public class RootController implements Initializable {
     }
     
     /**
-     * Inserts the HTML Editor
+     * Inserts the HTML Editor and sets necessary controllers
      */
     private void insertEditor(){
            try {
@@ -257,6 +302,10 @@ public class RootController implements Initializable {
         }
     }
     
+    /**
+     * Sets the tree controller for the folders as well as other necessary 
+     * controllers. 
+     */
     private void insertTree(){
         try{
             FXMLLoader loader = new FXMLLoader();
@@ -277,6 +326,9 @@ public class RootController implements Initializable {
         }
     }
     
+    /**
+     * Inserts the email table and sets the necessary controllers.
+     */
     private void insertTable(){
         try{
             FXMLLoader loader = new FXMLLoader();
@@ -294,5 +346,14 @@ public class RootController implements Initializable {
         }catch(Exception e){
             e.printStackTrace();
         }
+    }
+    
+    /**
+     * TRYING THIS OUT TO BE REMOVED IF UNSUCCESFUL
+     */
+    public void addDefaultFolders(){
+        jagDAO.addFolder("sent");
+        jagDAO.addFolder("inbox");
+        jagDAO.addFolder("trash");
     }
 }
