@@ -376,16 +376,12 @@ public class JagEmailDAOImpl implements JagEmailDAO {
         String query = "SELECT attachmentByte, attachmentName from attachments WHERE attach_messageNumber = ?;";
         try (Connection conn = DriverManager.getConnection(cb.getDatabaseURL(), cb.getDatabaseUserName(), cb.getDatabasePassword())) {
             PreparedStatement stmt = conn.prepareStatement(query);
-            log.info("message number is: " + jagemail.getMessageNumber());
             stmt.setInt(1, jagemail.getMessageNumber());
-            log.info("WILL TRY TO GET ATTACHMENT FROM EMAIL");
             ResultSet rs = stmt.executeQuery();
-            log.info("INSIDE RESULT SETT");
             while (rs.next()) {
                 Blob fileData = rs.getBlob("attachmentByte");
                 byte[] stream = fileData.getBytes(1, (int) fileData.length());
                 String attachmentName = rs.getString("attachmentName");
-                log.info("SETTING ATTACHMENT TO EMAIL");
                 jagemail.attach(EmailAttachment.attachment().bytes(stream).setName(attachmentName).create());
             }
 

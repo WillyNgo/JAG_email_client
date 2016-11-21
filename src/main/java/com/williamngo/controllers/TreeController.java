@@ -243,7 +243,7 @@ public class TreeController implements Initializable {
             @Override
             public void handle(ActionEvent event) {
                 deleteFolder();
-                displayAlert("SUCCESSFULLY DELETED FOLDER");
+                
                 try {
                     displayTree();
                 } catch (SQLException ex) {
@@ -285,6 +285,7 @@ public class TreeController implements Initializable {
         }
         else{
             jagDAO.deleteFolder(foldername);
+            displayAlert("SUCCESSFULLY DELETED FOLDER");
         }
     }
     

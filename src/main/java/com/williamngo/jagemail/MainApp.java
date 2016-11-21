@@ -81,7 +81,7 @@ public class MainApp extends Application {
         if (this.cb == null) {
             showConfigWindow(primaryStage);
         } else {
-            showUserInterface(primaryStage);
+            showRootView(primaryStage);
         }
     }
 
@@ -98,10 +98,9 @@ public class MainApp extends Application {
             loader = new FXMLLoader();
             loader.setLocation(path);
             loader.setBuilderFactory(new JavaFXBuilderFactory());
-            log.info("Loader done loading");
+            
             //A new configBean is created in the initialize() to allow user to input new information
             Scene scene = new Scene(loader.load());
-            log.info("Scene loaded");
             ConfigController control = (ConfigController) loader.getController();
             //control.setCurrentStage(stage);
             control.setJagEmailDAO(this.jagDAO);
@@ -123,7 +122,7 @@ public class MainApp extends Application {
      * in the resources
      * @param stage 
      */
-    private void showUserInterface(Stage stage) {
+    private void showRootView(Stage stage) {
         log.info("GOING INTO USERINTERFACE");
         try {
             FXMLLoader loader = null;

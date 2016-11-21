@@ -6,6 +6,8 @@
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.williamngo.controllers.RootController">
@@ -35,15 +37,78 @@
          <top>
             <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
               <items>
-                  <Button fx:id="newMessageButton" mnemonicParsing="false" onAction="#clickOnNewMsg" text="New Message" />
-                  <Button fx:id="replyButton" mnemonicParsing="false" onAction="#clickOnReply" text="Reply" />
-                  <Button fx:id="replyAllButton" mnemonicParsing="false" onAction="#clickOnReplyAll" text="Reply All" />
-                  <Button fx:id="forwardButton" mnemonicParsing="false" onAction="#clickOnForward" text="Forward" />
-                  <Button fx:id="deleteMessageButton" mnemonicParsing="false" onAction="#clickOnDeleteMsg" text="Delete Message" />
-                  <Button fx:id="moveMessageButton" mnemonicParsing="false" onAction="#clickOnMoveMsg" text="Move Message" />
-                  <Button fx:id="addFolderButton" mnemonicParsing="false" onAction="#clickOnAddFolder" text="Add Folder" />
-                  <Button fx:id="deleteFolderButton" mnemonicParsing="false" onAction="#clickOnDeleteFolder" text="Delete Folder" />
-                  <Button fx:id="reloadButton" mnemonicParsing="false" onAction="#clickOnReload" text="Reload" />
+                  <Button fx:id="newMessageButton" mnemonicParsing="false" onAction="#clickOnNewMsg">
+                     <graphic>
+                        <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/newMsg.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="replyButton" mnemonicParsing="false" onAction="#clickOnReply">
+                     <graphic>
+                        <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/reply.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="replyAllButton" mnemonicParsing="false" onAction="#clickOnReplyAll">
+                     <graphic>
+                        <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/replyAll.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="forwardButton" mnemonicParsing="false" onAction="#clickOnForward">
+                     <graphic>
+                        <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/forward.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="deleteMessageButton" mnemonicParsing="false" onAction="#clickOnDeleteMsg">
+                     <graphic>
+                        <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/trash.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="moveMessageButton" mnemonicParsing="false" onAction="#clickOnMoveMsg">
+                     <graphic>
+                        <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/move.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="addFolderButton" mnemonicParsing="false" onAction="#clickOnAddFolder">
+                     <graphic>
+                        <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/addFolder.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="deleteFolderButton" mnemonicParsing="false" onAction="#clickOnDeleteFolder">
+                     <graphic>
+                        <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/deleteFolder.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="reloadButton" mnemonicParsing="false" onAction="#clickOnReload">
+                     <graphic>
+                        <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/reload.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
               </items>
             </ToolBar>
          </top>

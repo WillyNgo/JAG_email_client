@@ -20,8 +20,15 @@
    <bottom>
       <ToolBar maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" BorderPane.alignment="CENTER">
         <items>
-          <Button fx:id="sendButton" minHeight="40.0" minWidth="40.0" mnemonicParsing="false" onAction="#sendMail" prefHeight="50.0" prefWidth="50.0" text="Send" />
-          <Button fx:id="attachButton" minWidth="40.0" mnemonicParsing="false" onAction="#placeAttachment" prefHeight="50.0" prefWidth="50.0" text="">
+          <Button fx:id="sendButton" minHeight="40.0" minWidth="40.0" mnemonicParsing="false" onAction="#sendMail" prefHeight="50.0" prefWidth="50.0">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/send.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+          <Button fx:id="attachButton" minHeight="40.0" minWidth="40.0" mnemonicParsing="false" onAction="#placeAttachment" prefHeight="50.0" prefWidth="50.0" text="">
                <graphic>
                   <ImageView fx:id="attachImage" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -29,7 +36,14 @@
                      </image>
                   </ImageView>
                </graphic></Button>
-            <Button fx:id="saveAttachButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="77.0" onAction="#saveFile" text="Save attach" />
+            <Button fx:id="saveAttachButton" minHeight="40.0" minWidth="40.0" mnemonicParsing="false" onAction="#saveFile" prefHeight="50.0" prefWidth="50.0">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/save.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
         </items>
       </ToolBar>
    </bottom>

@@ -29,6 +29,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -175,12 +176,15 @@ public class TableController implements Initializable {
         bYes.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
+                try {
                 //Move email to 'trash' folder
                 int msgNum = email.getMessageNumber();
                 jagDAO.moveEmail(msgNum, "trash");
                 //Reloads table view
-                try {
-                    displayTable();
+                displayTable();
+                //Disables buttons to avoid weird interaction with a deleted emails
+                rootControl.disableMessageButtons();
+                editorControl.clearInputFields();
                 } catch (SQLException ex) {
                     ex.getMessage();
                 }
@@ -228,11 +232,11 @@ public class TableController implements Initializable {
         bYes.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
+                try {
                 //Delete the email
                 deleteEmail();
                 //Reloads table view
-                try {
-                    displayTable();
+                displayTable();
                 } catch (SQLException ex) {
                     ex.getMessage();
                 }
@@ -266,10 +270,8 @@ public class TableController implements Initializable {
      */
     public void deleteEmail() {
         int emailId = this.email.getMessageNumber();
-        log.info("EMAIL SUBJECT IS: " + email.getSubject());
-        log.info("EMAIL ID IS: " + emailId);
         jagDAO.deleteEmail(emailId);
-
+        displayMessage("Successfully deleted email");
     }
     
     /**
@@ -281,7 +283,7 @@ public class TableController implements Initializable {
         Label l = new Label();
         l.setLayoutX(95);
         l.setLayoutY(125);
-        l.setText("Specify new folder destination: ");
+        l.setText("Specify folder name where you would like to move your message: ");
         //SEtting textfield
         TextField tf = new TextField();
         tf.setLayoutX(225);
@@ -295,13 +297,20 @@ public class TableController implements Initializable {
         b.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
+                try {
                 String newname = tf.textProperty().get();
+                //Only move the message if the specified folder exists
+                if(validateFolderName(newname)){
                 int msgNumber = email.getMessageNumber();
                 jagDAO.moveEmail(msgNumber, newname);
-                log.info("SUCCESSFULLY ADDED NEW FOLDER");
+                
                 //Reloads the table
-                try {
-                    displayTable();
+                displayTable();
+                editorControl.clearInputFields();
+                }
+                else{
+                    displayMessage("Sorry, there is no such folder.");
+                }
                 } catch (SQLException ex) {
                     ex.getMessage();
                 }
@@ -317,6 +326,25 @@ public class TableController implements Initializable {
         myStage.setScene(new Scene(root, 600, 250));
         myStage.show();
     }
+    
+    /**
+     * Determine if a folder of the specified name exists in the current
+     * session
+     * @param foldername
+     * @return 
+     */
+    private boolean validateFolderName(String foldername){
+        boolean isValid = false;
+        List<String> allFolders = jagDAO.getAllFolders();
+        //Iterate through all the folders and find one that matches
+        for(String name : allFolders){
+            if(foldername.equals(name)){
+                isValid = true;
+            }
+        }
+        
+        return isValid;
+    } 
     
     /***************** SETTERS *******************/
     
@@ -341,6 +369,17 @@ public class TableController implements Initializable {
     }
     public TableView<JagEmail> getEmailsTable() {
         return emailsTableView;
+    }
+    
+    private void displayMessage(String msg){
+        Stage stage = new Stage();
+        Label l = new Label();
+        l.setText(msg);
+        
+        StackPane sp = new StackPane();
+        sp.getChildren().add(l);
+        stage.setScene(new Scene(sp, 300, 300));
+        stage.show();
     }
     
     /**

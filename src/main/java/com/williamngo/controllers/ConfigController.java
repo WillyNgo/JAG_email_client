@@ -142,7 +142,26 @@ public class ConfigController {
             myStage.setResizable(true);
             myStage.setScene(scene);
             myStage.show();
-            showProperties();
+            
+            /*
+            FXMLLoader loader = null;
+
+            URL path = Paths.get("src/main/resources/fxml/root.fxml").toUri().toURL();
+            
+            loader = new FXMLLoader();
+            loader.setLocation(path);
+            loader.setBuilderFactory(new JavaFXBuilderFactory());
+            
+            Scene scene = new Scene(loader.load());
+
+            rootControl = (RootController) loader.getController();
+            
+            stage.setTitle("Email Client - " + cb.getUserName());
+            stage.setResizable(true);
+            stage.setScene(scene);
+            stage.show();
+            */
+            
         } catch (MalformedURLException mue) {
             mue.getMessage();
         } catch (IOException ioe) {
