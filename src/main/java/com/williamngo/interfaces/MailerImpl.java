@@ -203,6 +203,7 @@ public class MailerImpl implements Mailer {
         //Convert ReceivedEmail to JagEmail
         if(emails != null)
         {
+            log.info("New email received!");
             jagEmails = convertBean(emails);
         }
         else
@@ -211,11 +212,11 @@ public class MailerImpl implements Mailer {
         }
         
         //Populate database with emails received
-        for(JagEmail rcvdMail: jagEmails)
-        {
-            jdb.addEmail(rcvdMail);
+        if (jagEmails != null) {
+            for (JagEmail rcvdMail : jagEmails) {
+                jdb.addEmail(rcvdMail);
+            }
         }
-        
         session.close();
         return jagEmails;
     }

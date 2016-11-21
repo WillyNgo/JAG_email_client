@@ -8,6 +8,7 @@ package com.williamngo.controllers;
 import com.williamngo.business.JagEmail;
 import com.williamngo.database.JagEmailDAO;
 import com.williamngo.database.JagEmailDAOImpl;
+import com.williamngo.interfaces.MailerImpl;
 import java.net.URL;
 import java.sql.SQLException;
 import java.util.Date;
@@ -46,6 +47,7 @@ public class TableController implements Initializable {
 
     private JagEmailDAOImpl jagDAO;
     private String foldername;
+    private MailerImpl mailer;
     private EditorController editorControl;
     private RootController rootControl;
     private TreeController treeControl;
@@ -138,6 +140,10 @@ public class TableController implements Initializable {
         }
 
         return mails;
+    }
+    
+    public void reloadEmails(){
+        JagEmail[] allEmails = mailer.receiveEmail();
     }
 
     /**
@@ -367,9 +373,13 @@ public class TableController implements Initializable {
     public void setTreeController(TreeController treeControl){
         this.treeControl = treeControl;
     }
+    public void setMailer(MailerImpl mailer){
+        this.mailer = mailer;
+    }
     public TableView<JagEmail> getEmailsTable() {
         return emailsTableView;
     }
+    
     
     private void displayMessage(String msg){
         Stage stage = new Stage();

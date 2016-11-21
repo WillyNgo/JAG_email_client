@@ -231,6 +231,7 @@ public class RootController implements Initializable {
      */
     @FXML
     public void clickOnReload() throws SQLException{
+        tableControl.reloadEmails();
         tableControl.displayTable();
         treeControl.displayTree();
     }
@@ -341,6 +342,7 @@ public class RootController implements Initializable {
             
             tableControl.setEditorController(editorControl);
             tableControl.setRootController(this);
+            tableControl.setMailer(mailer);
             tableControl.setJagDAO(jagDAO);
             
             tablePane.getChildren().add(bp);

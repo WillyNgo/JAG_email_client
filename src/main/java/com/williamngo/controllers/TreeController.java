@@ -161,8 +161,9 @@ public class TreeController implements Initializable {
      * @param folder 
      */
     private void clickOnFolder(TreeItem<String> folder) {
-        String foldername = folder.getValue();
+        
         try {
+            String foldername = folder.getValue();
             tableControl.setFoldername(foldername);
             tableControl.displayTable();
             rootControl.enableDeleteFolderButton();
@@ -170,6 +171,8 @@ public class TreeController implements Initializable {
             editorControl.disableAttachButton();
         } catch (SQLException sqle) {
             log.info(sqle.getMessage());
+        } catch (NullPointerException npe){
+            log.info("npe in clickOnFolder");
         }
     }
     
