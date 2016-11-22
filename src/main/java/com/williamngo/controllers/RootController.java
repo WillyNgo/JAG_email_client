@@ -14,16 +14,20 @@ import com.williamngo.interfaces.MailerImpl;
 import com.williamngo.jagemail.MainApp;
 import java.io.IOException;
 import java.net.URL;
+import java.nio.file.Paths;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.fxml.JavaFXBuilderFactory;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -255,6 +259,25 @@ public class RootController implements Initializable {
         treeControl.showDeleteFolderWindow();
     }
     
+    /**
+     * Displays the about page
+     * @throws IOException 
+     */
+    public void clickOnAbout() throws IOException{
+        Stage stage = new Stage();
+        URL path = Paths.get("src/main/resources/fxml/about.fxml").toUri().toURL();
+
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(path);
+        loader.setBuilderFactory(new JavaFXBuilderFactory());
+
+        Scene scene = new Scene(loader.load());
+        
+        stage.setTitle("Email Client - About page");
+        stage.setScene(scene);
+        stage.show();
+    }
+    
     
     /**
      * Clears all input fields of the editor view.
@@ -262,6 +285,8 @@ public class RootController implements Initializable {
     public void clearInputFields(){
         editorControl.clearInputFields();
     }
+    
+    
     
     
     /**
@@ -349,14 +374,5 @@ public class RootController implements Initializable {
         }catch(Exception e){
             e.printStackTrace();
         }
-    }
-    
-    /**
-     * TRYING THIS OUT TO BE REMOVED IF UNSUCCESFUL
-     */
-    public void addDefaultFolders(){
-        jagDAO.addFolder("sent");
-        jagDAO.addFolder("inbox");
-        jagDAO.addFolder("trash");
     }
 }

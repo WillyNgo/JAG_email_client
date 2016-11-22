@@ -25406,3 +25406,50 @@ Caused by: java.lang.NullPointerException
 [INFO ] 2016-11-21 18:33:24.735 [JavaFX Application Thread] com.williamngo.controllers.TableController.<init>(TableController.java:74) - Ok at least constructor: TableControl works
 [INFO ] 2016-11-21 18:33:24.780 [JavaFX Application Thread] com.williamngo.controllers.TreeController.setTableController(TreeController.java:85) - TABLE CONTROLLER HAS BEEN PASSED TO TREE CONTROLLER!
 [INFO ] 2016-11-21 18:33:25.044 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:100) - INSERTED ALL MODULES
+[INFO ] 2016-11-21 20:35:42.263 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.start(MainApp.java:65) - Program Begins
+[INFO ] 2016-11-21 20:35:42.482 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-21 20:35:42.485 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.showUserInterface(MainApp.java:127) - GOING INTO USERINTERFACE
+[INFO ] 2016-11-21 20:35:43.527 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-21 20:35:43.528 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-21 20:35:43.557 [JavaFX Application Thread] com.williamngo.controllers.RootController.setUpNewRoot(RootController.java:276) - SETTING UP NEW ROOT
+[INFO ] 2016-11-21 20:35:46.376 [JavaFX Application Thread] com.williamngo.controllers.TableController.<init>(TableController.java:71) - Ok at least constructor: TableControl works
+[INFO ] 2016-11-21 20:35:46.573 [JavaFX Application Thread] com.williamngo.controllers.TreeController.setTableController(TreeController.java:84) - TABLE CONTROLLER HAS BEEN PASSED TO TREE CONTROLLER!
+[INFO ] 2016-11-21 20:35:48.236 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:100) - INSERTED ALL MODULES
+[INFO ] 2016-11-21 20:51:49.444 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.start(MainApp.java:65) - Program Begins
+[INFO ] 2016-11-21 20:51:49.453 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-21 20:51:49.455 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.showRootView(MainApp.java:126) - GOING INTO USERINTERFACE
+[INFO ] 2016-11-21 20:51:49.582 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-21 20:51:49.582 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-21 20:51:49.583 [JavaFX Application Thread] com.williamngo.controllers.RootController.setUpNewRoot(RootController.java:277) - SETTING UP NEW ROOT
+[INFO ] 2016-11-21 20:51:49.677 [JavaFX Application Thread] com.williamngo.controllers.TableController.<init>(TableController.java:74) - Ok at least constructor: TableControl works
+[INFO ] 2016-11-21 20:51:49.713 [JavaFX Application Thread] com.williamngo.controllers.TreeController.setTableController(TreeController.java:85) - TABLE CONTROLLER HAS BEEN PASSED TO TREE CONTROLLER!
+[INFO ] 2016-11-21 20:51:50.031 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:100) - INSERTED ALL MODULES
+[INFO ] 2016-11-21 20:52:35.147 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.start(MainApp.java:65) - Program Begins
+[INFO ] 2016-11-21 20:52:35.156 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-21 20:52:35.158 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.showRootView(MainApp.java:126) - GOING INTO USERINTERFACE
+[INFO ] 2016-11-21 20:52:35.283 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-21 20:52:35.284 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-21 20:52:35.285 [JavaFX Application Thread] com.williamngo.controllers.RootController.setUpNewRoot(RootController.java:277) - SETTING UP NEW ROOT
+[INFO ] 2016-11-21 20:52:35.378 [JavaFX Application Thread] com.williamngo.controllers.TableController.<init>(TableController.java:74) - Ok at least constructor: TableControl works
+[INFO ] 2016-11-21 20:52:35.412 [JavaFX Application Thread] com.williamngo.controllers.TreeController.setTableController(TreeController.java:85) - TABLE CONTROLLER HAS BEEN PASSED TO TREE CONTROLLER!
+[INFO ] 2016-11-21 20:52:35.724 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:100) - INSERTED ALL MODULES
+[INFO ] 2016-11-21 20:53:16.279 [JavaFX Application Thread] com.williamngo.controllers.EditorController.checkForAttachment(EditorController.java:148) - NO ATTACHMENT
+[INFO ] 2016-11-21 20:53:27.124 [JavaFX Application Thread] com.williamngo.database.JagEmailDAOImpl.moveEmail(JagEmailDAOImpl.java:335) - MOVED '1' EMAIL(S) INTO FOLDER: trash
+[INFO ] 2016-11-21 20:54:27.714 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.start(MainApp.java:65) - Program Begins
+[INFO ] 2016-11-21 20:54:27.723 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-21 20:54:27.725 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.showRootView(MainApp.java:126) - GOING INTO USERINTERFACE
+[INFO ] 2016-11-21 20:54:27.848 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-21 20:54:27.849 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-21 20:54:27.850 [JavaFX Application Thread] com.williamngo.controllers.RootController.setUpNewRoot(RootController.java:277) - SETTING UP NEW ROOT
+[INFO ] 2016-11-21 20:54:27.945 [JavaFX Application Thread] com.williamngo.controllers.TableController.<init>(TableController.java:74) - Ok at least constructor: TableControl works
+[INFO ] 2016-11-21 20:54:27.982 [JavaFX Application Thread] com.williamngo.controllers.TreeController.setTableController(TreeController.java:85) - TABLE CONTROLLER HAS BEEN PASSED TO TREE CONTROLLER!
+[INFO ] 2016-11-21 20:54:28.285 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:100) - INSERTED ALL MODULES
+[INFO ] 2016-11-21 21:11:19.367 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.start(MainApp.java:65) - Program Begins
+[INFO ] 2016-11-21 21:11:19.376 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-21 21:11:19.378 [JavaFX Application Thread] com.williamngo.jagemail.MainApp.showRootView(MainApp.java:126) - GOING INTO USERINTERFACE
+[INFO ] 2016-11-21 21:11:19.518 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-21 21:11:19.518 [JavaFX Application Thread] com.williamngo.business.PropertyManager.loadTextProperties(PropertyManager.java:49) - File does exists, now going through settings
+[INFO ] 2016-11-21 21:11:19.519 [JavaFX Application Thread] com.williamngo.controllers.RootController.setUpNewRoot(RootController.java:302) - SETTING UP NEW ROOT
+[INFO ] 2016-11-21 21:11:19.626 [JavaFX Application Thread] com.williamngo.controllers.TableController.<init>(TableController.java:74) - Ok at least constructor: TableControl works
+[INFO ] 2016-11-21 21:11:19.668 [JavaFX Application Thread] com.williamngo.controllers.TreeController.setTableController(TreeController.java:85) - TABLE CONTROLLER HAS BEEN PASSED TO TREE CONTROLLER!
+[INFO ] 2016-11-21 21:11:19.964 [JavaFX Application Thread] com.williamngo.controllers.RootController.initialize(RootController.java:104) - INSERTED ALL MODULES
